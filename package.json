@@ -1,0 +1,15 @@
+{
+  "name": "inclojure",
+  "description": "Package to resolve node dependencies required for inclojure",
+  "author": "Abhishek Mishra <ideamonk@gmail.com>",
+  "repository": {
+    "type": "git"
+  },
+  "dependencies": {
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "*",
+    "node-sass-import-once": "*"
+  }
+}

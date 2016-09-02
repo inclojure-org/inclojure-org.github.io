@@ -1,0 +1,7 @@
+*.scssc
+.DS_Store
+
+# NPM related
+npm-debug.log
+
+/node_modules
