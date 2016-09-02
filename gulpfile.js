@@ -17,7 +17,6 @@ const BROWSER_COMPATIBILITY = [
   "ie > 10"
 ];
 
-
 const SASS_OPTIONS = {
   development: {
     outputStyle: "expanded",
@@ -36,18 +35,12 @@ const SASS_OPTIONS = {
   }
 };
 
-
-const compileSass = (path, prod = false) => {
-  let sassHasErrors = false;
-
+const compileSass = function(path, prod) {
   return gulp.src (path.src)
              .pipe (plumber ())
              .pipe (sass (prod === true ?
                                    SASS_OPTIONS.production : SASS_OPTIONS.development)
-                                     .on ("error", sass.logError)
-                                     .on ("error", () => {
-                                       sassHasErrors = true;
-                                     }))
+                                     .on ("error", sass.logError))
              .pipe (autoprefixer ({
                browsers: BROWSER_COMPATIBILITY
              }))
@@ -56,14 +49,14 @@ const compileSass = (path, prod = false) => {
 };
 
 
-gulp.task ("sass:styles", () => {
+gulp.task ("sass:styles", function() {
   compileSass (PATHS.styles);
 });
 
-gulp.task ("sass:compile", () => {
+gulp.task ("sass:compile", function() {
   compileSass (PATHS.styles, true);
 });
 
-gulp.task ("sass:watch", () => {
+gulp.task ("sass:watch", function() {
   gulp.watch ([PATHS.styles.src], ["sass:styles"]);
 });

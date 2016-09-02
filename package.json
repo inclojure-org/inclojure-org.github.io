@@ -8,6 +8,7 @@
   "dependencies": {
     "gulp": "*",
     "gulp-autoprefixer": "*",
+    "gulp-babel": "*",
     "gulp-plumber": "^1.1.0",
     "gulp-sass": "*",
     "node-sass-import-once": "*"
