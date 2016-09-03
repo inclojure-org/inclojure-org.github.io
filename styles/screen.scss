@@ -10,8 +10,130 @@
 //
 
 @import "normalize";
+@import "utils";
 
 $font-bold     : 'Archivo Black', sans-serif;
 $font-body     : 'Arimo', sans-serif;
 $font-mono     : 'Monaco', 'Menlo', 'Lucida Console', "Courier", monospace;
 $font-fallback : "Helvetica Neue", HelveticaNeue, Helvetica, Arial, "Lucida Grande", sans-serif;
+
+$color-white   : #f1f1f1;
+$color-black   : #0e0e0e;
+$color-tape    : rgba($color-black, 0.85);
+
+$base          : 32px;
+$content-max   : 1440px;
+$content-min   : 1120px;
+
+@mixin content-bounds() {
+    max-width: $content-max;
+    min-width: $content-min;
+}
+
+@mixin content-wrapper() {
+    margin: 0 auto;
+    padding: 0 $base*2;
+    @include content-bounds;
+}
+
+@mixin bold-title() {
+    font-family: $font-bold;
+    text-transform: uppercase;
+}
+
+
+html,
+body {
+    background: $color-white;
+    font-family: $font-body;
+}
+
+.content {
+    @include content-wrapper;
+}
+
+.header {
+    padding: $base*3.5 0 $base*2;
+    margin-bottom: $base;
+
+    @include bg-img(transparent,
+                    "bg-pune.png",
+                    "bg-pune@2x.png");
+    background-size: cover;
+
+    &__content {
+        @include content-wrapper;
+    }
+
+    &__link {
+        display: inline-block;
+        background: $color-tape;
+        padding: $base*1.6 $base*1.4 $base*1.1;
+        margin-bottom: $base;
+    }
+    &__logo {
+        width: 633px;
+        height: 93px;
+    }
+
+    &__info {
+        margin: 0 0 $base*2;
+        padding: 0;
+        list-style-type: none;
+    }
+}
+
+.tape {
+    padding: 0 $base*1.3;
+    font-size: 64px;
+    color: $color-white;
+    background: $color-tape;
+    @include bold-title;
+}
+
+.button {
+    margin-right: $base;
+    padding: 0 $base*1.3;
+    font-size: 60px;
+    background: $color-tape;
+    text-decoration: none;
+    @include bold-title;
+
+    &,
+    &:active,
+    &:visited {
+        color: $color-white;
+    }
+}
+
+
+.section {
+    margin-bottom: $base*3;
+    &__title {
+        font-size: 86px;
+        @include bold-title;
+        margin: $base*2 0 0;
+    }
+    &__content {
+        font-size: 43px;
+        line-height: 1.4;
+        margin-top: $base;
+    }
+}
+
+.sponsor-class {
+    margin: $base 0;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 1.4;
+}
+
+.sponsors--plat {
+    .sponsor-link {
+        display: block;
+        width: 50%;
+    }
+    .sponsor-img {
+        height: 200px;
+    }
+}
