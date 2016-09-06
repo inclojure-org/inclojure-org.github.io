@@ -404,55 +404,20 @@ textarea {
   /* 2 */
 }
 
-html,
-body {
-  background: #f1f1f1;
-  font-family: "Arimo", sans-serif;
+.link-white {
+  text-decoration: none;
 }
 
-.content {
-  margin: 0 auto;
-  padding: 0 64px;
-  max-width: 1440px;
-  min-width: 1120px;
+.link-white, .link-white:visited {
+  color: #f1f1f1;
 }
 
-.header {
-  padding: 112px 0 64px;
-  margin-bottom: 32px;
-  background: transparent url("/static/images/bg-pune.png") no-repeat 0 0;
-  background-size: cover;
+.link-black {
+  text-decoration: none;
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 1.5dppx) {
-  .header {
-    background-image: url("/static/images/bg-pune@2x.png");
-  }
-}
-
-.header__content {
-  margin: 0 auto;
-  padding: 0 64px;
-  max-width: 1440px;
-  min-width: 1120px;
-}
-
-.header__link {
-  display: inline-block;
-  background: rgba(14, 14, 14, 0.85);
-  padding: 51.2px 44.8px 35.2px;
-  margin-bottom: 32px;
-}
-
-.header__logo {
-  width: 633px;
-  height: 93px;
-}
-
-.header__info {
-  margin: 0 0 64px;
-  padding: 0;
-  list-style-type: none;
+.link-black, .link-black:visited {
+  color: #0e0e0e;
 }
 
 .tape {
@@ -478,8 +443,70 @@ body {
   color: #f1f1f1;
 }
 
+html,
+body {
+  background: #f1f1f1;
+  font-family: "Arimo", sans-serif;
+}
+
+.content {
+  margin: 0 auto;
+  padding: 0 64px;
+  max-width: 1440px;
+  min-width: 1000px;
+}
+
+.header {
+  padding: 112px 0 64px;
+  margin-bottom: 32px;
+  background: transparent url("/static/images/bg-pune.png") no-repeat 0 0;
+  background-size: cover;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 1.5dppx) {
+  .header {
+    background-image: url("/static/images/bg-pune@2x.png");
+  }
+}
+
+.header__content {
+  margin: 0 auto;
+  padding: 0 64px;
+  max-width: 1440px;
+  min-width: 1000px;
+}
+
+.header__link {
+  display: inline-block;
+  background: rgba(14, 14, 14, 0.85);
+  padding: 51.2px 44.8px 35.2px;
+  margin-bottom: 32px;
+}
+
+.header__logo {
+  width: 633px;
+  height: 93px;
+}
+
+.header__info {
+  margin: 0 0 64px;
+  padding: 0;
+  list-style-type: none;
+}
+
 .section {
   margin-bottom: 96px;
+}
+
+.section a {
+  display: inline-block;
+  text-decoration: none;
+  color: rgba(14, 14, 14, 0.75);
+  border-bottom: 2px solid rgba(14, 14, 14, 0.2);
+}
+
+.section a:hover {
+  border-bottom-color: #0e0e0e;
 }
 
 .section__title {
@@ -509,4 +536,51 @@ body {
 
 .sponsors--plat .sponsor-img {
   height: 200px;
+}
+
+.footer {
+  background: #0e0e0e;
+  padding-bottom: 64px;
+}
+
+.footer__content {
+  margin: 0 auto;
+  padding: 0 64px;
+  max-width: 1440px;
+  min-width: 1000px;
+}
+
+.footer__links {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  margin-bottom: 96px;
+}
+
+.footer__link {
+  text-decoration: none;
+  font-family: "Archivo Black", sans-serif;
+  font-size: 86px;
+  line-height: 0.94;
+  text-transform: uppercase;
+  -webkit-flex-basis: 50%;
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%;
+  margin-top: 89.6px;
+}
+
+.footer__link, .footer__link:hover, .footer__link:visited {
+  color: #f1f1f1;
+}
+
+.footer__stuff {
+  margin: 0;
+  color: #f1f1f1;
+  font-family: "Archivo Black", sans-serif;
+  font-size: 33px;
+  line-height: 1.0606;
+  text-transform: uppercase;
 }
