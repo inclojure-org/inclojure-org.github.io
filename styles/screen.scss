@@ -17,9 +17,10 @@ $font-body     : 'Arimo', sans-serif;
 $font-mono     : 'Monaco', 'Menlo', 'Lucida Console', "Courier", monospace;
 $font-fallback : "Helvetica Neue", HelveticaNeue, Helvetica, Arial, "Lucida Grande", sans-serif;
 
-$color-white   : #f1f1f1;
-$color-black   : #0e0e0e;
-$color-tape    : rgba($color-black, 0.85);
+$color-white      : #f1f1f1;
+$color-black      : #0e0e0e;
+$color-tape       : rgba($color-black, 0.85);
+$color-pure-white : #ffffff;
 
 $base          : 32px;
 $content-max   : 1440px;
@@ -170,6 +171,11 @@ body {
         }
     }
 
+    .unstyled-link {
+        text-decoration: none;
+        border: 0;
+    }
+
     &__title {
         font-size: 86px;
         font-size: _vw(86px);
@@ -191,6 +197,17 @@ body {
     }
 }
 
+.map-container {
+    iframe {
+        pointer-events: none;
+    }
+}
+
+.sponsor {
+    margin-bottom: $base*3;
+    margin-bottom: _vw($base*3);
+}
+
 .sponsor-class {
     margin: $base 0;
     margin: _vw($base) 0;
@@ -203,26 +220,19 @@ body {
     line-height: 1.4;
 }
 
-.sponsors--plat {
-    .sponsor-link {
-        display: block;
-        text-decoration: none;
-        border: 0;
-        width: 50%;
-    }
+.sponsor-link {
+    display: block;
+    width: 50%;
+}
+
+.sponsor--plat {
     .sponsor-img {
         height: 200px;
         height: _vw(200px);
     }
 }
 
-.sponsors--silver {
-    .sponsor-link {
-        display: block;
-        text-decoration: none;
-        border: 0;
-        width: 50%;
-    }
+.sponsor--silver {
     .sponsor-img {
         height: 200px;
         height: _vw(200px);
@@ -248,6 +258,7 @@ body {
     }
 
     &__link {
+        color: $color-white;
         text-decoration: none;
         font-family: $font-bold;
 
@@ -261,10 +272,8 @@ body {
         margin-top: $base*2.8;
         margin-top: _vw($base*2.8);
 
-        &,
-        &:hover,
-        &:visited {
-            color: $color-white;
+        &:hover {
+            color: $color-pure-white;
         }
     }
 

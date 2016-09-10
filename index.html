@@ -85,7 +85,7 @@
           We encourage you to submit a talk regardless of your experience level with Clojure. All perspectives matter!
         </p>
         <p>
-          The last date to submit a talk is: October 26, 2016.
+          The last date to submit a talk is: <time datetime="2016-10-26 23:59">October 26, 2016</time>.
         </p>
       </section>
     </div>
@@ -135,16 +135,21 @@
     <div class="section">
       <h3 class="section__title">Venue</h3>
       <p class="section__content">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.332444568801!2d73.90884331562518!3d18.5590450728385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c13f953dc837%3A0xb6782032b34e422e!2sHotel+Novotel+Pune+Nagar+Road!5e0!3m2!1sen!2sin!4v1473495569525" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <div class="map-container" onClick="try { document.querySelector('#venue-map').style.setProperty('pointer-events', 'auto'); } catch(err) { ; }">
+          <iframe id="venue-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.332444568801!2d73.90884331562518!3d18.5590450728385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c13f953dc837%3A0xb6782032b34e422e!2sHotel+Novotel+Pune+Nagar+Road!5e0!3m2!1sen!2sin!4v1473495569525" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
       </p>
     </div>
 
     <!-- Sponsors -->
     <div class="section">
       <h3 class="section__title">Sponsors</h3>
+
       <h5 class="sponsor-class">Platinum</h5>
-      <div class="sponsors sponsors--plat">
-        <a class="sponsor-link" href="https://helpshift.com">
+      <div class="sponsor sponsor--plat">
+        <a class="unstyled-link sponsor-link"
+           href="https://helpshift.com"
+           targe="_blank">
           <img class="sponsor-img"
                src="/static/images/logo-helpshift@2x.png"
                alt="Platinum Sponsor Helpshift"
@@ -153,22 +158,23 @@
       </div>
 
       <h5 class="sponsor-class">Gold</h5>
-      <div class="sponsors sponsors--gold">
+      <div class="sponsor sponsor--gold">
         <section class="section__content">
           <p>
             You?
           </p>
           <p>
-            Please get in touch with team@inclojure.org if your organization would like to be a gold or silver sponsor.
+            Please get in touch with <a href="mailto:team@inclojure.org">team@inclojure.org</a> if your organization would like to be a gold or silver sponsor.
           </p>
-          <p>Sponsorship details are available <a href="/static/pdf/inclojure-sponsorship.pdf">here (PDF).</a></p>
+          <p>Sponsorship details are available <a href="/static/pdf/inclojure-sponsorship.pdf" target="_blank">here (PDF)</a>.</p>
         </section>
       </div>
 
       <h5 class="sponsor-class">Silver</h5>
-      <div class="sponsors sponsors--silver">
-        <a class="sponsor-link"
-           href="http://decomplect.io">
+      <div class="sponsor sponsor--silver">
+        <a class="unstyled-link sponsor-link"
+           href="http://decomplect.io"
+           target="_blank">
           <img class="sponsor-img"
               src="/static/images/logo-decomplect.png"
               alt="Silver Sponsor Decomplect"
