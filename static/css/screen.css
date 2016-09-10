@@ -545,12 +545,26 @@ body {
 
 .sponsors--plat .sponsor-link {
   display: block;
+  text-decoration: none;
+  border: 0;
   width: 50%;
 }
 
 .sponsors--plat .sponsor-img {
   height: 200px;
   height: 13.88889vw;
+}
+
+.sponsors--silver .sponsor-link {
+  display: block;
+  text-decoration: none;
+  border: 0;
+  width: 50%;
+}
+
+.sponsors--silver .sponsor-img {
+  height: 100px;
+  height: 6.94444vw;
 }
 
 .footer {

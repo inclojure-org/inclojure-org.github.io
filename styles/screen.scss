@@ -206,11 +206,26 @@ body {
 .sponsors--plat {
     .sponsor-link {
         display: block;
+        text-decoration: none;
+        border: 0;
         width: 50%;
     }
     .sponsor-img {
         height: 200px;
         height: _vw(200px);
+    }
+}
+
+.sponsors--silver {
+    .sponsor-link {
+        display: block;
+        text-decoration: none;
+        border: 0;
+        width: 50%;
+    }
+    .sponsor-img {
+        height: 100px;
+        height: _vw(100px);
     }
 }
 
