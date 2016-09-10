@@ -81,6 +81,11 @@ $content-min   : 1000px;
 }
 
 .button {
+    position: relative;
+
+    margin-left: 12px;
+    margin-left: _vw(12px);
+
     margin-right: $base;
     margin-right: _vw($base);
 
@@ -92,12 +97,57 @@ $content-min   : 1000px;
 
     background: $color-tape;
     text-decoration: none;
+    transform-origin: 50% 50%;
+    transition: all 0.1s ease-in;
     @include bold-title;
+
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+    }
+
+    &:before {
+        left: 0;
+
+        top: -12px;
+        top: _vw(-12px);
+
+        height: 12px;
+        height: _vw(12px);
+
+        width: 100%;
+
+        background: rgba($color-white, 0.4);
+        transform-origin: 0 100%;
+        transform: skewX(45deg);
+    }
+
+    &:after {
+        top: 0;
+
+        left: -12px;
+        left: _vw(-12px);
+
+        width: 12px;
+        width: _vw(12px);
+
+        height: 100%;
+
+        background: rgba($color-black, 0.4);
+        transform-origin: 100% 0;
+        transform: skewY(45deg);
+    }
+
 
     &,
     &:active,
     &:visited {
         color: $color-white;
+    }
+
+    &:hover {
+        background: $color-black;
     }
 }
 
