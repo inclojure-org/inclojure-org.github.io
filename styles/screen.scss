@@ -170,8 +170,7 @@ body {
     margin-bottom: _vw($base);
 
     @include bg-img(transparent,
-                    "bg-pune.png",
-                    "bg-pune@2x.png");
+                    "bg-pune.jpg");
     background-size: cover;
     background-position: 50% 50%;
 
@@ -225,6 +224,9 @@ body {
         text-decoration: none;
         border: 0;
     }
+    .spc-link {
+        display: block;
+    }
 
     &__title {
         font-size: 86px;
@@ -270,22 +272,19 @@ body {
     line-height: 1.4;
 }
 
-.spc-link {
-    display: block;
-    width: 50%;
-}
-
 .spc--plat {
     .spc-img {
-        height: 200px;
-        height: _vw(200px);
+        width: 50%;
     }
 }
-
+.spc--gold {
+    .spc-img {
+        width: 45%;
+    }
+}
 .spc--silver {
     .spc-img {
-        height: 200px;
-        height: _vw(200px);
+        width: 40%;
     }
 }
 

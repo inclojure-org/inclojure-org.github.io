@@ -11,10 +11,12 @@ $IMG_DIR : "/static/images/";
 }
 
 //Background image
-@mixin bg-img($clr, $src, $src-retina, $repeat: no-repeat, $x: 0, $y: 0) {
+@mixin bg-img($clr, $src, $src-retina: "", $repeat: no-repeat, $x: 0, $y: 0) {
     background: $clr image-url($src) $repeat $x $y;
-    @include respond-to(retina) {
-        background-image: image-url($src-retina);
+    @if ($src-retina != "") {
+        @include respond-to(retina) {
+            background-image: image-url($src-retina);
+        }
     }
 }
 

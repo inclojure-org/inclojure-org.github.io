@@ -512,15 +512,9 @@ body {
   padding: 7.77778vw 0 4.44444vw;
   margin-bottom: 32px;
   margin-bottom: 2.22222vw;
-  background: transparent url("/static/images/bg-pune.png") no-repeat 0 0;
+  background: transparent url("/static/images/bg-pune.jpg") no-repeat 0 0;
   background-size: cover;
   background-position: 50% 50%;
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 1.5dppx) {
-  .header {
-    background-image: url("/static/images/bg-pune@2x.png");
-  }
 }
 
 .header__content {
@@ -570,6 +564,10 @@ body {
   border: 0;
 }
 
+.section .spc-link {
+  display: block;
+}
+
 .section__title {
   font-size: 86px;
   font-size: 5.97222vw;
@@ -605,19 +603,16 @@ body {
   line-height: 1.4;
 }
 
-.spc-link {
-  display: block;
+.spc--plat .spc-img {
   width: 50%;
 }
 
-.spc--plat .spc-img {
-  height: 200px;
-  height: 13.88889vw;
+.spc--gold .spc-img {
+  width: 45%;
 }
 
 .spc--silver .spc-img {
-  height: 200px;
-  height: 13.88889vw;
+  width: 40%;
 }
 
 .footer {
