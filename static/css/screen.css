@@ -591,12 +591,12 @@ body {
   pointer-events: none;
 }
 
-.sponsor {
+.spc {
   margin-bottom: 96px;
   margin-bottom: 6.66667vw;
 }
 
-.sponsor-class {
+.spc-class {
   margin: 32px 0;
   margin: 2.22222vw 0;
   font-weight: bold;
@@ -605,17 +605,17 @@ body {
   line-height: 1.4;
 }
 
-.sponsor-link {
+.spc-link {
   display: block;
   width: 50%;
 }
 
-.sponsor--plat .sponsor-img {
+.spc--plat .spc-img {
   height: 200px;
   height: 13.88889vw;
 }
 
-.sponsor--silver .sponsor-img {
+.spc--silver .spc-img {
   height: 200px;
   height: 13.88889vw;
 }
