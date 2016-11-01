@@ -651,10 +651,18 @@ body {
   display: inline-block;
   text-decoration: none;
   color: rgba(14, 14, 14, 0.75);
+  cursor: pointer;
   border-bottom: 2px solid rgba(14, 14, 14, 0.2);
 }
 
+@media only screen and (max-width: 1280px) {
+  .section a {
+    border-bottom-width: 0.13889vw;
+  }
+}
+
 .section a:hover {
+  color: #0e0e0e;
   border-bottom-color: #0e0e0e;
 }
 
@@ -829,5 +837,128 @@ body {
 @media only screen and (max-width: 1280px) {
   .footer__stuff {
     font-size: 2.29167vw;
+  }
+}
+
+.schedule {
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 12px solid #0e0e0e;
+}
+
+@media only screen and (max-width: 1280px) {
+  .schedule {
+    border-top: 0.83333vw solid #0e0e0e;
+  }
+}
+
+.schedule__header {
+  text-align: left;
+  padding: 16px 0 12px;
+}
+
+.schedule__header:last-child {
+  text-align: right;
+}
+
+@media only screen and (max-width: 1280px) {
+  .schedule__header {
+    padding: 1.11111vw 0 0.83333vw;
+  }
+}
+
+.schedule__sessions {
+  border-top: 4px solid #0e0e0e;
+}
+
+@media only screen and (max-width: 1280px) {
+  .schedule__sessions {
+    border-top: 0.27778vw solid #0e0e0e;
+  }
+}
+
+.session > td {
+  vertical-align: top;
+  padding-top: 24px;
+  border-top: 2px solid #0e0e0e;
+}
+
+@media only screen and (max-width: 1280px) {
+  .session > td {
+    padding-top: 1.66667vw;
+    border-top: 0.13889vw solid #0e0e0e;
+  }
+}
+
+.session:first-child > td {
+  padding-top: 42px;
+}
+
+@media only screen and (max-width: 1280px) {
+  .session:first-child > td {
+    padding-top: 2.91667vw;
+  }
+}
+
+.session__slot {
+  font-weight: bold;
+  width: 266px;
+}
+
+@media only screen and (max-width: 1280px) {
+  .session__slot {
+    width: 18.47222vw;
+  }
+}
+
+.session__title {
+  margin: 0;
+}
+
+.session__summary {
+  line-height: 1.4;
+  margin: 20px 0 60px;
+  padding-right: 60px;
+  font-size: 36px;
+}
+
+@media only screen and (max-width: 1280px) {
+  .session__summary {
+    margin: 1.38889vw 0 3.33333vw;
+    padding-right: 4.16667vw;
+    font-size: 2.5vw;
+  }
+}
+
+.session__speaker {
+  width: 270px;
+}
+
+@media only screen and (max-width: 1280px) {
+  .session__speaker {
+    width: 18.75vw;
+  }
+}
+
+.session__speaker-name, .session__speaker-extras {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+@media only screen and (max-width: 1280px) {
+  .session__speaker-name, .session__speaker-extras {
+    margin-bottom: 1.11111vw;
+  }
+}
+
+.session__speaker-link {
+  display: inline;
+  font-size: 36px;
+}
+
+@media only screen and (max-width: 1280px) {
+  .session__speaker-link {
+    font-size: 2.5vw;
   }
 }

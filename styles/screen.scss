@@ -252,9 +252,15 @@ body {
         display: inline-block;
         text-decoration: none;
         color: rgba($color-black, 0.75);
+        cursor: pointer;
+
         border-bottom: 2px solid rgba($color-black, 0.2);
+        @include respond-to-width($max-width: $max-var) {
+            border-bottom-width: _vw(2px);
+        }
 
         &:hover {
+            color: $color-black;
             border-bottom-color: $color-black;
         }
     }
@@ -399,5 +405,110 @@ body {
 
         line-height: 1.0606;
         text-transform: uppercase;
+    }
+}
+
+.schedule {
+    width: 100%;
+    border-collapse: collapse;
+
+    border-top: 12px solid $color-black;
+    @include respond-to-width($max-width: $max-var) {
+        border-top: _vw(12px) solid $color-black;
+    }
+
+    &__header {
+        text-align: left;
+        &:last-child {
+            text-align: right;
+        }
+
+        padding: 16px 0 12px;
+        @include respond-to-width($max-width: $max-var) {
+            padding: _vw(16px) 0 _vw(12px);
+        }
+    }
+
+    &__sessions {
+        border-top: 4px solid $color-black;
+        @include respond-to-width($max-width: $max-var) {
+            border-top: _vw(4px) solid $color-black;
+        }
+    }
+}
+
+.session {
+    > td {
+        vertical-align: top;
+
+        padding-top: 24px;
+        border-top: 2px solid $color-black;
+        @include respond-to-width($max-width: $max-var) {
+            padding-top: _vw(24px);
+            border-top: _vw(2px) solid $color-black;
+        }
+
+    }
+
+    &:first-child {
+        > td {
+            padding-top: 42px;
+            @include respond-to-width($max-width: $max-var) {
+                padding-top: _vw(42px);
+            }
+        }
+    }
+
+    &__slot {
+        font-weight: bold;
+
+        width: 266px;
+        @include respond-to-width($max-width: $max-var) {
+            width: _vw(266px);
+        }
+    }
+
+    &__title {
+        margin: 0;
+    }
+
+    &__summary {
+        line-height: 1.4;
+
+        margin: 20px 0 60px;
+        padding-right: 60px;
+        font-size: 36px;
+        @include respond-to-width($max-width: $max-var) {
+            margin: _vw(20px) 0 _vw(48px);
+            padding-right: _vw(60px);
+            font-size: _vw(36px);
+        }
+    }
+
+    &__speaker {
+        width: 270px;
+        @include respond-to-width($max-width: $max-var) {
+            width: _vw(270px);
+        }
+    }
+
+    &__speaker-name,
+    &__speaker-extras {
+        display: block;
+        font-weight: bold;
+
+        margin-bottom: 16px;
+        @include respond-to-width($max-width: $max-var) {
+            margin-bottom: _vw(16px);
+        }
+    }
+
+    &__speaker-link {
+        display: inline;
+
+        font-size: 36px;
+        @include respond-to-width($max-width: $max-var) {
+            font-size: _vw(36px);
+        }
     }
 }
