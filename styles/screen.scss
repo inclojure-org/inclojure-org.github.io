@@ -459,6 +459,15 @@ body {
         }
     }
 
+    &--special {
+        .session__title {
+            margin-bottom: 60px;
+            @include respond-to-width($max-width: $max-var) {
+                margin-bottom: _vw(60px);
+            }
+        }
+    }
+
     &__slot {
         font-weight: bold;
 
@@ -479,7 +488,7 @@ body {
         padding-right: 60px;
         font-size: 36px;
         @include respond-to-width($max-width: $max-var) {
-            margin: _vw(20px) 0 _vw(48px);
+            margin: _vw(20px) 0 _vw(60px);
             padding-right: _vw(60px);
             font-size: _vw(36px);
         }
