@@ -23,8 +23,8 @@ $color-tape       : rgba($color-black, 0.85);
 $color-pure-white : #ffffff;
 
 $base          : 32px;
-$content-max   : 1440px;
-$max-var       : 1280px;
+$content-max   : 1440px * 1.333;
+$max-var       : 1440px;
 
 
 @function strip-unit($number) {
@@ -39,11 +39,17 @@ $max-var       : 1280px;
     @return (strip-unit($measure)/strip-unit($content-max))*100vw;
 }
 
+@mixin vw-fix {
+    @include respond-to-width($max-width: $max-var) {
+        @content;
+    }
+}
+
 @mixin content-wrapper() {
     margin: 0 auto;
     padding: 0 $base*2;
-    max-width: $max-var;
-    @include respond-to-width($max-width: $max-var) {
+    max-width: 1000px;
+    @include vw-fix {
         padding: 0 _vw($base*2);
     }
 
@@ -75,12 +81,12 @@ $max-var       : 1280px;
 
 .tape {
     padding: 0 $base*1.3;
-    @include respond-to-width($max-width: $max-var) {
+    @include vw-fix {
         padding: 0 _vw($base*1.3);
     }
 
     font-size: 64px;
-    @include respond-to-width($max-width: $max-var) {
+    @include vw-fix {
         font-size: _vw(64px);
     }
 
@@ -93,22 +99,22 @@ $max-var       : 1280px;
     position: relative;
 
     margin-left: 12px;
-    @include respond-to-width($max-width: $max-var) {
+    @include vw-fix {
         margin-left: _vw(12px);
     }
 
     margin-right: $base;
-    @include respond-to-width($max-width: $max-var) {
+    @include vw-fix {
         margin-right: _vw($base);
     }
 
     padding: 0 $base*1.3;
-    @include respond-to-width($max-width: $max-var) {
+    @include vw-fix {
         padding: 0 _vw($base*1.3);
     }
 
     font-size: 60px;
-    @include respond-to-width($max-width: $max-var) {
+    @include vw-fix {
         font-size: _vw(60px);
     }
 
@@ -128,12 +134,12 @@ $max-var       : 1280px;
         left: 0;
 
         top: -12px;
-        @include respond-to-width($max-width: $max-var) {
+        @include vw-fix {
             top: _vw(-12px);
         }
 
         height: 12px;
-        @include respond-to-width($max-width: $max-var) {
+        @include vw-fix {
             height: _vw(12px);
         }
 
@@ -148,12 +154,12 @@ $max-var       : 1280px;
         top: 0;
 
         left: -12px;
-        @include respond-to-width($max-width: $max-var) {
+        @include vw-fix {
             left: _vw(-12px);
         }
 
         width: 12px;
-        @include respond-to-width($max-width: $max-var) {
+        @include vw-fix {
             width: _vw(12px);
         }
 
@@ -194,7 +200,7 @@ body {
     }
 
     margin-bottom: $base;
-    @include respond-to-width($max-width: $max-var) {
+    @include vw-fix {
         margin-bottom: _vw($base);
     }
 
@@ -212,19 +218,19 @@ body {
         background: $color-tape;
 
         padding: $base*1.6 $base*1.4 $base*1.1;
-        @include respond-to-width($max-width: $max-var) {
+        @include vw-fix {
             padding: _vw($base*1.6) _vw($base*1.4) _vw($base*1.1);
         }
 
         margin-bottom: $base;
-        @include respond-to-width($max-width: $max-var) {
+        @include vw-fix {
             margin-bottom: _vw($base);
         }
     }
 
     &__logo {
         width: 633px;
-        @include respond-to-width($max-width: $max-var) {
+        @include vw-fix {
             width: _vw(633);
         }
 
@@ -233,7 +239,7 @@ body {
 
     &__info {
         margin: 0 0 $base*2;
-        @include respond-to-width($max-width: $max-var) {
+        @include vw-fix {
             margin: 0 0 _vw($base*2);
         }
 
@@ -244,7 +250,7 @@ body {
 
 .section {
     margin-bottom: $base*3;
-    @include respond-to-width($max-width: $max-var) {
+    @include vw-fix {
         margin-bottom: _vw($base*3);
     }
 
@@ -255,7 +261,7 @@ body {
         cursor: pointer;
 
         border-bottom: 2px solid rgba($color-black, 0.2);
-        @include respond-to-width($max-width: $max-var) {
+        @include vw-fix {
             border-bottom-width: _vw(2px);
         }
 
@@ -275,12 +281,12 @@ body {
 
     &__title {
         font-size: 86px;
-        @include respond-to-width($max-width: $max-var) {
+        @include vw-fix {
             font-size: _vw(86px);
         }
 
         margin: $base*2 0 0;
-        @include respond-to-width($max-width: $max-var) {
+        @include vw-fix {
             margin: _vw($base*2) 0 0;
         }
 
@@ -289,14 +295,14 @@ body {
 
     &__content {
         font-size: 43px;
-        @include respond-to-width($max-width: $max-var) {
+        @include vw-fix {
             font-size: _vw(43px);
         }
 
         line-height: 1.4;
 
         margin-top: $base;
-        @include respond-to-width($max-width: $max-var) {
+        @include vw-fix {
             margin-top: _vw($base);
         }
     }
@@ -310,21 +316,21 @@ body {
 
 .spc {
     margin-bottom: $base*3;
-    @include respond-to-width($max-width: $max-var) {
+    @include vw-fix {
         margin-bottom: _vw($base*3);
     }
 }
 
 .spc-class {
     margin: $base 0;
-    @include respond-to-width($max-width: $max-var) {
+    @include vw-fix {
         margin: _vw($base) 0;
     }
 
     font-weight: bold;
 
     font-size: 43px;
-    @include respond-to-width($max-width: $max-var) {
+    @include vw-fix {
         font-size: _vw(43px);
     }
 
@@ -351,7 +357,7 @@ body {
     background: $color-black;
 
     padding-bottom: $base*2;
-    @include respond-to-width($max-width: $max-var) {
+    @include vw-fix {
         padding-bottom: _vw($base*2);
     }
 
@@ -364,7 +370,7 @@ body {
         flex-flow: row wrap;
 
         margin-bottom: $base*3;
-        @include respond-to-width($max-width: $max-var) {
+        @include vw-fix {
             margin-bottom: _vw($base*3);
         }
     }
@@ -375,7 +381,7 @@ body {
         font-family: $font-bold;
 
         font-size: 86px;
-        @include respond-to-width($max-width: $max-var) {
+        @include vw-fix {
             font-size: _vw(86px);
         }
 
@@ -384,7 +390,7 @@ body {
         flex-basis: 50%;
 
         margin-top: $base*2.8;
-        @include respond-to-width($max-width: $max-var) {
+        @include vw-fix {
             margin-top: _vw($base*2.8);
         }
 
@@ -399,7 +405,7 @@ body {
         font-family: $font-bold;
 
         font-size: 33px;
-        @include respond-to-width($max-width: $max-var) {
+        @include vw-fix {
             font-size: _vw(33px);
         }
 
@@ -413,7 +419,7 @@ body {
     border-collapse: collapse;
 
     border-top: 12px solid $color-black;
-    @include respond-to-width($max-width: $max-var) {
+    @include vw-fix {
         border-top: _vw(12px) solid $color-black;
     }
 
@@ -424,14 +430,14 @@ body {
         }
 
         padding: 16px 0 12px;
-        @include respond-to-width($max-width: $max-var) {
+        @include vw-fix {
             padding: _vw(16px) 0 _vw(12px);
         }
     }
 
     &__sessions {
         border-top: 4px solid $color-black;
-        @include respond-to-width($max-width: $max-var) {
+        @include vw-fix {
             border-top: _vw(4px) solid $color-black;
         }
     }
@@ -443,7 +449,7 @@ body {
 
         padding-top: 24px;
         border-top: 2px solid $color-black;
-        @include respond-to-width($max-width: $max-var) {
+        @include vw-fix {
             padding-top: _vw(24px);
             border-top: _vw(2px) solid $color-black;
         }
@@ -453,7 +459,7 @@ body {
     &:first-child {
         > td {
             padding-top: 42px;
-            @include respond-to-width($max-width: $max-var) {
+            @include vw-fix {
                 padding-top: _vw(42px);
             }
         }
@@ -462,7 +468,7 @@ body {
     &--special {
         .session__title {
             margin-bottom: 60px;
-            @include respond-to-width($max-width: $max-var) {
+            @include vw-fix {
                 margin-bottom: _vw(60px);
             }
         }
@@ -472,23 +478,26 @@ body {
         font-weight: bold;
 
         width: 266px;
-        @include respond-to-width($max-width: $max-var) {
+        @include vw-fix {
             width: _vw(266px);
         }
     }
 
     &__title {
-        margin: 0;
+        margin: 0 40px 0;
+        @include vw-fix {
+            margin: 0 _vw(40px) 0;
+        }
     }
 
     &__summary {
         line-height: 1.4;
 
-        margin: 20px 0 60px;
+        margin: 20px 40px 60px;
         padding-right: 60px;
         font-size: 36px;
-        @include respond-to-width($max-width: $max-var) {
-            margin: _vw(20px) 0 _vw(60px);
+        @include vw-fix {
+            margin: _vw(20px) _vw(40px) _vw(60px);
             padding-right: _vw(60px);
             font-size: _vw(36px);
         }
@@ -496,7 +505,7 @@ body {
 
     &__speaker {
         width: 270px;
-        @include respond-to-width($max-width: $max-var) {
+        @include vw-fix {
             width: _vw(270px);
         }
     }
@@ -507,16 +516,16 @@ body {
         font-weight: bold;
 
         margin-bottom: 16px;
-        @include respond-to-width($max-width: $max-var) {
+        @include vw-fix {
             margin-bottom: _vw(16px);
         }
     }
 
-    &__speaker-link {
+    .session__speaker-link {
         display: inline;
 
         font-size: 36px;
-        @include respond-to-width($max-width: $max-var) {
+        @include vw-fix {
             font-size: _vw(36px);
         }
     }
