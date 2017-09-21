@@ -562,7 +562,7 @@ body {
 .header {
   padding: 112px 0 64px;
   margin-bottom: 32px;
-  background: transparent url("/static/images/bg-pune.jpg") no-repeat 0 0;
+  background: transparent url("../images/bg-pune.jpg") no-repeat 0 0;
   background-size: cover;
   background-position: 50% 50%;
 }
