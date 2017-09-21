@@ -1,0 +1,58 @@
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+html,
+body {
+  background: #f1f1f1;
+  font-family: "Arimo", sans-serif;
+}
+
+.header {
+  width: 100%;
+  font-size: 3em;
+  text-align: center;
+  background: #333;
+  color: white;
+}
+
+.unstyled-list {
+  list-style: none;
+}
+
+.content, .footer {
+  margin: 0 auto;
+  padding: 0 64px;
+  max-width: 1000px;
+}
+
+.footer-links {
+  text-align: center;
+}
+
+.footer-link {
+  border: 1px solid #aaa;
+  margin: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media only screen and (max-width: 1440px) {
+  .content {
+    padding: 0 3.33417vw;
+  }
+}
