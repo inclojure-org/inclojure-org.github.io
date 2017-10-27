@@ -75,6 +75,17 @@ body {
     font-weight: bold;
 }
 
+.schedule-table {
+    width: 100%;
+    border: 1px solid;
+    padding: 10px;
+}
+
+.schedule-table thead th {
+    border-bottom: 1px solid;
+    font-family: 'Alegreya Sans SC', sans-serif;
+}
+
 .footer {
     height: 100px;
     background-position: bottom;
@@ -87,6 +98,10 @@ body {
 .footer .nav-link {
     background-color: rgba(0,0,0,1);
     color: white;
+}
+
+.contact-map iframe {
+    width: 100%;
 }
 
 /* Smartphones (portrait and landscape) ----------- */
@@ -111,5 +126,24 @@ body {
 
     .header-content {
 	margin: 0;
+    }
+
+    .contact-map iframe {
+	width: 80%;
+    }
+
+    .schedule-table td {
+	text-align: left;
+	max-width: 40%;
+	font-size: 20px;
+    }
+
+    .schedule-table {
+	width: 80%;
+    }
+
+    .schedule-table tr td:nth-child(3),
+    .schedule-table tr th:nth-child(3) {
+	display: none;
     }
 }
