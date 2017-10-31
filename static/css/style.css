@@ -25,7 +25,7 @@ body {
 
 .nav-links {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -34,7 +34,7 @@ body {
     font-family: 'Alegreya Sans SC', sans-serif;
     margin: 0 10px 10px 0;
     color: black;
-    padding: 10px 20px;
+    padding: 10px 30px;
     background: rgba(0,0,0,0.1);
     text-align: center;
     text-decoration: none;
@@ -85,6 +85,35 @@ body {
 
 .contact-map iframe {
     width: 100%;
+}
+
+.speakers .section__content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.speaker-img {
+    width: 30%;
+    min-width: 180px;
+    border: 1px solid;
+}
+
+.speaker {
+    display: flex;
+    align-items: center;
+}
+
+.speaker-about {
+    margin-left: 4%;
+    max-width: 50%;
+    text-align: left;
+}
+
+.speaker-name {
+    font-weight: bold;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 32px;
+    margin: 0;
 }
 
 /* Smartphones (portrait and landscape) ----------- */
