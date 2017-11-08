@@ -116,6 +116,36 @@ body {
     margin: 0;
 }
 
+.sponsors {
+    text-align: center;
+    margin-bottom: 5%;
+    border-bottom: 1px dotted;
+}
+
+.sponsors-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.sponsor-slab {
+    font-weight: bold;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 32px;
+}
+
+.platinum .sponsor {
+    width: 80%;
+}
+
+.gold .sponsor {
+    width: 40%;
+}
+
+.sponsor-logo {
+    width: 100%;
+}
+
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (max-width : 520px) {
     body {
