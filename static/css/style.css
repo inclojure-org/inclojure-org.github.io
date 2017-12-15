@@ -266,4 +266,22 @@ aside.right {
     .schedule-table tr th:nth-child(1) {
 	width: 30%;
     }
+
+    .speaker-and-talk {
+	flex-direction: column;
+	margin: 20px 0;
+    }
+
+    aside.left {
+	width: initial;
+    }
+
+    aside.right {
+	margin-top: 2%;
+    }
+
+    .talk-title {
+	text-align: center;
+    }
+
 }
