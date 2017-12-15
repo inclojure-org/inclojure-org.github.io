@@ -1,7 +1,7 @@
 body {
     /* font-family: 'Inconsolata', monospace; */
     font-family: 'Alegreya Sans', sans-serif;
-    font-size: 24px;
+    font-size: 20px;
     margin: 0;
     text-align: justify;
 }
@@ -117,19 +117,25 @@ iframe {
 
 .speakers .section__content {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.speaker:nth-child(odd) {
+    margin-right: 5%;
 }
 
 .speaker-img {
     width: 30%;
     min-width: 180px;
-    border: 1px solid;
+    border: 1px solid #aaa;
 }
 
 .speaker {
     display: flex;
     align-items: center;
-    width: 50%;
+    width: 47%;
+    margin: 3% 0;
 }
 
 .speaker-about {
@@ -137,12 +143,28 @@ iframe {
     text-align: left;
 }
 
-.speaker-name {
+.speaker-name, .talk-title {
     font-weight: bold;
     font-family: 'Alegreya Sans SC', sans-serif;
-    font-size: 32px;
+    font-size: 24px;
     margin: 0;
 }
+
+.speaker-and-talk {
+    display: flex;
+    align-items: center;
+}
+
+aside.left {
+    margin-right: 5%;
+    text-align: center;
+    width: 20%;
+}
+
+
+aside.right {
+}
+
 
 .sponsors {
     text-align: center;
