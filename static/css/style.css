@@ -25,17 +25,18 @@ body {
 
 .section.header {
     background-color: initial;
+    text-align: center;
 }
 
 .header-logo {
-    width: 100%;
+    width: 66%;
     margin-top: 4%;
-    display: block;
+    display: inline-block;
 }
 
 .date-and-venue {
     text-align: center;
-    font-size: 36px;
+    font-size: 28px;
     font-weight: 600;
 }
 
@@ -46,7 +47,7 @@ body {
 }
 
 .nav-link {
-    font-size: 24px;
+    font-size: 18px;
     font-family: 'Alegreya Sans SC', sans-serif;
     margin: 0 10px 10px 0;
     color: black;
@@ -68,6 +69,8 @@ body {
 
 .schedule-table {
     width: 100%;
+    word-wrap: break-word;
+    word-break: break-word;
 }
 
 .schedule-table td, .schedule-table th {
@@ -224,10 +227,6 @@ aside.right {
 	margin: 10px 0 0;
     }
 
-    .header {
-	height: 300px;
-    }
-
     .footer {
 	height: 200px;
     }
@@ -251,7 +250,7 @@ aside.right {
 
     .schedule-table td {
     	max-width: 40%;
-    	font-size: 20px;
+    	font-size: 16px;
     }
 
     .schedule-table tr td:nth-child(4),
@@ -264,7 +263,15 @@ aside.right {
 
     .schedule-table tr td:nth-child(1),
     .schedule-table tr th:nth-child(1) {
-	width: 30%;
+	width: 25%;
+    }
+
+    .td-time {
+	min-width: initial;
+    }
+
+    .td-speaker {
+	min-width: 90px;
     }
 
     .speaker-and-talk {
@@ -283,5 +290,4 @@ aside.right {
     .talk-title {
 	text-align: center;
     }
-
 }
