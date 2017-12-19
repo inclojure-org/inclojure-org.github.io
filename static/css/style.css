@@ -176,34 +176,34 @@ aside.right {
 }
 
 
-.sponsors {
+.benefactors {
     text-align: center;
     margin-bottom: 5%;
     border-bottom: 1px dotted;
 }
 
-.sponsors-list {
+.benefactors-list {
     list-style-type: none;
     display: flex;
     justify-content: space-around;
     padding: 0;
 }
 
-.sponsor-slab {
+.benefactor-slab {
     font-weight: bold;
     font-family: 'Alegreya Sans SC', sans-serif;
     font-size: 32px;
 }
 
-.platinum .sponsor {
+.platinum .benefactor {
     width: 80%;
 }
 
-.gold .sponsor {
+.gold .benefactor {
     width: 40%;
 }
 
-.sponsor-logo {
+.benefactor-logo {
     width: 100%;
 }
 
