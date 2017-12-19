@@ -218,6 +218,30 @@ aside.right {
     margin: 5px;
 }
 
+.conductors {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.conductor {
+    display: flex;
+    margin-right: 5%;
+    width: 45%;
+    margin-bottom: 5%;
+}
+
+.conductor-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.conductor-img {
+    width: 20%;
+    height: 100%;
+    margin-right: 5%;
+}
+
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (max-width : 520px) {
 
