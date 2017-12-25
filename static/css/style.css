@@ -196,11 +196,15 @@ aside.right {
 }
 
 .platinum .benefactor {
-    width: 80%;
+    width: 60%;
 }
 
 .gold .benefactor {
     width: 40%;
+}
+
+.silver .benefactor {
+    width: 30%;
 }
 
 .benefactor-logo {
