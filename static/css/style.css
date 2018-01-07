@@ -85,6 +85,21 @@ body {
     padding: 8px;
 }
 
+.schedule-table tr td:nth-child(3),
+.schedule-table tr th:nth-child(3) {
+    width: 20%;
+}
+
+.schedule-table tr td:nth-child(4),
+.schedule-table tr th:nth-child(4) {
+    width: 10%;
+}
+
+.schedule-table tr td:nth-child(5),
+.schedule-table tr th:nth-child(5) {
+    width: 15%;
+}
+
 .schedule-table thead th {
     border-bottom: 1px solid;
     font-family: 'Alegreya Sans SC', sans-serif;
