@@ -266,6 +266,23 @@ aside.right {
     margin-right: 5%;
 }
 
+.benefactor-h {
+    text-align: center;
+}
+
+
+.section.benefactor-h {
+    padding: 3% 30%;
+}
+
+.benefactor-h .benefactor-logo {
+    width: 50%;
+}
+
+.benefactor-h-blurb {
+    text-align: left;
+}
+
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (max-width : 520px) {
 
