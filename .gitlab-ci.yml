@@ -1,0 +1,13 @@
+image: alpine:latest
+
+pages:
+  stage: deploy
+  script:
+    - echo 'Copying artifacts to public/'
+    - mv index.html static/ public/
+    - echo 'Done.'
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
