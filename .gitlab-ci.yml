@@ -4,7 +4,7 @@ pages:
   stage: deploy
   script:
     - echo 'Copying artifacts to public/'
-    - mv index.html static/ public/
+    - mv *.html static/ public/
     - echo 'Done.'
   artifacts:
     paths:
