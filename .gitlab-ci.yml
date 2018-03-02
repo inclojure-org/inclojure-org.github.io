@@ -3,9 +3,9 @@ image: alpine:latest
 pages:
   stage: deploy
   script:
-    - echo 'Copying artifacts to public/'
-    - mv *.html static/ public/
-    - echo 'Done.'
+    - mkdir .public
+    - cp -r .* .public
+    - mv .public public/
   artifacts:
     paths:
     - public
