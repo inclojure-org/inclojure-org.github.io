@@ -5,8 +5,8 @@ pages:
   script:
     - mkdir public
     - cp *.html public/
-    - cp static public/
-    - cp .well-known public/
+    - cp -r static public/
+    - cp -r .well-known public/
   artifacts:
     paths:
     - public
