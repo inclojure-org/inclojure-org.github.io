@@ -34,6 +34,12 @@
 
     <!-- HTTPS for search engines -->
     <link rel="canonical" href="https://inclojure.org/sponsors.html" />
+    <script>
+     var host = "inclojure.org";
+     if ((host == window.location.host) && (window.location.protocol != 'https:')) {
+       window.location = window.location.toString().replace(/^http:/, "https:");
+     }
+    </script>
   </head>
 
   <body>
