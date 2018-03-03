@@ -4,7 +4,9 @@ pages:
   stage: deploy
   script:
     - mkdir public
-    - cp *.html static .well-known public/
+    - cp *.html public/
+    - cp static public/
+    - cp .well-known public/
   artifacts:
     paths:
     - public
