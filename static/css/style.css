@@ -13,11 +13,11 @@ body {
 }
 
 .section {
-    padding: 0% 15% 3%;
+    padding: 0% 20% 1%;
 }
 
 .section + .section {
-    padding: 3% 15%;
+    padding: 1% 20%;
 }
 
 .section .section__content {
