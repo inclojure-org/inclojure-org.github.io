@@ -1,0 +1,376 @@
+body {
+    /* font-family: 'Inconsolata', monospace; */
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 20px;
+    line-height: 1.3;
+    margin: 0;
+    text-align: justify;
+}
+
+.content {
+    margin: 1% 0%;
+    /* max-width: 1200px; */
+}
+
+.section {
+    padding: 0% 20% 1%;
+}
+
+.section + .section {
+    padding: 1% 20%;
+}
+
+.section .section__content {
+    line-height: 1.5;
+}
+
+.section:nth-child(odd) {
+    background-color: #f5f5f5;
+}
+
+.section.header {
+    background-color: initial;
+    text-align: center;
+}
+
+.header-logo {
+    width: 66%;
+    margin-top: 4%;
+    display: inline-block;
+}
+
+.date-and-venue {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    font-size: 18px;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    margin: 0 10px 10px 0;
+    color: black;
+    padding: 10px 30px;
+    /* background: rgba(145, 181, 251, 0.4); */
+    background: rgba(0,0,0,0.1);
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    background: rgba(0,0,0,0.2);
+}
+
+.section-title {
+    font-size: 36px;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-weight: bold;
+    /* color: #5b9b35; */
+}
+
+.schedule-table {
+    width: 100%;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.schedule-table td, .schedule-table th {
+    text-align: left;
+    padding: 8px;
+}
+
+.schedule-table tr td:nth-child(3),
+.schedule-table tr th:nth-child(3) {
+    width: 20%;
+}
+
+.schedule-table tr td:nth-child(4),
+.schedule-table tr th:nth-child(4) {
+    width: 10%;
+}
+
+.schedule-table tr td:nth-child(5),
+.schedule-table tr th:nth-child(5) {
+    width: 15%;
+}
+
+.schedule-table thead th {
+    border-bottom: 1px solid;
+    font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+.td-time {
+    min-width: 100px;
+}
+
+.td-event {
+    max-width: 30%;
+}
+
+.td-event a {
+    color: cornflowerblue;
+    text-decoration: none;
+}
+
+.non-talk td {
+    background: #eee;
+    color: green;
+}
+
+.footer {
+    height: 100px;
+    background-position: bottom;
+}
+
+.section + .footer.section {
+    padding-bottom: 0;
+}
+
+.footer-content {
+    margin: 0 15%;
+}
+
+.footer .nav-link {
+    background-color: rgba(0,0,0,1);
+    color: white;
+}
+
+iframe {
+    width: 100%;
+}
+
+.speakers .section__content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.speaker:nth-child(odd) {
+    margin-right: 5%;
+}
+
+.speaker-img {
+    width: 30%;
+    min-width: 180px;
+    border: 1px solid #aaa;
+}
+
+.speaker {
+    display: flex;
+    align-items: center;
+    width: 47%;
+    margin: 3% 0;
+}
+
+.speaker-about {
+    margin-left: 4%;
+    text-align: left;
+}
+
+.speaker-name, .talk-title {
+    font-weight: bold;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 24px;
+    margin: 0;
+}
+
+.speaker-and-talk {
+    display: flex;
+    align-items: center;
+}
+
+aside.left {
+    margin-right: 5%;
+    text-align: center;
+    width: 20%;
+}
+
+
+aside.right {
+}
+
+
+.benefactors {
+    text-align: center;
+    margin-bottom: 5%;
+    border-bottom: 1px dotted;
+}
+
+.benefactors-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.benefactor-slab {
+    font-weight: bold;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 32px;
+}
+
+.platinum .benefactor {
+    width: 60%;
+}
+
+.gold .benefactor {
+    width: 40%;
+}
+
+.silver .benefactor {
+    width: 30%;
+}
+
+.benefactor-logo {
+    width: 100%;
+}
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    display: inline-block;
+    width: 20%;
+    margin: 5px;
+}
+
+.conductors {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.conductor {
+    display: flex;
+    margin-right: 5%;
+    width: 45%;
+    margin-bottom: 5%;
+}
+
+.conductor-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.conductor-img {
+    width: 20%;
+    height: 100%;
+    margin-right: 5%;
+}
+
+.benefactor-h {
+    text-align: center;
+}
+
+
+.section.benefactor-h {
+    padding: 3% 20%;
+}
+
+.benefactor-h .benefactor-logo {
+    width: 50%;
+}
+
+.benefactor-h-blurb {
+    text-align: left;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (max-width : 520px) {
+
+    body            {font-size: 18px;}
+    .date-and-venue {font-size: 24px;}
+    .nav-link       {font-size: 18px;}
+    .section-title  {font-size: 24px;}
+    .speaker-name   {font-size: 18px;}
+
+    body {
+	text-align: left;
+    }
+
+    .content {
+	margin: 1% 0%;
+	max-width: initial;
+    }
+
+    .section, .section + .section {
+	padding: 3%;
+    }
+
+    .nav-link {
+	width: 100%;
+	margin: 10px 0 0;
+    }
+
+    .footer {
+	height: 200px;
+    }
+
+    .header-content {
+	margin: 0;
+    }
+
+    .speakers .section__content {
+	flex-direction: column;
+    }
+
+    .speaker {
+	margin: 0 0 4%;
+	width: initial;
+    }
+
+    .speaker-img {
+	min-width: 160px;
+    }
+
+    .schedule-table td {
+    	max-width: 40%;
+    	font-size: 16px;
+    }
+
+    .schedule-table tr td:nth-child(4),
+    .schedule-table tr th:nth-child(4),
+    .schedule-table tr td:nth-child(5),
+    .schedule-table tr th:nth-child(5)
+    {
+	display: none;
+    }
+
+    .schedule-table tr td:nth-child(1),
+    .schedule-table tr th:nth-child(1) {
+	width: 25%;
+    }
+
+    .td-time {
+	min-width: initial;
+    }
+
+    .td-speaker {
+	min-width: 90px;
+    }
+
+    .speaker-and-talk {
+	flex-direction: column;
+	margin: 20px 0;
+    }
+
+    aside.left {
+	width: initial;
+    }
+
+    aside.right {
+	margin-top: 2%;
+    }
+
+    .talk-title {
+	text-align: center;
+    }
+}

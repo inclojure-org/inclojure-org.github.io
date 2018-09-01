@@ -7,3 +7,9 @@ npm-debug.log
 /node_modules
 /gtd.org
 /package-lock.json
+
+target
+system.properties
+.lein-env
+env/
+figwheel_server.log
