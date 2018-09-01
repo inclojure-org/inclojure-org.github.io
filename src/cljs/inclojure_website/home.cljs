@@ -17,7 +17,7 @@
   [layout/section "sponsorship" "Sponsorship"
    [:p
     "Details will be up soon. Sponsorship details are available as a prospectus "
-    [:a {:href "pdf/inclojure-sponsorship.pdf",:target "_blank"} "here"]
+    [:a {:href (layout/resource-link "pdf/inclojure-sponsorship.pdf") :target "_blank"} "here"]
     "."]])
 
 (defn code-of-conduct []
@@ -29,14 +29,14 @@
     [:p "Conference participants violating these rules may be sanctioned or expelled from the conference without a refund at the discretion  of the conference organisers."]]])
 
 (def members
-  [{:name "Aditya Athalye"     :twitter "http ://twitter.com/adityaathalye"}
-   {:name "Deepa Venkatraman"  :twitter "http ://twitter.com/deepa_v"}
-   {:name "Kiran Gangadharan"  :twitter "http ://twitter.com/kirang89"}
-   {:name "Shantanu Kumar"     :twitter "http ://twitter.com/kumarshantanu"}
-   {:name "Mohit Thatte"       :twitter "http ://twitter.com/mohitthatte"}
-   {:name "Ravindra Jaju"      :twitter "http ://twitter.com/jaju "}
-   {:name "Sandilya Jandhyala" :twitter "http ://twitter.com/jysandilya"}
-   {:name "Srihari Sriraman"   :twitter "http ://twitter.com/sriharisriraman"}])
+  [{:name "Aditya Athalye"     :twitter-link "http://twitter.com/adityaathalye"}
+   {:name "Deepa Venkatraman"  :twitter-link "http://twitter.com/deepa_v"}
+   {:name "Kiran Gangadharan"  :twitter-link "http://twitter.com/kirang89"}
+   {:name "Shantanu Kumar"     :twitter-link "http://twitter.com/kumarshantanu"}
+   {:name "Mohit Thatte"       :twitter-link "http://twitter.com/mohitthatte"}
+   {:name "Ravindra Jaju"      :twitter-link "http://twitter.com/jaju "}
+   {:name "Sandilya Jandhyala" :twitter-link "http://twitter.com/jysandilya"}
+   {:name "Srihari Sriraman"   :twitter-link "http://twitter.com/sriharisriraman"}])
 
 (defn team-member [twitter-link name]
   [:a.team-member
@@ -46,9 +46,9 @@
 (defn team []
   [layout/section "team" "Team"
    [:div.team-members
-    (for [{:keys [twitter name]} members]
+    (for [{:keys [twitter-link name]} members]
       ^{:key (str (random-uuid))}
-      [team-member twitter name])]])
+      [team-member twitter-link name])]])
 
 (defn page []
   [layout/page
