@@ -4,7 +4,7 @@
 (defn intro []
   [:div.section
    [:p.section__content
-    "IN/Clojure is India's annual Clojure conference. It is alsothe only Clojure conference in all of Asia. IN/Clojure’sprimary focus is the free exchange of ideas between new andexperienced Clojure programmers alike. IN/Clojure 2019 isthe third edition of Asia's very first Clojure conference,and is scheduled to be held in "
+    "IN/Clojure is India's annual Clojure conference. It is also the only Clojure conference in all of Asia. IN/Clojure’s primary focus is the free exchange of ideas between new and experienced Clojure programmers alike. IN/Clojure 2019 is the third edition of Asia's very first Clojure conference, and is scheduled to be held in "
     [:strong "Bengaluru, India in January,  2019."]]])
 
 (defn cfp []
