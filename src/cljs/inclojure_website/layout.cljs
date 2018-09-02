@@ -29,8 +29,8 @@
 
 (defn navigation []
   [:div.section.nav-links
-   [nav-link "cfp" "CFP"]
    [nav-link "sponsorship" "Sponsors"]
+   [nav-link "cfp" "CFP"]
    [nav-link "conduct" "Code of Conduct"]
    [nav-link "team" "Team"]] )
 

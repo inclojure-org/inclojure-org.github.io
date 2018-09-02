@@ -10,8 +10,35 @@
 (defn cfp []
   [layout/section "cfp" "Call for Proposals"
    [:div
-    [:p "IN/Clojure's Call For Proposals will open soon."]
-    [:p "We’re looking for submissions on a wide range of topics. Done something cool with Clojure lately? Maybe you learnt Clojure on weekends and built a small game in ClojureScript? We want to hear from you! You can submit a talk regardless of your experience level with Clojure; all perspectives matter."]]])
+    [:p "The CFP is now open! Go to "
+     [:a {:href "https://www.papercall.io/inclojure-2019"
+          :target "_blank"}
+      "papercall "]
+     "to submit yours."]
+    [:h4 "Why propose a talk?"]
+    [:p "The first two editions of the conference have served as a platform to kickstart a series of Clojure workshops and meet-ups across the country. It has also helped attendees make a strong case for Clojure, and Clojurescript adoption in their companies. We believe that this edition of the conference, like previous editions will foster the growing Clojure community in Asia."]
+    [:p "A talk at IN/Clojure is an avenue for sharing ideas, experiences, and knowledge, with the Clojure community at large. It is an opportunity to bring the community together on interesting problems, or technical challenges, to showcase your work, or to contribute to a worthy cause."]
+    [:h4 "What to propose?"]
+    [:p
+     [:ul
+      [:li "Done something cool with Clojure lately? We want to hear from you!"]
+      [:li "Maybe you learnt Clojure on weekends and built a small game in ClojureScript? Write in!"]
+      [:li "Maybe you re-wrote your old java, or go-lang application into Clojure. We want to hear about it."]
+      [:li "Maybe you taught Clojure to your friends, and there were some interesting aha! moments you want to talk about? Write in!"]
+      [:li "If you built a wrapper library, a terminal game, a scraper spider, a crud generator, a tflops number cruncher, a distributed messaging platform, or a deep learning thingamajig, yes, you should should submit a talk!"]]
+     "You can submit a talk regardless of your experience level with Clojure; all perspectives matter."
+
+     "We’re looking for submissions on a wide range of topics."
+     [:ul
+      [:li "Full Talks will be 40 mins long - including 5 mins of Q & A."]
+      [:li "Crisp Talks will be 20 mins long - including 5 mins of Q & A."]]]
+
+    [:h4 "Speaker reimbursements"]
+    [:p "We will reimburse economy-class travel costs for speakers:"]
+    [:ul
+     [:li "For international travel - up to INR 80K (approx. USD 1200)"]
+     [:li "For domestic travel - up to INR 15K"]]
+    [:p "Apart from the travel, we will also provide up to 2 nights of stay to speakers whose submissions are accepted."]]])
 
 (defn sponsorship []
   [layout/section "sponsorship" "Sponsorship"
@@ -63,7 +90,7 @@
       " Bengaluru, India"]]
     [layout/navigation]
     [intro]
-    [cfp]
     [sponsorship]
+    [cfp]
     [code-of-conduct]
     [team]]])
