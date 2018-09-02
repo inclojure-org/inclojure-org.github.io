@@ -16,8 +16,8 @@
       "papercall "]
      "to submit yours."]
     [:h4 "Why propose a talk?"]
-    [:p "The first two editions of the conference have served as a platform to kickstart a series of Clojure workshops and meet-ups across the country. It has also helped attendees make a strong case for Clojure, and Clojurescript adoption in their companies. We believe that this edition of the conference, like previous editions will foster the growing Clojure community in Asia."]
-    [:p "A talk at IN/Clojure is an avenue for sharing ideas, experiences, and knowledge, with the Clojure community at large. It is an opportunity to bring the community together on interesting problems, or technical challenges, to showcase your work, or to contribute to a worthy cause."]
+    [:p "The first two editions of the conference have served as a platform to kickstart a series of Clojure workshops and meet-ups across the country. It has also helped attendees make a strong case for Clojure, and Clojurescript adoption in their companies. We believe that this edition of the conference, like previous editions, will foster the growing Clojure community in Asia."]
+    [:p "A talk at IN/Clojure is an avenue for sharing ideas, experiences, and knowledge with the Clojure community at large. It is an opportunity to bring the community together on interesting problems, and technical challenges, to showcase your work, and to contribute to a worthy cause."]
     [:h4 "What to propose?"]
     [:p
      [:ul
