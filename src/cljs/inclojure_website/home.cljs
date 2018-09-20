@@ -10,8 +10,8 @@
 (defn cfp []
   [layout/section "cfp" "Call for Proposals"
    [:div
-    [:p "The CFP is now open! Go to "
-     [:a {:href "https://www.papercall.io/inclojure-2019"
+    [:p "The CFP is now live! Go to "
+     [:a {:href "https://www.papercall.io/cfps/1407/submissions/new"
           :target "_blank"}
       "papercall "]
      "to submit yours."]
@@ -36,14 +36,14 @@
     [:h4 "Speaker reimbursements"]
     [:p "We will reimburse economy-class travel costs for speakers:"]
     [:ul
-     [:li "For international travel - up to INR 80K (approx. USD 1200)"]
+     [:li "For international travel - up to INR 80K (approx. USD 1100)"]
      [:li "For domestic travel - up to INR 15K"]]
     [:p "Apart from the travel, we will also provide up to 2 nights of stay to speakers whose submissions are accepted."]]])
 
 (defn sponsorship []
   [layout/section "sponsorship" "Sponsorship"
    [:p
-    "Details will be up soon. Sponsorship details are available as a prospectus "
+    "Sponsorship details are available as a prospectus "
     [:a {:href (layout/resource-link "pdf/inclojure-sponsorship.pdf") :target "_blank"} "here"]
     "."]])
 
