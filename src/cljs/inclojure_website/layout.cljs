@@ -31,6 +31,7 @@
   [:div.section.nav-links
    [nav-link "sponsorship" "Sponsors"]
    [nav-link "cfp" "CFP"]
+   [nav-link "tickets" "Tickets"]
    [nav-link "conduct" "Code of Conduct"]
    [nav-link "team" "Team"]] )
 

@@ -40,6 +40,14 @@
      [:li "For domestic travel - up to INR 15K"]]
     [:p "Apart from the travel, we will also provide up to 2 nights of stay to speakers whose submissions are accepted."]]])
 
+(defn tickets []
+  [layout/section "tickets" "Tickets"
+   [:div
+    [:iframe {:src "https://www.townscript.com/widget/inclojure-2019" :frameborder "0" :height "500" :width "80%"}]
+    [:p
+     "Alternatively, tickets can be purchased directly at "
+     [:a {:href "https://www.townscript.com/e/inclojure-2019/booking" :target "_blank"} "townscript."]]]])
+
 (defn sponsorship []
   [layout/section "sponsorship" "Sponsorship"
    [:p
@@ -83,7 +91,8 @@
     [:div.section.header
      [:img.header-logo
       {:alt "Goto INClojure 2019 home page",
-       :src (layout/resource-link "images/inclojure-logo-v2.png")}]
+       :src (layout/resource-link "images/inclojure-logo-2019.png")
+       :href "/"}]
      [:p.date-and-venue
       "January 2019"
       [:br]
@@ -92,5 +101,6 @@
     [intro]
     [sponsorship]
     [cfp]
+    [tickets]
     [code-of-conduct]
     [team]]])
