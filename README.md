@@ -1,5 +1,3 @@
-NOTE: This repository has been migrated to https://gitlab.com/inclojure/inclojure.gitlab.io/ because they support HTTPS with LetsEncrypt.
-
 # Contributing
 
 So far we've only created a basic static site with html, css, js. HTML files live
@@ -33,12 +31,13 @@ To start the Figwheel compiler, navigate to the project folder and run the follo
 lein figwheel
 ```
 
-Figwheel will automatically push cljs changes to the browser. The server will be available at [http://localhost:3449](http://localhost:3449) once Figwheel starts up.
+Figwheel will automatically push cljs changes to the browser.
 
 Figwheel also starts `nREPL` using the value of the `:nrepl-port` in the `:figwheel`
 config found in `project.clj`. By default the port is set to `7002`.
 
 Run a simple server to serve the static website locally
+
 ```
 python -m SimpleHTTPServer
 ```
