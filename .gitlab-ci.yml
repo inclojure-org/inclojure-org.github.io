@@ -1,7 +1,13 @@
-image: alpine:latest
+image: clojure:lein-2.8.1-alpine
+
+cache:
+  paths:
+    - .local-m2
 
 pages:
   stage: deploy
+  before_script:
+    - lein cljsbuild once min
   script:
     - mkdir public
     - cp *.html public/
@@ -9,6 +15,6 @@ pages:
     - cp -r .well-known public/
   artifacts:
     paths:
-    - public
+      - public
   only:
-  - master
+    - master

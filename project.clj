@@ -27,6 +27,8 @@
   :ring {:handler      inclojure-website.handler/app
          :uberwar-name "inclojure-website.war"}
 
+  :local-repo ".local-m2"
+
   :min-lein-version "2.5.0"
   :uberjar-name "inclojure-website.jar"
   :main inclojure-website.server
@@ -92,5 +94,4 @@
                        :prep-tasks   ["compile" ["cljsbuild" "once" "min"]]
                        :env          {:production true}
                        :aot          :all
-                       :omit-source  true}}
-  )
+                       :omit-source  true}})
