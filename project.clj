@@ -1,8 +1,8 @@
-(defproject inclojure-website "0.1.0-SNAPSHOT"
-  :description "FIXME: write description"
-  :url "http://example.com/FIXME"
+(defproject inclojure-website "3.0.0"
+  :description "the in/clojure website"
+  :url "http://inclojure.org"
   :license {:name "Eclipse Public License"
-            :url "http://www.eclipse.org/legal/epl-v10.html"}
+            :url  "http://www.eclipse.org/legal/epl-v10.html"}
 
   :dependencies [[org.clojure/clojure "1.9.0"]
                  [ring-server "0.5.0"]
@@ -24,7 +24,7 @@
             [lein-asset-minifier "0.2.7"
              :exclusions [org.clojure/clojure]]]
 
-  :ring {:handler inclojure-website.handler/app
+  :ring {:handler      inclojure-website.handler/app
          :uberwar-name "inclojure-website.war"}
 
   :min-lein-version "2.5.0"
@@ -46,30 +46,28 @@
   {:builds {:min
             {:source-paths ["src/cljs" "src/cljc" "env/prod/cljs"]
              :compiler
-             {:output-to        "resources/public/js/app.js"
+             {:output-to     "resources/public/js/app.js"
               :optimizations :advanced
               :pretty-print  false}}
             :app
             {:source-paths ["src/cljs" "src/cljc" "env/dev/cljs"]
-             :figwheel {:on-jsload "inclojure-website.core/mount-root"}
+             :figwheel     {:on-jsload "inclojure-website.core/mount-root"}
              :compiler
-             {:main "inclojure-website.dev"
-              :asset-path "/js/out"
-              :output-to "resources/public/js/app.js"
-              :output-dir "resources/public/js/out"
-              :source-map true
+             {:main          "inclojure-website.core"
+              :asset-path    "resources/public/js/figwheel-out"
+              :output-to     "resources/public/js/app.js"
+              :output-dir    "resources/public/js/figwheel-out"
+              :source-map    true
               :optimizations :none
               :pretty-print  true}}}}
 
   :figwheel
   {:http-server-root "public"
-   :server-port 3449
-   :nrepl-port 7002
+   :server-port      3449
+   :nrepl-port       7002
    :nrepl-middleware [cider.piggieback/wrap-cljs-repl]
-   :css-dirs ["resources/public/css"]
-   :ring-handler inclojure-website.handler/app}
-
-
+   :css-dirs         ["resources/public/css"]
+   :ring-handler     inclojure-website.handler/app}
 
   :profiles {:dev {:repl-options {:init-ns inclojure-website.repl}
                    :dependencies [[cider/piggieback "0.3.8"]
@@ -83,15 +81,16 @@
                                   [pjstadig/humane-test-output "0.8.3"]]
 
                    :source-paths ["env/dev/clj"]
-                   :plugins [[lein-figwheel "0.5.16"]]
+                   :plugins      [[lein-figwheel "0.5.16"]]
 
                    :injections [(require 'pjstadig.humane-test-output)
                                 (pjstadig.humane-test-output/activate!)]
-                   :env {:dev true}}
+                   :env        {:dev true}}
 
-             :uberjar {:hooks [minify-assets.plugin/hooks]
+             :uberjar {:hooks        [minify-assets.plugin/hooks]
                        :source-paths ["env/prod/clj"]
-                       :prep-tasks ["compile" ["cljsbuild" "once" "min"]]
-                       :env {:production true}
-                       :aot :all
-                       :omit-source true}})
+                       :prep-tasks   ["compile" ["cljsbuild" "once" "min"]]
+                       :env          {:production true}
+                       :aot          :all
+                       :omit-source  true}}
+  )

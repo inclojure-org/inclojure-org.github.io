@@ -13,3 +13,6 @@ system.properties
 .lein-env
 env/
 figwheel_server.log
+.rebel_readline_history
+
+resources/public/js/figwheel-out
