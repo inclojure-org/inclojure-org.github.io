@@ -65,6 +65,7 @@
 
 (def members
   [{:name "Aditya Athalye"     :twitter-link "http://twitter.com/adityaathalye"}
+   {:name "Akshay Gupta"       :twitter-link "http://twitter.com/kitallis"}
    {:name "Deepa Venkatraman"  :twitter-link "http://twitter.com/deepa_v"}
    {:name "Kiran Gangadharan"  :twitter-link "http://twitter.com/kirang89"}
    {:name "Shantanu Kumar"     :twitter-link "http://twitter.com/kumarshantanu"}
