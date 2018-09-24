@@ -39,7 +39,7 @@ python -m SimpleHTTPServer
 
 Now you should be able to see the website at http://localhost:8000 and hot-reload code from your favorite editor.
 
-**Note:** lein is configured to setup the `.m2` directory within the project as `.local-m2` so that it plays well with gitlab and its artefact caching limitations
+**NOTE:** lein is configured to setup the `.m2` directory within the project as `.local-m2` (as opposed to `~/.m2`) so that it plays well with gitlab and its artefact caching limitations
 
 # Release
 
