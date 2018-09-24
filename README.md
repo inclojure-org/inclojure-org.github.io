@@ -36,13 +36,13 @@ Figwheel will automatically push cljs changes to the browser.
 Figwheel also starts `nREPL` using the value of the `:nrepl-port` in the `:figwheel`
 config found in `project.clj`. By default the port is set to `7002`.
 
-Run a simple server to serve the static website locally
+Run a simple server to serve the static website locally:
 
 ```
 python -m SimpleHTTPServer
 ```
 
-Now you should be able to see the website at http://localhost:8000.
+Now you should be able to see the website at http://localhost:8000 and hot-reload code from your favorite editor.
 
 ## Building for release
 
