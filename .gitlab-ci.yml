@@ -11,8 +11,8 @@ pages:
     - lein cljsbuild once min
   script:
     - mkdir public
-    - cp -r resources/public/* public/
-    - cp -r .well-known public/
+    - cp -R resources/public/* public/
+    - cp -R .well-known public/
   artifacts:
     paths:
       - public
