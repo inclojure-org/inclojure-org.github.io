@@ -26,18 +26,10 @@ To start the Figwheel compiler, navigate to the project folder and run the follo
 lein figwheel
 ```
 
-Figwheel will automatically push cljs changes to the browser.
+Figwheel will automatically push cljs changes to the browser. Visit `http://localhost:3449` to see the website.
 
 Figwheel also starts `nREPL` using the value of the `:nrepl-port` in the `:figwheel`
 config found in `project.clj`. By default the port is set to `7002`.
-
-Run a simple server to serve the static website locally:
-
-```
-python -m SimpleHTTPServer
-```
-
-Now you should be able to see the website at http://localhost:8000 and hot-reload code from your favorite editor.
 
 **NOTE:** lein is configured to setup the `.m2` directory within the project as `.local-m2` (as opposed to `~/.m2`) so that it plays well with gitlab and its artefact caching limitations
 
