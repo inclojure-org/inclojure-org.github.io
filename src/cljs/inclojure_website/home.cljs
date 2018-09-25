@@ -5,7 +5,7 @@
   [:div.section
    [:p.section__content
     "IN/Clojure is India's annual Clojure conference. It is also the only Clojure conference in all of Asia. IN/Clojure’s primary focus is the free exchange of ideas between new and experienced Clojure programmers alike. IN/Clojure 2019 is the third edition of Asia's very first Clojure conference, and is scheduled to be held in "
-    [:strong "Bengaluru, India in January,  2019."]]])
+    [:strong "Bengaluru, from 11th – 13th January,  2019."]]])
 
 (defn cfp []
   [layout/section "cfp" "Call for Proposals"
@@ -64,15 +64,16 @@
     [:p "Conference participants violating these rules may be sanctioned or expelled from the conference without a refund at the discretion  of the conference organisers."]]])
 
 (def members
-  [{:name "Aditya Athalye"     :twitter-link "http://twitter.com/adityaathalye"}
-   {:name "Akshay Gupta"       :twitter-link "http://twitter.com/kitallis"}
-   {:name "Deepa Venkatraman"  :twitter-link "http://twitter.com/deepa_v"}
-   {:name "Kiran Gangadharan"  :twitter-link "http://twitter.com/kirang89"}
-   {:name "Shantanu Kumar"     :twitter-link "http://twitter.com/kumarshantanu"}
-   {:name "Mohit Thatte"       :twitter-link "http://twitter.com/mohitthatte"}
-   {:name "Ravindra Jaju"      :twitter-link "http://twitter.com/jaju "}
+  [{:name "Aditya Athalye" :twitter-link "http://twitter.com/adityaathalye"}
+   {:name "Akshay Gupta" :twitter-link "http://twitter.com/kitallis"}
+   {:name "Deepa Venkatraman" :twitter-link "http://twitter.com/deepa_v"}
+   {:name "Kiran Gangadharan" :twitter-link "http://twitter.com/kirang89"}
+   {:name "Shantanu Kumar" :twitter-link "http://twitter.com/kumarshantanu"}
+   {:name "Mohit Thatte" :twitter-link "http://twitter.com/mohitthatte"}
+   {:name "Nivedita Priyadarshini" :twitter-link "http://twitter.com/nid90"}
+   {:name "Ravindra Jaju" :twitter-link "http://twitter.com/jaju "}
    {:name "Sandilya Jandhyala" :twitter-link "http://twitter.com/jysandilya"}
-   {:name "Srihari Sriraman"   :twitter-link "http://twitter.com/sriharisriraman"}])
+   {:name "Srihari Sriraman" :twitter-link "http://twitter.com/sriharisriraman"}])
 
 (defn team-member [twitter-link name]
   [:a.team-member
@@ -95,7 +96,7 @@
        :src (layout/resource-link "images/inclojure-logo-2019.png")
        :href "/"}]
      [:p.date-and-venue
-      "January 2019"
+      "11th – 13th January, 2019"
       [:br]
       " Bengaluru, India"]]
     [layout/navigation]
