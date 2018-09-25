@@ -17,5 +17,3 @@ figwheel_server.log
 
 resources/public/js/app.js
 resources/public/js/figwheel-out
-
-.local-m2

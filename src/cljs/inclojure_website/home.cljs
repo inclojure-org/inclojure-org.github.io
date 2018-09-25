@@ -19,7 +19,7 @@
     [:p "The first two editions of the conference have served as a platform to kickstart a series of Clojure workshops and meet-ups across the country. It has also helped attendees make a strong case for Clojure, and Clojurescript adoption in their companies. We believe that this edition of the conference, like previous editions, will foster the growing Clojure community in Asia."]
     [:p "A talk at IN/Clojure is an avenue for sharing ideas, experiences, and knowledge with the Clojure community at large. It is an opportunity to bring the community together on interesting problems, and technical challenges, to showcase your work, and to contribute to a worthy cause."]
     [:h4 "What to propose?"]
-    [:div
+    [:p
      [:ul
       [:li "Done something cool with Clojure lately? We want to hear from you!"]
       [:li "Maybe you learnt Clojure on weekends and built a small game in ClojureScript? Write in!"]
@@ -43,16 +43,16 @@
 (defn tickets []
   [layout/section "tickets" "Tickets"
    [:div
-    [:iframe {:src "https://www.townscript.com/widget/inclojure-2019" :frameBorder "0" :height "500" :width "80%"}]
+    [:iframe {:src "https://www.townscript.com/widget/inclojure-2019" :frameborder "0" :height "500" :width "80%"}]
     [:p
      "Alternatively, tickets can be purchased directly at "
      [:a {:href "https://www.townscript.com/e/inclojure-2019/booking" :target "_blank"} "townscript."]]]])
 
 (defn sponsorship []
-  [layout/section "sponsorship" "Sponsorshiphips"
+  [layout/section "sponsorship" "Sponsorship"
    [:p
     "Sponsorship details are available as a prospectus "
-    [:a {:href "pdf/inclojure-sponsorship.pdf" :target "_blank"} "here"]
+    [:a {:href (layout/resource-link "pdf/inclojure-sponsorship.pdf") :target "_blank"} "here"]
     "."]])
 
 (defn code-of-conduct []
@@ -93,7 +93,7 @@
     [:div.section.header
      [:img.header-logo
       {:alt "Goto INClojure 2019 home page",
-       :src "images/inclojure-logo-2019.png"
+       :src (layout/resource-link "images/inclojure-logo-2019.png")
        :href "/"}]
      [:p.date-and-venue
       "11th – 13th January, 2019"
