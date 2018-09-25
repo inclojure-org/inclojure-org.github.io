@@ -15,4 +15,5 @@ env/
 figwheel_server.log
 .rebel_readline_history
 
+resources/public/js/app.js
 resources/public/js/figwheel-out
