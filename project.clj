@@ -56,7 +56,7 @@
              :figwheel     {:on-jsload "inclojure-website.core/mount-root"}
              :compiler
              {:main          "inclojure-website.core"
-              :asset-path    "resources/public/js/figwheel-out"
+              :asset-path    "js/figwheel-out"
               :output-to     "resources/public/js/app.js"
               :output-dir    "resources/public/js/figwheel-out"
               :source-map    true
