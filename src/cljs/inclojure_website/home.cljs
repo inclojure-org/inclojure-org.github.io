@@ -49,11 +49,21 @@
      [:a {:href "https://www.townscript.com/e/inclojure-2019/booking" :target "_blank"} "townscript."]]]])
 
 (defn sponsorship []
-  [layout/section "sponsorship" "Sponsorshiphips"
+  [layout/section "sponsorship" "Sponsorship"
    [:p
+    [:div.benefactors.gold
+     [:p.benefactor-slab
+      "Gold"]
+     [:ul.benefactors-list
+      [:li.benefactor
+       [:a {:href "https://nilenso.com" :target "_blank"}
+        [:img.benefactor-logo {:alt "Goto INClojure 2019 home page",
+               :src "images/logo-nilenso.png"
+               :href "/"}]]]]]
     "Sponsorship details are available as a prospectus "
     [:a {:href "pdf/inclojure-sponsorship.pdf" :target "_blank"} "here"]
-    "."]])
+    ". If you'd like to sponsor IN/Clojure 2019, check out the prospectus or contact us at "
+    [:a {:href "mailto:events@inclojure.org"} "events@inclojure.org."]]])
 
 (defn code-of-conduct []
   [layout/section "conduct" "Code Of Conduct"
@@ -101,8 +111,8 @@
       " Bengaluru, India"]]
     [layout/navigation]
     [intro]
-    [sponsorship]
     [cfp]
+    [sponsorship]
     [tickets]
     [code-of-conduct]
     [team]]])
