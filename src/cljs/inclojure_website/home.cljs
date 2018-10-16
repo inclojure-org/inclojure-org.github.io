@@ -53,13 +53,36 @@
    [:p
     [:div.benefactors.gold
      [:p.benefactor-slab
+      "Platinum"]
+     [:ul.benefactors-list
+      [:li.benefactor
+       [:a {:href "https://www.go-jek.com/" :target "_blank"}
+        [:img.benefactor-logo {:alt "Goto INClojure 2019 home page",
+                               :src "images/sponsor-logos/go-jek.png"
+                               :href "/"}]]]
+      [:li.benefactor
+       [:a {:href "https://www.helpshift.com/" :target "_blank"}
+        [:img.benefactor-logo {:alt "Goto INClojure 2019 home page",
+                               :src "images/sponsor-logos/helpshift.png"
+                               :href "/"}]]]]]
+    [:div.benefactors.gold
+     [:p.benefactor-slab
       "Gold"]
      [:ul.benefactors-list
       [:li.benefactor
        [:a {:href "https://nilenso.com" :target "_blank"}
         [:img.benefactor-logo {:alt "Goto INClojure 2019 home page",
-               :src "images/logo-nilenso.png"
+               :src "images/sponsor-logos/nilenso.png"
                :href "/"}]]]]]
+    [:div.benefactors.silver
+     [:p.benefactor-slab
+      "Silver"]
+     [:ul.benefactors-list
+      [:li.benefactor
+       [:a {:href "https://www.formcept.com/" :target "_blank"}
+        [:img.benefactor-logo {:alt "Goto INClojure 2019 home page",
+                               :src "images/sponsor-logos/formcept.png"
+                               :href "/"}]]]]]
     "Sponsorship details are available as a prospectus "
     [:a {:href "pdf/inclojure-sponsorship.pdf" :target "_blank"} "here"]
     ". If you'd like to sponsor IN/Clojure 2019, check out the prospectus or contact us at "
