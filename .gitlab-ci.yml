@@ -12,6 +12,7 @@ pages:
   script:
     - mkdir public
     - cp -R resources/public/* public/
+    - cp -R archive/* public/
     - cp -R .well-known public/
   artifacts:
     paths:
