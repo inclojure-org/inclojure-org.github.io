@@ -5,7 +5,7 @@
   [:div.section
    [:p.section__content
     "IN/Clojure is India's annual Clojure conference. It is also the only Clojure conference in all of Asia. IN/Clojure’s primary focus is the free exchange of ideas between new and experienced Clojure programmers alike. IN/Clojure 2019 is the third edition of Asia's very first Clojure conference, and is scheduled to be held in "
-    [:strong "Bengaluru, from 11th – 13th January,  2019."]]])
+    [:strong "Bengaluru, on 11th and 12th January,  2019."]]])
 
 (defn cfp []
   [layout/section "cfp" "Call for Proposals"
@@ -172,7 +172,7 @@
        :src "images/inclojure-logo-2019.png"
        :href "/"}]
      [:p.date-and-venue
-      "11th – 13th January, 2019"
+      "11th and 12th January, 2019"
       [:br]
       " Bengaluru, India"]]
     [layout/navigation]
