@@ -46,13 +46,13 @@
 
   :cljsbuild
   {:builds {:min
-            {:source-paths ["src/cljs" "src/cljc" "env/prod/cljs"]
+            {:source-paths ["src/cljs" "src/cljc"]
              :compiler
              {:output-to     "resources/public/js/app.js"
               :optimizations :advanced
               :pretty-print  false}}
             :app
-            {:source-paths ["src/cljs" "src/cljc" "env/dev/cljs"]
+            {:source-paths ["src/cljs" "src/cljc"]
              :figwheel     {:on-jsload "inclojure-website.core/mount-root"}
              :compiler
              {:main          "inclojure-website.core"

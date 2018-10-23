@@ -19,3 +19,5 @@ resources/public/js/app.js
 resources/public/js/figwheel-out
 
 .local-m2
+.idea/
+*.iml

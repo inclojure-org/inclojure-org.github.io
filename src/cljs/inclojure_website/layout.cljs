@@ -30,6 +30,7 @@
 (defn navigation []
   [:div.section.nav-links
    [nav-link "cfp" "CFP"]
+   [nav-link "workshops" "Workshops"]
    [nav-link "sponsorship" "Sponsors"]
    [nav-link "tickets" "Tickets"]
    [nav-link "conduct" "Code of Conduct"]

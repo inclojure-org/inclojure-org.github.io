@@ -40,6 +40,49 @@
      [:li "For domestic travel - up to INR 15K"]]
     [:p "Apart from the travel, we will also provide up to 2 nights of stay to speakers whose submissions are accepted."]]])
 
+(defn workshops []
+  [layout/section "workshops" "Workshops"
+   [:div
+    [:p "We will have two workshops at IN/Clojure, an introductory Clojure workshop and an intermediate Clojure workshop. Note that both the workshops will be
+         conducted simultaneously on the same day. Therefore, one cannot attend both the workshops."]
+    [:h4 "Introductory workshop"]
+    [:h5 "Audience"]
+    [:p "Practising programmers and/or CS undergrads/grads who are new to Clojure (i.e. not absolute beginners in programming)."]
+    [:h5 "Session outline"]
+    [:div
+     [:p "This will be a day-long hands-on workshop."]
+     [:p "We will progressively grow logic for a little data-processing utility, by building concept upon concept until we have a working application."]
+     [:p "We will try to achieve this with:"]
+     [:ul
+      [:li "A small set of core ideas,"]
+      [:li "a handful of Clojure primitives, a few API design techniques, and"]
+      [:li "an interactive (REPL-driven) programming workflow."]]
+     [:p "We will do the following:"]
+     [:ul
+      [:li "Model things with pure data,"]
+      [:li "design clean functional APIs,"]
+      [:li "compose purely functional logic, and"]
+      [:li "use the REPL to interactively \"grow\" and introspect code."]]
+     [:p "Fully documented workshop material will be available for use at home."]]
+
+    [:h4 "Intermediate workshop"]
+    [:h5 "Audience"]
+    [:p "Working Clojure programmers who are relatively new to the language, but have written some Clojure code, perhaps under someone else's supervision."]
+    [:h5 "Session outline"]
+    [:p "This will be a day-long hands-on workshop."]
+    [:p "The aim of this workshop is to help the attendee work in Clojure more effectively. We will learn about the application of the following concepts:"]
+    [:ul
+     [:li "Java interop"]
+     [:li "Polymorphism using Multimethods and Protocols"]
+     [:li "Laziness"]
+     [:li "Concurrency in Clojure"
+      [:ul
+       [:li "Basic: Futures, Promises, Atoms and Agents"]
+       [:li "Advanced: Refs and Software Transactional Memory"]]]
+     [:li "Macros"]
+     [:li "Testing"]]
+    [:p "To help illustrate and understand the application of these concepts, we will build a project that ties all these concepts together."]]])
+
 (defn tickets []
   [layout/section "tickets" "Tickets"
    [:div
@@ -135,6 +178,7 @@
     [layout/navigation]
     [intro]
     [cfp]
+    [workshops]
     [sponsorship]
     [tickets]
     [code-of-conduct]
