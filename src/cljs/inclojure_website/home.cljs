@@ -41,7 +41,7 @@
     [:p "Apart from the travel, we will also provide up to 2 nights of stay to speakers whose submissions are accepted."]]])
 
 (defn workshops []
-  [layout/section "workshops" "Workshops"
+  [layout/section "workshops" "Workshops (11th January)"
    [:div
     [:p "We will have two workshops at IN/Clojure, an introductory Clojure workshop and an intermediate Clojure workshop. Note that both the workshops will be
          conducted simultaneously on the same day. Therefore, one cannot attend both the workshops."]
