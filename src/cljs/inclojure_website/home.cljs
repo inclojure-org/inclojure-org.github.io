@@ -91,6 +91,13 @@
      "Alternatively, tickets can be purchased directly at "
      [:a {:href "https://www.townscript.com/e/inclojure-2019/booking" :target "_blank"} "townscript."]]]])
 
+(defn benefactor [benefactor-name site-link logo-src]
+  [:li.benefactor
+   [:a {:href site-link :target "_blank"}
+    [:img.benefactor-logo {:alt benefactor-name,
+                           :src logo-src
+                           :href "/"}]]])
+
 (defn sponsorship []
   [layout/section "sponsorship" "Sponsorship"
    [:p
@@ -98,34 +105,20 @@
      [:p.benefactor-slab
       "Platinum"]
      [:ul.benefactors-list
-      [:li.benefactor
-       [:a {:href "https://www.go-jek.com/" :target "_blank"}
-        [:img.benefactor-logo {:alt "Goto INClojure 2019 home page",
-                               :src "images/sponsor-logos/go-jek.png"
-                               :href "/"}]]]
-      [:li.benefactor
-       [:a {:href "https://www.helpshift.com/" :target "_blank"}
-        [:img.benefactor-logo {:alt "Goto INClojure 2019 home page",
-                               :src "images/sponsor-logos/helpshift.png"
-                               :href "/"}]]]]]
+      [benefactor "Go-Jek" "https://www.go-jek.com/" "images/sponsor-logos/go-jek.png"]
+      [benefactor "Helpshift" "https://www.helpshift.com" "images/sponsor-logos/helpshift.png"]]]
     [:div.benefactors.gold
      [:p.benefactor-slab
       "Gold"]
      [:ul.benefactors-list
-      [:li.benefactor
-       [:a {:href "https://nilenso.com" :target "_blank"}
-        [:img.benefactor-logo {:alt "Goto INClojure 2019 home page",
-               :src "images/sponsor-logos/nilenso.png"
-               :href "/"}]]]]]
+      [benefactor "nilenso" "https://nilenso.com" "images/sponsor-logos/nilenso.png"]
+      [benefactor "Thoughtworks" "https://www.thoughtworks.com" "images/sponsor-logos/thoughtworks.png"]]]
     [:div.benefactors.silver
      [:p.benefactor-slab
       "Silver"]
      [:ul.benefactors-list
-      [:li.benefactor
-       [:a {:href "https://www.formcept.com/" :target "_blank"}
-        [:img.benefactor-logo {:alt "Goto INClojure 2019 home page",
-                               :src "images/sponsor-logos/formcept.png"
-                               :href "/"}]]]]]
+      [benefactor "Formcept" "https://www.formcept.com" "images/sponsor-logos/formcept.png"]
+      [benefactor "Concur" "https://www.concur.co.in" "images/sponsor-logos/sap-concur.png"]]]
     "Sponsorship details are available as a prospectus "
     [:a {:href "pdf/inclojure-sponsorship.pdf" :target "_blank"} "here"]
     ". If you'd like to sponsor IN/Clojure 2019, check out the prospectus or contact us at "
