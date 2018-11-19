@@ -29,6 +29,7 @@
 
 (defn navigation []
   [:div.section.nav-links
+   [nav-link "invited-speakers" "Speakers"]
    [nav-link "cfp" "CFP"]
    [nav-link "workshops" "Workshops"]
    [nav-link "sponsorship" "Sponsors"]

@@ -164,7 +164,7 @@ iframe {
 .speaker {
     display: flex;
     align-items: center;
-    width: 47%;
+    width: 60%;
     margin: 3% 0;
 }
 
@@ -178,6 +178,7 @@ iframe {
     font-family: 'Alegreya Sans SC', sans-serif;
     font-size: 24px;
     margin: 0;
+    text-decoration: none;
 }
 
 .speaker-and-talk {

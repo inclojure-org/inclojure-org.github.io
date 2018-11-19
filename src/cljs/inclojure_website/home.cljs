@@ -156,6 +156,21 @@
       ^{:key (str (random-uuid))}
       [team-member twitter-link name])]])
 
+(defn invited-speakers []
+  [layout/section "invited-speakers" "Invited Speakers"
+   [:div.speaker
+    [:img.speaker-img
+     {:alt "Eric Normand", :src "https://lispcast.com/wp-content/uploads/2018/07/ERIC-NORMAND-LISPCAST.COM_.jpg"}]
+    [:div.speaker-about
+     [:p.speaker-name "Eric Normand"]
+     [:p.speaker-desc
+      [:a {:target "_blank" :href "https://lispcast.com/category/writing/"} "Writer"]
+      ", trainer, and speaker. Runs "
+      [:a {:target "_blank" :href "https://purelyfunctional.tv/"} "purelyfunctional.tv"]
+      ", and organises "
+      [:a {:target "_blank" :href "https://clojuresync.com/"} "Clojure SYNC."]]]]])
+
+
 (defn page []
   [layout/page
    [:div
@@ -170,6 +185,7 @@
       " Bengaluru, India"]]
     [layout/navigation]
     [intro]
+    [invited-speakers]
     [cfp]
     [workshops]
     [sponsorship]
