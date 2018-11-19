@@ -164,7 +164,7 @@
     [:div.speaker-about
      [:p.speaker-name "Eric Normand"]
      [:p.speaker-desc
-      [:a {:target "_blank" :href "https://lispcast.com/category/writing/"} "Writer"]
+      [:a {:target "_blank" :href "https://lispcast.com"} "Writer"]
       ", trainer, and speaker. Runs "
       [:a {:target "_blank" :href "https://purelyfunctional.tv/"} "purelyfunctional.tv"]
       ", and organises "
