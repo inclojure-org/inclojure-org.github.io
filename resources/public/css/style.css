@@ -156,7 +156,7 @@ iframe {
 }
 
 .speaker-img {
-    width: 30%;
+    max-width: 20%;
     min-width: 180px;
     border: 1px solid #aaa;
 }
@@ -164,7 +164,7 @@ iframe {
 .speaker {
     display: flex;
     align-items: center;
-    width: 60%;
+    max-width: 90%;
     margin: 3% 0;
 }
 
