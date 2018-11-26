@@ -14,7 +14,7 @@
      [:a {:href "https://www.papercall.io/cfps/1407/submissions/new"
           :target "_blank"}
       "papercall "]
-     "to submit yours. Closing date for the CFP has been extended to November 26, 2018 05:00 UTC"]
+     "to submit yours. Closing date for the CFP has been extended to November 28, 2018 05:00 UTC"]
     [:h4 "Why propose a talk?"]
     [:p "The first two editions of the conference have served as a platform to kickstart a series of Clojure workshops and meet-ups across the country. It has also helped attendees make a strong case for Clojure, and Clojurescript adoption in their companies. We believe that this edition of the conference, like previous editions, will foster the growing Clojure community in Asia."]
     [:p "A talk at IN/Clojure is an avenue for sharing ideas, experiences, and knowledge with the Clojure community at large. It is an opportunity to bring the community together on interesting problems, and technical challenges, to showcase your work, and to contribute to a worthy cause."]
