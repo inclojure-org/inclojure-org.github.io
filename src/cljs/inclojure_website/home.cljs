@@ -137,10 +137,7 @@
    {:name "Akshay Gupta" :twitter-link "http://twitter.com/kitallis"}
    {:name "Deepa Venkatraman" :twitter-link "http://twitter.com/deepa_v"}
    {:name "Kiran Gangadharan" :twitter-link "http://twitter.com/kirang89"}
-   {:name "Shantanu Kumar" :twitter-link "http://twitter.com/kumarshantanu"}
-   {:name "Mohit Thatte" :twitter-link "http://twitter.com/mohitthatte"}
    {:name "Nivedita Priyadarshini" :twitter-link "http://twitter.com/nid90"}
-   {:name "Ravindra Jaju" :twitter-link "http://twitter.com/jaju "}
    {:name "Sandilya Jandhyala" :twitter-link "http://twitter.com/jysandilya"}
    {:name "Srihari Sriraman" :twitter-link "http://twitter.com/sriharisriraman"}])
 
