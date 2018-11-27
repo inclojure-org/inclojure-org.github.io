@@ -35,6 +35,7 @@
    [nav-link "sponsorship" "Sponsors"]
    [nav-link "tickets" "Tickets"]
    [nav-link "conduct" "Code of Conduct"]
+   [nav-link "opgrant" "Opportunity Grant"]
    [nav-link "team" "Team"]] )
 
 (defn section [id title content]

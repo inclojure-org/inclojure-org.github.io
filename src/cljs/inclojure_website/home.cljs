@@ -132,6 +132,26 @@
     [:p "Sexual language and imagery is not appropriate for any conference venue, including talks, workshops, parties, Twitter and other online media."]
     [:p "Conference participants violating these rules may be sanctioned or expelled from the conference without a refund at the discretion  of the conference organisers."]]])
 
+(defn opportunity-grant []
+  [layout/section "opgrant" "Opportunity Grant"
+   [:div
+    [:p "IN/Clojure aims to be an inclusive conference. We're really glad to announce an opportunity grant for community members who would be unable to attend the conference for financial reasons. The opportunity grant includes a free ticket and travel assistance."]
+    [:p "Please fill out this "
+     [:a {:href   "https://goo.gl/forms/QYvM8FRjRV5LC0jn2"
+          :target "_blank"}
+      "form"]
+     " to apply for an opportunity grant. Please do share the link with your friends who might be interested."]
+    [:p "We want our conference to have a diverse set of attendees. Ashe Dryden has written a "
+     [:a {:href   "https://www.ashedryden.com/blog/increasing-diversity-at-your-conference"
+          :target "_blank"}
+      "detailed post"]
+     " on how to improve diversity at conferences, and it includes a section on what \"diversity\" means. We will try our best to be truly diverse."]
+    [:p "Preference will be given to attendees who fall into an under-represented category in tech - women, members of the LGBTQ community, people with physical disabilities, and any other under-represented group."]
+    [:p "However, please DO apply even if you do not fall into any of those categories!"]
+    [:p "You've never written a line of Clojure? It doesn't matter - apply anyway!"]
+    [:p "You don't think you 'deserve' to attend? You DO! - please apply!"]
+    [:p "Decisions on the opportunity grant will be made by the organizing team with help from a diversity committee. Preference for travel assistance will be given to participants from the Bengaluru region and other cities in India (due to budget constraints). We are open to consider applications from outside India as well."]]])
+
 (def members
   [{:name "Aditya Athalye" :twitter-link "http://twitter.com/adityaathalye"}
    {:name "Akshay Gupta" :twitter-link "http://twitter.com/kitallis"}
@@ -187,5 +207,6 @@
     [workshops]
     [sponsorship]
     [tickets]
+    [opportunity-grant]
     [code-of-conduct]
     [team]]])
