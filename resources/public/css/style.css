@@ -376,3 +376,13 @@ aside.right {
 	text-align: center;
     }
 }
+
+.talk-speakers a {
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.talk-speakers a + a:before {
+    content: "|";
+    margin-right: 5px;
+}

@@ -1,49 +1,13 @@
 (ns inclojure-website.home
   (:require [inclojure-website.layout :as layout]
-            [clojure.string :as string]))
+            [clojure.string :as string]
+            [inclojure-website.talks :as talks]))
 
 (defn intro []
   [:div.section
    [:p.section__content
     "IN/Clojure is India's annual Clojure conference. It is also the only Clojure conference in all of Asia. IN/Clojure’s primary focus is the free exchange of ideas between new and experienced Clojure programmers alike. IN/Clojure 2019 is the third edition of Asia's very first Clojure conference, and is scheduled to be held in "
     [:strong "Bengaluru, on 11th and 12th January,  2019."]]])
-
-(def selected-talks
-  [{:duration "30m" :title "Registrations" :time "8:40 am"}
-   {:duration "10m" :title "Welcome" :time "9:20 am"}
-   {:duration "40m" :type "Keynote" :time "9:30 am" :speaker "Eric Normand"
-    :company "Lispcast" :title "TBD" :twitter "https://twitter.com/ericnormand"}
-   {:duration "40m" :type "Full talk" :time "10:20 am" :speaker "Abhinav Sarkar"
-    :company "Flipkart" :title "Introduction to Concurrency" :twitter "http://twitter.com/abhin4v"}
-
-   {:duration "30m" :type "Tea Break" :time "11:00 am" }
-
-   {:duration "10m" :type "Lightning talk" :time "11:30 am"}
-   {:duration "20m" :type "Crisp talk" :time "11:45 am" :speaker "Rubal Jabbal",
-    :company "Helpshift" :title "Using components in production"}
-   {:duration "40m" :type "Full talk" :time "12:10 am" :speaker "Martin Klepsch"
-    :title "Cljdoc — Better documentation tooling for the Clojure/Script ecosystem" :twitter "http://twitter.com/martinklepsch"
-    :company "cljdoc"}
-   {:duration "20m" :type "Crisp talk" :time "1:00 pm" :speaker "Mourjo Sen"
-    :company "Helpshift" :title "Writing a fair task execution framework" :twitter "http://twitter.com/mourjo_sen"}
-
-   {:duration "1h 20m" :type "Lunch" :time "1:20 pm"}
-
-   {:duration "10m" :type "Lightning talk" :time "2:40 pm"}
-   {:duration "10m" :type "Lightning talk" :time "2:50 pm"}
-   {:duration "20m" :type "Crisp talk" :time "3:10 pm" :speaker "Neha Mishra"
-    :company "Helpshift" :title "Chanakya: Building composable logical rules"}
-   {:duration "40m" :type "Full talk" :time "3:40 pm" :speaker "Shantanu Kumar"
-    :company "Concur" :title "Bract: A minimal DRY app framework" :twitter "http://twitter.com/kumarshantanu"}
-
-   {:duration "30m" :type "Break" :time "4:20 pm"}
-
-   {:duration "10m" :type "Lightning talk" :time "4:50 pm"}
-   {:duration "40m" :type "Full talk" :time "5:00 pm" :speaker "Anirudh Vyas + 1"
-    :company "Go-Jek" :title "Evolution of a stream processing framework" :twitter "http://twitter.com/Anirudh2403"}
-   {:duration "10m" :type "Lightning talk" :time "5:40 pm"}
-   {:duration "40m" :title "Panel" :time "5:50 pm"}
-   {:duration "5m" :title "Ending note" :time "6:30 pm"}])
 
 (defn schedule []
   [layout/section "schedule" "Schedule"
@@ -58,14 +22,18 @@
           {:style {:text-align "left"}}
           (string/capitalize (name h))])]]
      [:tbody
-      (for [{:keys [duration type time speaker company title twitter]} selected-talks]
+      (for [{:keys [duration type time speakers company title link]} talks/selected-talks]
         [:tr
-         {:class (when (and (nil? speaker) (not= "Lightning talk" type)) "non-talk")}
+         {:class (when (and (nil? speakers) (not= "Lightning talk" type)) "non-talk")}
          [:td.td-time time]
          [:td.td-event
           title
-          (when (some? speaker) [:br])
-          (when (some? speaker) [:a {:href twitter :target "_blank"} (str speaker ", " company)])
+          (when (some? speakers) [:br])
+          (when (some? speakers)
+            [:div.talk-speakers
+             (for [{:keys [name link]} speakers]
+               [:a {:href link :target "_blank"} (str name ", " company)])])
+          (when (some? speakers))
           (when (= "Lightning talk" type) "TBD")]
          [:td type]
          [:td duration]])]]]])
