@@ -162,15 +162,30 @@
     [:p "Sexual language and imagery is not appropriate for any conference venue, including talks, workshops, parties, Twitter and other online media."]
     [:p "Conference participants violating these rules may be sanctioned or expelled from the conference without a refund at the discretion  of the conference organisers."]]])
 
+(defn opportunity-grant []
+  [layout/section "opgrant" "Opportunity Grant"
+   [:div
+    [:p "IN/Clojure aims to be an inclusive conference. We're really glad to announce an opportunity grant for community members who would be unable to attend the conference for financial reasons. The opportunity grant includes a free ticket and travel assistance."]
+    [:p "Please fill out this "
+     [:a {:href   "https://goo.gl/forms/QYvM8FRjRV5LC0jn2"
+          :target "_blank"}
+      "form"]
+     " to apply for an opportunity grant. Please do share the link with your friends who might be interested."]
+    [:p "We want our conference to have a diverse set of attendees. Ashe Dryden has written a "
+     [:a {:href   "https://www.ashedryden.com/blog/increasing-diversity-at-your-conference"
+          :target "_blank"}
+      "detailed post"]
+     " on how to improve diversity at conferences, and it includes a section on what \"diversity\" means. We will try our best to be truly diverse."]
+    [:p "Preference will be given to attendees who fall into an under-represented category in tech - women, members of the LGBTQ community, people with physical disabilities, students, and any other under-represented group."]
+    [:p "If you are unsure about applying for an opportunity grant because you do not fall into any of these categories, please do apply explaining why you need assistance, and we will try to help you make it to the conference."]
+    [:p "Decisions on the opportunity grant will be made by the organizing team. Preference for travel assistance will be given to participants from the Bengaluru region and other cities in India (due to budget constraints). We are open to consider applications from outside India as well."]]])
+
 (def members
   [{:name "Aditya Athalye" :twitter-link "http://twitter.com/adityaathalye"}
    {:name "Akshay Gupta" :twitter-link "http://twitter.com/kitallis"}
    {:name "Deepa Venkatraman" :twitter-link "http://twitter.com/deepa_v"}
    {:name "Kiran Gangadharan" :twitter-link "http://twitter.com/kirang89"}
-   {:name "Shantanu Kumar" :twitter-link "http://twitter.com/kumarshantanu"}
-   {:name "Mohit Thatte" :twitter-link "http://twitter.com/mohitthatte"}
    {:name "Nivedita Priyadarshini" :twitter-link "http://twitter.com/nid90"}
-   {:name "Ravindra Jaju" :twitter-link "http://twitter.com/jaju "}
    {:name "Sandilya Jandhyala" :twitter-link "http://twitter.com/jysandilya"}
    {:name "Srihari Sriraman" :twitter-link "http://twitter.com/sriharisriraman"}])
 
@@ -220,5 +235,6 @@
     [workshops]
     [sponsorship]
     [tickets]
+    [opportunity-grant]
     [code-of-conduct]
     [team]]])
