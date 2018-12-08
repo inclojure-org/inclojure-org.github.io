@@ -1,5 +1,6 @@
 (ns inclojure-website.home
-  (:require [inclojure-website.layout :as layout]))
+  (:require [inclojure-website.layout :as layout]
+            [clojure.string :as string]))
 
 (defn intro []
   [:div.section
@@ -7,38 +8,67 @@
     "IN/Clojure is India's annual Clojure conference. It is also the only Clojure conference in all of Asia. IN/Clojure’s primary focus is the free exchange of ideas between new and experienced Clojure programmers alike. IN/Clojure 2019 is the third edition of Asia's very first Clojure conference, and is scheduled to be held in "
     [:strong "Bengaluru, on 11th and 12th January,  2019."]]])
 
-(defn cfp []
-  [layout/section "cfp" "Call for Proposals"
+(def selected-talks
+  [{:duration "30m" :title "Registrations" :time "8:40 am"}
+   {:duration "10m" :title "Welcome" :time "9:20 am"}
+   {:duration "40m" :type "Keynote" :time "9:30 am" :speaker "Eric Normand"
+    :company "Lispcast" :title "TBD" :twitter "https://twitter.com/ericnormand"}
+   {:duration "40m" :type "Full talk" :time "10:20 am" :speaker "Abhinav Sarkar"
+    :company "Flipkart" :title "Introduction to Concurrency" :twitter "http://twitter.com/abhin4v"}
+
+   {:duration "30m" :type "Tea Break" :time "11:00 am" }
+
+   {:duration "10m" :type "Lightning talk" :time "11:30 am"}
+   {:duration "20m" :type "Crisp talk" :time "11:45 am" :speaker "Rubal Jabbal",
+    :company "Helpshift" :title "Using components in production"}
+   {:duration "40m" :type "Full talk" :time "12:10 am" :speaker "Martin Klepsch"
+    :title "Cljdoc — Better documentation tooling for the Clojure/Script ecosystem" :twitter "http://twitter.com/martinklepsch"
+    :company "cljdoc"}
+   {:duration "20m" :type "Crisp talk" :time "1:00 pm" :speaker "Mourjo Sen"
+    :company "Helpshift" :title "Writing a fair task execution framework" :twitter "http://twitter.com/mourjo_sen"}
+
+   {:duration "1h 20m" :type "Lunch" :time "1:20 pm"}
+
+   {:duration "10m" :type "Lightning talk" :time "2:40 pm"}
+   {:duration "10m" :type "Lightning talk" :time "2:50 pm"}
+   {:duration "20m" :type "Crisp talk" :time "3:10 pm" :speaker "Neha Mishra"
+    :company "Helpshift" :title "Chanakya: Building composable logical rules"}
+   {:duration "40m" :type "Full talk" :time "3:40 pm" :speaker "Shantanu Kumar"
+    :company "Concur" :title "Bract: A minimal DRY app framework" :twitter "http://twitter.com/kumarshantanu"}
+
+   {:duration "30m" :type "Break" :time "4:20 pm"}
+
+   {:duration "10m" :type "Lightning talk" :time "4:50 pm"}
+   {:duration "40m" :type "Full talk" :time "5:00 pm" :speaker "Anirudh Vyas + 1"
+    :company "Go-Jek" :title "Evolution of a stream processing framework" :twitter "http://twitter.com/Anirudh2403"}
+   {:duration "10m" :type "Lightning talk" :time "5:40 pm"}
+   {:duration "40m" :title "Panel" :time "5:50 pm"}
+   {:duration "5m" :title "Ending note" :time "6:30 pm"}])
+
+(defn schedule []
+  [layout/section "schedule" "Schedule"
    [:div
-    [:p "The CFP is now live! Go to "
-     [:a {:href "https://www.papercall.io/cfps/1407/submissions/new"
-          :target "_blank"}
-      "papercall "]
-     "to submit yours. Closing date for the CFP has been extended to November 26, 2018 05:00 UTC"]
-    [:h4 "Why propose a talk?"]
-    [:p "The first two editions of the conference have served as a platform to kickstart a series of Clojure workshops and meet-ups across the country. It has also helped attendees make a strong case for Clojure, and Clojurescript adoption in their companies. We believe that this edition of the conference, like previous editions, will foster the growing Clojure community in Asia."]
-    [:p "A talk at IN/Clojure is an avenue for sharing ideas, experiences, and knowledge with the Clojure community at large. It is an opportunity to bring the community together on interesting problems, and technical challenges, to showcase your work, and to contribute to a worthy cause."]
-    [:h4 "What to propose?"]
-    [:div
-     [:ul
-      [:li "Done something cool with Clojure lately? We want to hear from you!"]
-      [:li "Maybe you learnt Clojure on weekends and built a small game in ClojureScript? Write in!"]
-      [:li "Maybe you re-wrote your old java, or go-lang application into Clojure. We want to hear about it."]
-      [:li "Maybe you taught Clojure to your friends, and there were some interesting aha! moments you want to talk about? Write in!"]
-      [:li "If you built a wrapper library, a terminal game, a scraper spider, a crud generator, a tflops number cruncher, a distributed messaging platform, or a deep learning thingamajig, yes, you should should submit a talk!"]]
-     "You can submit a talk regardless of your experience level with Clojure; all perspectives matter."
-
-     "We’re looking for submissions on a wide range of topics."
-     [:ul
-      [:li "Full Talks will be 40 mins long - including 5 mins of Q & A."]
-      [:li "Crisp Talks will be 20 mins long - including 5 mins of Q & A."]]]
-
-    [:h4 "Speaker reimbursements"]
-    [:p "We will reimburse economy-class travel costs for speakers:"]
-    [:ul
-     [:li "For international travel - up to INR 80K (approx. USD 1100)"]
-     [:li "For domestic travel - up to INR 15K"]]
-    [:p "Apart from the travel, we will also provide up to 2 nights of stay to speakers whose submissions are accepted."]]])
+    [:p "Day 1: Beginner and Intermediate workshop"]
+    [:p "Day 2: The tentative schedule is as follows"]
+    [:table.schedule-table
+     [:thead
+      [:tr
+       (for [h [:time :event :type :duration]]
+         [:th
+          {:style {:text-align "left"}}
+          (string/capitalize (name h))])]]
+     [:tbody
+      (for [{:keys [duration type time speaker company title twitter]} selected-talks]
+        [:tr
+         {:class (when (and (nil? speaker) (not= "Lightning talk" type)) "non-talk")}
+         [:td.td-time time]
+         [:td.td-event
+          title
+          (when (some? speaker) [:br])
+          (when (some? speaker) [:a {:href twitter :target "_blank"} (str speaker ", " company)])
+          (when (= "Lightning talk" type) "TBD")]
+         [:td type]
+         [:td duration]])]]]])
 
 (defn workshops []
   [layout/section "workshops" "Workshops (11th January)"
@@ -186,7 +216,7 @@
     [layout/navigation]
     [intro]
     [invited-speakers]
-    [cfp]
+    [schedule]
     [workshops]
     [sponsorship]
     [tickets]

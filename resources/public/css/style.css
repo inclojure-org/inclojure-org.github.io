@@ -82,7 +82,7 @@ body {
 
 .schedule-table td, .schedule-table th {
     text-align: left;
-    padding: 8px;
+    padding: 4px;
 }
 
 .schedule-table tr td:nth-child(3),
