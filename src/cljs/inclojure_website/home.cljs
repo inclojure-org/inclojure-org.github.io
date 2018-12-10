@@ -79,9 +79,9 @@
 (defn schedule []
   [layout/section "schedule" "Schedule"
    [:div
-    [:p "Day 1: Workshops"]
+    [:p "Friday, 11.01.2019: Workshops"]
     [day-1-schedule]
-    [:p "Day 2: Talks"]
+    [:p "Saturday, 12.01.2019: Talks"]
     [day-2-schedule]]])
 
 (defn workshops []
@@ -133,7 +133,7 @@
 (defn tickets []
   [layout/section "tickets" "Tickets"
    [:div
-    [:iframe {:src "https://www.townscript.com/widget/inclojure-2019" :frameBorder "0" :height "500" :width "80%"}]
+    [:iframe {:src "https://www.townscript.com/widget/inclojure-2019" :frameBorder "0" :height "060" :width "80%"}]
     [:p
      "Alternatively, tickets can be purchased directly at "
      [:a {:href "https://www.townscript.com/e/inclojure-2019/booking" :target "_blank"} "townscript."]]]])
@@ -255,7 +255,7 @@
     [tickets]
     [workshops]
     [talks]
-    [sponsorship]
     [opportunity-grant]
+    [sponsorship]
     [code-of-conduct]
     [team]]])

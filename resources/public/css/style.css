@@ -5,6 +5,7 @@ body {
     line-height: 1.3;
     margin: 0;
     text-align: justify;
+    color: #333333e6;
 }
 
 a {
@@ -73,9 +74,10 @@ a {
 }
 
 .section-title {
-    font-size: 36px;
+    font-size: 52px;
     font-family: 'Alegreya Sans SC', sans-serif;
     font-weight: bold;
+    color: black;
     /* color: #5b9b35; */
 }
 
@@ -185,7 +187,12 @@ iframe {
 }
 
 .talk-details {
-    width: 70%;
+    width: 90%;
+}
+
+.talk-details p {
+    margin: 0;
+    margin-bottom: 10px;
 }
 
 .speaker-about {
@@ -194,11 +201,20 @@ iframe {
 }
 
 .speaker-name, .talk-title {
-    font-weight: bold;
     font-family: 'Alegreya Sans SC', sans-serif;
     font-size: 24px;
     margin: 0;
     text-decoration: none;
+}
+
+.talk-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.speaker-name {
+    font-weight: normal;
 }
 
 .speaker-and-talk {
@@ -416,6 +432,11 @@ aside.right {
 .talk-speakers span + span:before {
     content: "|";
     margin-right: 5px;
+}
+
+.talk-details .speaker-name + .speaker-name:before {
+    content: "|";
+    margin: 0 10px;
 }
 
 .home-page-talk {

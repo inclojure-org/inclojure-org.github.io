@@ -47,9 +47,9 @@
    [nav-link "tickets" "Tickets"]
    [nav-link "workshops" "Workshops"]
    [nav-link "talks" "Talks and Speakers"]
+   [nav-link "opgrant" "Opportunity Grant"]
    [nav-link "sponsorship" "Sponsors"]
    [nav-link "conduct" "Code of Conduct"]
-   [nav-link "opgrant" "Opportunity Grant"]
    [nav-link "team" "Team"]] )
 
 (defn section [id title content]
