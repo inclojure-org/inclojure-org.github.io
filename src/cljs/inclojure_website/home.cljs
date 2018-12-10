@@ -21,39 +21,76 @@
      (for [{:keys [name link]} speakers]
        [:span (str name ", " company)])]))
 
+(defn day-2-schedule []
+  [:table.schedule-table
+   [:thead
+    [:tr
+     (for [h [:time :event :type :duration]]
+       [:th
+        {:style {:text-align "left"}}
+        (string/capitalize (name h))])]]
+   [:tbody
+    (for [{:keys [selected-talk? duration type time speakers company title] :as talk} talks/selected-talks]
+      [:tr
+       {:class (when (and (nil? speakers) (not= "Lightning talk" type)) "non-talk")}
+       [:td.td-time time]
+       [:td.td-event
+        (cond
+          (= "Lightning talk" type) "TBD"
+          selected-talk?            [event-detail talk]
+          :else                     title)
+        [:br]
+        [schedule-speakers speakers company]]
+       [:td type]
+       [:td duration]])]])
+
+(def day-1-workshops
+  [{:time "8:40 am" :title "Registrations" :duration "30m"}
+   {:time "9:20 am" :title "Welcome" :duration "10m"}
+   {:time "9:30 am – 5:30 pm" :title "Introductory workshop"
+    :selected-talk? true :page-id "introductory-workshop" :duration "8h"}
+   {:time "9:30 am – 5:30 pm" :title "Intermediate workshop"
+    :selected-talk? true :page-id "intermediate-workshop" :duration "8h"}])
+
+(defn day-1-schedule []
+  [:table.schedule-table
+   [:thead
+    [:tr
+     (for [h [:time :event :duration]]
+       [:th
+        {:style {:text-align "left"}}
+        (string/capitalize (name h))])]]
+   [:tbody
+    (for [{:keys [selected-talk? duration type time speakers company title page-id] :as talk} day-1-workshops]
+      [:tr
+       {:class (when-not selected-talk? "non-talk")}
+       [:td.td-time time]
+       [:td.td-event
+        (if selected-talk?
+          [:a {:href "#"
+               :on-click   #(layout/goto page-id)}
+           title
+           (when (= "Lightning talk" type) "TBD")]
+          title)
+        [:br]
+        [schedule-speakers speakers company]]
+       [:td duration]])]])
+
 (defn schedule []
   [layout/section "schedule" "Schedule"
    [:div
-    [:p "Day 1: Beginner and Intermediate workshop"]
-    [:p "Day 2: The tentative schedule is as follows"]
-    [:table.schedule-table
-     [:thead
-      [:tr
-       (for [h [:time :event :type :duration]]
-         [:th
-          {:style {:text-align "left"}}
-          (string/capitalize (name h))])]]
-     [:tbody
-      (for [{:keys [selected-talk? duration type time speakers company title link] :as talk} talks/selected-talks]
-        [:tr
-         {:class (when (and (nil? speakers) (not= "Lightning talk" type)) "non-talk")}
-         [:td.td-time time]
-         [:td.td-event
-          (cond
-            (= "Lightning talk" type) "TBD"
-            selected-talk?            [event-detail talk]
-            :else                     title)
-          [:br]
-          [schedule-speakers speakers company]]
-         [:td type]
-         [:td duration]])]]]])
+    [:p "Day 1: Workshops"]
+    [day-1-schedule]
+    [:p "Day 2: Talks"]
+    [day-2-schedule]]])
 
 (defn workshops []
   [layout/section "workshops" "Workshops (11th January)"
    [:div
     [:p "We will have two workshops at IN/Clojure, an introductory Clojure workshop and an intermediate Clojure workshop. Note that both the workshops will be
          conducted simultaneously on the same day. Therefore, one cannot attend both the workshops."]
-    [:h4 "Introductory workshop"]
+    [:h4 {:id "introductory-workshop"}
+     "Introductory workshop"]
     [:h5 "Audience"]
     [:p "Practising programmers and/or CS undergrads/grads who are new to Clojure (i.e. not absolute beginners in programming)."]
     [:h5 "Session outline"]
@@ -73,7 +110,9 @@
       [:li "use the REPL to interactively \"grow\" and introspect code."]]
      [:p "Fully documented workshop material will be available for use at home."]]
 
-    [:h4 "Intermediate workshop"]
+    [:h4
+     {:id "intermediate-workshop"}
+     "Intermediate workshop"]
     [:h5 "Audience"]
     [:p "Working Clojure programmers who are relatively new to the language, but have written some Clojure code, perhaps under someone else's supervision."]
     [:h5 "Session outline"]
