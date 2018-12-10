@@ -11,7 +11,8 @@
 
 (defn event-detail [{:keys [title speakers company] :as talk}]
   [:a {:href "#"
-       :on-click #(layout/goto (str "talk-" (talks/talk-id talk)))}
+       :on-click #(layout/goto (str "talk-" (talks/talk-id talk)))
+       :style {:font-weight "bold"}}
    title
    (when (= "Lightning talk" type) "TBD")])
 
@@ -68,7 +69,8 @@
        [:td.td-event
         (if selected-talk?
           [:a {:href "#"
-               :on-click   #(layout/goto page-id)}
+               :on-click   #(layout/goto page-id)
+               :style {:font-weight "bold"}}
            title
            (when (= "Lightning talk" type) "TBD")]
           title)
@@ -79,9 +81,10 @@
 (defn schedule []
   [layout/section "schedule" "Schedule"
    [:div
-    [:p "Friday, 11.01.2019: Workshops"]
-    [day-1-schedule]
-    [:p "Saturday, 12.01.2019: Talks"]
+    [:p [:strong "Friday, 11.01.2019"] " | Workshops"
+     [day-1-schedule]]
+    [:br]
+    [:p [:strong "Saturday, 12.01.2019"] " | Talks"]
     [day-2-schedule]]])
 
 (defn workshops []
@@ -238,10 +241,6 @@
    (for [talk (filter :selected-talk? talks/selected-talks)]
      [:div.home-page-talk
       {:id (str "talk-" (talks/talk-id talk))}
-      [:a.talk-title
-       {:href "#"
-        :on-click #(layout/goto (str "talk-" (talks/talk-id talk)))}
-       (:title talk)]
       [talks/speaker-talk talk]])])
 
 (defn page []

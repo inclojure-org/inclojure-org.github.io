@@ -130,10 +130,13 @@
     (for [{:keys [name link picture]} speakers]
       [:div.speaker
        [:img.speaker-img
-        {:src picture}]])]
+        {:src picture}]
+       [:a.speaker-name {:href link :target "_blank"} name]])]
    [:div.talk-details
-    (for [speaker speakers]
-      [:a.speaker-name {:href (:link speaker) :target "_blank"} (:name speaker)])
+    [:a.talk-title
+       {:href "#"
+        :on-click #(layout/goto (str "talk-" (talk-id talk)))}
+       (:title talk)]
     [:p abstract]
     [:p (:bio (first speakers))]]])
 
