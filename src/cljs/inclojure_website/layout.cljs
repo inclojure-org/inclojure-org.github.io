@@ -7,6 +7,17 @@
 (defn resource-link [s]
   (str "/resources/public/" s))
 
+(defn header []
+  [:div.section.header
+     [:img.header-logo
+      {:alt  "Goto INClojure 2019 home page",
+       :src  "images/inclojure-logo-2019.png"
+       :href "/"}]
+     [:p.date-and-venue
+      "11th and 12th January, 2019"
+      [:br]
+      " Bengaluru, India"]])
+
 (defn footer []
   [:div.section.footer
    [:div.footer-content
@@ -24,13 +35,18 @@
 (defn nav-link [id title]
   [:a.nav-link
    {:href "#"
-    :on-click #(set! (.-location js/window ) (str "#" id))}
+    :on-click #(set! (.-location js/window ) (str "/#" id))}
    title])
+
+(defn goto [page id]
+  (set! (.-location js/window) (str "/" page)))
 
 (defn navigation []
   [:div.section.nav-links
-   [nav-link "invited-speakers" "Speakers"]
    [nav-link "schedule" "Schedule"]
+   [:a.nav-link
+    {:href "/talks"}
+    "Talks"]
    [nav-link "workshops" "Workshops"]
    [nav-link "sponsorship" "Sponsors"]
    [nav-link "tickets" "Tickets"]

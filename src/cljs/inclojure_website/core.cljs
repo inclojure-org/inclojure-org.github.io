@@ -2,17 +2,14 @@
     (:require [reagent.core :as reagent :refer [atom]]
               [secretary.core :as secretary :include-macros true]
               [accountant.core :as accountant]
-              [inclojure-website.home :as home]))
+              [inclojure-website.home :as home]
+              [inclojure-website.talks :as talks]))
 
 ;; -------------------------
 ;; Views
 
 (defn home-page []
   [home/page])
-
-(defn about-page []
-  [:div [:h2 "About inclojure-website"]
-   [:div [:a {:href "/"} "go to the home page"]]])
 
 ;; -------------------------
 ;; Routes
@@ -25,8 +22,8 @@
 (secretary/defroute #"/" []
   (reset! page #'home-page))
 
-(secretary/defroute "/about" []
-  (reset! page #'about-page))
+(secretary/defroute #"/talks.*" []
+  (reset! page #'talks/page))
 
 ;; -------------------------
 ;; Initialize app

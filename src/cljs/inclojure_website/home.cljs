@@ -9,6 +9,16 @@
     "IN/Clojure is India's annual Clojure conference. It is also the only Clojure conference in all of Asia. IN/Clojure’s primary focus is the free exchange of ideas between new and experienced Clojure programmers alike. IN/Clojure 2019 is the third edition of Asia's very first Clojure conference, and is scheduled to be held in "
     [:strong "Bengaluru, on 11th and 12th January,  2019."]]])
 
+(defn event-detail [{:keys [title speakers company] :as talk}]
+  [:a {:href (str "/talks#" (talks/talk-id talk))}
+   [:div
+    title
+    [:br]
+    [:div.talk-speakers
+     (for [{:keys [name link]} speakers]
+       [:span (str name ", " company)])]
+    (when (= "Lightning talk" type) "TBD")]])
+
 (defn schedule []
   [layout/section "schedule" "Schedule"
    [:div
@@ -22,19 +32,15 @@
           {:style {:text-align "left"}}
           (string/capitalize (name h))])]]
      [:tbody
-      (for [{:keys [duration type time speakers company title link]} talks/selected-talks]
+      (for [{:keys [selected-talk? duration type time speakers company title link] :as talk} talks/selected-talks]
         [:tr
          {:class (when (and (nil? speakers) (not= "Lightning talk" type)) "non-talk")}
          [:td.td-time time]
          [:td.td-event
-          title
-          (when (some? speakers) [:br])
-          (when (some? speakers)
-            [:div.talk-speakers
-             (for [{:keys [name link]} speakers]
-               [:a {:href link :target "_blank"} (str name ", " company)])])
-          (when (some? speakers))
-          (when (= "Lightning talk" type) "TBD")]
+          (cond
+            (= "Lightning talk" type) "TBD"
+            selected-talk?            [event-detail talk]
+            :else                     title)]
          [:td type]
          [:td duration]])]]]])
 
@@ -170,10 +176,10 @@
       [team-member twitter-link name])]])
 
 (defn invited-speakers []
-  [layout/section "invited-speakers" "Invited Speakers"
+  [layout/section "invited-speakers" "Keynote Speaker"
    [:div.speaker
     [:img.speaker-img
-     {:alt "Eric Normand", :src "https://lispcast.com/wp-content/uploads/2018/07/ERIC-NORMAND-LISPCAST.COM_.jpg"}]
+     {:alt "Eric Normand", :src "images/speakers/eric-normand.jpg"}]
     [:div.speaker-about
      [:p.speaker-name "Eric Normand"]
      [:p.speaker-desc
@@ -187,15 +193,7 @@
 (defn page []
   [layout/page
    [:div
-    [:div.section.header
-     [:img.header-logo
-      {:alt "Goto INClojure 2019 home page",
-       :src "images/inclojure-logo-2019.png"
-       :href "/"}]
-     [:p.date-and-venue
-      "11th and 12th January, 2019"
-      [:br]
-      " Bengaluru, India"]]
+    [layout/header]
     [layout/navigation]
     [intro]
     [invited-speakers]
