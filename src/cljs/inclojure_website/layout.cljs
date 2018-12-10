@@ -38,18 +38,16 @@
     :on-click #(set! (.-location js/window ) (str "/#" id))}
    title])
 
-(defn goto [page id]
-  (set! (.-location js/window) (str "/" page)))
+(defn goto [id]
+  (set! (.-location js/window) (str "/#" id)))
 
 (defn navigation []
   [:div.section.nav-links
    [nav-link "schedule" "Schedule"]
-   [:a.nav-link
-    {:href "/talks"}
-    "Talks"]
-   [nav-link "workshops" "Workshops"]
-   [nav-link "sponsorship" "Sponsors"]
    [nav-link "tickets" "Tickets"]
+   [nav-link "workshops" "Workshops"]
+   [nav-link "talks" "Talks and Speakers"]
+   [nav-link "sponsorship" "Sponsors"]
    [nav-link "conduct" "Code of Conduct"]
    [nav-link "opgrant" "Opportunity Grant"]
    [nav-link "team" "Team"]] )

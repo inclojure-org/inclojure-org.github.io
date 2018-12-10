@@ -7,6 +7,11 @@ body {
     text-align: justify;
 }
 
+a {
+    color: cornflowerblue;
+    text-decoration: none;
+}
+
 .content {
     margin: 1% 0%;
     /* max-width: 1200px; */
@@ -159,7 +164,7 @@ iframe {
 
 .speaker {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     max-width: 90%;
     margin: 3% 0;
@@ -411,4 +416,12 @@ aside.right {
 .talk-speakers span + span:before {
     content: "|";
     margin-right: 5px;
+}
+
+.home-page-talk {
+    margin: 40px 0;
+}
+
+div.schedule-event-detail {
+    display: inline;
 }

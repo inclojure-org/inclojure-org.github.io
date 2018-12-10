@@ -10,14 +10,16 @@
     [:strong "Bengaluru, on 11th and 12th January,  2019."]]])
 
 (defn event-detail [{:keys [title speakers company] :as talk}]
-  [:a {:href (str "/talks#" (talks/talk-id talk))}
-   [:div
-    title
-    [:br]
+  [:a {:href "#"
+       :on-click #(layout/goto (str "talk-" (talks/talk-id talk)))}
+   title
+   (when (= "Lightning talk" type) "TBD")])
+
+(defn schedule-speakers [speakers company]
+  (when (some? speakers)
     [:div.talk-speakers
      (for [{:keys [name link]} speakers]
-       [:span (str name ", " company)])]
-    (when (= "Lightning talk" type) "TBD")]])
+       [:span (str name ", " company)])]))
 
 (defn schedule []
   [layout/section "schedule" "Schedule"
@@ -40,7 +42,9 @@
           (cond
             (= "Lightning talk" type) "TBD"
             selected-talk?            [event-detail talk]
-            :else                     title)]
+            :else                     title)
+          [:br]
+          [schedule-speakers speakers company]]
          [:td type]
          [:td duration]])]]]])
 
@@ -190,17 +194,29 @@
       [:a {:target "_blank" :href "https://clojuresync.com/"} "Clojure SYNC."]]]]])
 
 
+(defn talks []
+  [layout/section "talks" "Talks and Speakers"
+   (for [talk (filter :selected-talk? talks/selected-talks)]
+     [:div.home-page-talk
+      {:id (str "talk-" (talks/talk-id talk))}
+      [:a.talk-title
+       {:href "#"
+        :on-click #(layout/goto (str "talk-" (talks/talk-id talk)))}
+       (:title talk)]
+      [talks/speaker-talk talk]])])
+
 (defn page []
   [layout/page
    [:div
     [layout/header]
     [layout/navigation]
     [intro]
-    [invited-speakers]
     [schedule]
-    [workshops]
-    [sponsorship]
+    [invited-speakers]
     [tickets]
+    [workshops]
+    [talks]
+    [sponsorship]
     [opportunity-grant]
     [code-of-conduct]
     [team]]])

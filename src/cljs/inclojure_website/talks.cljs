@@ -125,17 +125,16 @@
   (string/replace (string/lower-case (:name (first (:speakers talk)))) #" " "-"))
 
 (defn speaker-talk [{:keys [speakers title abstract bio] :as talk}]
-  [layout/section (talk-id talk) title
-   [:div.talk
-    [:div.speakers
-     (for [{:keys [name link picture]} speakers]
-       [:div.speaker
-        [:img.speaker-img
-         {:src picture}]
-        [:a.speaker-name {:href link :target "_blank"} name]])]
-    [:div.talk-details
-     [:p abstract]
-     [:p (:bio (first speakers))]]]])
+  [:div.talk
+   [:div.speakers
+    (for [{:keys [name link picture]} speakers]
+      [:div.speaker
+       [:img.speaker-img
+        {:src picture}]
+       [:a.speaker-name {:href link :target "_blank"} name]])]
+   [:div.talk-details
+    [:p abstract]
+    [:p (:bio (first speakers))]]])
 
 (defn page []
   [layout/page
@@ -143,4 +142,5 @@
     [layout/header]
     [layout/navigation]
     (for [talk (filter :selected-talk? selected-talks)]
-      [speaker-talk talk])]])
+      [layout/section (talk-id talk) (:title talk)
+       [speaker-talk talk]])]])
