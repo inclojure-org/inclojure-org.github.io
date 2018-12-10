@@ -136,7 +136,7 @@
 (defn tickets []
   [layout/section "tickets" "Tickets"
    [:div
-    [:iframe {:src "https://www.townscript.com/widget/inclojure-2019" :frameBorder "0" :height "060" :width "80%"}]
+    [:iframe {:src "https://www.townscript.com/widget/inclojure-2019" :frameBorder "0" :height "600" :width "80%"}]
     [:p
      "Alternatively, tickets can be purchased directly at "
      [:a {:href "https://www.townscript.com/e/inclojure-2019/booking" :target "_blank"} "townscript."]]]])
