@@ -24,7 +24,7 @@
     :selected-talk? true
     :speakers       [{:name    "Abhinav Sarkar"
                       :link    "http://twitter.com/abhin4v"
-                      :picture "images/speakers/abhinav-sarkar.webp"
+                      :picture "images/speakers/abhinav-sarkar.png"
                       :bio     "Abhinav works as a Principal Engineer at Flipkart. Abhinav has worked extensively in Clojure, Go and Java on large distributed systems for past ten years. He has been dabbling in functional programming for past few years and has been exploring Haskell, Erlang and ML. While not programming, you can find him riding his bicycle around the city."}]
     :company        "Flipkart"
     :title          "Introduction to Concurrency"
