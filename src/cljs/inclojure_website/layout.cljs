@@ -45,6 +45,7 @@
   [:div.section.nav-links
    [nav-link "schedule" "Schedule"]
    [nav-link "tickets" "Tickets"]
+   [nav-link "venue" "Venue"]
    [nav-link "workshops" "Workshops"]
    [nav-link "talks" "Talks and Speakers"]
    [nav-link "opgrant" "Opportunity Grant"]

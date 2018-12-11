@@ -243,6 +243,23 @@
       {:id (str "talk-" (talks/talk-id talk))}
       [talks/speaker-talk talk]])])
 
+(defn venue []
+  [layout/section "venue" "Venue"
+   [:div
+    [:p
+     "Royal Orchid Hotels Ltd."
+     [:br]
+     "#1, Golf Avenue, Adjoining KGA Golf Course, HAL Airport Road, Kodihalli, Bengaluru 560008"
+     [:br]
+     "Contact: "
+     [:a.contact-link {:href "tel:+919902000089"}
+      "+919902000089"]
+     ", "
+     [:a.contact-link {:href "tel:+918041783000"}
+      "+918041783000"]]
+    [:div.contact-map
+     [:iframe {:src "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7776.444925532358!2d77.6418106!3d12.9576119!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3f03ae46d85ca1a6!2sHotel+Royal+Orchid!5e0!3m2!1sen!2sin!4v1509077557311" :allowfullscreen "" :width "100" :height "450" :frameBorder "0"}]]]])
+
 (defn page []
   [layout/page
    [:div
@@ -255,6 +272,7 @@
     [workshops]
     [talks]
     [opportunity-grant]
+    [venue]
     [sponsorship]
     [code-of-conduct]
     [team]]])
