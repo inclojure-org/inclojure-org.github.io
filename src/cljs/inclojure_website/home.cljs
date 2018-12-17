@@ -26,7 +26,7 @@
   [:table.schedule-table
    [:thead
     [:tr
-     (for [h [:time :event :type :duration]]
+     (for [h [:time :event :type]]
        [:th
         {:style {:text-align "left"}}
         (string/capitalize (name h))])]]
@@ -42,8 +42,7 @@
           :else                     title)
         [:br]
         [schedule-speakers speakers company]]
-       [:td type]
-       [:td duration]])]])
+       [:td type]])]])
 
 (def day-1-workshops
   [{:time "8:40 am" :title "Registrations" :duration "30m"}
@@ -57,7 +56,7 @@
   [:table.schedule-table
    [:thead
     [:tr
-     (for [h [:time :event :duration]]
+     (for [h [:time :event]]
        [:th
         {:style {:text-align "left"}}
         (string/capitalize (name h))])]]
@@ -75,8 +74,7 @@
            (when (= "Lightning talk" type) "TBD")]
           title)
         [:br]
-        [schedule-speakers speakers company]]
-       [:td duration]])]])
+        [schedule-speakers speakers company]]])]])
 
 (defn schedule []
   [layout/section "schedule" "Schedule"
