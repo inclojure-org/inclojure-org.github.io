@@ -15,8 +15,8 @@
                       :picture "images/speakers/eric-normand.jpg"
                       :bio     "Eric is a writer, trainer, and speaker. He runs purelyfunctional.tv, and organises Clojure SYNC."}]
     :company        "Lispcast"
-    :title          "Keynote"
-    :abstract       "The subject of this keynote will be announced shortly."}
+    :title          "You are in a maze of deeply nested maps, all alike"
+    :abstract       "People complain a lot about difficulties with deeply nested maps in Clojure. I've never had that problem. I looked at other people's code to see what they were doing to get into trouble. In this talk you'll get a good idea of the wrong turns people take and you'll leave with some techniques to find your way out and to avoid getting lost in the first place."}
 
    {:duration       "40m"
     :type           "Full talk"
