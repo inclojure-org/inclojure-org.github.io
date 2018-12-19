@@ -86,7 +86,7 @@
     [day-2-schedule]]])
 
 (defn workshops []
-  [layout/section "workshops" "Workshops (11th January)"
+  [layout/section "workshops" "Workshops"
    [:div
     [:p "We will have two workshops at IN/Clojure, an introductory Clojure workshop and an intermediate Clojure workshop. Note that both the workshops will be
          conducted simultaneously on the same day. Therefore, one cannot attend both the workshops."]

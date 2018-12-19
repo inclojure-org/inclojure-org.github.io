@@ -26,7 +26,7 @@
       {:href "mailto:team@inclojure.org"}
       "    Contact  "]
      [:a.nav-link
-      {:href (resource-link "pdf/inclojure-sponsorship.pdf")}
+      {:href "pdf/inclojure-sponsorship.pdf"}
       "    Sponsorship  "]
      [:a.nav-link
       {:href "https://twitter.com/in_clojure"}
