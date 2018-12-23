@@ -447,3 +447,46 @@ aside.right {
 div.schedule-event-detail {
     display: inline;
 }
+
+.previously .section__content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.previously-section {
+    display: flex;
+    align-items: center;
+}
+
+.previously-img {
+    max-width: 20%;
+    min-width: 180px;
+    border: 1px solid #aaa;
+    height: 100px;
+}
+
+.previously {
+    max-width: 50%;
+    margin: 3% 0;
+    display: flex;
+}
+
+.previously:first-child {
+    padding-right: 10px;
+}
+
+.previously-about {
+    text-align: left;
+}
+
+p.previously-title {
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 24px;
+    margin: 0;
+    text-decoration: none;
+}
+
+p.previously-desc {
+
+}

@@ -22,6 +22,39 @@
      (for [{:keys [name link]} speakers]
        [:span (str name ", " company)])]))
 
+(defn previously [year]
+  [layout/section "previously" "Previously"
+   [:div.previously-section
+    [:div.previously
+     [:div.previously-content
+      [:a {:href "/2016"}
+       [:img.previously-img
+        {:alt "Pune 2016", :src "images/bg-pune.jpg"}]]
+      [:div.previously-about
+       [:a {:href "/2016"}
+        [:p.previously-title "Pune, 2016"]]
+       [:ul
+        [:li
+         [:a {:href
+              "https://www.youtube.com/playlist?list=PLlAML-kjpXY6XllFUezz6RYow6hF4zlFV"}
+          "Talks"]]]]]]
+
+    [:div.previously
+     [:div.previously-content
+      [:a {:href "/2018"}
+       [:img.previously-img
+        {:alt "Bangalore 2018", :src "images/bg-bangalore.jpg"}]]
+      [:div.previously-about
+       [:a {:href "/2018"}
+        [:p.previously-title "Bangalore, 2018"]]
+       [:p.previously-desc
+        [:ul
+         [:li
+          [:a {:href "https://www.youtube.com/playlist?list=PLlAML-kjpXY4rljddpJ5qMUp-t1Qa-Vfy"}
+           "Talks"]]
+         [:li
+          [:a {:href "https://www.flickr.com/photos/rvgpl/sets/72157691528752114"} "Pictures"]]]]]]]]])
+
 (defn day-2-schedule []
   [:table.schedule-table
    [:thead
@@ -90,11 +123,11 @@
    [:div
     [:p "We will have two workshops at IN/Clojure, an introductory Clojure workshop and an intermediate Clojure workshop. Note that both the workshops will be
          conducted simultaneously on the same day. Therefore, one cannot attend both the workshops."]
-    [:h4 {:id "introductory-workshop"}
+    [:h3 {:id "introductory-workshop"}
      "Introductory workshop"]
-    [:h5 "Audience"]
+    [:h4 "Audience"]
     [:p "Practising programmers and/or CS undergrads/grads who are new to Clojure (i.e. not absolute beginners in programming)."]
-    [:h5 "Session outline"]
+    [:h4 "Session outline"]
     [:div
      [:p "This will be a day-long hands-on workshop."]
      [:p "We will progressively grow logic for a little data-processing utility, by building concept upon concept until we have a working application."]
@@ -111,12 +144,12 @@
       [:li "use the REPL to interactively \"grow\" and introspect code."]]
      [:p "Fully documented workshop material will be available for use at home."]]
 
-    [:h4
+    [:h3
      {:id "intermediate-workshop"}
      "Intermediate workshop"]
-    [:h5 "Audience"]
+    [:h4 "Audience"]
     [:p "Working Clojure programmers who are relatively new to the language, but have written some Clojure code, perhaps under someone else's supervision."]
-    [:h5 "Session outline"]
+    [:h4 "Session outline"]
     [:p "This will be a day-long hands-on workshop."]
     [:p "The aim of this workshop is to help the attendee work in Clojure more effectively. We will learn about the application of the following concepts:"]
     [:ul
@@ -256,7 +289,17 @@
      [:a.contact-link {:href "tel:+918041783000"}
       "+918041783000"]]
     [:div.contact-map
-     [:iframe {:src "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7776.444925532358!2d77.6418106!3d12.9576119!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3f03ae46d85ca1a6!2sHotel+Royal+Orchid!5e0!3m2!1sen!2sin!4v1509077557311" :allowfullscreen "" :width "100" :height "450" :frameBorder "0"}]]]])
+     [:iframe {:src "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7776.444925532358!2d77.6418106!3d12.9576119!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3f03ae46d85ca1a6!2sHotel+Royal+Orchid!5e0!3m2!1sen!2sin!4v1509077557311" :allowfullscreen "" :width "100" :height "450" :frameBorder "0"}]]
+
+    [:h3 "Getting there"]
+    [:p
+     "By Air: Kempegowda International Airport (BLR) is a 50 minute taxi ride from the venue."]
+    [:p
+     "By Train: Bangalore is well connected by train to all major cities of India. Bangalore City Railway Station is about 30 minutes from the venue by car."]
+    [:h3 "Getting around"]
+    [:p "Uber and Ola and Meru cabs are all active in Bangalore. You should have no trouble using these. Local autorickshaws are also easily available."]
+    [:p "There are quite a few restaurants, pubs and small cafes at the 100ft road on Indiranagar, which is about a 10 minute walk from the venue."]
+    ]])
 
 (defn page []
   [layout/page
