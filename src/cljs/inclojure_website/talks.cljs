@@ -117,8 +117,7 @@
     :title          "Evolution of a stream processing framework"
     :abstract       "As we move to an event-driven architecture in Gojek, Ziggurat, our stream processing framework written in clojure acts as the central platform that enables developers to rapidly iterate on and develop applications in a day that solve problems ranging from processing payments to geofencing."}
 
-   {:duration "10m" :type "Lightning talk" :time "5:40 pm"}
-   {:duration "40m" :title "Panel" :time "5:50 pm"}
+   {:duration "40m" :title "BoF (birds of feather) session" :time "5:40 pm"}
    {:duration "5m" :title "Ending note" :time "6:30 pm"}])
 
 (defn talk-id [talk]
