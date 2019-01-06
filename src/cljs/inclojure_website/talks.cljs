@@ -99,7 +99,7 @@
                       :picture "images/speakers/shantanu-kumar.jpg"
                       :bio     "Shantanu is a Principal Engineer at Concur, building the core services platform using Clojure for fault tolerance and scale. Author of the book “Clojure High Performance Programming”, published by Packt publishing. Author of several Open Source Clojure libraries at https://github.com/kumarshantanu. Earlier worked at Runa (acquired by Staples) where he was using Clojure. Lives in Bangalore, India."}]
     :company        "Concur"
-    :title          "Bract: A minimal dry app framework"
+    :title          "Bract: A minimal DRY app framework"
     :abstract       "Most Clojure applications have a lot in common. While libraries do the heavy lifting for a specific purpose, everything still needs to be glued together. I will talk about an a-la-carte glue framework that brings uniformity and structure to various types of applications."}
 
    {:duration "30m" :type "Break" :time "4:20 pm"}
