@@ -52,7 +52,7 @@
 
    {:duration       "40m"
     :type           "Full talk"
-    :time           "12:10 am"
+    :time           "12:10 pm"
     :selected-talk? true
     :speakers       [{:name    "Martin Klepsch"
                       :link    "http://twitter.com/martinklepsch"
