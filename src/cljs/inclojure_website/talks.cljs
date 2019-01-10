@@ -44,7 +44,8 @@
                       :bio     "Rubal loves to code, and loves sharing the knowledge! She is interested in photography, calligraphy and is an avid bathroom singer!"}
                      {:name    "Pavitra Shetty"
                       :link    "https://www.linkedin.com/in/pavitra-shetty-22877418"
-                      :picture "images/speakers/pavithra-shetty.jpeg"}],
+                      :picture "images/speakers/pavithra-shetty.jpeg"
+                      :bio     "Pavitra is a backend Clojure developer at Helpshift."}],
     :company        "Helpshift"
     :title          "Using components in production"
     :abstract       "In this talk we introduce the problems faced in our current architecture [read - giant monolith architecture] The issues with multiple dependencies for a project and problems faced when there is no clear boundary."}
@@ -138,7 +139,8 @@
         :on-click #(layout/goto (str "talk-" (talk-id talk)))}
        (:title talk)]
     [:p abstract]
-    [:p (:bio (first speakers))]]])
+    (for [speaker speakers]
+      [:p (:bio speaker)])]])
 
 (defn page []
   [layout/page
