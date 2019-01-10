@@ -78,11 +78,10 @@
        [:td type]])]])
 
 (def day-1-workshops
-  [{:time "8:40 am" :title "Registrations" :duration "30m"}
-   {:time "9:20 am" :title "Welcome" :duration "10m"}
-   {:time "9:30 am – 5:30 pm" :title "Introductory workshop"
+  [{:time "9:30 am" :title "Registrations" :duration "30m"}
+   {:time "10:00 am – 6 pm" :title "Introductory workshop"
     :selected-talk? true :page-id "introductory-workshop" :duration "8h"}
-   {:time "9:30 am – 5:30 pm" :title "Intermediate workshop"
+   {:time "10:00 am – 6 pm" :title "Intermediate workshop"
     :selected-talk? true :page-id "intermediate-workshop" :duration "8h"}])
 
 (defn day-1-schedule []
