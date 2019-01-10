@@ -234,8 +234,10 @@
   [{:name "Aditya Athalye" :twitter-link "http://twitter.com/adityaathalye"}
    {:name "Akshay Gupta" :twitter-link "http://twitter.com/kitallis"}
    {:name "Deepa Venkatraman" :twitter-link "http://twitter.com/deepa_v"}
+   {:name "Kapil Reddy" :twitter-link "https://twitter.com/KapilReddy"}
    {:name "Kiran Gangadharan" :twitter-link "http://twitter.com/kirang89"}
    {:name "Nivedita Priyadarshini" :twitter-link "http://twitter.com/nid90"}
+   {:name "Ravindra Jaju" :twitter-link "https://twitter.com/jaju"}
    {:name "Sandilya Jandhyala" :twitter-link "http://twitter.com/jysandilya"}
    {:name "Srihari Sriraman" :twitter-link "http://twitter.com/sriharisriraman"}])
 
