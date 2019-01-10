@@ -70,7 +70,6 @@
        [:td.td-time time]
        [:td.td-event
         (cond
-          (= "Lightning talk" type) "TBD"
           selected-talk?            [event-detail talk]
           :else                     title)
         [:br]

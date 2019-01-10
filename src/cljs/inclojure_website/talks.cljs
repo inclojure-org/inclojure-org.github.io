@@ -32,7 +32,16 @@
 
    {:duration "30m" :type "Tea Break" :time "11:00 am" }
 
-   {:duration "10m" :type "Lightning talk" :time "11:30 am"}
+   {:duration       "10m"
+    :type           "Lightning talk"
+    :time           "11:30 am"
+    :selected-talk? true
+    :speakers       [{:name    "Kapil Reddy"
+                      :link    "https://twitter.com/kapilreddy"
+                      :picture "images/speakers/kapilreddy.jpg"
+                      :bio     "Kapil is a senior backend engineer at Helpshift"}]
+    :title          "Creating and evolving contracts with Clojure.spec"
+    :company        "Helpshift"}
 
    {:duration       "20m"
     :type           "Crisp talk"
@@ -76,12 +85,21 @@
 
    {:duration "1h 20m" :type "Lunch" :time "1:20 pm"}
 
-   {:duration "10m" :type "Lightning talk" :time "2:40 pm"}
-   {:duration "10m" :type "Lightning talk" :time "2:50 pm"}
+
+   {:duration       "10m"
+    :type           "Lightning talk"
+    :time           "2:40 pm"
+    :selected-talk? true
+    :speakers       [{:name    "Divyansh Prakash"
+                      :link    "https://twitter.com/therealdivs1210"
+                      :picture "images/speakers/divyansh.jpeg"
+                      :bio     "Hiking, chai, distributed, concurrent, clojure, etc."}]
+    :company        "nilenso"
+    :title          "async/await in Clojure using conquerant"}
 
    {:duration       "20m"
     :type           "Crisp talk"
-    :time           "3:10 pm"
+    :time           "2:50 pm"
     :selected-talk? true
     :speakers       [{:name    "Neha Mishra"
                       :link    "https://in.linkedin.com/in/neha-mishra-563674ab"
@@ -93,7 +111,7 @@
 
    {:duration       "40m"
     :type           "Full talk"
-    :time           "3:40 pm"
+    :time           "3:15 pm"
     :selected-talk? true
     :speakers       [{:name    "Shantanu Kumar"
                       :link    "http://twitter.com/kumarshantanu"
@@ -103,13 +121,22 @@
     :title          "Bract: A minimal DRY app framework"
     :abstract       "Most Clojure applications have a lot in common. While libraries do the heavy lifting for a specific purpose, everything still needs to be glued together. I will talk about an a-la-carte glue framework that brings uniformity and structure to various types of applications."}
 
-   {:duration "30m" :type "Break" :time "4:20 pm"}
+   {:duration "40m" :type "Break" :time "4:00 pm"}
 
-   {:duration "10m" :type "Lightning talk" :time "4:50 pm"}
+   {:duration       "10m"
+    :type           "Lightning talk"
+    :time           "4:40 pm"
+    :selected-talk? true
+    :speakers       [{:name    "Aditya Chowdhry"
+                      :link    "https://twitter.com/adityachowdhry9"
+                      :picture "images/speakers/aditya.jpg"
+                      :bio     "Product engineer at Go-Jek"}]
+    :company        "nilenso"
+    :title          "Afraid of Clojure error stacktraces? Fear no more!"}
 
    {:duration       "40m"
     :type           "Full talk"
-    :time           "5:00 pm"
+    :time           "4:50 pm"
     :speakers       [{:name    "Anirudh Vyas"
                       :link    "http://twitter.com/Anirudh2403"
                       :picture "images/speakers/anirudh-vyas.jpg"}]
@@ -118,9 +145,9 @@
     :title          "Evolution of a stream processing framework"
     :abstract       "As we move to an event-driven architecture in Gojek, Ziggurat, our stream processing framework written in clojure acts as the central platform that enables developers to rapidly iterate on and develop applications in a day that solve problems ranging from processing payments to geofencing."}
 
-   {:duration "40m" :title "BoF (Birds of Feather) session" :time "5:40 pm"}
-   {:duration "5m" :title "Ending note" :time "6:30 pm"}
-   {:duration "3h" :title "Helpshift Sponsored Event" :time "7:30 pm"}])
+   {:duration "60m" :title "BoF (Birds of Feather) sessions" :time "5:30 pm"}
+   {:duration "5m" :title "Ending note (10m)" :time "6:30 pm"}
+   {:duration "3h" :title "After party sponsored by Helpshift" :time "7:30 pm"}])
 
 (defn talk-id [talk]
   (string/replace (string/lower-case (:name (first (:speakers talk)))) #" " "-"))
