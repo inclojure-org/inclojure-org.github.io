@@ -93,7 +93,7 @@
     :speakers       [{:name    "Divyansh Prakash"
                       :link    "https://twitter.com/therealdivs1210"
                       :picture "images/speakers/divyansh.jpeg"
-                      :bio     "Hiking, chai, distributed, concurrent, clojure, etc."}]
+                      :bio     "Divyansh is a software developer at nilenso"}]
     :company        "nilenso"
     :title          "async/await in Clojure using conquerant"}
 
