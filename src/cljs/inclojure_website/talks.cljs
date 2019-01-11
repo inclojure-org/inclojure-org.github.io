@@ -131,7 +131,7 @@
                       :link    "https://twitter.com/adityachowdhry9"
                       :picture "images/speakers/aditya.jpg"
                       :bio     "Product engineer at Go-Jek"}]
-    :company        "nilenso"
+    :company        "Go-Jek"
     :title          "Afraid of Clojure error stacktraces? Fear no more!"}
 
    {:duration       "40m"
