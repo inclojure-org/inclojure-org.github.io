@@ -189,7 +189,7 @@
   [layout/section "sponsorship" "Sponsorship"
    [:p
     [:div.benefactors.gold
-     "Get In Touch"]]
+     "Get In Touch! See contact details below."]]
    #_[:p
     [:div.benefactors.gold
      [:p.benefactor-slab
@@ -245,12 +245,14 @@
   [{:name "Aditya Athalye" :twitter-link "http://twitter.com/adityaathalye"}
    {:name "Akshay Gupta" :twitter-link "http://twitter.com/kitallis"}
    #_{:name "Deepa Venkatraman" :twitter-link "http://twitter.com/deepa_v"}
+   {:name "Harsh Gupta" :twitter-link "https://github.com/hargup"}
    {:name "Kapil Reddy" :twitter-link "https://twitter.com/KapilReddy"}
-   {:name "Kiran Gangadharan" :twitter-link "http://twitter.com/kirang89"}
+   #_{:name "Kiran Gangadharan" :twitter-link "http://twitter.com/kirang89"}
    {:name "Nivedita Priyadarshini" :twitter-link "http://twitter.com/nid90"}
    {:name "Ravindra Jaju" :twitter-link "https://twitter.com/jaju"}
    {:name "Sandilya Jandhyala" :twitter-link "http://twitter.com/jysandilya"}
-   {:name "Srihari Sriraman" :twitter-link "http://twitter.com/sriharisriraman"}])
+   {:name "Srihari Sriraman" :twitter-link "http://twitter.com/sriharisriraman"}
+   {:name "Venkatesh Halli" :twitter-link "https://github.com/vhalli"}])
 
 (defn team-member [twitter-link name]
   [:a.team-member
