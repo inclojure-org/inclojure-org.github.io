@@ -131,7 +131,8 @@
     [:h4 "Audience"]
     [:p "Practising programmers and/or CS undergrads/grads who are new to Clojure (i.e. not absolute beginners in programming)."]
     [:h4 "Session outline"]
-    [:div
+    [:p>em "Details coming soon!"]
+    #_[:div
      [:p "This will be a day-long hands-on workshop."]
      [:p "We will progressively grow logic for a little data-processing utility, by building concept upon concept until we have a working application."]
      [:p "We will try to achieve this with:"]
@@ -153,9 +154,10 @@
     [:h4 "Audience"]
     [:p "Working Clojure programmers who are relatively new to the language, but have written some Clojure code, perhaps under someone else's supervision."]
     [:h4 "Session outline"]
-    [:p "This will be a day-long hands-on workshop."]
-    [:p "The aim of this workshop is to help the attendee work in Clojure more effectively. We will learn about the application of the following concepts:"]
-    [:ul
+    [:p>em "Details coming soon!"]
+    #_[:p "This will be a day-long hands-on workshop."]
+    #_[:p "The aim of this workshop is to help the attendee work in Clojure more effectively. We will learn about the application of the following concepts:"]
+    #_[:ul
      [:li "Java interop"]
      [:li "Polymorphism using Multimethods and Protocols"]
      [:li "Laziness"]
@@ -165,7 +167,7 @@
        [:li "Advanced: Refs and Software Transactional Memory"]]]
      [:li "Macros"]
      [:li "Testing"]]
-    [:p "To help illustrate and understand the application of these concepts, we will build a project that ties all these concepts together."]]])
+    #_[:p "To help illustrate and understand the application of these concepts, we will build a project that ties all these concepts together."]]])
 
 (defn tickets []
   [layout/section "tickets" "Tickets"
