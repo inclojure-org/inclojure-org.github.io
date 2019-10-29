@@ -10,8 +10,8 @@
 (defn header []
   [:div.section.header
      [:img.header-logo
-      {:alt  "Goto INClojure 2020 home page",
-       :src  "images/inclojure-logo-2019.png"
+      {:alt  "Goto IN/Clojure 2020 home page",
+       :src  "images/inclojure-banner-2020.png"
        :href "/"}]
      [:p.date-and-venue
       "February, 2020"
