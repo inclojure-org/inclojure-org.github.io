@@ -224,7 +224,8 @@
   [layout/section "opgrant" "Opportunity Grant"
    [:div
     [:p "IN/Clojure aims to be an inclusive conference. We're really glad to announce an opportunity grant for community members who would be unable to attend the conference for financial reasons. The opportunity grant includes a free ticket and travel assistance."]
-    [:p "Please fill out this "
+    [:p "Please watch this space for announcement related to applying for the Opportunity Grant."]
+    #_[:p "Please fill out this "
      [:a {:href   "https://goo.gl/forms/QYvM8FRjRV5LC0jn2"
           :target "_blank"}
       "form"]
