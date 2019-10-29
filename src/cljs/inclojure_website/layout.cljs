@@ -11,7 +11,7 @@
   [:div.section.header
      [:img.header-logo
       {:alt  "Goto IN/Clojure 2020 home page",
-       :src  "images/inclojure-banner-2020.png"
+       :src  "images/inclojure-logo.png"
        :href "/"}]
      [:p.date-and-venue
       "February, 2020"
