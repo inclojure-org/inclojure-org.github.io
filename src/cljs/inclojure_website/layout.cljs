@@ -10,13 +10,13 @@
 (defn header []
   [:div.section.header
      [:img.header-logo
-      {:alt  "Goto INClojure 2019 home page",
+      {:alt  "Goto INClojure 2020 home page",
        :src  "images/inclojure-logo-2019.png"
        :href "/"}]
      [:p.date-and-venue
-      "11th and 12th January, 2019"
+      "February, 2020"
       [:br]
-      " Bengaluru, India"]])
+      "Pune, India"]])
 
 (defn footer []
   [:div.section.footer
@@ -25,7 +25,7 @@
      [:a.nav-link
       {:href "mailto:team@inclojure.org"}
       "    Contact  "]
-     [:a.nav-link
+     #_[:a.nav-link
       {:href "pdf/inclojure-sponsorship.pdf"}
       "    Sponsorship  "]
      [:a.nav-link
@@ -49,7 +49,7 @@
    [nav-link "workshops" "Workshops"]
    [nav-link "talks" "Talks and Speakers"]
    [nav-link "opgrant" "Opportunity Grant"]
-   [nav-link "sponsorship" "Sponsors"]
+   #_[nav-link "sponsorship" "Sponsors"]
    [nav-link "conduct" "Code of Conduct"]
    [nav-link "team" "Team"]] )
 

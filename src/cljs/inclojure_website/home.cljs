@@ -6,8 +6,11 @@
 (defn intro []
   [:div.section
    [:p.section__content
-    "IN/Clojure is India's annual Clojure conference. It is also the only Clojure conference in all of Asia. IN/Clojure’s primary focus is the free exchange of ideas between new and experienced Clojure programmers alike. IN/Clojure 2019 is the third edition of Asia's very first Clojure conference, and is scheduled to be held in "
-    [:strong "Bengaluru, on 11th and 12th January,  2019."]]])
+    "IN/Clojure is India's annual Clojure conference. It is also the only Clojure conference in all of Asia.
+    IN/Clojure’s primary focus is the free exchange of ideas between new and experienced Clojure programmers alike.
+    IN/Clojure 2020 is the third edition of Asia's very first Clojure conference, and is scheduled to be held in "
+    [:strong "Pune, in February 2020."]
+    [:em "The exact dates will be finalized very soon, and this page will see frequent updates."]]])
 
 (defn event-detail [{:keys [title speakers company] :as talk}]
   [:a {:href "#"
@@ -77,10 +80,10 @@
        [:td type]])]])
 
 (def day-1-workshops
-  [{:time "9:30 am" :title "Registrations" :duration "30m"}
-   {:time "10:00 am – 6 pm" :title "Introductory workshop"
+  [{:time "Time TBA" :title "Registrations" :duration "30m"}
+   {:time "Time TBA" :title "Introductory workshop"
     :selected-talk? true :page-id "introductory-workshop" :duration "8h"}
-   {:time "10:00 am – 6 pm" :title "Intermediate workshop"
+   {:time "Time TBA" :title "Intermediate workshop"
     :selected-talk? true :page-id "intermediate-workshop" :duration "8h"}])
 
 (defn day-1-schedule []
@@ -110,11 +113,13 @@
 (defn schedule []
   [layout/section "schedule" "Schedule"
    [:div
-    [:p [:strong "Friday, 11.01.2019"] " | Workshops"
-     [day-1-schedule]]
+    [:p [:strong "Dates TBA"] " | Workshops"
+     #_[day-1-schedule]]
     [:br]
-    [:p [:strong "Saturday, 12.01.2019"] " | Talks"]
-    [day-2-schedule]]])
+    [:p [:strong "Dates TBA"] " | Talks"
+     [:div "CFP is open. "
+      [:a {:href "https://hasgeek.com/inclojure/2020/proposals" :target "_blank"} "Submit your proposal."]]]
+    #_[day-2-schedule]]])
 
 (defn workshops []
   [layout/section "workshops" "Workshops"
@@ -164,7 +169,8 @@
 
 (defn tickets []
   [layout/section "tickets" "Tickets"
-   [:div
+   [:div "Coming Soon"]
+   #_[:div
     [:iframe {:src "https://www.townscript.com/widget/inclojure-2019" :frameBorder "0" :height "600" :width "80%"}]
     [:p
      "Alternatively, tickets can be purchased directly at "
@@ -180,6 +186,9 @@
 (defn sponsorship []
   [layout/section "sponsorship" "Sponsorship"
    [:p
+    [:div.benefactors.gold
+     "Get In Touch"]]
+   #_[:p
     [:div.benefactors.gold
      [:p.benefactor-slab
       "Platinum"]
@@ -232,7 +241,7 @@
 (def members
   [{:name "Aditya Athalye" :twitter-link "http://twitter.com/adityaathalye"}
    {:name "Akshay Gupta" :twitter-link "http://twitter.com/kitallis"}
-   {:name "Deepa Venkatraman" :twitter-link "http://twitter.com/deepa_v"}
+   #_{:name "Deepa Venkatraman" :twitter-link "http://twitter.com/deepa_v"}
    {:name "Kapil Reddy" :twitter-link "https://twitter.com/KapilReddy"}
    {:name "Kiran Gangadharan" :twitter-link "http://twitter.com/kirang89"}
    {:name "Nivedita Priyadarshini" :twitter-link "http://twitter.com/nid90"}
@@ -253,30 +262,29 @@
       [team-member twitter-link name])]])
 
 (defn invited-speakers []
-  [layout/section "invited-speakers" "Keynote Speaker"
+  [layout/section "invited-speakers" "Invited Speaker"
    [:div.speaker
     [:img.speaker-img
-     {:alt "Eric Normand", :src "images/speakers/eric-normand.jpg"}]
+     {:alt "Bozhidar Batsov", :src "images/speakers/bozhidar-batsov.jpg"}]
     [:div.speaker-about
-     [:p.speaker-name "Eric Normand"]
+     [:p.speaker-name "Bozhidar Batsov"]
      [:p.speaker-desc
-      [:a {:target "_blank" :href "https://lispcast.com"} "Writer"]
-      ", trainer, and speaker. Runs "
-      [:a {:target "_blank" :href "https://purelyfunctional.tv/"} "purelyfunctional.tv"]
-      ", and organises "
-      [:a {:target "_blank" :href "https://clojuresync.com/"} "Clojure SYNC."]]]]])
+      "Bozhidar is the maintainer of CIDER, nREPL, a dozen of related projects and the editor of the community Clojure style guide. Most people would probably describe him as an Emacs zealot (and they would be right). He's also quite fond of the Lisp family of languages, functional programming in general and Clojure in particular.\n\nBelieve it or not, Bozhidar has hobbies and interests outside the realm of computers, but we won't bore with those here."]]]])
 
 
 (defn talks []
   [layout/section "talks" "Talks and Speakers"
-   (for [talk (filter :selected-talk? talks/selected-talks)]
+   [:div "CFP is open. "
+    [:a {:href "https://hasgeek.com/inclojure/2020/proposals" :target "_blank"} "Submit your proposal."]]
+   #_(for [talk (filter :selected-talk? talks/selected-talks)]
      [:div.home-page-talk
       {:id (str "talk-" (talks/talk-id talk))}
       [talks/speaker-talk talk]])])
 
 (defn venue []
   [layout/section "venue" "Venue"
-   [:div
+   "Coming Soon"
+   #_[:div
     [:p
      "Royal Orchid Hotels Ltd."
      [:br]

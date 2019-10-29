@@ -21,3 +21,4 @@ resources/public/js/figwheel-out
 .local-m2
 .idea/
 *.iml
+/.lein-repl-history
