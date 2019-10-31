@@ -28,35 +28,52 @@
 (defn previously [year]
   [layout/section "previously" "Previously"
    [:div.previously-section
+
     [:div.previously
      [:div.previously-content
-      [:a {:href "/2016"}
+      [:div {}
        [:img.previously-img
         {:alt "Pune 2016", :src "images/bg-pune.jpg"}]]
       [:div.previously-about
-       [:a {:href "/2016"}
+       [:div {}
         [:p.previously-title "Pune, 2016"]]
        [:ul
         [:li
          [:a {:href
-              "https://www.youtube.com/playlist?list=PLlAML-kjpXY6XllFUezz6RYow6hF4zlFV"}
+              "https://www.youtube.com/playlist?list=PLlAML-kjpXY6XllFUezz6RYow6hF4zlFV" :target "_blank"}
           "Talks"]]]]]]
 
     [:div.previously
      [:div.previously-content
-      [:a {:href "/2018"}
+      [:div {}
        [:img.previously-img
         {:alt "Bangalore 2018", :src "images/bg-bangalore.jpg"}]]
       [:div.previously-about
-       [:a {:href "/2018"}
+       [:div {}
         [:p.previously-title "Bangalore, 2018"]]
        [:p.previously-desc
         [:ul
          [:li
-          [:a {:href "https://www.youtube.com/playlist?list=PLlAML-kjpXY4rljddpJ5qMUp-t1Qa-Vfy"}
+          [:a {:href "https://www.youtube.com/playlist?list=PLlAML-kjpXY4rljddpJ5qMUp-t1Qa-Vfy" :target "_blank"}
            "Talks"]]
+         #_[:li
+            [:a {:href "https://www.flickr.com/photos/rvgpl/sets/72157691528752114"} "Pictures"]]]]]]]
+
+    [:div.previously
+     [:div.previously-content
+      [:div {}
+       [:img.previously-img
+        {:alt "Bangalore 2019", :src "images/bg-bangalore.jpg"}]]
+      [:div.previously-about
+       [:div {}
+        [:p.previously-title "Bangalore, 2019"]]
+       [:p.previously-desc
+        [:ul
          [:li
-          [:a {:href "https://www.flickr.com/photos/rvgpl/sets/72157691528752114"} "Pictures"]]]]]]]]])
+          [:a {:href "https://www.youtube.com/playlist?list=PLlAML-kjpXY7kzJp0p1EPJ9eb8B15CCBU" :target "_blank"}
+           "Talks"]]
+         #_[:li
+            [:a {:href "https://www.flickr.com/photos/rvgpl/sets/72157691528752114"} "Pictures"]]]]]]]]])
 
 (defn day-2-schedule []
   [:table.schedule-table
@@ -113,12 +130,15 @@
 (defn schedule []
   [layout/section "schedule" "Schedule"
    [:div
-    [:p [:strong "Dates TBA"] " | Workshops"
-     #_[day-1-schedule]]
+    [:h3 "The Call For Proposals is now open."]
+    [:a {:href "https://hasgeek.com/inclojure/2020/proposals" :target "_blank"} [:i "Submit your proposal(s) now."]]
     [:br]
-    [:p [:strong "Dates TBA"] " | Talks"
+    [:em "IN/Clojure 2020 will happen over two days. The exact dates will be announced soon."]
+    [:p [:strong "Day 1"] " | Workshops"
+     #_[day-1-schedule]]
+    [:p [:strong "Day 2"] " | Talks"
      [:div "CFP is open. "
-      [:a {:href "https://hasgeek.com/inclojure/2020/proposals" :target "_blank"} "Submit your proposal."]]]
+      [:a {:href "https://hasgeek.com/inclojure/2020/proposals" :target "_blank"} [:i "Submit your proposal(s) now."]]]]
     #_[day-2-schedule]]])
 
 (defn workshops []
@@ -133,20 +153,20 @@
     [:h4 "Session outline"]
     [:p>em "Details coming soon!"]
     #_[:div
-     [:p "This will be a day-long hands-on workshop."]
-     [:p "We will progressively grow logic for a little data-processing utility, by building concept upon concept until we have a working application."]
-     [:p "We will try to achieve this with:"]
-     [:ul
-      [:li "A small set of core ideas,"]
-      [:li "a handful of Clojure primitives, a few API design techniques, and"]
-      [:li "an interactive (REPL-driven) programming workflow."]]
-     [:p "We will do the following:"]
-     [:ul
-      [:li "Model things with pure data,"]
-      [:li "design clean functional APIs,"]
-      [:li "compose purely functional logic, and"]
-      [:li "use the REPL to interactively \"grow\" and introspect code."]]
-     [:p "Fully documented workshop material will be available for use at home."]]
+       [:p "This will be a day-long hands-on workshop."]
+       [:p "We will progressively grow logic for a little data-processing utility, by building concept upon concept until we have a working application."]
+       [:p "We will try to achieve this with:"]
+       [:ul
+        [:li "A small set of core ideas,"]
+        [:li "a handful of Clojure primitives, a few API design techniques, and"]
+        [:li "an interactive (REPL-driven) programming workflow."]]
+       [:p "We will do the following:"]
+       [:ul
+        [:li "Model things with pure data,"]
+        [:li "design clean functional APIs,"]
+        [:li "compose purely functional logic, and"]
+        [:li "use the REPL to interactively \"grow\" and introspect code."]]
+       [:p "Fully documented workshop material will be available for use at home."]]
 
     [:h3
      {:id "intermediate-workshop"}
@@ -158,25 +178,25 @@
     #_[:p "This will be a day-long hands-on workshop."]
     #_[:p "The aim of this workshop is to help the attendee work in Clojure more effectively. We will learn about the application of the following concepts:"]
     #_[:ul
-     [:li "Java interop"]
-     [:li "Polymorphism using Multimethods and Protocols"]
-     [:li "Laziness"]
-     [:li "Concurrency in Clojure"
-      [:ul
-       [:li "Basic: Futures, Promises, Atoms and Agents"]
-       [:li "Advanced: Refs and Software Transactional Memory"]]]
-     [:li "Macros"]
-     [:li "Testing"]]
+       [:li "Java interop"]
+       [:li "Polymorphism using Multimethods and Protocols"]
+       [:li "Laziness"]
+       [:li "Concurrency in Clojure"
+        [:ul
+         [:li "Basic: Futures, Promises, Atoms and Agents"]
+         [:li "Advanced: Refs and Software Transactional Memory"]]]
+       [:li "Macros"]
+       [:li "Testing"]]
     #_[:p "To help illustrate and understand the application of these concepts, we will build a project that ties all these concepts together."]]])
 
 (defn tickets []
   [layout/section "tickets" "Tickets"
    [:div "Coming Soon"]
    #_[:div
-    [:iframe {:src "https://www.townscript.com/widget/inclojure-2019" :frameBorder "0" :height "600" :width "80%"}]
-    [:p
-     "Alternatively, tickets can be purchased directly at "
-     [:a {:href "https://www.townscript.com/e/inclojure-2019/booking" :target "_blank"} "townscript."]]]])
+      [:iframe {:src "https://www.townscript.com/widget/inclojure-2019" :frameBorder "0" :height "600" :width "80%"}]
+      [:p
+       "Alternatively, tickets can be purchased directly at "
+       [:a {:href "https://www.townscript.com/e/inclojure-2019/booking" :target "_blank"} "townscript."]]]])
 
 (defn benefactor [benefactor-name site-link logo-src]
   [:li.benefactor
@@ -244,15 +264,15 @@
 (def members
   [{:name "Aditya Athalye" :twitter-link "http://twitter.com/adityaathalye"}
    {:name "Akshay Gupta" :twitter-link "http://twitter.com/kitallis"}
-   #_{:name "Deepa Venkatraman" :twitter-link "http://twitter.com/deepa_v"}
    {:name "Harsh Gupta" :twitter-link "https://github.com/hargup"}
    {:name "Kapil Reddy" :twitter-link "https://twitter.com/KapilReddy"}
-   #_{:name "Kiran Gangadharan" :twitter-link "http://twitter.com/kirang89"}
    {:name "Nivedita Priyadarshini" :twitter-link "http://twitter.com/nid90"}
    {:name "Ravindra Jaju" :twitter-link "https://twitter.com/jaju"}
+   {:name "Rubal Jabbal" :twitter-link "https://github.com/rubalj"}
    {:name "Sandilya Jandhyala" :twitter-link "http://twitter.com/jysandilya"}
    {:name "Srihari Sriraman" :twitter-link "http://twitter.com/sriharisriraman"}
-   {:name "Venkatesh Halli" :twitter-link "https://github.com/vhalli"}])
+   {:name "Venkatesh Halli" :twitter-link "https://github.com/vhalli"}
+   {:name "Vikram Chintalapati" :twitter-link "https://github.com/vkrmis"}])
 
 (defn team-member [twitter-link name]
   [:a.team-member
@@ -320,8 +340,9 @@
     [layout/header]
     [layout/navigation]
     [intro]
-    [schedule]
     [invited-speakers]
+    [schedule]
+    [previously 1900]
     [tickets]
     [workshops]
     [talks]
