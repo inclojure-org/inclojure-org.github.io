@@ -6,7 +6,7 @@
 (defn intro []
   [:div.section
    [:p.section__content
-    "IN/Clojure is India's annual Clojure conference. It is also the only Clojure conference in all of Asia.
+    "IN/Clojure is India's annual Clojure conference, and Asia's first.
     IN/Clojure’s primary focus is the free exchange of ideas between new and experienced Clojure programmers alike.
     IN/Clojure 2020 is the fourth edition of Asia's very first Clojure conference, and is scheduled to be held in "
     [:strong "Pune, in February 2020."]
