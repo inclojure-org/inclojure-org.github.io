@@ -9,8 +9,7 @@
     "IN/Clojure is India's annual Clojure conference, and Asia's first.
     IN/Clojure’s primary focus is the free exchange of ideas between new and experienced Clojure programmers alike.
     IN/Clojure 2020 is the fourth edition of Asia's very first Clojure conference, and is scheduled to be held in "
-    [:strong "Pune, in February 2020."]
-    [:em "The exact dates will be finalized very soon, and this page will see frequent updates."]]])
+    [:strong "Pune, on the 14" [:sup "th"] " and 15" [:sup "th"] "of February 2020."]]])
 
 (defn event-detail [{:keys [title speakers company] :as talk}]
   [:a {:href "#"
@@ -133,7 +132,7 @@
     [:h3 "The Call For Proposals is now open."]
     [:a {:href "https://hasgeek.com/inclojure/2020/proposals" :target "_blank"} [:i "Submit your proposal(s) now."]]
     [:br]
-    [:em "IN/Clojure 2020 will happen over two days. The exact dates will be announced soon."]
+    [:em "IN/Clojure 2020 will happen over two days - 14" [:sup "th"] " and 15" [:sup "th"] " of February, 2020."]
     [:p [:strong "Day 1"] " | Workshops"
      #_[day-1-schedule]]
     [:p [:strong "Day 2"] " | Talks"
@@ -150,8 +149,8 @@
      "Introductory workshop"]
     [:h4 "Audience"]
     [:p "Practising programmers and/or CS undergrads/grads who are new to Clojure (i.e. not absolute beginners in programming)."]
-    [:h4 "Session outline"]
-    [:p>em "Details coming soon!"]
+    ;;[:h4 "Session outline"]
+    ;;[:p>em "Details coming soon!"]
     #_[:div
        [:p "This will be a day-long hands-on workshop."]
        [:p "We will progressively grow logic for a little data-processing utility, by building concept upon concept until we have a working application."]
@@ -173,8 +172,8 @@
      "Intermediate workshop"]
     [:h4 "Audience"]
     [:p "Working Clojure programmers who are relatively new to the language, but have written some Clojure code, perhaps under someone else's supervision."]
-    [:h4 "Session outline"]
-    [:p>em "Details coming soon!"]
+    ;;[:h4 "Session outline"]
+    ;;[:p>em "Details coming soon!"]
     #_[:p "This will be a day-long hands-on workshop."]
     #_[:p "The aim of this workshop is to help the attendee work in Clojure more effectively. We will learn about the application of the following concepts:"]
     #_[:ul
@@ -346,6 +345,6 @@
     [talks]
     [opportunity-grant]
     [venue]
-    [sponsorship]
+    #_[sponsorship]
     [code-of-conduct]
     [team]]])

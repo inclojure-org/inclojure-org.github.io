@@ -14,7 +14,7 @@
        :src  "images/inclojure-logo.png"
        :href "/"}]
      [:p.date-and-venue
-      "February, 2020"
+      "14" [:sup "th"] " and 15" [:sup "th"] " February, 2020"
       [:br]
       "Pune, India"]])
 
@@ -26,8 +26,8 @@
       {:href "mailto:team@inclojure.org"}
       "    Contact  "]
      #_[:a.nav-link
-      {:href "pdf/inclojure-sponsorship.pdf"}
-      "    Sponsorship  "]
+        {:href "pdf/inclojure-sponsorship.pdf"}
+        "    Sponsorship  "]
      [:a.nav-link
       {:href "https://twitter.com/in_clojure"}
       "    @in_clojure  "]]]])
@@ -51,7 +51,7 @@
    [nav-link "opgrant" "Opportunity Grant"]
    #_[nav-link "sponsorship" "Sponsors"]
    [nav-link "conduct" "Code of Conduct"]
-   [nav-link "team" "Team"]] )
+   [nav-link "team" "Team"]])
 
 (defn section [id title content]
   [:div.section {:id id}
