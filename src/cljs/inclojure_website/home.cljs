@@ -143,8 +143,8 @@
 (defn workshops []
   [layout/section "workshops" "Workshops"
    [:div
-    [:p "We will have two workshops at IN/Clojure, an introductory Clojure workshop and an intermediate Clojure workshop. Note that both the workshops will be
-         conducted simultaneously on the same day. Therefore, one cannot attend both the workshops."]
+    [:p "There will be two workshops at IN/Clojure 2020 - an introductory Clojure workshop and an intermediate Clojure workshop. Note that both the workshops will be
+         conducted simultaneously on the 14" [:sup "th"] " of February, 2020. Therefore, one cannot attend both the workshops."]
     [:h3 {:id "introductory-workshop"}
      "Introductory workshop"]
     [:h4 "Audience"]
