@@ -25,9 +25,9 @@
      [:a.nav-link
       {:href "mailto:team@inclojure.org"}
       "    Contact  "]
-     #_[:a.nav-link
-        {:href "pdf/inclojure-sponsorship.pdf"}
-        "    Sponsorship  "]
+     [:a.nav-link
+      {:href "pdf/inclojure-2020-sponsorship-deck.pdf"}
+      "    Sponsorship  "]
      [:a.nav-link
       {:href "https://twitter.com/in_clojure"}
       "    @in_clojure  "]]]])
@@ -49,7 +49,7 @@
    [nav-link "workshops" "Workshops"]
    [nav-link "talks" "Talks and Speakers"]
    [nav-link "opgrant" "Opportunity Grant"]
-   #_[nav-link "sponsorship" "Sponsors"]
+   [nav-link "sponsorship" "Sponsors"]
    [nav-link "conduct" "Code of Conduct"]
    [nav-link "team" "Team"]])
 

@@ -207,31 +207,29 @@
 (defn sponsorship []
   [layout/section "sponsorship" "Sponsorship"
    [:p
+    ;; [:div.benefactors.gold
+    ;;  [:p.benefactor-slab
+    ;;   "Platinum"]
+    ;;  [:ul.benefactors-list
+    ;;   [benefactor "Go-Jek" "https://www.go-jek.com/" "images/sponsor-logos/go-jek.png"]
+    ;;   [benefactor "Helpshift" "https://www.helpshift.com" "images/sponsor-logos/helpshift.png"]]]
+    ;; [:div.benefactors.gold
+    ;;  [:p.benefactor-slab
+    ;;   "Gold"]
+    ;;  [:ul.benefactors-list
+    ;;   [benefactor "nilenso" "https://nilenso.com" "images/sponsor-logos/nilenso.png"]
+    ;;   [benefactor "Thoughtworks" "https://www.thoughtworks.com" "images/sponsor-logos/thoughtworks.png"]]]
+    ;; [:div.benefactors.silver
+    ;;  [:p.benefactor-slab
+    ;;   "Silver"]
+    ;;  [:ul.benefactors-list
+    ;;   [benefactor "Formcept" "https://www.formcept.com" "images/sponsor-logos/formcept.png"]
+    ;;   [benefactor "Concur" "https://www.concur.co.in" "images/sponsor-logos/sap-concur.png"]]]
     [:div.benefactors.gold
-     "Get In Touch! See contact details below."]]
-   #_[:p
-      [:div.benefactors.gold
-       [:p.benefactor-slab
-        "Platinum"]
-       [:ul.benefactors-list
-        [benefactor "Go-Jek" "https://www.go-jek.com/" "images/sponsor-logos/go-jek.png"]
-        [benefactor "Helpshift" "https://www.helpshift.com" "images/sponsor-logos/helpshift.png"]]]
-      [:div.benefactors.gold
-       [:p.benefactor-slab
-        "Gold"]
-       [:ul.benefactors-list
-        [benefactor "nilenso" "https://nilenso.com" "images/sponsor-logos/nilenso.png"]
-        [benefactor "Thoughtworks" "https://www.thoughtworks.com" "images/sponsor-logos/thoughtworks.png"]]]
-      [:div.benefactors.silver
-       [:p.benefactor-slab
-        "Silver"]
-       [:ul.benefactors-list
-        [benefactor "Formcept" "https://www.formcept.com" "images/sponsor-logos/formcept.png"]
-        [benefactor "Concur" "https://www.concur.co.in" "images/sponsor-logos/sap-concur.png"]]]
-      "Sponsorship details are available as a prospectus "
-      [:a {:href "pdf/inclojure-sponsorship.pdf" :target "_blank"} "here"]
-      ". If you'd like to sponsor IN/Clojure 2019, check out the prospectus or contact us at "
-      [:a {:href "mailto:events@inclojure.org"} "events@inclojure.org."]]])
+     "Sponsorship details are available as a prospectus "
+     [:a {:href "pdf/inclojure-2020-sponsorship-deck.pdf" :target "_blank"} "here"]
+     ". If you'd like to sponsor IN/Clojure 2020, check out the prospectus or contact us at "
+     [:a {:href "mailto:2020@inclojure.org"} "2020@inclojure.org."]]]])
 
 (defn code-of-conduct []
   [layout/section "conduct" "Code Of Conduct"
@@ -345,6 +343,6 @@
     [talks]
     [opportunity-grant]
     [venue]
-    #_[sponsorship]
+    [sponsorship]
     [code-of-conduct]
     [team]]])
