@@ -5,12 +5,47 @@
 
 (defn intro []
   [:div.section
+   [:h3 "About"]
    [:p.section__content
     "IN/Clojure is India’s annual Clojure conference, and Asia's first.
 
      Our focus is the free exchange of ideas between new and experienced Clojure programmers alike.
 
-     IN/Clojure 2020, our fourth edition, is happening " [:strong "in Pune, on the 14" [:sup "th"] " and 15" [:sup "th"] "of February 2020."]]])
+     IN/Clojure 2020, our fourth edition, is happening " [:strong "in Pune, on the 14" [:sup "th"] " and 15" [:sup "th"] "of February 2020."]]
+   [:h3 "Previous editions"]
+   [:div.previously-section
+
+    [:div.previously
+     [:div.previously-content
+      [:div {}
+       [:img.previously-img
+        {:alt "Bangalore 2019", :src "images/bg-bangalore.jpg"}]]
+      [:div.previously-about
+       [:div {}
+        [:p.previously-title [:a {:href "https://www.youtube.com/playlist?list=PLlAML-kjpXY7kzJp0p1EPJ9eb8B15CCBU" :target "_blank"}
+                              "Bangalore, 2019"]]]]]]
+
+    [:div.previously
+     [:div.previously-content
+      [:div {}
+       [:img.previously-img
+        {:alt "Bangalore 2018", :src "images/bg-bangalore.jpg"}]]
+      [:div.previously-about
+       [:div {}
+        [:p.previously-title [:a {:href "https://www.youtube.com/playlist?list=PLlAML-kjpXY4rljddpJ5qMUp-t1Qa-Vfy" :target "_blank"}
+                              "Bangalore, 2018"]]]]]]
+
+    [:div.previously
+     [:div.previously-content
+      [:div {}
+       [:img.previously-img
+        {:alt "Pune 2016", :src "images/bg-pune.jpg"}]]
+      [:div.previously-about
+       [:div {}
+        [:p.previously-title [:a {:href
+                                  "https://www.youtube.com/playlist?list=PLlAML-kjpXY6XllFUezz6RYow6hF4zlFV" :target "_blank"}
+                              "Pune, 2016"]]]]]]
+    ]])
 
 (defn event-detail [{:keys [title speakers company] :as talk}]
   [:a {:href "#"
@@ -24,58 +59,6 @@
     [:div.talk-speakers
      (for [{:keys [name link]} speakers]
        [:span (str name ", " company)])]))
-
-(defn previously [year]
-  [layout/section "previously" "Previously"
-   [:div.previously-section
-
-    [:div.previously
-     [:div.previously-content
-      [:div {}
-       [:img.previously-img
-        {:alt "Bangalore 2019", :src "images/bg-bangalore.jpg"}]]
-      [:div.previously-about
-       [:div {}
-        [:p.previously-title "Bangalore, 2019"]]
-       [:p.previously-desc
-        [:ul
-         [:li
-          [:a {:href "https://www.youtube.com/playlist?list=PLlAML-kjpXY7kzJp0p1EPJ9eb8B15CCBU" :target "_blank"}
-           "Talks"]]
-         #_[:li
-            [:a {:href "https://www.flickr.com/photos/rvgpl/sets/72157691528752114"} "Pictures"]]]]]]]
-
-    [:div.previously
-     [:div.previously-content
-      [:div {}
-       [:img.previously-img
-        {:alt "Bangalore 2018", :src "images/bg-bangalore.jpg"}]]
-      [:div.previously-about
-       [:div {}
-        [:p.previously-title "Bangalore, 2018"]]
-       [:p.previously-desc
-        [:ul
-         [:li
-          [:a {:href "https://www.youtube.com/playlist?list=PLlAML-kjpXY4rljddpJ5qMUp-t1Qa-Vfy" :target "_blank"}
-           "Talks"]]
-         #_[:li
-            [:a {:href "https://www.flickr.com/photos/rvgpl/sets/72157691528752114"} "Pictures"]]]]]]]
-
-    [:div.previously
-     [:div.previously-content
-      [:div {}
-       [:img.previously-img
-        {:alt "Pune 2016", :src "images/bg-pune.jpg"}]]
-      [:div.previously-about
-       [:div {}
-        [:p.previously-title "Pune, 2016"]]
-       [:ul
-        [:li
-         [:a {:href
-              "https://www.youtube.com/playlist?list=PLlAML-kjpXY6XllFUezz6RYow6hF4zlFV" :target "_blank"}
-          "Talks"]]]]]]
-
-    ]])
 
 (defn day-2-schedule []
   [:table.schedule-table
@@ -359,7 +342,7 @@
     [intro]
     #_[invited-speakers]
     [schedule]
-    [previously 1900]
+    #_[invited-speakers]
     [tickets]
     [workshops]
     [talks]

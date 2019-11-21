@@ -457,6 +457,7 @@ div.schedule-event-detail {
 .previously-section {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .previously-img {
@@ -468,7 +469,7 @@ div.schedule-event-detail {
 
 .previously {
     max-width: 50%;
-    margin: 3% 0;
+    margin: 1% 0;
     display: flex;
 }
 
