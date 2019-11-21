@@ -322,30 +322,29 @@
 
 (defn venue []
   [layout/section "venue" "Venue"
-   "Coming Soon"
-   #_[:div
-      [:p
-       "Royal Orchid Hotels Ltd."
-       [:br]
-       "#1, Golf Avenue, Adjoining KGA Golf Course, HAL Airport Road, Kodihalli, Bengaluru 560008"
-       [:br]
-       "Contact: "
-       [:a.contact-link {:href "tel:+919902000089"}
-        "+919902000089"]
-       ", "
-       [:a.contact-link {:href "tel:+918041783000"}
-        "+918041783000"]]
-      [:div.contact-map
-       [:iframe {:src "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7776.444925532358!2d77.6418106!3d12.9576119!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3f03ae46d85ca1a6!2sHotel+Royal+Orchid!5e0!3m2!1sen!2sin!4v1509077557311" :allowfullscreen "" :width "100" :height "450" :frameBorder "0"}]]
-
-      [:h3 "Getting there"]
-      [:p
-       "By Air: Kempegowda International Airport (BLR) is a 50 minute taxi ride from the venue."]
-      [:p
-       "By Train: Bangalore is well connected by train to all major cities of India. Bangalore City Railway Station is about 30 minutes from the venue by car."]
-      [:h3 "Getting around"]
-      [:p "Uber and Ola and Meru cabs are all active in Bangalore. You should have no trouble using these. Local autorickshaws are also easily available."]
-      [:p "There are quite a few restaurants, pubs and small cafes at the 100ft road on Indiranagar, which is about a 10 minute walk from the venue."]]])
+   [:div
+    [:h3 "Novotel Pune Nagar Road"]
+    [:p
+     "Address: Novotel Pune Nagar Road, Weikfield IT City Infopark, Viman Nagar, 411014, Pune, India."
+     [:br]
+     "Contact: "
+     [:a.contact-link {:href "tel:+912067056000"}
+      "+912067056000"]
+     ", "
+     [:a.contact-link {:href "https://www.accorhotels.com/gb/hotel-6833-novotel-pune-nagar-road/index.shtml"
+                       :target "_blank"}
+      "official website"]]
+    [:div.contact-map
+     [:iframe {:src "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.3359264729024!2d73.90860004983779!3d18.558887972784607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c13f953dc837%3A0xb6782032b34e422e!2sNovotel%20Pune%20Nagar%20Road!5e0!3m2!1sen!2sin!4v1574325057287!5m2!1sen!2sin" :allowfullscreen ""
+               :width "400" :height "300" :frameBorder "0"}]]
+    [:h3 "Getting there"]
+    [:p
+     "By Air: Pune Airport is a 15 minute taxi ride from the venue (3 Km / 2 mi). Those arriving internationally via Mumbai can taxi over in about 4 hours."]
+    [:p
+     "By Train: Pune is well connected by train to all major cities of India. Pune City Railway Station is about 30 minutes from the venue by car (6.1 Km / 3.8 mi)."]
+    [:h3 "Getting around"]
+    [:p "Uber and Ola are active in Pune. You should have no trouble using these. Local autorickshaws are also easily available."]
+    [:p "Several restaurants, pubs, cafes, and malls are in the vicinity of Novotel, from a short walk away to a short drive away."]]])
 
 (defn page []
   [layout/page
