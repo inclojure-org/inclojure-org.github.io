@@ -43,13 +43,13 @@
 
 (defn navigation []
   [:div.section.nav-links
+   [nav-link "talks" "Call For Proposals"]
+   [nav-link "workshops" "Workshops"]
+   [nav-link "sponsorship" "Sponsors"]
+   [nav-link "venue" "Venue"]
    [nav-link "schedule" "Schedule"]
    [nav-link "tickets" "Tickets"]
-   [nav-link "venue" "Venue"]
-   [nav-link "workshops" "Workshops"]
-   [nav-link "talks" "Call For Proposals"]
    [nav-link "opgrant" "Opportunity Grant"]
-   [nav-link "sponsorship" "Sponsors"]
    [nav-link "conduct" "Code of Conduct"]
    [nav-link "team" "Team"]])
 
