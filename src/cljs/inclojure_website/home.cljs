@@ -352,6 +352,6 @@
     [venue]
     [schedule]
     [tickets]
-    [opportunity-grant]
+    #_[opportunity-grant]
     [code-of-conduct]
     [team]]])

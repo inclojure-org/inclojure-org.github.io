@@ -49,7 +49,7 @@
    [nav-link "venue" "Venue"]
    [nav-link "schedule" "Schedule"]
    [nav-link "tickets" "Tickets"]
-   [nav-link "opgrant" "Opportunity Grant"]
+   #_[nav-link "opgrant" "Opportunity Grant"]
    [nav-link "conduct" "Code of Conduct"]
    [nav-link "team" "Team"]])
 
