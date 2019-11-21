@@ -214,7 +214,7 @@
     ;;  [:ul.benefactors-list
     ;;   [benefactor "Formcept" "https://www.formcept.com" "images/sponsor-logos/formcept.png"]
     ;;   [benefactor "Concur" "https://www.concur.co.in" "images/sponsor-logos/sap-concur.png"]]]
-    [:h3 "Help foster the growing Clojure community is Asia/India"]
+    [:h3 "Help foster the growing Clojure community in Asia/India"]
     [:div
      [:p "IN/Clojure is run by volunteers and is a not-for-profit conference."]
      [:p "Over the years, IN/Clojure has helped kick-start a series of Clojure workshops and meet-ups across the country. It has helped organizations hiring Clojurists reach out to a wonderful community. And it has helped attendees make a strong case for Clojure/Clojurescript adoption in their companies."]
