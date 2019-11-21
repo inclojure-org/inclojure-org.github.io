@@ -228,11 +228,16 @@
     ;;  [:ul.benefactors-list
     ;;   [benefactor "Formcept" "https://www.formcept.com" "images/sponsor-logos/formcept.png"]
     ;;   [benefactor "Concur" "https://www.concur.co.in" "images/sponsor-logos/sap-concur.png"]]]
-    [:div.benefactors.gold
-     "Sponsorship details are available as a prospectus "
-     [:a {:href "pdf/inclojure-2020-sponsorship-deck.pdf" :target "_blank"} "here"]
-     ". If you'd like to sponsor IN/Clojure 2020, check out the prospectus or contact us at "
-     [:a {:href "mailto:2020@inclojure.org"} "2020@inclojure.org."]]]])
+    [:h3 "Help foster the growing Clojure community is Asia/India"]
+    [:div
+     [:p "Over the years, IN/Clojure has helped kick-start a series of Clojure workshops and meet-ups across the country. It has helped organizations hiring Clojurists reach out to a wonderful community. And it has helped attendees make a strong case for Clojure/Clojurescript adoption in their companies."]
+     [:p "With your help, we hope to make IN/Clojure 2020 bigger than before and continue our efforts to help foster the growing Clojure community in Asia/India."]
+     [:p
+      "To sponsor IN/Clojure 2020, review sponsorship details in "
+      [:a {:href "pdf/inclojure-2020-sponsorship-deck.pdf" :target "_blank"} "the prospectus here (PDF)"]
+      " and contact us at "
+      [:a {:href "mailto:2020@inclojure.org"} "2020@inclojure.org."]]]
+    ]])
 
 (defn code-of-conduct []
   [layout/section "conduct" "Code Of Conduct"
