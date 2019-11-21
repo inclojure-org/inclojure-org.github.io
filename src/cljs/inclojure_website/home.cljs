@@ -33,15 +33,17 @@
      [:div.previously-content
       [:div {}
        [:img.previously-img
-        {:alt "Pune 2016", :src "images/bg-pune.jpg"}]]
+        {:alt "Bangalore 2019", :src "images/bg-bangalore.jpg"}]]
       [:div.previously-about
        [:div {}
-        [:p.previously-title "Pune, 2016"]]
-       [:ul
-        [:li
-         [:a {:href
-              "https://www.youtube.com/playlist?list=PLlAML-kjpXY6XllFUezz6RYow6hF4zlFV" :target "_blank"}
-          "Talks"]]]]]]
+        [:p.previously-title "Bangalore, 2019"]]
+       [:p.previously-desc
+        [:ul
+         [:li
+          [:a {:href "https://www.youtube.com/playlist?list=PLlAML-kjpXY7kzJp0p1EPJ9eb8B15CCBU" :target "_blank"}
+           "Talks"]]
+         #_[:li
+            [:a {:href "https://www.flickr.com/photos/rvgpl/sets/72157691528752114"} "Pictures"]]]]]]]
 
     [:div.previously
      [:div.previously-content
@@ -63,17 +65,17 @@
      [:div.previously-content
       [:div {}
        [:img.previously-img
-        {:alt "Bangalore 2019", :src "images/bg-bangalore.jpg"}]]
+        {:alt "Pune 2016", :src "images/bg-pune.jpg"}]]
       [:div.previously-about
        [:div {}
-        [:p.previously-title "Bangalore, 2019"]]
-       [:p.previously-desc
-        [:ul
-         [:li
-          [:a {:href "https://www.youtube.com/playlist?list=PLlAML-kjpXY7kzJp0p1EPJ9eb8B15CCBU" :target "_blank"}
-           "Talks"]]
-         #_[:li
-            [:a {:href "https://www.flickr.com/photos/rvgpl/sets/72157691528752114"} "Pictures"]]]]]]]]])
+        [:p.previously-title "Pune, 2016"]]
+       [:ul
+        [:li
+         [:a {:href
+              "https://www.youtube.com/playlist?list=PLlAML-kjpXY6XllFUezz6RYow6hF4zlFV" :target "_blank"}
+          "Talks"]]]]]]
+
+    ]])
 
 (defn day-2-schedule []
   [:table.schedule-table
