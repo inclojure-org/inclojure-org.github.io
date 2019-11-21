@@ -115,15 +115,15 @@
 (defn schedule []
   [layout/section "schedule" "Schedule"
    [:div
-    [:h3 "The Call For Proposals is now open."]
-    [:a {:href "https://hasgeek.com/inclojure/2020/proposals" :target "_blank"} [:i "Submit your proposal(s) now."]]
-    [:br]
     [:em "IN/Clojure 2020 will happen over two days - 14" [:sup "th"] " and 15" [:sup "th"] " of February, 2020."]
-    [:p [:strong "Day 1"] " | Workshops"
+    [:p [:strong "Day 1: Fri, 14" [:sup "th"] " Feb, 2020"] " | Two full-day workshops. Details coming soon."
+     [:ul
+      [:li "Workshop 1: Introduction to Clojure, for programmers new to Clojure."]
+      [:li "Workshop 2: Intermediate Clojure, for programmers familiar with Clojure."]]
      #_[day-1-schedule]]
-    [:p [:strong "Day 2"] " | Talks"
-     [:div "CFP is open. "
-      [:a {:href "https://hasgeek.com/inclojure/2020/proposals" :target "_blank"} [:i "Submit your proposal(s) now."]]]]
+    [:p [:strong "Day 2: Sat, 15" [:sup "th"] " Feb, 2020"] " | Single-track day of Talks. "
+     "CFP is open. "
+     [:a {:href "https://hasgeek.com/inclojure/2020/proposals" :target "_blank"} [:i "Submit your proposal(s) now."]]]
     #_[day-2-schedule]]])
 
 (defn workshops []
