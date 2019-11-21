@@ -5,11 +5,49 @@
 
 (defn intro []
   [:div.section
+   [:h3 "About"]
    [:p.section__content
-    "IN/Clojure is India's annual Clojure conference, and Asia's first.
-    IN/Clojure’s primary focus is the free exchange of ideas between new and experienced Clojure programmers alike.
-    IN/Clojure 2020 is the fourth edition of Asia's very first Clojure conference, and is scheduled to be held in "
-    [:strong "Pune, on the 14" [:sup "th"] " and 15" [:sup "th"] "of February 2020."]]])
+    "IN/Clojure is India’s annual Clojure conference, and Asia's first.
+
+     Our focus is the free exchange of ideas between new and experienced Clojure programmers alike. We are volunteer-run, and not-for-profit."]
+   [:p.section__content
+    "IN/Clojure 2020, our fourth edition, is happening "
+    [:strong "in Pune, on the 14" [:sup "th"] " and 15" [:sup "th"] "of February 2020."]
+    " Follow " [:a {:href "https://twitter.com/in_clojure" :target "_blank"} "@in_clojure"] " to stay up-to-date."]
+   [:h3 "Previous editions"]
+   [:div.previously-section
+
+    [:div.previously
+     [:div.previously-content
+      [:div {}
+       [:img.previously-img
+        {:alt "Bangalore 2019", :src "images/bg-bangalore.jpg"}]]
+      [:div.previously-about
+       [:div {}
+        [:p.previously-title [:a {:href "https://www.youtube.com/playlist?list=PLlAML-kjpXY7kzJp0p1EPJ9eb8B15CCBU" :target "_blank"}
+                              "Bangalore, 2019"]]]]]]
+
+    [:div.previously
+     [:div.previously-content
+      [:div {}
+       [:img.previously-img
+        {:alt "Bangalore 2018", :src "images/bg-bangalore.jpg"}]]
+      [:div.previously-about
+       [:div {}
+        [:p.previously-title [:a {:href "https://www.youtube.com/playlist?list=PLlAML-kjpXY4rljddpJ5qMUp-t1Qa-Vfy" :target "_blank"}
+                              "Bangalore, 2018"]]]]]]
+
+    [:div.previously
+     [:div.previously-content
+      [:div {}
+       [:img.previously-img
+        {:alt "Pune 2016", :src "images/bg-pune.jpg"}]]
+      [:div.previously-about
+       [:div {}
+        [:p.previously-title [:a {:href
+                                  "https://www.youtube.com/playlist?list=PLlAML-kjpXY6XllFUezz6RYow6hF4zlFV" :target "_blank"}
+                              "Pune, 2016"]]]]]]
+    ]])
 
 (defn event-detail [{:keys [title speakers company] :as talk}]
   [:a {:href "#"
@@ -23,56 +61,6 @@
     [:div.talk-speakers
      (for [{:keys [name link]} speakers]
        [:span (str name ", " company)])]))
-
-(defn previously [year]
-  [layout/section "previously" "Previously"
-   [:div.previously-section
-
-    [:div.previously
-     [:div.previously-content
-      [:div {}
-       [:img.previously-img
-        {:alt "Pune 2016", :src "images/bg-pune.jpg"}]]
-      [:div.previously-about
-       [:div {}
-        [:p.previously-title "Pune, 2016"]]
-       [:ul
-        [:li
-         [:a {:href
-              "https://www.youtube.com/playlist?list=PLlAML-kjpXY6XllFUezz6RYow6hF4zlFV" :target "_blank"}
-          "Talks"]]]]]]
-
-    [:div.previously
-     [:div.previously-content
-      [:div {}
-       [:img.previously-img
-        {:alt "Bangalore 2018", :src "images/bg-bangalore.jpg"}]]
-      [:div.previously-about
-       [:div {}
-        [:p.previously-title "Bangalore, 2018"]]
-       [:p.previously-desc
-        [:ul
-         [:li
-          [:a {:href "https://www.youtube.com/playlist?list=PLlAML-kjpXY4rljddpJ5qMUp-t1Qa-Vfy" :target "_blank"}
-           "Talks"]]
-         #_[:li
-            [:a {:href "https://www.flickr.com/photos/rvgpl/sets/72157691528752114"} "Pictures"]]]]]]]
-
-    [:div.previously
-     [:div.previously-content
-      [:div {}
-       [:img.previously-img
-        {:alt "Bangalore 2019", :src "images/bg-bangalore.jpg"}]]
-      [:div.previously-about
-       [:div {}
-        [:p.previously-title "Bangalore, 2019"]]
-       [:p.previously-desc
-        [:ul
-         [:li
-          [:a {:href "https://www.youtube.com/playlist?list=PLlAML-kjpXY7kzJp0p1EPJ9eb8B15CCBU" :target "_blank"}
-           "Talks"]]
-         #_[:li
-            [:a {:href "https://www.flickr.com/photos/rvgpl/sets/72157691528752114"} "Pictures"]]]]]]]]])
 
 (defn day-2-schedule []
   [:table.schedule-table
@@ -129,15 +117,15 @@
 (defn schedule []
   [layout/section "schedule" "Schedule"
    [:div
-    [:h3 "The Call For Proposals is now open."]
-    [:a {:href "https://hasgeek.com/inclojure/2020/proposals" :target "_blank"} [:i "Submit your proposal(s) now."]]
-    [:br]
     [:em "IN/Clojure 2020 will happen over two days - 14" [:sup "th"] " and 15" [:sup "th"] " of February, 2020."]
-    [:p [:strong "Day 1"] " | Workshops"
+    [:p [:strong "Day 1: Fri, 14" [:sup "th"] " Feb, 2020"] " | Two full-day workshops. Details coming soon."
+     [:ul
+      [:li "Workshop 1: Introduction to Clojure, for programmers new to Clojure."]
+      [:li "Workshop 2: Intermediate Clojure, for programmers familiar with Clojure."]]
      #_[day-1-schedule]]
-    [:p [:strong "Day 2"] " | Talks"
-     [:div "CFP is open. "
-      [:a {:href "https://hasgeek.com/inclojure/2020/proposals" :target "_blank"} [:i "Submit your proposal(s) now."]]]]
+    [:p [:strong "Day 2: Sat, 15" [:sup "th"] " Feb, 2020"] " | Single-track day of Talks. "
+     "CFP is open. "
+     [:a {:href "https://hasgeek.com/inclojure/2020/proposals" :target "_blank"} [:i "Submit your proposal(s) now."]]]
     #_[day-2-schedule]]])
 
 (defn workshops []
@@ -190,7 +178,8 @@
 
 (defn tickets []
   [layout/section "tickets" "Tickets"
-   [:div "Coming Soon"]
+   [:div "Coming Soon! For news, follow "
+    [:a {:href "https://twitter.com/in_clojure" :target "_blank"} "@in_clojure"] " on twitter."]
    #_[:div
       [:iframe {:src "https://www.townscript.com/widget/inclojure-2019" :frameBorder "0" :height "600" :width "80%"}]
       [:p
@@ -225,11 +214,17 @@
     ;;  [:ul.benefactors-list
     ;;   [benefactor "Formcept" "https://www.formcept.com" "images/sponsor-logos/formcept.png"]
     ;;   [benefactor "Concur" "https://www.concur.co.in" "images/sponsor-logos/sap-concur.png"]]]
-    [:div.benefactors.gold
-     "Sponsorship details are available as a prospectus "
-     [:a {:href "pdf/inclojure-2020-sponsorship-deck.pdf" :target "_blank"} "here"]
-     ". If you'd like to sponsor IN/Clojure 2020, check out the prospectus or contact us at "
-     [:a {:href "mailto:2020@inclojure.org"} "2020@inclojure.org."]]]])
+    [:h3 "Help foster the growing Clojure community in Asia/India"]
+    [:div
+     [:p "IN/Clojure is run by volunteers and is a not-for-profit conference."]
+     [:p "Over the years, IN/Clojure has helped kick-start a series of Clojure workshops and meet-ups across the country. It has helped organizations hiring Clojurists reach out to a wonderful community. And it has helped attendees make a strong case for Clojure/Clojurescript adoption in their companies."]
+     [:p "With your help, we hope to make IN/Clojure 2020 bigger than before and continue our efforts to help foster the growing Clojure community in Asia/India."]
+     [:p
+      "To sponsor IN/Clojure 2020, review sponsorship details in "
+      [:a {:href "pdf/inclojure-2020-sponsorship-deck.pdf" :target "_blank"} "the prospectus here (PDF)"]
+      " and contact us at "
+      [:a {:href "mailto:2020@inclojure.org"} "2020@inclojure.org."]]]
+    ]])
 
 (defn code-of-conduct []
   [layout/section "conduct" "Code Of Conduct"
@@ -294,9 +289,24 @@
       "Bozhidar is the maintainer of CIDER, nREPL, a dozen of related projects and the editor of the community Clojure style guide. Most people would probably describe him as an Emacs zealot (and they would be right). He's also quite fond of the Lisp family of languages, functional programming in general and Clojure in particular.\n\nBelieve it or not, Bozhidar has hobbies and interests outside the realm of computers, but we won't bore with those here."]]]])
 
 (defn talks []
-  [layout/section "talks" "Talks and Speakers"
-   [:div "CFP is open. "
-    [:a {:href "https://hasgeek.com/inclojure/2020/proposals" :target "_blank"} "Submit your proposal."]]
+  [layout/section "talks" "Call For Proposals"
+   [:div [:h3 "CFP is open!"]
+    "We welcome talk submissions for the 4th edition of IN/Clojure 2020.
+     This year, selected speakers will enjoy sharing the stage with the perennially effervescent Bozhidar Batsov, and other speakers from across the globe. "
+    [:p [:strong [:a {:href "https://hasgeek.com/inclojure/2020/proposals" :target "_blank"}
+                  "Submit your proposal now!"]]]
+    [:h3 "Invited Speaker"]
+    [:div.speaker
+     [:img.speaker-img
+      {:alt "Bozhidar Batsov", :src "images/speakers/bozhidar-batsov.jpg"}]
+     [:div.speaker-about
+      [:p.speaker-name "Bozhidar Batsov"]
+      [:p.speaker-desc
+       "Bozhidar is the maintainer of CIDER, nREPL, a dozen of related projects and the editor of the community Clojure style guide. Most people would probably describe him as an Emacs zealot (and they would be right). He's also quite fond of the Lisp family of languages, functional programming in general and Clojure in particular.\n\nBelieve it or not, Bozhidar has hobbies and interests outside the realm of computers, but we won't bore with those here."]]]
+    ]
+
+
+
    #_(for [talk (filter :selected-talk? talks/selected-talks)]
        [:div.home-page-talk
         {:id (str "talk-" (talks/talk-id talk))}
@@ -304,30 +314,31 @@
 
 (defn venue []
   [layout/section "venue" "Venue"
-   "Coming Soon"
+   [:div
+    [:p "Will be announced soon. Follow " [:a {:href "https://twitter.com/in_clojure" :target "_blank"} "@in_clojure"] " to stay up-to-date."]]
    #_[:div
-      [:p
-       "Royal Orchid Hotels Ltd."
-       [:br]
-       "#1, Golf Avenue, Adjoining KGA Golf Course, HAL Airport Road, Kodihalli, Bengaluru 560008"
-       [:br]
-       "Contact: "
-       [:a.contact-link {:href "tel:+919902000089"}
-        "+919902000089"]
-       ", "
-       [:a.contact-link {:href "tel:+918041783000"}
-        "+918041783000"]]
-      [:div.contact-map
-       [:iframe {:src "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7776.444925532358!2d77.6418106!3d12.9576119!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3f03ae46d85ca1a6!2sHotel+Royal+Orchid!5e0!3m2!1sen!2sin!4v1509077557311" :allowfullscreen "" :width "100" :height "450" :frameBorder "0"}]]
-
-      [:h3 "Getting there"]
-      [:p
-       "By Air: Kempegowda International Airport (BLR) is a 50 minute taxi ride from the venue."]
-      [:p
-       "By Train: Bangalore is well connected by train to all major cities of India. Bangalore City Railway Station is about 30 minutes from the venue by car."]
-      [:h3 "Getting around"]
-      [:p "Uber and Ola and Meru cabs are all active in Bangalore. You should have no trouble using these. Local autorickshaws are also easily available."]
-      [:p "There are quite a few restaurants, pubs and small cafes at the 100ft road on Indiranagar, which is about a 10 minute walk from the venue."]]])
+    [:h3 "Novotel Pune Nagar Road"]
+    [:p
+     "Address: Novotel Pune Nagar Road, Weikfield IT City Infopark, Viman Nagar, 411014, Pune, India."
+     [:br]
+     "Contact: "
+     [:a.contact-link {:href "tel:+912067056000"}
+      "+912067056000"]
+     ", "
+     [:a.contact-link {:href "https://www.accorhotels.com/gb/hotel-6833-novotel-pune-nagar-road/index.shtml"
+                       :target "_blank"}
+      "official website"]]
+    [:div.contact-map
+     [:iframe {:src "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.3359264729024!2d73.90860004983779!3d18.558887972784607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c13f953dc837%3A0xb6782032b34e422e!2sNovotel%20Pune%20Nagar%20Road!5e0!3m2!1sen!2sin!4v1574325057287!5m2!1sen!2sin" :allowfullscreen ""
+               :width "400" :height "300" :frameBorder "0"}]]
+    [:h3 "Getting there"]
+    [:p
+     "By Air: Pune Airport is a 15 minute taxi ride from the venue (3 Km / 2 mi). Those arriving internationally via Mumbai can taxi over in about 4 hours."]
+    [:p
+     "By Train: Pune is well connected by train to all major cities of India. Pune City Railway Station is about 30 minutes from the venue by car (6.1 Km / 3.8 mi)."]
+    [:h3 "Getting around"]
+    [:p "Uber and Ola are active in Pune. You should have no trouble using these. Local autorickshaws are also easily available."]
+    [:p "Several restaurants, pubs, cafes, and malls are in the vicinity of Novotel, from a short walk away to a short drive away."]]])
 
 (defn page []
   [layout/page
@@ -335,14 +346,12 @@
     [layout/header]
     [layout/navigation]
     [intro]
-    [invited-speakers]
-    [schedule]
-    [previously 1900]
-    [tickets]
-    [workshops]
     [talks]
-    [opportunity-grant]
-    [venue]
+    [workshops]
     [sponsorship]
+    [venue]
+    [schedule]
+    [tickets]
+    #_[opportunity-grant]
     [code-of-conduct]
     [team]]])
