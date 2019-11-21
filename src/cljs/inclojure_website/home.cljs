@@ -12,7 +12,8 @@
      Our focus is the free exchange of ideas between new and experienced Clojure programmers alike. We are volunteer-run, and not-for-profit."]
    [:p.section__content
     "IN/Clojure 2020, our fourth edition, is happening "
-    [:strong "in Pune, on the 14" [:sup "th"] " and 15" [:sup "th"] "of February 2020."]]
+    [:strong "in Pune, on the 14" [:sup "th"] " and 15" [:sup "th"] "of February 2020."]
+    " Follow " [:a {:href "https://twitter.com/in_clojure" :target "_blank"} "@in_clojure"] " to stay up-to-date."]
    [:h3 "Previous editions"]
    [:div.previously-section
 
@@ -177,7 +178,8 @@
 
 (defn tickets []
   [layout/section "tickets" "Tickets"
-   [:div "Coming Soon"]
+   [:div "Coming Soon! For news, follow "
+    [:a {:href "https://twitter.com/in_clojure" :target "_blank"} "@in_clojure"] " on twitter."]
    #_[:div
       [:iframe {:src "https://www.townscript.com/widget/inclojure-2019" :frameBorder "0" :height "600" :width "80%"}]
       [:p
