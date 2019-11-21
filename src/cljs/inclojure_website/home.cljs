@@ -315,6 +315,8 @@
 (defn venue []
   [layout/section "venue" "Venue"
    [:div
+    [:p "Will be announced soon. Follow " [:a {:href "https://twitter.com/in_clojure" :target "_blank"} "@in_clojure"] " to stay up-to-date."]]
+   #_[:div
     [:h3 "Novotel Pune Nagar Road"]
     [:p
      "Address: Novotel Pune Nagar Road, Weikfield IT City Infopark, Viman Nagar, 411014, Pune, India."
