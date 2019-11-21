@@ -47,7 +47,7 @@
    [nav-link "tickets" "Tickets"]
    [nav-link "venue" "Venue"]
    [nav-link "workshops" "Workshops"]
-   [nav-link "talks" "Talks and Speakers"]
+   [nav-link "talks" "Call For Proposals"]
    [nav-link "opgrant" "Opportunity Grant"]
    [nav-link "sponsorship" "Sponsors"]
    [nav-link "conduct" "Code of Conduct"]

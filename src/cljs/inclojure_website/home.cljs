@@ -297,9 +297,24 @@
       "Bozhidar is the maintainer of CIDER, nREPL, a dozen of related projects and the editor of the community Clojure style guide. Most people would probably describe him as an Emacs zealot (and they would be right). He's also quite fond of the Lisp family of languages, functional programming in general and Clojure in particular.\n\nBelieve it or not, Bozhidar has hobbies and interests outside the realm of computers, but we won't bore with those here."]]]])
 
 (defn talks []
-  [layout/section "talks" "Talks and Speakers"
-   [:div "CFP is open. "
-    [:a {:href "https://hasgeek.com/inclojure/2020/proposals" :target "_blank"} "Submit your proposal."]]
+  [layout/section "talks" "Call For Proposals"
+   [:div [:h3 "CFP is open!"]
+    "We welcome talk submissions for the 4th edition of IN/Clojure 2020.
+     This year, selected speakers will enjoy sharing the stage with the perennially effervescent Bozhidar Batsov. "
+    [:a {:href "https://hasgeek.com/inclojure/2020/proposals" :target "_blank"}
+     "Submit your proposal now!"]
+    [:h3 "Invited Speaker."]
+    [:div.speaker
+     [:img.speaker-img
+      {:alt "Bozhidar Batsov", :src "images/speakers/bozhidar-batsov.jpg"}]
+     [:div.speaker-about
+      [:p.speaker-name "Bozhidar Batsov"]
+      [:p.speaker-desc
+       "Bozhidar is the maintainer of CIDER, nREPL, a dozen of related projects and the editor of the community Clojure style guide. Most people would probably describe him as an Emacs zealot (and they would be right). He's also quite fond of the Lisp family of languages, functional programming in general and Clojure in particular.\n\nBelieve it or not, Bozhidar has hobbies and interests outside the realm of computers, but we won't bore with those here."]]]
+    ]
+
+
+
    #_(for [talk (filter :selected-talk? talks/selected-talks)]
        [:div.home-page-talk
         {:id (str "talk-" (talks/talk-id talk))}
@@ -338,7 +353,7 @@
     [layout/header]
     [layout/navigation]
     [intro]
-    [invited-speakers]
+    #_[invited-speakers]
     [schedule]
     [previously 1900]
     [tickets]
