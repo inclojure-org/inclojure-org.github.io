@@ -9,9 +9,10 @@
    [:p.section__content
     "IN/Clojure is India’s annual Clojure conference, and Asia's first.
 
-     Our focus is the free exchange of ideas between new and experienced Clojure programmers alike.
-
-     IN/Clojure 2020, our fourth edition, is happening " [:strong "in Pune, on the 14" [:sup "th"] " and 15" [:sup "th"] "of February 2020."]]
+     Our focus is the free exchange of ideas between new and experienced Clojure programmers alike. We are volunteer-run, and not-for-profit."]
+   [:p.section__content
+    "IN/Clojure 2020, our fourth edition, is happening "
+    [:strong "in Pune, on the 14" [:sup "th"] " and 15" [:sup "th"] "of February 2020."]]
    [:h3 "Previous editions"]
    [:div.previously-section
 
@@ -213,6 +214,7 @@
     ;;   [benefactor "Concur" "https://www.concur.co.in" "images/sponsor-logos/sap-concur.png"]]]
     [:h3 "Help foster the growing Clojure community is Asia/India"]
     [:div
+     [:p "IN/Clojure is run by volunteers and is a not-for-profit conference."]
      [:p "Over the years, IN/Clojure has helped kick-start a series of Clojure workshops and meet-ups across the country. It has helped organizations hiring Clojurists reach out to a wonderful community. And it has helped attendees make a strong case for Clojure/Clojurescript adoption in their companies."]
      [:p "With your help, we hope to make IN/Clojure 2020 bigger than before and continue our efforts to help foster the growing Clojure community in Asia/India."]
      [:p
