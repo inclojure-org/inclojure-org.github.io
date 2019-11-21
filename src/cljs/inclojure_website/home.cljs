@@ -292,10 +292,10 @@
   [layout/section "talks" "Call For Proposals"
    [:div [:h3 "CFP is open!"]
     "We welcome talk submissions for the 4th edition of IN/Clojure 2020.
-     This year, selected speakers will enjoy sharing the stage with the perennially effervescent Bozhidar Batsov. "
-    [:a {:href "https://hasgeek.com/inclojure/2020/proposals" :target "_blank"}
-     "Submit your proposal now!"]
-    [:h3 "Invited Speaker."]
+     This year, selected speakers will enjoy sharing the stage with the perennially effervescent Bozhidar Batsov, and other speakers from across the globe. "
+    [:p [:strong [:a {:href "https://hasgeek.com/inclojure/2020/proposals" :target "_blank"}
+                  "Submit your proposal now!"]]]
+    [:h3 "Invited Speaker"]
     [:div.speaker
      [:img.speaker-img
       {:alt "Bozhidar Batsov", :src "images/speakers/bozhidar-batsov.jpg"}]
