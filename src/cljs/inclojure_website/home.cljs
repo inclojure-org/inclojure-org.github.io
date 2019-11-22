@@ -279,14 +279,17 @@
       [team-member twitter-link name])]])
 
 (defn invited-speakers []
-  [layout/section "invited-speakers" "Invited Speaker"
-   [:div.speaker
-    [:img.speaker-img
-     {:alt "Bozhidar Batsov", :src "images/speakers/bozhidar-batsov.jpg"}]
-    [:div.speaker-about
-     [:p.speaker-name "Bozhidar Batsov"]
-     [:p.speaker-desc
-      "Bozhidar is the maintainer of CIDER, nREPL, a dozen of related projects and the editor of the community Clojure style guide. Most people would probably describe him as an Emacs zealot (and they would be right). He's also quite fond of the Lisp family of languages, functional programming in general and Clojure in particular.\n\nBelieve it or not, Bozhidar has hobbies and interests outside the realm of computers, but we won't bore with those here."]]]])
+  #_[layout/section "invited-speakers" "Invited Speaker"
+   ]
+  [:div.speaker
+   [:img.speaker-img
+    {:alt "Bozhidar Batsov", :src "images/speakers/bozhidar-batsov.jpg"}]
+   [:div.speaker-about
+    [:p.speaker-name "Bozhidar Batsov"]
+    [:p.speaker-desc
+     [:a {:href "https://github.com/bbatsov" :target "_blank"}
+      "Bozhidar "]
+     "is the maintainer of CIDER, nREPL, a dozen related projects, and the editor of the community Clojure style guide. Most people would probably describe him as an Emacs zealot (and they would be right). He's also quite fond of the Lisp family of languages, functional programming in general and Clojure in particular.\n\nBelieve it or not, Bozhidar has hobbies and interests outside the realm of computers, but we won't bore with those here."]]])
 
 (defn talks []
   [layout/section "talks" "Call For Proposals"
@@ -296,18 +299,7 @@
     [:p [:strong [:a {:href "https://hasgeek.com/inclojure/2020/proposals" :target "_blank"}
                   "Submit your proposal now!"]]]
     [:h3 "Invited Speaker"]
-    [:div.speaker
-     [:img.speaker-img
-      {:alt "Bozhidar Batsov", :src "images/speakers/bozhidar-batsov.jpg"}]
-     [:div.speaker-about
-      [:p.speaker-name "Bozhidar Batsov"]
-      [:p.speaker-desc
-       [:a {:href "https://github.com/bbatsov" :target "_blank"}
-        "Bozhidar "]
-       "is the maintainer of CIDER, nREPL, a dozen related projects, and the editor of the community Clojure style guide. Most people would probably describe him as an Emacs zealot (and they would be right). He's also quite fond of the Lisp family of languages, functional programming in general and Clojure in particular.\n\nBelieve it or not, Bozhidar has hobbies and interests outside the realm of computers, but we won't bore with those here."]]]
-    ]
-
-
+    (invited-speakers)]
 
    #_(for [talk (filter :selected-talk? talks/selected-talks)]
        [:div.home-page-talk
