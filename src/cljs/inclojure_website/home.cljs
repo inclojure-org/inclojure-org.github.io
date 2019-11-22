@@ -7,7 +7,7 @@
   [:div.section
    [:h3 "About"]
    [:p.section__content
-    "IN/Clojure is India’s annual Clojure conference, and Asia's first.
+    "IN/Clojure is India's annual Clojure and ClojureScript conference, and Asia's first.
 
      Our focus is the free exchange of ideas between new and experienced Clojure programmers alike. We are volunteer-run, and not-for-profit."]
    [:p.section__content
@@ -131,8 +131,8 @@
 (defn workshops []
   [layout/section "workshops" "Workshops"
    [:div
-    [:p "There will be two workshops at IN/Clojure 2020 - an introductory Clojure workshop and an intermediate Clojure workshop. Note that both the workshops will be
-         conducted simultaneously on the 14" [:sup "th"] " of February, 2020. Therefore, one cannot attend both the workshops."]
+    [:p "There will be two full-day workshops at IN/Clojure 2020 - an introductory Clojure workshop and an intermediate Clojure workshop. The lessons apply to ClojureScript as well. Note that both the workshops will be
+         conducted simultaneously on the 14" [:sup "th"] " of February, 2020."]
     [:h3 {:id "introductory-workshop"}
      "Introductory workshop"]
     [:h4 "Audience"]
