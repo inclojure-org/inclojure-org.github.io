@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
     <!-- Basic Page Needs
@@ -11,7 +11,7 @@
 
     <!-- Browser/Mobile Specific Metas
 	 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Open Graph Metas
@@ -53,234 +53,12 @@
     <link rel="stylesheet" href="css/normalize.css" media="all">
     <link rel="stylesheet" href="css/skeleton.css" media="all">
     <link rel="stylesheet" href="css/style.css" media="all">
-
-    <!-- Fix for Flash of Unstyled Content
-	 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <style type="text/css">
-        .hidden {
-            display: none;
-        }
-    </style>
-    <script type="text/javascript" src="/scripts/jquery.js"></script>
-    <script type="text/javascript">
-        $('html').addClass('hidden');
-        $(document).ready(function () {
-            $(window).on('load', function () {...});
-        $('html').show();
-      });
-    </script>
-
-    <!-- FONT
-	 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,700|Alegreya+Sans:400,700" rel="stylesheet">
-
-    <!-- JS
-	 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <!-- <script src="javascripts/site.js"></script> -->
 </head>
 
 <body>
-    <div class="feature ">
-        <a href="/screens">François Morellet</a>
-    </div>
-
-    <div class="half">
-        <div class="contents en">
-            <nav>
-                <h1><a href="/"></a></h1>
-                <span class="nav-links">
-                    <a class="link" href="/about/">CoC</a>
-                    <a class="link" href="https://medium.com/simple-dot-org">Team</a>
-                    <a class="link" href="https://docs.simple.org">Previously</a>
-                </span>
-            </nav>
-
-            <p class="intro">
-                IN/Clojure is India's annual Clojure and ClojureScript conference, and Asia's first.
-                <p>Our focus is the free exchange of ideas between new and experienced Clojure programmers alike. We
-                    are volunteer-run, and not-for-profit.</p>
-
-                <h2>Keynote</h2>
-                <ol class="article-list">
-                    <li>
-                        <a href="#"><img src="images/speakers/bozhidar-batsov.jpg" class="article-image"></a>
-                        <h4><a href="/2019/02/22/sarahjones.html">Bozhidar Batsov</a></h4>
-                        <p class="article-subtitle">Bozhidar is the maintainer of CIDER, nREPL, a dozen related
-                            projects, and the editor of the community Clojure style guide. Most people would probably
-                            describe him as an Emacs zealot (and they would be right). He's also quite fond of the Lisp
-                            family of languages, functional programming in general and Clojure in particular. Believe
-                            it or not, Bozhidar has hobbies and interests outside the realm of computers, but we won't
-                            bore you with those here.</p>
-                        <div class="article-date">https://github.com/bbatsov</div>
-                    </li>
-                </ol>
-
-                <h2>Call For Proposals</h2>
-                <p>
-                    We welcome talk submissions for the 4th edition of IN/Clojure 2020. This year, selected speakers
-                    will enjoy sharing the stage with the perennially effervescent Bozhidar Batsov, and other speakers
-                    from across the globe.
-                </p>
-
-                <h2>Sponsorship</h2>
-                <p>
-                    <p>Help foster the growing Clojure community in Asia/India</p>
-                    <p>IN/Clojure is run by volunteers and is a not-for-profit conference.</p>
-                    <p>Over the years, IN/Clojure has helped kick-start a series of Clojure workshops and meet-ups
-                        across the country. It has helped organizations hiring Clojurists reach out to a wonderful
-                        community. And it has helped attendees make a strong case for Clojure/Clojurescript adoption in
-                        their companies.</p>
-                    <p>With your help, we hope to make IN/Clojure 2020 bigger than before and continue our efforts to
-                        help foster the growing Clojure community in Asia/India.</p>
-                    <p>To sponsor IN/Clojure 2020, review sponsorship details in the prospectus here (PDF) and contact
-                        us at 2020@inclojure.org.</p>
-                </p>
-
-                <h2>Venue</h2>
-                <img src="images/bg-pune.jpg" alt="" style="width: 100%; margin: 0.5em 0 0.5em 0; border-radius: 2%">
-                <p>We will announce the venue in Pune soon. Follow @in_clojure to stay up-to-date.</p>
-
-                <h2>Schedule</h2>
-                <p>IN/Clojure 2020 will happen over two days - 14th and 15th of February, 2020.</p>
-
-                <table class="u-full-width">
-                    <tbody>
-                        <tr>
-                            <td>Workshop #1</td>
-                            <td>Fri, 14th Feb 2020</td>
-                            <td>Introduction to Clojure</td>
-                        </tr>
-                        <tr>
-                            <td>Workshop #2</td>
-                            <td>Fri, 14th Feb 2020</td>
-                            <td>Intermediate Clojure</td>
-                        </tr>
-                        <tr>
-                            <td>Single-track day of talks</td>
-                            <td>Sat, 15th Feb 2020</td>
-                            <td>CFP is open</td>
-                        </tr>
-
-                    </tbody>
-                </table>
-
-                <h2>Code of Conduct</h2>
-                <p>Our conference is dedicated to providing a harassment-free conference experience for everyone,
-                    regardless of gender, gender identity and expression, age, sexual orientation, disability, physical
-                    appearance, body size, race, ethnicity, religion (or lack thereof), or technology choices.</p>
-                <p>We do not tolerate harassment of conference participants in any form.</p>
-                <p>Sexual language and imagery is not appropriate for any conference venue, including talks, workshops,
-                    parties, Twitter and other online media.</p>
-                <p>Conference participants violating these rules may be sanctioned or expelled from the conference
-                    without a refund at the discretion of the conference organisers.</p>
-
-
-                <h2>Team</h2>
-                <ul class="people">
-                    <li>
-                        <a href="https://new.uncommon.is/about/">
-                            Aditya Aathalye
-                            <img src="images/akshaygupta.jpg" alt="Sanchita Agarwal">
-                        </a>
-                        <div class="small">Freelancer</div>
-                    </li>
-                    <li>
-                        <a href="https://new.uncommon.is/about/">
-                            Akshay Gupta
-                            <img src="images/akshaygupta.jpg" alt="Sanchita Agarwal">
-                        </a>
-                        <div class="small">Nilenso</div>
-                    </li>
-
-                    <li>
-                        <a href="https://new.uncommon.is/about/">
-                            Harsh Gupta
-                            <img src="images/akshaygupta.jpg" alt="Sanchita Agarwal">
-                        </a>
-                        <div class="small">Helpshit</div>
-                    </li>
-                    <li>
-                        <a href="https://new.uncommon.is/about/">
-                            Kapil Reddy
-                            <img src="images/akshaygupta.jpg" alt="Sanchita Agarwal">
-                        </a>
-                        <div class="small">Helpshift</div>
-                    </li>
-
-                    <li>
-                        <a href="https://new.uncommon.is/about/">
-                            Nivedita Priyadarshini
-                            <img src="images/akshaygupta.jpg" alt="Sanchita Agarwal">
-                        </a>
-                        <div class="small">Nilenso</div>
-                    </li>
-
-                    <li>
-                        <a href="https://new.uncommon.is/about/">
-                            Prabhanshu Gupta
-                            <img src="images/akshaygupta.jpg" alt="Sanchita Agarwal">
-                        </a>
-                        <div class="small">Nilenso</div>
-                    </li>
-
-                    <li>
-                        <a href="https://new.uncommon.is/about/">
-                            Ravindra Jaju
-                            <img src="images/akshaygupta.jpg" alt="Sanchita Agarwal">
-                        </a>
-                        <div class="small">Freelancer</div>
-                    </li>
-
-                    <li>
-                        <a href="https://new.uncommon.is/about/">
-                            Rubbal Jabbal
-                            <img src="images/akshaygupta.jpg" alt="Sanchita Agarwal">
-                        </a>
-                        <div class="small">Helpshift</div>
-                    </li>
-
-                    <li>
-                        <a href="https://new.uncommon.is/about/">
-                            Sandilya Jandhyala
-                            <img src="images/akshaygupta.jpg" alt="Sanchita Agarwal">
-                        </a>
-                        <div class="small">Nilenso</div>
-                    </li>
-
-                    <li>
-                        <a href="https://new.uncommon.is/about/">
-                            Srihari Sriraman
-                            <img src="images/akshaygupta.jpg" alt="Sanchita Agarwal">
-                        </a>
-                        <div class="small">Nilenso</div>
-                    </li>
-
-                    <li>
-                        <a href="https://new.uncommon.is/about/">
-                            Venkatesh Halli
-                            <img src="images/akshaygupta.jpg" alt="Sanchita Agarwal">
-                        </a>
-                        <div class="small">Helpshift</div>
-                    </li>
-
-                    <li>
-                        <a href="https://new.uncommon.is/about/">
-                            Vikram Chintalapati
-                            <img src="images/akshaygupta.jpg" alt="Sanchita Agarwal">
-                        </a>
-                        <div class="small">Nilenso</div>
-                    </li>
-
-                </ul>
-
-                <div class="clear"></div>
-                <footer>
-                    <a href="_"><img src="images/twitter.png"></a>
-                    <a href="_"><img src="images/flickr.png"></a>
-                </footer>
-        </div>
-    </div>
-    <!-- <div id="app"></div> -->
+    <div id="app"></div>
+    <!-- JS
+     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <script src="js/app.js" type="text/javascript"></script>
 </body>
 

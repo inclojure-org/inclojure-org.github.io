@@ -11,7 +11,6 @@
 ;; This is a procedurally generated rendition of 'Croix violettes, bleues, vertes, jaunes, orange rouges'
 ;;
 
-
 ;;
 ;; Data
 ;;
@@ -94,7 +93,7 @@
 ;;
 ;; Render & animation
 ;;
-(def square-count 32)
+(def square-count 16)
 (def colors ["#147AAB" "#00B180" "#FFBA00" "#E36511" "#D04B36" "#675997"])
 (def delay-time 3000)
 (def then (atom (- (js/Date.now) delay-time)))
@@ -106,9 +105,13 @@
       (draw-painting ctx (get-painting width height (shuffle colors) square-count))))
   (js/requestAnimationFrame animate))
 
-(defn render [doc-class]
-  (let [canvas (.getElementById js/document doc-class)
-        ctx    (.getContext canvas "2d")
+(defn render [canvas]
+  (doto canvas
+    (.setAttribute "width"  (.-scrollWidth canvas))
+    (.setAttribute "height" (.-scrollHeight canvas)))
+
+  (let [ctx    (.getContext canvas "2d")
         width  (+ (.-width canvas))
         height (+ (.-height canvas))]
-    (animate ctx width height)))
+
+    (draw-painting ctx (get-painting width height (shuffle colors) square-count))))

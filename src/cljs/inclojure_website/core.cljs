@@ -3,6 +3,7 @@
               [secretary.core :as secretary :include-macros true]
               [accountant.core :as accountant]
               [inclojure-website.home :as home]
+              [inclojure-website.morellet :as morellet]
               [inclojure-website.talks :as talks]))
 
 ;; -------------------------
@@ -11,16 +12,23 @@
 (defn home-page []
   [home/page])
 
+(defn side-bar []
+  [home/feature])
+
 ;; -------------------------
 ;; Routes
 
 (defonce page (atom #'home-page))
+(defonce feature (atom #'side-bar))
 
 (defn current-page []
-  [:div [@page]])
+  [:div
+   [:div [@feature]]
+   [:div [@page]]])
 
 (secretary/defroute #"/" []
-  (reset! page #'home-page))
+  (reset! page #'home-page)
+  (reset! feature #'side-bar))
 
 (secretary/defroute #"/talks.*" []
   (reset! page #'talks/page))
