@@ -95,15 +95,21 @@
 ;;
 (def square-count 16)
 (def colors ["#147AAB" "#00B180" "#FFBA00" "#E36511" "#D04B36" "#675997"])
-(def delay-time 3000)
-(def then (atom (- (js/Date.now) delay-time)))
 
-(defn animate [ctx width height]
-  (let [elapsed (- (js/Date.now) @then)]
-    (when (> elapsed delay-time)
-      (reset! then (- (js/Date.now) (mod elapsed delay-time)))
-      (draw-painting ctx (get-painting width height (shuffle colors) square-count))))
-  (js/requestAnimationFrame animate))
+;;
+;; This is currently unused due to performance issues
+;;
+;;
+;; (def delay-time 3000)
+;; (def then (atom (- (js/Date.now) delay-time)))
+;;
+;; (defn animate [ctx width height]
+;;   (let [elapsed (- (js/Date.now) @then)]
+;;     (when (> elapsed delay-time)
+;;       (reset! then (- (js/Date.now) (mod elapsed delay-time)))
+;;       (draw-painting ctx (get-painting width height (shuffle colors) square-count))))
+;;   (js/requestAnimationFrame animate))
+;;
 
 (defn render [canvas]
   (doto canvas
