@@ -1,11 +1,11 @@
 (ns inclojure-website.page
   (:require [inclojure-website.data :as data]
             [inclojure-website.morellet :as morellet]
+            [inclojure-website.sundry :as sundry]
             [inclojure-website.talks :as talks]
             [reagent.core :as reagent :refer [atom create-class]]))
 
 (defn artwork []
-  (prn "artwork")
   (let [dom-node (atom nil)]
     (create-class
      {:component-did-update
@@ -20,16 +20,20 @@
       (fn []
         [:div
          [:canvas.feature]
-         [:div.feature-overlay]])})))
+         [:div.feature-overlay]
+         [:a.feature-link {:href "https://www.centrepompidou.fr/cpv/resource/cxx585o/ryjG5EL"}
+          [:div.feature-text "inspired from François Morellet"]]])})))
 
 (defn venue []
-  [:div
+  [:section {:id "venue"}
    [:h2 "Venue"]
    [:img
     {:style {:width "100%" :margin "1.5em 0 1.5em 0" :border-radius "2%"}
      :alt "Pune",
      :src "images/bg-pune.jpg"}]
-   [:p "We will announce the venue in Pune soon. Follow @in_clojure to stay up-to-date."]
+   [:p "We will announce the venue in Pune soon. Follow"
+    [:a {:href "https://twitter.com/in_clojure"} " @in_clojure "]
+    "to stay up-to-date."]
    [:h2 "Schedule"]
    [:p "IN/Clojure 2020 will happen over two days - 14th and 15th of February, 2020."]
    [:table.u-full-width
@@ -48,7 +52,7 @@
       [:td "CFP is open! Submit here"]]]]])
 
 (defn sponsorship []
-  [:div
+  [:section {:id "sponsorship"}
    [:h2 "Sponsorship"]
    [:p]
    [:p "Help foster the growing Clojure community in Asia/India"]
@@ -62,10 +66,13 @@
    before and continue our efforts t help foster the growing
    Clojure community in Asia/India."]
    [:p "To sponsor IN/Clojure 2020, review sponsorship details in the
-   prospectus here (PDF) and contact us at 2020@inclojure.org."]])
+   prospectus"
+    [:a {:href "pdf/inclojure-2020-sponsorship-deck.pdf"} " here "]
+    "and contact us at"
+    [:a {:href "mailto:2020@inclojure.org"} " 2020@inclojure.org."]]])
 
 (defn coc []
-  [:div
+  [:section {:id "coc"}
    [:h2 "Code of Conduct"]
    [:p "Our conference is dedicated to providing a harassment-free
    conference experience for everyone, regardless of gender, gender
@@ -89,7 +96,7 @@
    [:div.small "Freelancer"]])
 
 (defn team []
-  [:div
+  [:section {:id "team"}
    [:h2 "Team"]
    [:ul.people
     (for [{:keys [name twitter-link]} data/team-list]
@@ -97,7 +104,7 @@
       [team-member name twitter-link])]])
 
 (defn keynote []
-  [:div
+  [:section {:id "keynote"}
    [:h2 "Keynote"]
    [:ol.article-list
     [:li
@@ -119,7 +126,7 @@
      [:div.article-date "https://github.com/bbatsov"]]]])
 
 (defn cfp []
-  [:div
+  [:section {:id "cfp"}
    [:h2 "Call For Proposals"]
    [:p "We welcome talk submissions for the 4th edition of
    IN/Clojure 2020. This year, selected speakers will enjoy sharing
@@ -127,7 +134,7 @@
    other speakers from across the globe."]])
 
 (defn intro []
-  [:div
+  [:section {:id "intro"}
    [:p.intro "IN/Clojure is India's annual Clojure and ClojureScript
     conference, and Asia's first."]
    [:p "Our focus is the free exchange of ideas between new and
@@ -138,13 +145,13 @@
   [:nav
    [:h1 [:a {:href "/"}]]
    [:span.nav-links
-    [:a.link {:href "_"} "Team"]
-    [:a.link {:href "_"} "Code of Conduct"]]])
+    [:a.link {:href "#" :on-click #(sundry/goto-link "team")} "Team"]
+    [:a.link {:href "#" :on-click #(sundry/goto-link "coc")} "Code of Conduct"]]])
 
 (defn footer []
   [:footer
    [:a
-    {:href "_"}
+    {:href "https://twitter.com/in_clojure"}
     [:img {:alt "Twitter", :src "images/twitter.png"}]]
    [:a
     {:href "_"}

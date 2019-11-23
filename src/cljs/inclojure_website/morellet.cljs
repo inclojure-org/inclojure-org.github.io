@@ -93,7 +93,7 @@
 ;;
 ;; Render & animation
 ;;
-(def square-count 16)
+(def square-count [8 16 24 32 64])
 (def colors ["#147AAB" "#00B180" "#FFBA00" "#E36511" "#D04B36" "#675997"])
 
 ;;
@@ -120,4 +120,4 @@
         width  (+ (.-width canvas))
         height (+ (.-height canvas))]
 
-    (draw-painting ctx (get-painting width height (shuffle colors) square-count))))
+    (draw-painting ctx (get-painting width height (shuffle colors) (first (shuffle square-count))))))
