@@ -13,7 +13,6 @@ pages:
   script:
     - mkdir -p public/unstable
     - cp -R resources/public/* public/unstable
-    - cp -R .well-known public/
     - cp -R .well-known public/unstable
   artifacts:
     paths:
