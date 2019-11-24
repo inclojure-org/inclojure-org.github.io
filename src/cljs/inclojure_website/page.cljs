@@ -21,7 +21,7 @@
         [:div
          [:canvas.feature]
          [:div.feature-overlay]
-         [:a.feature-link {:href "https://www.centrepompidou.fr/cpv/resource/cxx585o/ryjG5EL"}
+         [:a.feature-link {:href "https://gitlab.com/inclojure/inclojure.gitlab.io/blob/redesign/src/cljs/inclojure_website/morellet.cljs"}
           [:div.feature-text "inspired from François Morellet"]]])})))
 
 (defn venue []

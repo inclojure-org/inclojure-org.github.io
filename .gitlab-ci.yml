@@ -10,12 +10,11 @@ pages:
     - lein clean
     - lein cljsbuild once min
   script:
-    - mkdir public
-    - cp -R resources/public/* public/
-    - cp -R archive/* public/
-    - cp -R .well-known public/
+    - mkdir -p public/staging
+    - cp -R resources/public/* public/staging
+    - cp -R .well-known public/staging
   artifacts:
     paths:
       - public
   only:
-    - master
+    - redesign

@@ -201,6 +201,13 @@ footer a:hover img,
     border-color: #333;
 }
 
+.feature {
+    height: 200px;
+    background-size: auto;
+    background-size: cover;
+
+}
+
 .features img {
     width: 90px;
     height: 90px;
@@ -266,16 +273,32 @@ footer a:hover img,
 }
 
 nav {
-    margin-bottom: 2em;
-    color: #999;
-    position: absolute;
-    top: 100px;
-    left: 32px;
+    padding-top: 0;
+    position: relative;
 }
 
 nav em {
     padding: 0 8px;
     color: #ddd;
+}
+
+nav a.link,
+nav span {
+    display: inline-block;
+    padding: 10px 10px 10px 0;
+    height: 30px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 110%;
+}
+
+nav a.link:hover {
+    color: #000;
+}
+
+nav .nav-links {
+    display: block;
+    text-align: left;
 }
 
 .people {
@@ -392,9 +415,17 @@ nav em {
     }
 
     nav {
-        position: relative;
-        top: 0;
-        left: 0;
+        padding-bottom: 50px;
+    }
+
+    nav a.link,
+    nav span {
+        padding: 5px 6px 0 6px;
+        font-size: 100%;
+    }
+    
+    nav .nav-links {
+        display: inline;
     }
 
     nav a:nth-child(2) {
