@@ -3,6 +3,7 @@ image: clojure:lein-2.8.1-alpine
 cache:
   paths:
     - .local-m2
+    - public
 
 pages:
   stage: deploy
@@ -10,11 +11,10 @@ pages:
     - lein clean
     - lein cljsbuild once min
   script:
-    - cp -R public/* public/
-    - mkdir -p public/staging
-    - cp -R resources/public/* public/staging/
+    - mkdir -p public/unstable
+    - cp -R resources/public/* public/unstable
     - cp -R .well-known public/
-    - cp -R .well-known public/staging
+    - cp -R .well-known public/unstable
   artifacts:
     paths:
       - public
