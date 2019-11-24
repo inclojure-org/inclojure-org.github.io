@@ -3,6 +3,7 @@ image: clojure:lein-2.8.1-alpine
 cache:
   paths:
     - .local-m2
+    - public
 
 pages:
   stage: deploy
