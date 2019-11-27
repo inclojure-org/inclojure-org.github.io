@@ -136,24 +136,26 @@
     [:h3 {:id "introductory-workshop"}
      "Introductory workshop"]
     [:h4 "Audience"]
-    [:p "Practising programmers and/or CS undergrads/grads who are new to Clojure (i.e. not absolute beginners in programming)."]
-    ;;[:h4 "Session outline"]
-    ;;[:p>em "Details coming soon!"]
-    #_[:div
-       [:p "This will be a day-long hands-on workshop."]
-       [:p "We will progressively grow logic for a little data-processing utility, by building concept upon concept until we have a working application."]
-       [:p "We will try to achieve this with:"]
-       [:ul
-        [:li "A small set of core ideas,"]
-        [:li "a handful of Clojure primitives, a few API design techniques, and"]
-        [:li "an interactive (REPL-driven) programming workflow."]]
-       [:p "We will do the following:"]
-       [:ul
-        [:li "Model things with pure data,"]
-        [:li "design clean functional APIs,"]
-        [:li "compose purely functional logic, and"]
-        [:li "use the REPL to interactively \"grow\" and introspect code."]]
-       [:p "Fully documented workshop material will be available for use at home."]]
+    [:p "Practising programmers and/or CS undergrads/grads who are new to Clojure, LISPs or functional programming but not absolute beginners
+         at programming. We recommend that attendees be familiar with at least one programming language."]
+    [:h4 "Session outline"]
+    [:div
+     [:p "This will be a day-long hands-on workshop. We will progressively work through a series of exercises by building concept upon concept."]
+     [:p "We will try to achieve this with:"]
+     [:ul
+      [:li "A small set of core ideas,"]
+      [:li "a handful of Clojure primitives,"]
+      [:li "a few API design techniques, and"]
+      [:li "an interactive (REPL-driven) programming workflow."]]
+     [:p "We will do the following:"]
+     [:ul
+      [:li "Model things with pure data,"]
+      [:li "design clean functional APIs,"]
+      [:li "compose purely functional logic, and"]
+      [:li "use the REPL to interactively grow, inspect and debug code."]]
+     [:p "By the end of the workshop, attendees should have an understanding of what Clojure has to offer, as well as a basic understanding of
+            how to solve problems in Clojure. The workshop should serve as a springboard from which attendees can launch their own exploration
+            of the language and its ecosystem. Fully documented workshop material will be available for use at home."]]
 
     [:h3
      {:id "intermediate-workshop"}
