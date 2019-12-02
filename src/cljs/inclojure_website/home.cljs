@@ -161,22 +161,28 @@
      {:id "intermediate-workshop"}
      "Intermediate workshop"]
     [:h4 "Audience"]
-    [:p "Working Clojure programmers who are relatively new to the language, but have written some Clojure code, perhaps under someone else's supervision."]
-    ;;[:h4 "Session outline"]
-    ;;[:p>em "Details coming soon!"]
-    #_[:p "This will be a day-long hands-on workshop."]
-    #_[:p "The aim of this workshop is to help the attendee work in Clojure more effectively. We will learn about the application of the following concepts:"]
-    #_[:ul
-       [:li "Java interop"]
-       [:li "Polymorphism using Multimethods and Protocols"]
-       [:li "Laziness"]
-       [:li "Concurrency in Clojure"
-        [:ul
-         [:li "Basic: Futures, Promises, Atoms and Agents"]
-         [:li "Advanced: Refs and Software Transactional Memory"]]]
-       [:li "Macros"]
-       [:li "Testing"]]
-    #_[:p "To help illustrate and understand the application of these concepts, we will build a project that ties all these concepts together."]]])
+    [:p "This workshop is aimed at practising programmers who have some exposure to Clojure, but are looking to accomplish non trivial tasks using Clojure."]
+    [:h4 "Session outline"]
+    [:p "This will be a day-long hands-on workshop."]
+    [:p "The aim of this workshop is to help the attendee work in Clojure more effectively. We will learn about:"]
+    [:ul
+     [:li "Repl driven development"]
+     [:li "Clojure's approach to state and identity"]
+     [:li "Laziness & Vars (Benefits & pitfalls)"]
+     [:li "Java interop"]
+     [:li "Testing"]
+     [:li "Debugging Effectively"]
+     [:li "Clojure ecosystem"]
+     #_[:li "Polymorphism using Multimethods and Protocols"]
+     #_[:li "Laziness"]
+     #_[:li "Concurrency in Clojure"
+      [:ul
+       [:li "Basic: Futures, Promises, Atoms and Agents"]
+       [:li "Advanced: Refs and Software Transactional Memory"]]]
+     #_[:li "Macros"]
+     ]
+    [:p "To help us illustrate and understand the application of these concepts, we will build a simple web app that will tie all these concepts together."]
+    [:p "We will not be covering macros or advanced clojure concurrency primitives in this workshop."]]])
 
 (defn tickets []
   [layout/section "tickets" "Tickets"
