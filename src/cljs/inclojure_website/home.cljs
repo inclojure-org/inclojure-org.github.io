@@ -85,9 +85,9 @@
 
 (def day-1-workshops
   [{:time "Time TBA" :title "Registrations" :duration "30m"}
-   {:time "Time TBA" :title "Introductory workshop"
+   {:time "Time TBA" :title "Introduction to Clojure"
     :selected-talk? true :page-id "introductory-workshop" :duration "8h"}
-   {:time "Time TBA" :title "Intermediate workshop"
+   {:time "Time TBA" :title "Intermediate Clojure"
     :selected-talk? true :page-id "intermediate-workshop" :duration "8h"}])
 
 (defn day-1-schedule []
@@ -118,11 +118,21 @@
   [layout/section "schedule" "Schedule"
    [:div
     [:em "IN/Clojure 2020 will happen over two days - 14" [:sup "th"] " and 15" [:sup "th"] " of February, 2020."]
-    [:p [:strong "Day 1: Fri, 14" [:sup "th"] " Feb, 2020"] " | Two full-day workshops. Details coming soon."
-     [:ul
-      [:li "Workshop 1: Introduction to Clojure, for programmers new to Clojure."]
-      [:li "Workshop 2: Intermediate Clojure, for programmers familiar with Clojure."]]
+    [:p [:strong "Day 1: Fri, 14" [:sup "th"] " Feb, 2020"] " | Two full-day workshops."
+
      #_[day-1-schedule]]
+    [:p
+     [:ul
+      [:li "Workshop 1: " [:a {:href "#"
+                               :on-click #(layout/goto "introductory-workshop")
+                               :style {:font-weight "bold"}}
+                           "Introduction to Clojure"]
+       ", for programmers new to Clojure."]
+      [:li "Workshop 2: " [:a {:href "#"
+                               :on-click #(layout/goto "intermediate-workshop")
+                               :style {:font-weight "bold"}}
+                           "Intermediate Clojure"]
+       ", for programmers familiar with Clojure."]]]
     [:p [:strong "Day 2: Sat, 15" [:sup "th"] " Feb, 2020"] " | Single-track day of Talks. "
      "CFP is open. "
      [:a {:href "https://hasgeek.com/inclojure/2020/proposals" :target "_blank"} [:i "Submit your proposal(s) now."]]]
@@ -134,7 +144,7 @@
     [:p "There will be two full-day workshops at IN/Clojure 2020 - an introductory Clojure workshop and an intermediate Clojure workshop. The lessons apply to ClojureScript as well. Note that both the workshops will be
          conducted simultaneously on the 14" [:sup "th"] " of February, 2020."]
     [:h3 {:id "introductory-workshop"}
-     "Introductory workshop"]
+     "Introduction to Clojure"]
     [:h4 "Audience"]
     [:p "Practising programmers and/or CS undergrads/grads who are new to Clojure, LISPs or functional programming but not absolute beginners
          at programming. We recommend that attendees be familiar with at least one programming language."]
@@ -159,7 +169,7 @@
 
     [:h3
      {:id "intermediate-workshop"}
-     "Intermediate workshop"]
+     "Intermediate Clojure"]
     [:h4 "Audience"]
     [:p "This workshop is aimed at practising programmers who have some exposure to Clojure, but are looking to accomplish non trivial tasks using Clojure."]
     [:h4 "Session outline"]
