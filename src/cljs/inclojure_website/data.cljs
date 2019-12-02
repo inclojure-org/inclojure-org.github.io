@@ -1,17 +1,18 @@
 (ns inclojure-website.data)
 
 (defonce team-list
-  [{:name "Aditya Athalye" :twitter-link "http://twitter.com/adityaathalye"}
-   {:name "Akshay Gupta" :twitter-link "http://twitter.com/kitallis"}
-   {:name "Harsh Gupta" :twitter-link "https://github.com/hargup"}
-   {:name "Kapil Reddy" :twitter-link "https://twitter.com/KapilReddy"}
-   {:name "Nivedita Priyadarshini" :twitter-link "http://twitter.com/nid90"}
-   {:name "Ravindra Jaju" :twitter-link "https://twitter.com/jaju"}
-   {:name "Rubal Jabbal" :twitter-link "https://github.com/rubalj"}
-   {:name "Sandilya Jandhyala" :twitter-link "http://twitter.com/jysandilya"}
-   {:name "Srihari Sriraman" :twitter-link "http://twitter.com/sriharisriraman"}
-   {:name "Venkatesh Halli" :twitter-link "https://github.com/vhalli"}
-   {:name "Vikram Chintalapati" :twitter-link "https://github.com/vkrmis"}])
+  [{:name "Aditya Athalye" :twitter-link "http://twitter.com/adityaathalye" :avatar "aditya.png"}
+   {:name "Akshay Gupta" :twitter-link "http://twitter.com/kitallis" :avatar "kitallis.png"}
+   {:name "Harsh Gupta" :twitter-link "https://github.com/hargup" :avatar "harsh.jpg"}
+   {:name "Kapil Reddy" :twitter-link "https://twitter.com/KapilReddy" :avatar "kapil.png"}
+   {:name "Nivedita Priyadarshini" :twitter-link "http://twitter.com/nid90" :avatar "nid.png"}
+   {:name "Ravindra Jaju" :twitter-link "https://twitter.com/jaju" :avatar "jaju.jpg"}
+   {:name "Rubal Jabbal" :twitter-link "https://github.com/rubalj" :avatar "rubal.png"}
+   {:name "Sandilya Jandhyala" :twitter-link "http://twitter.com/jysandilya" :avatar "sandy.png"}
+   {:name "Srihari Sriraman" :twitter-link "http://twitter.com/sriharisriraman" :avatar "srihari.png"}
+   {:name "Venkatesh Halli" :twitter-link "https://github.com/vhalli" :avatar "vhalli.png"}
+   {:name "Vikram Chintalapati" :twitter-link "https://github.com/vkrmis" :avatar "vkrm.png"}])
+
 
 (def selected-talks
   [{:duration "30m" :title "Registrations" :time "8:40 am"}

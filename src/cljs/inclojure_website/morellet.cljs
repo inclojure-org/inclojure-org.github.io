@@ -93,7 +93,7 @@
 ;;
 ;; Render & animation
 ;;
-(def square-count [4 8 15 16 23 32])
+(def square-count [4 8 15 16 23 42])
 (def colors ["#147AAB" "#00B180" "#FFBA00" "#E36511" "#D04B36" "#675997"])
 
 ;;
