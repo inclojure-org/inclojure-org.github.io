@@ -183,6 +183,13 @@
        {:href "https://github.com/bbatsov"}
        [:img {:alt "Github", :src "images/github.png"}]]]]]])
 
+(defn tickets []
+  [:section {:id  "tickets"}
+   [:h2  "Tickets"]
+   [:div
+    [:div#boxoffice-widget [:p "Loading..."]]
+    [:p "For more news, follow @in_clojure on twitter."]]])
+
 (defn cfp []
   [:section {:id "cfp"}
    [:h2 "Call For Proposals"]
@@ -235,6 +242,7 @@
      [nav]
      [intro]
      [keynote]
+     [tickets]
      [sponsorship]
      [venue]
      [schedule]
