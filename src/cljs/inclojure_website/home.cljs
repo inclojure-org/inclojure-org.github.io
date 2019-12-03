@@ -180,7 +180,7 @@
   [layout/section "tickets" "Tickets"
    [:div
     [:div#boxoffice-widget [:p "Loading..."]]
-    [:p "For more news, follow @in_clojure on twitter."]]])
+    [:p "For more news, follow " [:a {:href "https://twitter.com/in_clojure" :target "_blank"} "@in_clojure"] " on twitter."]]])
 
 (defn benefactor [benefactor-name site-link logo-src]
   [:li.benefactor
