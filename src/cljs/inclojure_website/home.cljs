@@ -178,13 +178,9 @@
 
 (defn tickets []
   [layout/section "tickets" "Tickets"
-   [:div "Coming Soon! For news, follow "
-    [:a {:href "https://twitter.com/in_clojure" :target "_blank"} "@in_clojure"] " on twitter."]
-   #_[:div
-      [:iframe {:src "https://www.townscript.com/widget/inclojure-2019" :frameBorder "0" :height "600" :width "80%"}]
-      [:p
-       "Alternatively, tickets can be purchased directly at "
-       [:a {:href "https://www.townscript.com/e/inclojure-2019/booking" :target "_blank"} "townscript."]]]])
+   [:div
+    [:div#boxoffice-widget [:p "Loading..."]]
+    [:p "For more news, follow @in_clojure on twitter."]]])
 
 (defn benefactor [benefactor-name site-link logo-src]
   [:li.benefactor
