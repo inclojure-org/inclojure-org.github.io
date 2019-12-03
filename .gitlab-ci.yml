@@ -11,7 +11,7 @@ pages:
     - lein clean
     - lein cljsbuild once min
   script:
-    - mkdir public
+    - mkdir -p public
     - cp -R resources/public/* public/
     - cp -R archive/* public/
     - cp -R .well-known public/
