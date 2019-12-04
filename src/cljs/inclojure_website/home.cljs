@@ -85,9 +85,9 @@
 
 (def day-1-workshops
   [{:time "Time TBA" :title "Registrations" :duration "30m"}
-   {:time "Time TBA" :title "Introductory workshop"
+   {:time "Time TBA" :title "Introduction to Clojure"
     :selected-talk? true :page-id "introductory-workshop" :duration "8h"}
-   {:time "Time TBA" :title "Intermediate workshop"
+   {:time "Time TBA" :title "Intermediate Clojure"
     :selected-talk? true :page-id "intermediate-workshop" :duration "8h"}])
 
 (defn day-1-schedule []
@@ -118,11 +118,21 @@
   [layout/section "schedule" "Schedule"
    [:div
     [:em "IN/Clojure 2020 will happen over two days - 14" [:sup "th"] " and 15" [:sup "th"] " of February, 2020."]
-    [:p [:strong "Day 1: Fri, 14" [:sup "th"] " Feb, 2020"] " | Two full-day workshops. Details coming soon."
-     [:ul
-      [:li "Workshop 1: Introduction to Clojure, for programmers new to Clojure."]
-      [:li "Workshop 2: Intermediate Clojure, for programmers familiar with Clojure."]]
+    [:p [:strong "Day 1: Fri, 14" [:sup "th"] " Feb, 2020"] " | Two full-day workshops."
+
      #_[day-1-schedule]]
+    [:p
+     [:ul
+      [:li "Workshop 1: " [:a {:href "#"
+                               :on-click #(layout/goto "introductory-workshop")
+                               :style {:font-weight "bold"}}
+                           "Introduction to Clojure"]
+       ", for programmers new to Clojure."]
+      [:li "Workshop 2: " [:a {:href "#"
+                               :on-click #(layout/goto "intermediate-workshop")
+                               :style {:font-weight "bold"}}
+                           "Intermediate Clojure"]
+       ", for programmers familiar with Clojure."]]]
     [:p [:strong "Day 2: Sat, 15" [:sup "th"] " Feb, 2020"] " | Single-track day of Talks. "
      "CFP is open. "
      [:a {:href "https://hasgeek.com/inclojure/2020/proposals" :target "_blank"} [:i "Submit your proposal(s) now."]]]
@@ -134,47 +144,55 @@
     [:p "There will be two full-day workshops at IN/Clojure 2020 - an introductory Clojure workshop and an intermediate Clojure workshop. The lessons apply to ClojureScript as well. Note that both the workshops will be
          conducted simultaneously on the 14" [:sup "th"] " of February, 2020."]
     [:h3 {:id "introductory-workshop"}
-     "Introductory workshop"]
+     "Introduction to Clojure"]
     [:h4 "Audience"]
-    [:p "Practising programmers and/or CS undergrads/grads who are new to Clojure (i.e. not absolute beginners in programming)."]
-    ;;[:h4 "Session outline"]
-    ;;[:p>em "Details coming soon!"]
-    #_[:div
-       [:p "This will be a day-long hands-on workshop."]
-       [:p "We will progressively grow logic for a little data-processing utility, by building concept upon concept until we have a working application."]
-       [:p "We will try to achieve this with:"]
-       [:ul
-        [:li "A small set of core ideas,"]
-        [:li "a handful of Clojure primitives, a few API design techniques, and"]
-        [:li "an interactive (REPL-driven) programming workflow."]]
-       [:p "We will do the following:"]
-       [:ul
-        [:li "Model things with pure data,"]
-        [:li "design clean functional APIs,"]
-        [:li "compose purely functional logic, and"]
-        [:li "use the REPL to interactively \"grow\" and introspect code."]]
-       [:p "Fully documented workshop material will be available for use at home."]]
+    [:p "Practising programmers and/or CS undergrads/grads who are new to Clojure, LISPs or functional programming but not absolute beginners
+         at programming. We recommend that attendees be familiar with at least one programming language."]
+    [:h4 "Session outline"]
+    [:div
+     [:p "This will be a day-long hands-on workshop. We will progressively work through a series of exercises by building concept upon concept."]
+     [:p "We will try to achieve this with:"]
+     [:ul
+      [:li "A small set of core ideas,"]
+      [:li "a handful of Clojure primitives,"]
+      [:li "a few API design techniques, and"]
+      [:li "an interactive (REPL-driven) programming workflow."]]
+     [:p "We will do the following:"]
+     [:ul
+      [:li "Model things with pure data,"]
+      [:li "design clean functional APIs,"]
+      [:li "compose purely functional logic, and"]
+      [:li "use the REPL to interactively grow, inspect and debug code."]]
+     [:p "By the end of the workshop, attendees should have an understanding of what Clojure has to offer, as well as a basic understanding of
+            how to solve problems in Clojure. The workshop should serve as a springboard from which attendees can launch their own exploration
+            of the language and its ecosystem. Fully documented workshop material will be available for use at home."]]
 
     [:h3
      {:id "intermediate-workshop"}
-     "Intermediate workshop"]
+     "Intermediate Clojure"]
     [:h4 "Audience"]
-    [:p "Working Clojure programmers who are relatively new to the language, but have written some Clojure code, perhaps under someone else's supervision."]
-    ;;[:h4 "Session outline"]
-    ;;[:p>em "Details coming soon!"]
-    #_[:p "This will be a day-long hands-on workshop."]
-    #_[:p "The aim of this workshop is to help the attendee work in Clojure more effectively. We will learn about the application of the following concepts:"]
-    #_[:ul
-       [:li "Java interop"]
-       [:li "Polymorphism using Multimethods and Protocols"]
-       [:li "Laziness"]
-       [:li "Concurrency in Clojure"
-        [:ul
-         [:li "Basic: Futures, Promises, Atoms and Agents"]
-         [:li "Advanced: Refs and Software Transactional Memory"]]]
-       [:li "Macros"]
-       [:li "Testing"]]
-    #_[:p "To help illustrate and understand the application of these concepts, we will build a project that ties all these concepts together."]]])
+    [:p "This workshop is aimed at practising programmers who have some exposure to Clojure, but are looking to accomplish non trivial tasks using Clojure."]
+    [:h4 "Session outline"]
+    [:p "This will be a day-long hands-on workshop."]
+    [:p "The aim of this workshop is to help the attendee work in Clojure more effectively. We will learn about:"]
+    [:ul
+     [:li "Repl driven development"]
+     [:li "Clojure's approach to state and identity"]
+     [:li "Laziness & Vars (Benefits & pitfalls)"]
+     [:li "Java interop"]
+     [:li "Testing"]
+     [:li "Debugging Effectively"]
+     [:li "Clojure ecosystem"]
+     #_[:li "Polymorphism using Multimethods and Protocols"]
+     #_[:li "Laziness"]
+     #_[:li "Concurrency in Clojure"
+      [:ul
+       [:li "Basic: Futures, Promises, Atoms and Agents"]
+       [:li "Advanced: Refs and Software Transactional Memory"]]]
+     #_[:li "Macros"]
+     ]
+    [:p "To help us illustrate and understand the application of these concepts, we will build a simple web app that will tie all these concepts together."]
+    [:p "We will not be covering macros or advanced clojure concurrency primitives in this workshop."]]])
 
 (defn tickets []
   [layout/section "tickets" "Tickets"
