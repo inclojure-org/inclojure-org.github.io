@@ -80,9 +80,10 @@ h2 {
     color:#000;
     margin: 2em 0 1em 0;
     border: none;
-    padding: none;
+    padding: 0 0 10px 0;
     letter-spacing: 0.1em;
     font-weight: 500;
+    border-bottom: 1px dotted;
 }
 
 h2.guest {
@@ -210,6 +211,9 @@ footer a:hover img,
 
 }
 
+.contents {
+    padding: 25px;
+}
 
 .features img {
     width: 90px;
@@ -244,19 +248,17 @@ footer a:hover img,
     padding: 0.3em 0 0 0;
 }
 
+.article-fine-print {
+    line-height: 0.2;
+}
+
 .article-fine-print a {
     border: none;
 }
 
-.article-fine-print a img {
-    width: 17px;
-    height: 17px;
-    margin-right: 8px;
-    transition: border-color 1s;
-    border: 1px solid #eee;
-    border-radius: 100px;
-    padding: 3px;
-    background: #fff;
+.article-fine-print a:hover img {
+    opacity: 1;
+    border-color: #333;
 }
 
 .article-image {
@@ -338,7 +340,7 @@ nav .nav-links {
     left: 0;
     top: 0;
     background: #eee;
-    border-radius: 15%;
+    border-radius: 15px;
 }
 
 .photo {
@@ -430,15 +432,21 @@ table {
         color:#000;
         margin: 2em 0 1em 0;
         border: none;
-        padding: none;
+        padding: 0 0 10px 0;
         letter-spacing: 0.1em;
         font-weight: 500;
+	border-bottom: 1px dotted;
     }
 
     p {
         margin-top: 0;
         line-height: 1.4;
         font-weight: 100;
+    }
+
+    pre {
+	word-wrap: break-word;
+	white-space: break-spaces;
     }
 
     nav {
@@ -585,14 +593,41 @@ table {
         background-image: url(/images/rss.png);
     }
 
+    .people img {
+	height: 100%;
+	width: 16%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: #eee;
+	border-radius: 15%;
+    }
+
+    .article-fine-print a img {
+	width: 17px;
+	height: 17px;
+	margin-right: 8px;
+	transition: border-color 1s;
+	border: 1px solid #eee;
+	border-radius: 100px;
+	padding: 3px;
+	background: #fff;
+	position: relative;
+    }
+
+    .article-fine-print a:hover img {
+	opacity: 1;
+	border-color: #333;
+    }
+
     .article-list li {
         padding: 0 0 0 200px;
         max-height: 205px;
     }
 
     .article-image {
-        width: 180px;
-        height: 205px;
+        width: 27.7%;
+        height: 100%;
         float: none;
         position: absolute;
         left: 0;

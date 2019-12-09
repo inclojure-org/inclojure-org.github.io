@@ -74,11 +74,49 @@
 (defn venue []
   [:section {:id "venue"}
    [:h2 "Venue"]
+   [:p "We've sought to shuttle the conference between Pune and Bangalore and this time its Pune's turn."]
    [:img
-    {:style {:width "100%" :margin "1.5em 0 1.5em 0" :border-radius "2%"}
+    {:style {:width "100%" :margin "0.5em 0 1.5em 0" :border-radius "2%"}
      :alt "Pune",
      :src "images/bg-pune.jpg"}]
-   [:p "The venue in Pune will be announced soon! Follow"
+   [:h4 "The Conference"]
+   [:p "The conference will be held in a relatively centrally and well-connected on Nagar Rd, just 3kms off of the Pune International Airport (PNQ)."]
+   [:iframe
+    {:height "450",
+     :width "100%",
+     :src
+     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.3359264715677!2d73.90860541495768!3d18.558887972844822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c13f953dc837%3A0xb6782032b34e422e!2sNovotel%20Pune%20Nagar%20Road!5e0!3m2!1sen!2sin!4v1575908729886!5m2!1sen!2sin"}]
+   [:address "Crimson Hall, Novotel"
+    [:br]
+    "Nagar Rd, Sakore Nagar"
+    [:br]
+    "Viman Nagar"
+    [:br]
+    "Pune - 411014"
+    [:br]
+    "Maharashtra, IN"
+    [:br]]
+   [:h6 "Getting there"]
+   [:p [:strong "By Air:"] " Pune International Airport (PNQ) is a 10
+   minute taxi ride from the venue."]
+   [:p [:strong "By Train:"] " Pune is well connected by train to all
+   major cities of India. Pune Station is about 25 minutes from the
+   venue by car."]
+   [:p [:strong "By Road:"] " Pune is also well connected by bus. If
+   you are coming from Mumbai, we highly recommend taking the Shivneri
+   bus from Dadar, Chembur, Vashi or Borivali (this is a government
+   service)."]
+   [:h6 "Getting around"]
+   [:p "Uber and Ola Cabs are both active in Pune city. You should
+   have no trouble using these. Local autorickshaws are also easily
+   available."]
+   [:p "A few places of interest close to the venue are:"]
+   [:p "There are quite a few restaurants, pubs and small cafes in the
+   Koregaon Park neighborhood, which is a 15 minute ride from the
+   venue."]
+   [:h4 "The Workshops"]
+   [:p "The venue for the workshops will will be announced soon!
+   Follow"
     [:a {:href "https://twitter.com/in_clojure"} " @in_clojure "]
     "to stay updated."]])
 
@@ -137,15 +175,11 @@
    [:a
     {:href twitter-link}
     name
-    [:img {:alt name, :src (str "images/team/" avatar)}]
-    [:div.small.article-fine-print
-     "foo"
-     [:a
-      {:href "https://twitter.com/in_clojure"}
-      [:img {:alt "Twitter", :src "images/twitter.png"}]]
+    [:img {:alt name, :src (str "images/team/" avatar)}]]
+   [:div.small.article-fine-print.no-mobile
      [:a
       {:href "https://github.com/bbatsov"}
-      [:img {:alt "Github", :src "images/github.png"}]]]]])
+      [:img {:alt "Github", :src "images/github.png"}]]]])
 
 (defn team []
   [:section {:id "team"}
@@ -175,7 +209,7 @@
      general and Clojure in particular. Believe it or not, Bozhidar
      has hobbies and interests outside the realm of computers, but we
      won't bore you with those here."]
-     [:div.article-fine-print
+     [:div.article-fine-print.no-mobile
       [:a
        {:href "https://twitter.com/in_clojure"}
        [:img {:alt "Twitter", :src "images/twitter.png"}]]
@@ -187,8 +221,7 @@
   [:section {:id  "tickets"}
    [:h2  "Tickets"]
    [:div
-    [:div#boxoffice-widget [:p "Loading..."]]
-    [:p "For more news, follow @in_clojure on twitter."]]])
+    [:div#boxoffice-widget [:pre "Loading..."]]]])
 
 (defn cfp []
   [:section {:id "cfp"}
@@ -213,15 +246,6 @@
     [:a.link {:href "#" :on-click #(sundry/goto-link "team")} "Team"]
     [:a.link {:href "#" :on-click #(sundry/goto-link "coc")} "Code of Conduct"]]])
 
-(defn footer []
-  [:footer
-   [:a
-    {:href "https://twitter.com/in_clojure"}
-    [:img {:alt "Twitter", :src "images/twitter.png"}]]
-   [:a
-    {:href "https://www.flickr.com/photos/inclojure/albums/72157711988093001"}
-    [:img {:alt "Flickr", :src "images/flickr.png"}]]])
-
 (defn ending-ornament []
   [:section {:id "ornament"}
    [:img {:alt "", :src "images/footer-ornament.svg"}]])
@@ -230,9 +254,29 @@
   [:section {:id "end"}
    [:ul
     [:li "the sidebar artwork is procedurally generated and inspired by"
-     [:a {:href "https://gitlab.com/inclojure/inclojure.gitlab.io/blob/redesign/src/cljs/inclojure_website/morellet.cljs"} " François Morellet."]]
-    [:li "the source code to this website and other conference organizational material is available" [:a {:href "https://github.com/inclojure-org"} " here."]]
-    [:li "as maybe evident, this edition of IN/Clojure is organized in partnership with" [:a {:href "https://hasgeek.com"} " HasGeek."]]]])
+     [:a {:href
+     "https://gitlab.com/inclojure/inclojure.gitlab.io/blob/redesign/src/cljs/inclojure_website/morellet.cljs"}
+     " François Morellet."]]
+
+    [:li "this edition of IN/Clojure is organized in partnership with"
+     [:a {:href "https://hasgeek.com"} " HasGeek."]]
+
+    [:li "source code to this website and other conference
+    organizational material is available"
+     [:a {:href
+          "https://github.com/inclojure-org"} " here."]]
+
+    [:li "the Clojure & the Clojure logo are copyright"
+     [:a {:href "https://commons.wikimedia.org/wiki/File:Clojure_logo.svg"} " Rich Hickey."]]]])
+
+(defn footer []
+  [:footer
+   [:a
+    {:href "https://twitter.com/in_clojure"}
+    [:img {:alt "Twitter", :src "images/twitter.png"}]]
+   [:a
+    {:href "https://www.flickr.com/photos/inclojure/albums/72157711988093001"}
+    [:img {:alt "Flickr", :src "images/flickr.png"}]]])
 
 (defn contents []
   [:div
