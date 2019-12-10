@@ -76,10 +76,10 @@
    [:h2 "Venue"]
    [:p "We've sought to shuttle the conference between Pune and Bangalore and this time its Pune's turn."]
    [:img
-    {:style {:width "100%" :margin "0.5em 0 1.5em 0" :border-radius "2%"}
+    {:style {:width "100%" :border-radius "2%"}
      :alt "Pune",
      :src "images/bg-pune.jpg"}]
-   [:h4 "The Conference"]
+   [:h3 "The Conference"]
    [:p "The conference will be held in a relatively centrally and well-connected on Nagar Rd, just 3kms off of the Pune International Airport (PNQ)."]
    [:iframe
     {:height "450",
@@ -96,7 +96,7 @@
     [:br]
     "Maharashtra, IN"
     [:br]]
-   [:h6 "Getting there"]
+   [:h4 "Getting there"]
    [:p [:strong "By Air:"] " Pune International Airport (PNQ) is a 10
    minute taxi ride from the venue."]
    [:p [:strong "By Train:"] " Pune is well connected by train to all
@@ -106,15 +106,14 @@
    you are coming from Mumbai, we highly recommend taking the Shivneri
    bus from Dadar, Chembur, Vashi or Borivali (this is a government
    service)."]
-   [:h6 "Getting around"]
+   [:h4 "Getting around"]
    [:p "Uber and Ola Cabs are both active in Pune city. You should
    have no trouble using these. Local autorickshaws are also easily
    available."]
-   [:p "A few places of interest close to the venue are:"]
    [:p "There are quite a few restaurants, pubs and small cafes in the
    Koregaon Park neighborhood, which is a 15 minute ride from the
    venue."]
-   [:h4 "The Workshops"]
+   [:h3 "The Workshops"]
    [:p "The venue for the workshops will will be announced soon!
    Follow"
     [:a {:href "https://twitter.com/in_clojure"} " @in_clojure "]
@@ -176,7 +175,7 @@
     {:href twitter-link}
     name
     [:img {:alt name, :src (str "images/team/" avatar)}]]
-   [:div.small.article-fine-print.no-mobile
+   [:div.small.article-fine-print
      [:a
       {:href "https://github.com/bbatsov"}
       [:img {:alt "Github", :src "images/github.png"}]]]])
