@@ -305,6 +305,23 @@
       "Bozhidar "]
      "is the maintainer of CIDER, nREPL, a dozen related projects, and the editor of the community Clojure style guide. Most people would probably describe him as an Emacs zealot (and they would be right). He's also quite fond of the Lisp family of languages, functional programming in general and Clojure in particular.\n\nBelieve it or not, Bozhidar has hobbies and interests outside the realm of computers, but we won't bore you with those here."]]])
 
+(defn selection-committee []
+  [:div.committee-section
+   (for [{:keys [pname pic www]}
+         [{:pname "Martin Klepsch"
+           :pic "images/committee/martin.jpeg"
+           :www "https://github.com/martinklepsch"}
+          {:pname "Paula Gearon"
+           :pic "images/committee/paula.jpeg"
+           :www "https://github.com/quoll"}
+          {:pname "Tejas Dinkar"
+           :pic "images/committee/tejas.png"
+           :www "https://github.com/gja"}]]
+     [:div.committee-member
+      [:img.committee-img {:alt pname, :src pic}]
+      [:p.committee-name [:a {:href www :target "_blank"}
+                          pname]]])])
+
 (defn talks []
   [layout/section "talks" "Call For Proposals"
    [:div [:h3 "CFP is open!"]
@@ -312,6 +329,8 @@
      This year, selected speakers will enjoy sharing the stage with the perennially effervescent Bozhidar Batsov, and other speakers from across the globe. "
     [:p [:strong [:a {:href "https://hasgeek.com/inclojure/2020/proposals" :target "_blank"}
                   "Submit your proposal now!"]]]
+    [:h3 "Selection Committee"]
+    (selection-committee)
     [:h3 "Invited Speaker"]
     (invited-speakers)]
 
