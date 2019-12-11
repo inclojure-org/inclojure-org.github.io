@@ -122,7 +122,7 @@
 (defn schedule []
   [:section {:id "schedule"}
    [:h2 "Schedule"]
-   [:p "IN/Clojure 2020 will happen over two days - 14th and 15th of February, 2020."]
+   [:p "IN/Clojure 2020 will happen over two days. The 14th and the 15th of February, 2020."]
    [:table.u-full-width
     [:tbody
      [:tr
@@ -175,7 +175,7 @@
     {:href twitter-link}
     name
     [:img {:alt name, :src (str "images/team/" avatar)}]]
-   [:div.small.article-fine-print
+   [:div.small.article-fine-print.no-mobile
      [:a
       {:href "https://github.com/bbatsov"}
       [:img {:alt "Github", :src "images/github.png"}]]]])
