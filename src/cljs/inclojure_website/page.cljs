@@ -105,15 +105,7 @@
      [:li "Java interop"]
      [:li "Testing"]
      [:li "Debugging Effectively"]
-     [:li "Clojure ecosystem"]
-     #_[:li "Polymorphism using Multimethods and Protocols"]
-     #_[:li "Laziness"]
-     #_[:li "Concurrency in Clojure"
-        [:ul
-         [:li "Basic: Futures, Promises, Atoms and Agents"]
-         [:li "Advanced: Refs and Software Transactional Memory"]]]
-     #_[:li "Macros"]
-     ]
+     [:li "Clojure ecosystem"]]
     [:p "To help us illustrate and understand the application of these concepts, we will build a simple web app that will tie all these concepts together."]
     [:p "We will not be covering macros or advanced clojure concurrency primitives in this workshop."]]])
 
@@ -359,4 +351,9 @@
    [:div.half
     [:div.contents.en
      [nav]
-     [:div @sub-page]]]])
+
+     [:div @sub-page]
+
+     [ending-ornament]
+     [footnote]
+     [footer]]]])
