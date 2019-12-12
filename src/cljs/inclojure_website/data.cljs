@@ -13,7 +13,6 @@
    {:name "Venkatesh Halli" :twitter-link "https://github.com/vhalli" :avatar "vhalli.png"}
    {:name "Vikram Chintalapati" :twitter-link "https://github.com/vkrmis" :avatar "vkrm.png"}])
 
-
 (def selected-talks
   [{:duration "30m" :title "Registrations" :time "8:40 am"}
    {:duration "10m" :title "Welcome" :time "9:20 am"}
