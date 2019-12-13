@@ -329,8 +329,8 @@
      This year, selected speakers will enjoy sharing the stage with the perennially effervescent Bozhidar Batsov, and other speakers from across the globe. "
     [:p [:strong [:a {:href "https://hasgeek.com/inclojure/2020/proposals" :target "_blank"}
                   "Submit your proposal now!"]]]
-    [:h3 "Selection Committee"]
-    (selection-committee)
+    #_[:h3 "Selection Committee"]
+    #_(selection-committee)
     [:h3 "Invited Speaker"]
     (invited-speakers)]
 
