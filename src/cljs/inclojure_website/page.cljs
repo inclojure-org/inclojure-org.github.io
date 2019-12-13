@@ -241,6 +241,29 @@
       ^{:key (str (random-uuid))}
       [team-member name twitter-link avatar])]])
 
+(defn talk-selectors []
+  [:section {:id "talk-selection"}
+   [:h2 "Talk Selectors"]
+   [:ol.article-list
+    (for [{:keys [name github-link twitter-link avatar bio]} data/talk-selectors]
+      ^{:key (str (random-uuid))}
+      [:li
+       [:a
+        {:href "#"}
+        [:img.article-image
+         {:alt "bbatsov",
+          :src (str "images/comittee/" avatar)}]]
+       [:h4
+        [:a {:href github-link} name]]
+       [:p.article-subtitle bio]
+       [:div.article-fine-print.no-mobile
+        [:a
+         {:href twitter-link}
+         [:img {:alt "Twitter", :src "images/twitter.png"}]]
+        [:a
+         {:href github-link}
+         [:img {:alt "Github", :src "images/github.png"}]]]])]])
+
 (defn keynote []
   [:section {:id "keynote"}
    [:h2 "Keynote"]
@@ -275,13 +298,25 @@
    [:div
     [:div#boxoffice-widget [:pre "Loading..."]]]])
 
+(comment
+  "Some incomplete crap to start showing a countdown for CFP"
+  (defonce cfp-end-date (js/Date. "2020" "01" "11"))
+  (defonce timer (atom (- (/ (.getTime cfp-end-date) 1000) (/ (.getTime (js/Date.)) 1000))))
+  (defonce time-updater (js/setInterval #(swap! timer (fn [last-sec] (- last-sec 1))) 1000))
+  (let [delta @timer
+        days (Math/floor (/ delta 86400))
+        new-delta (- delta (* days 86400))
+        hours (mod (Math/floor (/ new-delta 3600)) 24)]))
+
 (defn cfp []
   [:section {:id "cfp"}
-   [:h2 "Call For Proposals"]
+   [:h2 "Call For proposals"]
    [:p "We welcome talk submissions for the 4th edition of
-   IN/Clojure 2020. This year, selected speakers will enjoy sharing
+   IN/Clojure 2020."]
+   [:p "This year, selected speakers will enjoy sharing
    the stage with the perennially effervescent Bozhidar Batsov, and
-   other speakers from across the globe."]])
+   other speakers from across the globe."]
+   [:p [:a {:href "https://hasgeek.com/inclojure/2020/proposals"} "Submit your proposal now!"]]])
 
 (defn ending-ornament []
   [:section {:id "ornament"}
@@ -326,16 +361,15 @@
 (defn home []
   [:div
    [intro]
+   [cfp]
    [keynote]
+   [talk-selectors]
    [tickets]
    [sponsorship]
    [venue]
    [schedule]
    [coc]
-   [team]
-   [ending-ornament]
-   [footnote]
-   [footer]])
+   [team]])
 
 ;;
 ;; -----------

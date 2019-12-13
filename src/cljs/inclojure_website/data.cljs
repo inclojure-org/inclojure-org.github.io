@@ -13,6 +13,25 @@
    {:name "Venkatesh Halli" :twitter-link "https://github.com/vhalli" :avatar "vhalli.png"}
    {:name "Vikram Chintalapati" :twitter-link "https://github.com/vkrmis" :avatar "vkrm.png"}])
 
+(defonce talk-selectors
+  [{:name "Martin Klepsch"
+    :bio "I enjoy eating, talking and programming. Lots of Clojure/Script. Remote, sustainable, yay."
+    :twitter-link ""
+    :github-link "https://github.com/martinklepsch"
+    :avatar "martin.jpeg" }
+
+   {:name "Paula Gearon"
+    :bio "Electrical Engineer. Physics graduate. Black Belt TKD. Clojurista. Graph Databassist."
+    :twitter-link ""
+    :github-link "https://github.com/quoll"
+    :avatar "paula.jpeg"}
+
+   {:name "Tejas Dinkar"
+    :bio "CodeMonkey and Chief Bug Generator at Quintype. Thought follower. Serial Non-Entrepreneur. Looking for the apt word for situations, but not how to spell it"
+    :twitter-link ""
+    :github-link "https://github.com/gja"
+    :avatar "tejas.png" }])
+
 (def selected-talks
   [{:duration "30m" :title "Registrations" :time "8:40 am"}
    {:duration "10m" :title "Welcome" :time "9:20 am"}

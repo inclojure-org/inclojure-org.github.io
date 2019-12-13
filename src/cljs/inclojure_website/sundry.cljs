@@ -7,3 +7,7 @@
 
 (defn goto-link [id]
   (set! (.-location js/window) (str "/#" id)))
+
+(defn subtract-seconds
+  ([s] (subtract-seconds (js/Date.) s))
+  ([d s] (js/Date. (- (.getTime d) (* 1000 s)))))
