@@ -440,12 +440,6 @@ table {
         padding-top: 0;
     }
 
-    aside {
-        background: none;
-        margin: 32px;
-        padding: 0;
-    }
-
     h1 {
         font-size: 46px;
         margin-top: 0;
@@ -482,6 +476,18 @@ table {
         letter-spacing: 0.1em;
         font-weight: 500;
 	border-bottom: 1px dotted;
+    }
+
+    h3 {
+        font-size: 22px;
+        letter-spacing: -0.03em;
+    }
+
+    h4 {
+	font-size: 18px;
+	font-weight: 300;
+	margin: 2em 0 0.5em 0;
+	color: #999;
     }
 
     p {
@@ -570,76 +576,6 @@ table {
         box-sizing: border-box;
     }
 
-    .feature-link {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 30%;
-        height: 5%;
-        background-position: 50% 50%;
-        background-size: contain;
-        box-sizing: border-box;
-        text-align: center;
-    }
-
-    .feature-text {
-        color: #222;
-        border-bottom: 2px dotted #222;
-        font-size: 80%;
-        font-style: italic;
-        font-weight: lighter;
-        background-image: none !important;
-    }
-
-    aside h2 {
-        color: rgba(0,0,0,0.4);
-    }
-
-    .article-list {
-        margin-top: 1.5em;
-    }
-
-    .subscribe {
-        margin-bottom: 3em;
-    }
-
-    .subscribe a {
-        border: none;
-        font-weight: 500;
-        display: inline-block;
-        text-align: center;
-        min-width: 3em;
-        font-size: 16px;
-    }
-
-    .subscribe a:before {
-        content: ".";
-        display: block;
-        vertical-align: middle;
-        width: 36px;
-        height: 36px;
-        border-radius: 100px;
-        background: #fff url(/images/apple.png);
-        background-size: contain;
-        margin: 0 auto 6px auto;
-        text-indent: -1000em;
-        color: rgba(255,255,255,0);
-        transition: border-color 1s;
-        border: 1px solid #eee;
-    }
-
-    .subscribe a.subscribe-google:before {
-        background-image: url(/images/google.png);
-    }
-
-    .subscribe a.subscribe-spotify:before {
-        background-image: url(/images/spotify.png);
-    }
-
-    .subscribe a.subscribe-rss:before {
-        background-image: url(/images/rss.png);
-    }
-
     .people img {
 	height: 100%;
 	width: 16%;
@@ -671,6 +607,10 @@ table {
 	border-color: #333;
     }
 
+    .article-list {
+        margin-top: 1.5em;
+    }
+
     .article-list li {
         padding: 0 0 0 230px;
         min-height: 200px;
@@ -694,28 +634,9 @@ table {
         margin-bottom: 0.3em;
     }
 
-    h3 {
-        font-size: 22px;
-        letter-spacing: -0.03em;
-    }
-
-    h4 {
-	font-size: 18px;
-	font-weight: 300;
-	margin: 2em 0 0.5em 0;
-	color: #999;
-    }
-
     .contents {
         padding: 0 40px 0px 40px;
         max-width: 650px;
-    }
-
-    .languages {
-        top: 10px;
-        right: 10px;
-        border: none;
-        background: none;
     }
 
     footer {
@@ -736,4 +657,73 @@ table {
         padding-left: 30px;
         padding-right: 30px;
     }
+}
+
+
+/* Slideshow Styles */
+
+#action-shots {
+  width: 625px;
+  overflow: hidden;
+  border: solid 1px white;
+}
+
+.slideshow-container {
+  width: 2500px;
+  font-size: 0;
+  transition: 1s ease;
+  height: 400px;
+}
+
+.slideshow-container:hover {
+  animation-play-state: paused;
+}
+
+.slideshow-container img {
+  width: 625px;
+  display: inline-block;
+  font-size: 16px;
+  text-align: center;
+}
+
+.slide {
+  animation: slide 15s ease infinite;
+}
+
+@keyframes slide {
+  12.5% {
+    transform: translateX(0%);
+  }
+
+  25% {
+    transform: translateX(-25%);
+  }
+
+  37.5% {
+    transform: translateX(-25%);
+  }
+
+  50% {
+    transform: translateX(-50%);
+  }
+
+  62.5% {
+    transform: translateX(-50%);
+  }
+
+  75% {
+    transform: translateX(-75%);
+  }
+
+  87.5% {
+    transform: translateX(-75%);
+  }
+
+  99% {
+    transform: translateX(-75%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }

@@ -308,6 +308,15 @@
         new-delta (- delta (* days 86400))
         hours (mod (Math/floor (/ new-delta 3600)) 24)]))
 
+(defn action-shots []
+  [:section {:id "action-shots"}
+   [:h2 "From the past"]
+   [:div.slideshow-container.slide
+    [:img {:src "images/action1.jpg"}]
+    [:img {:src "images/action4.jpg"}]
+    [:img {:src "images/action2.jpg"}]
+    [:img {:src "images/action3.jpg"}]]])
+
 (defn cfp []
   [:section {:id "cfp"}
    [:h2 "Call For proposals"]
@@ -363,6 +372,7 @@
    [intro]
    [cfp]
    [keynote]
+   [action-shots]
    [talk-selectors]
    [tickets]
    [sponsorship]
