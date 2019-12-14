@@ -327,7 +327,7 @@
     [:li
      [:img.previously.article-image.location
       {:alt "bbatsov"
-       :src "images/bangalore-map-caption.png"}]
+       :src "images/bangalore-map-caption.jpg"}]
 
      [:div.previously
       [:strong "2019"]
@@ -368,7 +368,7 @@
     [:li
      [:img.previously.article-image.location
      {:alt "bbatsov",
-      :src "images/pune-map-caption.png"}]
+      :src "images/pune-map-caption.jpg"}]
 
      [:div.previously
       [:strong "2016"]
