@@ -16,23 +16,46 @@
 (defonce talk-selectors
   [{:name "Martin Klepsch"
     :bio "I enjoy eating, talking and programming. Lots of Clojure/Script. Remote, sustainable, yay."
-    :twitter-link ""
-    :github-link "https://github.com/martinklepsch"
+    :twitter "https://twitter.com/martinklepsch"
+    :github "https://github.com/martinklepsch"
+    :www "https://www.martinklepsch.org"
+    :alt "martinklepsch"
     :avatar "martin.jpeg" }
 
    {:name "Paula Gearon"
     :bio "Electrical Engineer. Physics graduate. Black Belt TKD. Clojurista. Graph Databassist."
-    :twitter-link ""
-    :github-link "https://github.com/quoll"
+    :twitte "https://twitter.com/quoll"
+    :github "https://github.com/quoll"
+    :www "https://medium.com/@miffedgirl"
+    :alt "paulagearon"
     :avatar "paula.jpeg"}
 
    {:name "Tejas Dinkar"
-    :bio "CodeMonkey and Chief Bug Generator at Quintype. Thought follower. Serial Non-Entrepreneur. Looking for the apt word for situations, but not how to spell it"
-    :twitter-link ""
-    :github-link "https://github.com/gja"
+    :bio "CodeMonkey and Chief Bug Generator at Quintype. Thought
+    follower. Serial Non-Entrepreneur. Looking for the apt word for
+    situations, but not how to spell it"
+    :twitter "https://twitter.com/tdinkar"
+    :github "https://github.com/gja"
+    :www "http://blog.gja.in"
+    :alt "tdinkar"
     :avatar "tejas.png" }])
 
-(def selected-talks
+(defonce previous-editions
+  {:bangalore {:map "images/bangalore-map-caption.png"
+               :editions [{:year "2019"
+                           :talks "https://www.youtube.com/playlist?list=PLlAML-kjpXY6XllFUezz6RYow6hF4zlFV"
+                           :schedule "https://inclojure.org/2019/#schedule"}
+
+                          {:year "2018"
+                           :talks "https://www.youtube.com/playlist?list=PLlAML-kjpXY4rljddpJ5qMUp-t1Qa-Vfy"
+                           :schedule "https://inclojure.org/2018/#schedule"}]}
+
+   :pune {:map "images/bangalore-map-caption.png"
+          :editions [{:year "2016"
+                      :talks "https://www.youtube.com/playlist?list=PLlAML-kjpXY7kzJp0p1EPJ9eb8B15CCBU"
+                      :schedule "https://inclojure.org/2016/#schedule"}]}})
+
+(defonce selected-talks
   [{:duration "30m" :title "Registrations" :time "8:40 am"}
    {:duration "10m" :title "Welcome" :time "9:20 am"}
 

@@ -128,7 +128,12 @@
 (defn venue []
   [:section {:id "venue"}
    [:h2 "Venue"]
-   [:p "We've sought to shuttle the conference between Pune and Bangalore and this time its Pune's turn."]
+   [:p "The very first IN/Clojure was held in Pune in 2016 and after two editions in "
+    [:em "namma "]
+    "Bengaluru, we're delighted to return to "
+    [:em "apla "]
+    "Pune! Now, where are those "
+    [:em "bakarwadis and modaks?"]]
    [:img
     {:style {:width "100%" :border-radius "2%"}
      :alt "Pune",
@@ -167,10 +172,22 @@
    Koregaon Park neighborhood, which is a 15 minute ride from the
    venue."]
    [:h3 "The Workshops"]
-   [:p "The venue for the workshops will will be announced soon!
-   Follow"
-    [:a {:href "https://twitter.com/in_clojure"} " @in_clojure "]
-    "to stay updated."]])
+   [:iframe
+    {:height "450",
+     :width "100%",
+     :src "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15131.39434095538!2d73.8298557!3d18.5357433!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd8f30539fc95f1b4!2sMCCIA%20Trade%20Tower!5e0!3m2!1sen!2sin!4v1576334854079!5m2!1sen!2sin"}]
+   [:address "MCCIA Trade Tower"
+    [:br]
+    "ICC Complex, Senapati Bapat Rd"
+    [:br]
+    "Laxmi Society, Model Colony"
+    [:br]
+    "Shivajinagar"
+    [:br]
+    "Pune - 411016"
+    [:br]
+    "Maharashtra, IN"
+    [:br]]])
 
 (defn schedule []
   [:section {:id "schedule"}
@@ -203,7 +220,7 @@
    Clojure community in India/Asia."]
    [:p "To sponsor IN/Clojure 2020, review sponsorship details in the"
     [:a {:href "pdf/inclojure-2020-sponsorship-deck.pdf"} " prospectus "]
-    "and contact us at"
+    "and contact us at our mailing list"
     [:a {:href "mailto:2020@inclojure.org"} " 2020@inclojure.org."]]])
 
 (defn coc []
@@ -243,25 +260,25 @@
 
 (defn talk-selectors []
   [:section {:id "talk-selection"}
-   [:h2 "Talk Selectors"]
+   [:h2 "Reviewers"]
    [:ol.article-list
-    (for [{:keys [name github-link twitter-link avatar bio]} data/talk-selectors]
+    (for [{:keys [name alt github twitter www avatar bio]} data/talk-selectors]
       ^{:key (str (random-uuid))}
       [:li
        [:a
         {:href "#"}
-        [:img.article-image
-         {:alt "bbatsov",
+        [:img.article-image.location
+         {:alt alt
           :src (str "images/comittee/" avatar)}]]
        [:h4
-        [:a {:href github-link} name]]
+        [:a {:href www} name]]
        [:p.article-subtitle bio]
        [:div.article-fine-print.no-mobile
         [:a
-         {:href twitter-link}
+         {:href twitter}
          [:img {:alt "Twitter", :src "images/twitter.png"}]]
         [:a
-         {:href github-link}
+         {:href github}
          [:img {:alt "Github", :src "images/github.png"}]]]])]])
 
 (defn keynote []
@@ -281,9 +298,7 @@
      Clojure style guide. Most people would probably describe him as
      an Emacs zealot (and they would be right). He's also quite fond
      of the Lisp family of languages, functional programming in
-     general and Clojure in particular. Believe it or not, Bozhidar
-     has hobbies and interests outside the realm of computers, but we
-     won't bore you with those here."]
+     general and Clojure in particular."]
      [:div.article-fine-print.no-mobile
       [:a
        {:href "https://twitter.com/in_clojure"}
@@ -298,24 +313,80 @@
    [:div
     [:div#boxoffice-widget [:pre "Loading..."]]]])
 
-(comment
-  "Some incomplete crap to start showing a countdown for CFP"
-  (defonce cfp-end-date (js/Date. "2020" "01" "11"))
-  (defonce timer (atom (- (/ (.getTime cfp-end-date) 1000) (/ (.getTime (js/Date.)) 1000))))
-  (defonce time-updater (js/setInterval #(swap! timer (fn [last-sec] (- last-sec 1))) 1000))
-  (let [delta @timer
-        days (Math/floor (/ delta 86400))
-        new-delta (- delta (* days 86400))
-        hours (mod (Math/floor (/ new-delta 3600)) 24)]))
-
 (defn action-shots []
   [:section {:id "action-shots"}
-   [:h2 "From the past"]
-   [:div.slideshow-container.slide
-    [:img {:src "images/action1.jpg"}]
-    [:img {:src "images/action4.jpg"}]
-    [:img {:src "images/action2.jpg"}]
-    [:img {:src "images/action3.jpg"}]]])
+   [:h2 "Previous editions"]
+   [:div {:style {:overflow "hidden"}}
+    [:div.slideshow-container.slide.no-mobile
+     [:img {:src "images/action1.jpg"}]
+     [:img {:src "images/action4.jpg"}]
+     [:img {:src "images/action2.jpg"}]
+     [:img {:src "images/action3.jpg"}]]]
+
+   [:ol.article-list
+    [:li
+     [:img.previously.article-image.location
+      {:alt "bbatsov"
+       :src "images/bangalore-map-caption.png"}]
+
+     [:div.previously
+      [:h4 "2019"]
+      [:p.article-subtitle
+       [:a.button.city
+        {:href "https://www.youtube.com/playlist?list=PLlAML-kjpXY6XllFUezz6RYow6hF4zlFV"}
+        [:img
+         {:style {:height "25px" :width "25px" :vertical-align "middle" :margin-right "10px"}
+          :alt ""
+          :src "https://www.simple.org/images/youtube.png"}]
+        "Talks"]
+       [:a.button.city
+        {:href "https://inclojure.org/2019/#schedule"}
+        [:img
+         {:style {:height "25px" :width "25px" :vertical-align "middle" :margin-right "10px"}
+          :alt "",
+          :src "images/calendar.svg"}]
+        "Schedule"]]]
+
+     [:div.previously
+      [:h4 "2018"]
+      [:p.article-subtitle
+       [:a.button.city
+        {:href "https://www.youtube.com/playlist?list=PLlAML-kjpXY4rljddpJ5qMUp-t1Qa-Vfy"}
+        [:img
+         {:style {:height "25px" :width "25px" :vertical-align "middle", :margin-right "10px"}
+          :alt "",
+          :src "https://www.simple.org/images/youtube.png"}]
+        "Talks"]
+       [:a.button.city
+        {:href "https://inclojure.org/2018/#schedule"}
+        [:img
+         {:style {:height "25px" :width "25px" :vertical-align "middle", :margin-right "10px"}
+          :alt "",
+          :src "images/calendar.svg"}]
+        "Schedule"]]]]
+
+    [:li
+     [:img.previously.article-image.location
+     {:alt "bbatsov",
+      :src "images/pune-map-caption.png"}]
+
+     [:div.previously
+      [:h4 "2016"]
+      [:p.article-subtitle
+       [:a.button.city
+        {:href "https://www.youtube.com/playlist?list=PLlAML-kjpXY7kzJp0p1EPJ9eb8B15CCBU"}
+        [:img
+         {:style {:height "25px" :width "25px" :vertical-align "middle" :margin-right "10px"}
+          :alt "",
+          :src "https://www.simple.org/images/youtube.png"}]
+        "Talks"]
+       [:a.button.city
+        {:href "https://inclojure.org/2016/#schedule"}
+        [:img
+         {:style {:height "25px" :width "25px" :vertical-align "middle", :margin-right "10px"}
+          :alt "",
+          :src "images/calendar.svg"}]
+        "Schedule"]]]]]])
 
 (defn cfp []
   [:section {:id "cfp"}
