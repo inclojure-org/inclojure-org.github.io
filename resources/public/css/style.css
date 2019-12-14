@@ -330,7 +330,7 @@ nav a:nth-child(3) {
 }
 
 .people li {
-    font-size: 80%
+    font-size: 80%;
     line-height: 1.8;
     margin-left: 0;
     list-style: none;
