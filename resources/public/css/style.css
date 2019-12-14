@@ -241,7 +241,7 @@ footer a img {
 
 .article-subtitle {
     font-size: 85%;
-    margin: 1.2em 0;
+    margin: 0.8em 0;
 }
 
 .article-list h4 {
@@ -603,10 +603,6 @@ button:hover {
         top: 0;
         margin: 0;
         border-radius: 10%
-    }
-
-    .article-image.location {
-	height: 95%;
     }
 
     .article-list h4 {

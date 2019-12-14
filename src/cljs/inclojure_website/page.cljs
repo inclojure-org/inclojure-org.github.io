@@ -424,6 +424,9 @@
 (defn footer []
   [:footer
    [:a
+    {:href "mailto:2020@inclojure.org"}
+    [:img {:alt "Flickr", :src "images/mailbox.svg"}]]
+   [:a
     {:href "https://twitter.com/in_clojure"}
     [:img {:alt "Twitter", :src "images/twitter.png"}]]
    [:a
