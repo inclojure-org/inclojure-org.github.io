@@ -267,7 +267,7 @@
       [:li
        [:a
         {:href "#"}
-        [:img.article-image.location
+        [:img.reviewers.article-image.location
          {:alt alt
           :src (str "images/comittee/" avatar)}]]
        [:h4
@@ -330,7 +330,7 @@
        :src "images/bangalore-map-caption.png"}]
 
      [:div.previously
-      [:h4 "2019"]
+      [:strong "2019"]
       [:p.article-subtitle
        [:a.button.city
         {:href "https://www.youtube.com/playlist?list=PLlAML-kjpXY6XllFUezz6RYow6hF4zlFV"}
@@ -348,7 +348,7 @@
         "Schedule"]]]
 
      [:div.previously
-      [:h4 "2018"]
+      [:strong "2018"]
       [:p.article-subtitle
        [:a.button.city
         {:href "https://www.youtube.com/playlist?list=PLlAML-kjpXY4rljddpJ5qMUp-t1Qa-Vfy"}
@@ -371,7 +371,7 @@
       :src "images/pune-map-caption.png"}]
 
      [:div.previously
-      [:h4 "2016"]
+      [:strong "2016"]
       [:p.article-subtitle
        [:a.button.city
         {:href "https://www.youtube.com/playlist?list=PLlAML-kjpXY7kzJp0p1EPJ9eb8B15CCBU"}

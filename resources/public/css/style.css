@@ -155,7 +155,7 @@ p, li {
 }
 
 address {
-    font-size: 14px;
+    font-size: 80%;
     margin: 1em 0 1em 0;
     font-style: initial;
     border: dotted;
@@ -240,7 +240,7 @@ footer a img {
 }
 
 .article-subtitle {
-    font-size: 85%;
+    font-size: 80%;
     margin: 0.8em 0;
 }
 
@@ -330,7 +330,7 @@ nav a:nth-child(3) {
 }
 
 .people li {
-    font-size: 14px;
+    font-size: 80%
     line-height: 1.8;
     margin-left: 0;
     list-style: none;
@@ -374,6 +374,7 @@ table {
 
 .previously {
     display: block;
+    margin-bottom: 1.5em;
 }
 
 .previously.article-image {
@@ -388,7 +389,7 @@ table {
     padding: 0 10px 0 10px;
     height: auto;
     font-weight: 300;
-    font-size: 85%;
+    font-size: 80%;
     letter-spacing: 0;
     text-transform: none;
     background:#fff;
@@ -593,7 +594,6 @@ button:hover {
 	margin-top: 1.5em;
     }
 
-    .previously.article-image,
     .article-image {
         width: 28%;
         height: 100%;
@@ -603,6 +603,10 @@ button:hover {
         top: 0;
         margin: 0;
         border-radius: 10%
+    }
+
+    .reviewers.article-image{
+	height: 90%;
     }
 
     .article-list h4 {
