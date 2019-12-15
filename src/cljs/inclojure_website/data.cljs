@@ -37,7 +37,7 @@
     :github "https://github.com/gja"
     :www "http://blog.gja.in"
     :alt "tdinkar"
-    :avatar "tejas.png" }])
+    :avatar "tejas.jpeg" }])
 
 (defonce previous-editions
   {:bangalore {:map "images/bangalore-map-caption.png"
