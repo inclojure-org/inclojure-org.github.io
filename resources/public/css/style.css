@@ -37,8 +37,8 @@ a:visited {
 
 a:hover,
 a:active {
-    border-color: rgba(0,0,0,0.7);
-    color: #000;
+    border-color: rgba(0,0,0,0.7) !important;
+    color: #000 !important;
 }
 
 hr {
