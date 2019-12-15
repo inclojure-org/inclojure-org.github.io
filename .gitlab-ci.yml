@@ -11,11 +11,12 @@ pages:
     - lein clean
     - lein cljsbuild once min
   script:
-    - mkdir -p public/unstable
-    - cp -R resources/public/* public/unstable
-    - cp -R .well-known public/unstable
+    - mkdir public
+    - cp -R resources/public/* public/
+    - cp -R archive/* public/
+    - cp -R .well-known public/
   artifacts:
     paths:
       - public
   only:
-    - redesign
+    - master
