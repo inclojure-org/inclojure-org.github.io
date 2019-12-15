@@ -48,7 +48,7 @@
    [:h1 [:a {:href "/"}]]
    [:span.nav-links
     [:a.link {:href "#" :on-click #(reset! sub-page (home))} "Home"]
-    [:a.link {:href "#" :on-click #(reset! sub-page (workshops))} "Workshops"]]])
+    [:a.link {:href "#" :on-click #(sundry/goto-link "workshops")} "Workshops"]]])
 
 ;;
 ;; --------------
@@ -59,6 +59,8 @@
 ;;
 
 (defn workshops []
+  (sundry/goto-link "")
+
   [:section {:id "workshops"}
    [:div
     [:p.intro "IN/Clojure 2020 will have two full-day workshops."]
@@ -66,7 +68,7 @@
     workshop. The lessons apply to ClojureScript as well. Note that
     both the workshops will be conducted simultaneously on the 14"
     [:sup "th"] " of February, 2020."]
-    [:h3 {:id "introductory-workshop"}
+    [:h3 {:id "introduction"}
      "Introduction to Clojure"]
     [:h4 "Audience"]
     [:p "Practising programmers and/or CS undergrads/grads who are new to Clojure, LISPs or functional programming but not absolute beginners
@@ -91,7 +93,7 @@
             of the language and its ecosystem. Fully documented workshop material will be available for use at home."]]
 
     [:h3
-     {:id "intermediate-workshop"}
+     {:id "intermediate"}
      "Intermediate Clojure"]
     [:h4 "Audience"]
     [:p "This workshop is aimed at practising programmers who have some exposure to Clojure, but are looking to accomplish non trivial tasks using Clojure."]
@@ -254,24 +256,24 @@
    sanctioned or expelled from the conference without a refund at
    the discretion of the organisers."]])
 
-(defn team-member [name twitter-link avatar]
+(defn team-member [name github twitter avatar]
   [:li
    [:a
-    {:href twitter-link}
+    {:href twitter}
     name
     [:img {:alt name, :src (str "images/team/" avatar)}]]
    [:div.small.article-fine-print.no-mobile
      [:a
-      {:href "https://github.com/bbatsov"}
+      {:href github}
       [:img {:alt "Github", :src "images/github.png"}]]]])
 
 (defn team []
   [:section {:id "team"}
    [:h2 "Team"]
    [:ul.people
-    (for [{:keys [name twitter-link avatar]} data/team-list]
+    (for [{:keys [name github twitter avatar]} data/team-list]
       ^{:key (str (random-uuid))}
-      [team-member name twitter-link avatar])]])
+      [team-member name github twitter avatar])]])
 
 (defn talk-selectors []
   [:section {:id "talk-selection"}
@@ -341,7 +343,7 @@
    [:ol.article-list
     [:li
      [:img.previously.article-image.location
-      {:alt "bbatsov"
+      {:alt "bangalore"
        :src "images/bangalore-map-caption.jpg"}]
 
      [:div.previously
@@ -382,7 +384,7 @@
 
     [:li
      [:img.previously.article-image.location
-     {:alt "bbatsov",
+     {:alt "pune",
       :src "images/pune-map-caption.jpg"}]
 
      [:div.previously
@@ -448,6 +450,58 @@
     {:href "https://www.flickr.com/photos/inclojure/albums/72157711988093001"}
     [:img {:alt "Flickr", :src "images/flickr.png"}]]])
 
+(defn workshops-section []
+  [:section {:id "workshops"}
+   [:h2 "Workshops"]
+   [:div
+    [:p"IN/Clojure 2020 will have two full-day workshops."]
+    [:p "An introductory Clojure workshop and an intermediate Clojure
+    workshop. The lessons apply to ClojureScript as well. Note that
+    both the workshops will be conducted simultaneously on the 14"
+     [:sup "th"] " of February, 2020."]
+
+    [:ol.article-list
+    [:li
+     [:img.previously.article-image
+      {:alt "introductory"
+       :src "images/workshops/introductory.png"}]
+
+     [:h4 {:id "introductory-workshop"}
+      [:a {:href "#"
+           :on-click (fn []
+                       (reset! sub-page (workshops)))}
+       "Introduction to Clojure"]]
+
+     [:p.article-subtitle "Practising programmers and/or CS
+     undergrads/grads who are new to Clojure, LISPs or functional
+     programming but not absolute beginners at programming. We
+     recommend that attendees be familiar with at least one
+     programming language."]
+
+     [:div.article-fine-print.no-mobile
+      [:a
+       {:href "https://github.com/inclojure-org/clojure-by-example"}
+       [:img {:alt "Github", :src "images/github.png"}]]]]
+
+    [:li
+     [:img.previously.article-image
+      {:alt "intermediate",
+       :src "images/workshops/intermediate.png"}]
+
+     [:h4 {:id "intermediate-workshop"}
+      [:a  {:href "#"
+            :on-click (fn []
+                        (reset! sub-page (workshops)))} "Intermediate Clojure"]]
+
+     [:p.article-subtitle "This workshop is aimed at practising
+     programmers who have some exposure to Clojure, but are looking to
+     accomplish non trivial tasks using Clojure."]
+
+     [:div.article-fine-print.no-mobile
+      [:a
+       {:href "https://github.com/inclojure-org/intermediate-clojure-workshop"}
+       [:img {:alt "Github", :src "images/github.png"}]]]]]]])
+
 ;;
 ;; ---------
 ;;
@@ -462,6 +516,7 @@
    [keynote]
    [cfp]
    [talk-selectors]
+   [workshops-section]
    [tickets]
    [sponsorship]
    [venue]

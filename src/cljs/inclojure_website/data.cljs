@@ -1,17 +1,16 @@
 (ns inclojure-website.data)
 
 (defonce team-list
-  [{:name "Aditya Athalye" :twitter-link "http://twitter.com/adityaathalye" :avatar "aditya.png"}
-   {:name "Akshay Gupta" :twitter-link "http://twitter.com/kitallis" :avatar "kitallis.png"}
-   {:name "Harsh Gupta" :twitter-link "https://github.com/hargup" :avatar "harsh.jpg"}
-   {:name "Kapil Reddy" :twitter-link "https://twitter.com/KapilReddy" :avatar "kapil.png"}
-   {:name "Nivedita Priyadarshini" :twitter-link "http://twitter.com/nid90" :avatar "nid.png"}
-   {:name "Ravindra Jaju" :twitter-link "https://twitter.com/jaju" :avatar "jaju.jpg"}
-   {:name "Rubal Jabbal" :twitter-link "https://github.com/rubalj" :avatar "rubal.png"}
-   {:name "Sandilya Jandhyala" :twitter-link "http://twitter.com/jysandilya" :avatar "sandy.png"}
-   {:name "Srihari Sriraman" :twitter-link "http://twitter.com/sriharisriraman" :avatar "srihari.png"}
-   {:name "Venkatesh Halli" :twitter-link "https://github.com/vhalli" :avatar "vhalli.png"}
-   {:name "Vikram Chintalapati" :twitter-link "https://github.com/vkrmis" :avatar "vkrm.png"}])
+  [{:name "Aditya Athalye" :github "" :twitter "http://twitter.com/adityaathalye" :avatar "aditya.png"}
+   {:name "Akshay Gupta" :github "" :twitter "http://twitter.com/kitallis" :avatar "kitallis.png"}
+   {:name "Harsh Gupta" :github "" :twitter "https://github.com/hargup" :avatar "harsh.jpg"}
+   {:name "Kapil Reddy" :github "" :twitter "https://twitter.com/KapilReddy" :avatar "kapil.png"}
+   {:name "Nivedita Priyadarshini" :github "" :twitter "http://twitter.com/nid90" :avatar "nid.png"}
+   {:name "Ravindra Jaju" :github "" :twitter "https://twitter.com/jaju" :avatar "jaju.jpg"}
+   {:name "Rubal Jabbal" :github "" :twitter "https://github.com/rubalj" :avatar "rubal.png"}
+   {:name "Sandilya Jandhyala" :github "" :twitter "http://twitter.com/jysandilya" :avatar "sandy.png"}
+   {:name "Srihari Sriraman" :github "" :twitter "http://twitter.com/sriharisriraman" :avatar "srihari.png"}
+   {:name "Venkatesh Halli" :github "" :twitter "https://github.com/vhalli" :avatar "vhalli.png"}])
 
 (defonce talk-selectors
   [{:name "Martin Klepsch"
