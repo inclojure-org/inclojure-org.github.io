@@ -1,44 +1,44 @@
 (ns inclojure-website.core
-    (:require [reagent.core :as reagent :refer [atom]]
-              [secretary.core :as secretary :include-macros true]
-              [accountant.core :as accountant]
-              [inclojure-website.home :as home]
-              [inclojure-website.talks :as talks]))
-
-;; -------------------------
-;; Views
-
-(defn home-page []
-  [home/page])
+    (:require [accountant.core :as accountant]
+              [goog.events :as events]
+              [goog.history.EventType :as HistoryEventType]
+              [inclojure-website.morellet :as morellet]
+              [inclojure-website.page :as page :refer [home layout sub-page]]
+              [inclojure-website.talks :as talks]
+              [reagent.core :as reagent :refer [atom]]
+              [secretary.core :as secretary :include-macros true])
+    (:import goog.History))
 
 ;; -------------------------
 ;; Routes
 
-(defonce page (atom #'home-page))
+(secretary/defroute "/" []
+  (reset! sub-page (home)))
 
-(defn current-page []
-  [:div [@page]])
+;; -------------------------
+;; history
+;;
+;; Must be called after routes have been defined
 
-(secretary/defroute #"/" []
-  (reset! page #'home-page))
-
-(secretary/defroute #"/talks.*" []
-  (reset! page #'talks/page))
+(defn hook-browser-navigation! []
+  (doto (History.)
+        (events/listen
+         HistoryEventType/NAVIGATE
+         (fn [event]
+           (secretary/dispatch! (.-token event))))
+        (.setEnabled true)))
 
 ;; -------------------------
 ;; Initialize app
 
 (defn mount-root []
-  (reagent/render [current-page] (.getElementById js/document "app")))
+  (reset! sub-page (home))
+  (reagent/render-component [layout] (.getElementById js/document "app")))
 
 (defn init! []
   (accountant/configure-navigation!
-    {:nav-handler
-     (fn [path]
-       (secretary/dispatch! path))
-     :path-exists?
-     (fn [path]
-       (secretary/locate-route path))})
+   {:nav-handler  (fn [path] (secretary/dispatch! path))
+    :path-exists? (fn [path] (secretary/locate-route path))})
   (accountant/dispatch-current!)
   (mount-root))
 

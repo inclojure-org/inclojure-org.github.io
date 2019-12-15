@@ -17,17 +17,17 @@ $(document).ready(function() {
       var errorMsg;
       if (response.readyState === 4) {
         errorMsg = "Server error, please try again later.";
-        $('#boxoffice-widget p').html(errorMsg);
+        $('#boxoffice-widget pre').html(errorMsg);
       }
       else if (response.readyState === 0) {
         if (ajaxLoad.retries < 0) {
           if(!navigator.onLine) {
             errorMsg = "Unable to connect. There is no network!";
-            $('#boxoffice-widget p').html(errorMsg);
+            $('#boxoffice-widget pre').html(errorMsg);
           }
           else {
-            errorMsg = "Unable to connect. If you are behind a firewall or using any script blocking extension (like Privacy Badger), please ensure your browser can load boxoffice.hasgeek.com, api.razorpay.com and checkout.razorpay.com.";
-            $('#boxoffice-widget p').html(errorMsg);
+            errorMsg = "Unable to connect to the HasGeek ticketing portal. If you are behind a firewall or using any script blocking extension (like Privacy Badger), please ensure your browser can load boxoffice.hasgeek.com, api.razorpay.com and checkout.razorpay.com.";
+            $('#boxoffice-widget pre').html(errorMsg);
           }
         } else {
           setTimeout(function() {
