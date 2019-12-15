@@ -46,7 +46,7 @@
 (defn nav []
   [:nav
    [:h1 [:a {:href "/"}]]
-   [:span.nav-links
+   [:div.nav-links
     [:a.link {:href "#" :on-click #(reset! sub-page (home))} "Home"]
     [:a.link {:href "#" :on-click #(sundry/goto-link "tickets")} "Tickets"]
     [:a.link {:href "#" :on-click #(sundry/goto-link "cfp")} "Talks"]
