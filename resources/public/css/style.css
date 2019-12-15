@@ -730,3 +730,7 @@ table {
     transform: translateX(0);
   }
 }
+
+#boxoffice-widget {
+  padding-top: 0px !important;
+}
