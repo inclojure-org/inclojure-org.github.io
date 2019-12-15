@@ -462,7 +462,7 @@
 
     [:ol.article-list
     [:li
-     [:img.previously.article-image
+     [:img.article-image
       {:alt "introductory"
        :src "images/workshops/introductory.png"}]
 
@@ -484,7 +484,7 @@
        [:img {:alt "Github", :src "images/github.png"}]]]]
 
     [:li
-     [:img.previously.article-image
+     [:img.article-image
       {:alt "intermediate",
        :src "images/workshops/intermediate.png"}]
 

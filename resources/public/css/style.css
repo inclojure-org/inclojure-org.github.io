@@ -300,10 +300,6 @@ nav span {
     font-size: 18px;
 }
 
-nav a.link:hover {
-    color: #000;
-}
-
 nav .nav-links {
     display: block;
     text-align: left;
@@ -510,16 +506,6 @@ table {
 
     nav .nav-links {
         display: inline;
-    }
-
-    nav a:nth-child(2) {
-        margin-left: 20px;
-        border-bottom: 2px solid #147AAB;
-    }
-
-    nav a:nth-child(3) {
-        margin-left: 20px;
-        border-bottom: 2px solid #E36511;
     }
 
     .intro {
