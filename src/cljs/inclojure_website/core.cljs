@@ -32,6 +32,7 @@
 ;; Initialize app
 
 (defn mount-root []
+  (reset! sub-page (home))
   (reagent/render-component [layout] (.getElementById js/document "app")))
 
 (defn init! []

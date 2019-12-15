@@ -331,7 +331,7 @@ nav a:nth-child(3) {
 
 .people li {
     font-size: 80%;
-    line-height: 1.8;
+    line-height: 2.2;
     margin-left: 0;
     list-style: none;
     break-inside: avoid;
@@ -565,6 +565,7 @@ button:hover {
 
     .people li {
 	padding-left: 60px;
+	line-height: 1.8;
     }
 
     .article-fine-print a img {

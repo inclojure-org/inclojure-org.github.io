@@ -61,7 +61,7 @@
 (defn workshops []
   [:section {:id "workshops"}
    [:div
-    [:p.intro "There will be two full-day workshops at IN/Clojure 2020."]
+    [:p.intro "IN/Clojure 2020 will have two full-day workshops."]
     [:p "An introductory Clojure workshop and an intermediate Clojure
     workshop. The lessons apply to ClojureScript as well. Note that
     both the workshops will be conducted simultaneously on the 14"
