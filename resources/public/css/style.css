@@ -396,7 +396,7 @@ table {
     margin: 5px 8px 0 0;
 }
 
-button:hover {
+.button:hover {
     color:#333;
     border-color:#888;
     outline: 0;
@@ -626,6 +626,11 @@ button:hover {
         top: 32px;
         right: 80px;
         display: block;
+    }
+
+    footer a:hover img {
+	opacity: 1;
+	border-color: #333;
     }
 }
 
