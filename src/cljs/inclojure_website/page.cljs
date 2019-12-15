@@ -318,7 +318,7 @@
      general and Clojure in particular."]
      [:div.article-fine-print.no-mobile
       [:a
-       {:href "https://twitter.com/in_clojure"}
+       {:href "https://twitter.com/bbatsov"}
        [:img {:alt "Twitter", :src "images/twitter.png"}]]
       [:a
        {:href "https://github.com/bbatsov"}

@@ -1,16 +1,16 @@
 (ns inclojure-website.data)
 
 (defonce team-list
-  [{:name "Aditya Athalye" :github "" :twitter "http://twitter.com/adityaathalye" :avatar "aditya.png"}
-   {:name "Akshay Gupta" :github "" :twitter "http://twitter.com/kitallis" :avatar "kitallis.png"}
-   {:name "Harsh Gupta" :github "" :twitter "https://github.com/hargup" :avatar "harsh.jpg"}
-   {:name "Kapil Reddy" :github "" :twitter "https://twitter.com/KapilReddy" :avatar "kapil.png"}
-   {:name "Nivedita Priyadarshini" :github "" :twitter "http://twitter.com/nid90" :avatar "nid.png"}
-   {:name "Ravindra Jaju" :github "" :twitter "https://twitter.com/jaju" :avatar "jaju.jpg"}
-   {:name "Rubal Jabbal" :github "" :twitter "https://github.com/rubalj" :avatar "rubal.png"}
-   {:name "Sandilya Jandhyala" :github "" :twitter "http://twitter.com/jysandilya" :avatar "sandy.png"}
-   {:name "Srihari Sriraman" :github "" :twitter "http://twitter.com/sriharisriraman" :avatar "srihari.png"}
-   {:name "Venkatesh Halli" :github "" :twitter "https://github.com/vhalli" :avatar "vhalli.png"}])
+  [{:name "Aditya Athalye" :github "https://github.com/adityaathalye" :twitter "http://twitter.com/adityaathalye" :avatar "aditya.png"}
+   {:name "Akshay Gupta" :github "https://github.com/kitallis" :twitter "http://twitter.com/kitallis" :avatar "kitallis.png"}
+   {:name "Harsh Gupta" :github "https://github.com/hargup" :twitter "https://twitter.com/hargup13" :avatar "harsh.jpg"}
+   {:name "Kapil Reddy" :github "https://github.com/kapilreddy" :twitter "https://twitter.com/KapilReddy" :avatar "kapil.png"}
+   {:name "Nivedita Priyadarshini" :github "https://github.com/nid90" :twitter "http://twitter.com/nid90" :avatar "nid.png"}
+   {:name "Ravindra Jaju" :github "https://github.com/jaju" :twitter "https://twitter.com/jaju" :avatar "jaju.jpg"}
+   {:name "Rubal Jabbal" :github "https://github.com/rubalj" :twitter "https://twitter.com/rubaljabbal" :avatar "rubal.png"}
+   {:name "Sandilya Jandhyala" :github "https://github.com/jysandy" :twitter "http://twitter.com/jysandilya" :avatar "sandy.png"}
+   {:name "Srihari Sriraman" :github "https://github.com/ssrihari" :twitter "http://twitter.com/sriharisriraman" :avatar "srihari.png"}
+   {:name "Venkatesh Halli" :github "https://github.com/vhalli" :twitter "https://twitter.com/venkateshhalli" :avatar "vhalli.png"}])
 
 (defonce talk-selectors
   [{:name "Martin Klepsch"
@@ -23,7 +23,7 @@
 
    {:name "Paula Gearon"
     :bio "Electrical Engineer. Physics graduate. Black Belt TKD. Clojurista. Graph Databassist."
-    :twitte "https://twitter.com/quoll"
+    :twitter "https://twitter.com/quoll"
     :github "https://github.com/quoll"
     :www "https://medium.com/@miffedgirl"
     :alt "paulagearon"
