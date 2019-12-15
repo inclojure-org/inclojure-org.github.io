@@ -221,14 +221,29 @@
    [:p "To sponsor IN/Clojure 2020, review sponsorship details in the"
     [:a {:href "pdf/inclojure-2020-sponsorship-deck.pdf"} " prospectus "]
     "and contact us at our mailing list"
-    [:a {:href "mailto:2020@inclojure.org"} " 2020@inclojure.org."]]])
+    [:a {:href "mailto:2020@inclojure.org"} " 2020@inclojure.org."]]
+
+   [:div.benefactor-slab.platinum
+    [:h3 "Platinum"]
+
+    [:a {:href "https://nilenso.com"}
+     [:img {:alt "Github", :src "images/sponsors/nilenso.png"}]]
+    [:a {:href "https://www.helpshift.com"}
+     [:img {:alt "Github", :src "images/sponsors/helpshift.png"}]]]
+
+   [:div.benefactor-slab.community
+    [:h3 "Community"]
+
+    [:div
+     [:a {:href "https://cognitect.com"}
+      [:img {:alt "Github", :src "images/sponsors/cognitect.png"}]]]]])
 
 (defn coc []
   [:section {:id "coc"}
    [:h2 "Code of Conduct"]
    [:p "We do not tolerate harassment of conference participants in any form."]
-   [:p "We're dedicated to providing a harassment-free experience
-   for everyone. This is regardless of gender, gender
+   [:p "We are dedicated to providing a harassment-free experience
+   for everyone. This is true regardless of gender, gender
    identity and expression, age, sexual orientation, disability,
    physical appearance, race, ethnicity, religion (or
    lack thereof), or technology choices."]
@@ -318,10 +333,10 @@
    [:h2 "Previous editions"]
    [:div {:style {:overflow "hidden"}}
     [:div.slideshow-container.slide.no-mobile
-     [:img {:src "images/action1.jpg"}]
-     [:img {:src "images/action4.jpg"}]
-     [:img {:src "images/action2.jpg"}]
-     [:img {:src "images/action3.jpg"}]]]
+     [:img {:src "images/previously/action1.jpg"}]
+     [:img {:src "images/previously/action4.jpg"}]
+     [:img {:src "images/previously/action2.jpg"}]
+     [:img {:src "images/previously/action3.jpg"}]]]
 
    [:ol.article-list
     [:li
@@ -444,14 +459,14 @@
 (defn home []
   [:div
    [intro]
-   [cfp]
    [keynote]
-   [action-shots]
+   [cfp]
    [talk-selectors]
    [tickets]
    [sponsorship]
    [venue]
    [schedule]
+   [action-shots]
    [coc]
    [team]])
 
