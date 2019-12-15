@@ -315,6 +315,22 @@ nav a.link:nth-child(3) {
     border-bottom: 2px solid #E36511;
 }
 
+nav a.link:nth-child(4) {
+    margin-left: 20px;
+    border-bottom: 2px solid #00B180;
+}
+
+nav a.link:nth-child(5) {
+    margin-left: 20px;
+    border-bottom: 2px solid #D04B36;
+}
+
+nav a.link:nth-child(6) {
+    margin-left: 20px;
+    border-bottom: 2px solid #675997;
+}
+
+
 .people {
     column-count: 2;
     margin-left: 0;
