@@ -350,24 +350,21 @@ nav a.link:nth-child(3) {
     border-radius: 5px;
 }
 
-.benefactor-slab {
-}
-
 .benefactor-slab img {
     margin-top: 50px;
 }
 
 .benefactor-slab.platinum img {
-    width: 30%;
+    width: 55%;
 }
 
 .benefactor-slab.community img {
-    width: 25%
+    width: 40%
 }
 
 .benefactor-slab a {
     vertical-align: middle;
-    margin: 0 5em 0 2em;
+    margin: 0 2em 0 2em;
     text-decoration: none;
     border: none;
 }
@@ -530,6 +527,25 @@ table {
         line-height: 1.4;
         margin-top: 0;
         margin-bottom: 1em;
+    }
+
+    .benefactor-slab img {
+	margin-top: 50px;
+    }
+
+    .benefactor-slab.platinum img {
+	width: 30%;
+    }
+
+    .benefactor-slab.community img {
+	width: 25%
+    }
+
+    .benefactor-slab a {
+	vertical-align: middle;
+	margin: 0 5em 0 2em;
+	text-decoration: none;
+	border: none;
     }
 
     .permalink .intro {
