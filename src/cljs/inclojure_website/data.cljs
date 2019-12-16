@@ -14,7 +14,11 @@
 
 (defonce talk-selectors
   [{:name "Martin Klepsch"
-    :bio "I enjoy eating, talking and programming. Lots of Clojure/Script. Remote, sustainable, yay."
+    :bio "Martin is a Clojure/Script consultant who never expected to work on a
+documentation platform. Before starting cljdoc he helped run various community
+events in Berlin, created CLJSJS and contributed to lots of Clojure OpenSource
+projects like Boot, the ClojureScript compiler, re-frame and more. Martin also
+recently organised the Heart Of Clojure conference in Europe."
     :twitter "https://twitter.com/martinklepsch"
     :github "https://github.com/martinklepsch"
     :www "https://www.martinklepsch.org"
@@ -22,7 +26,15 @@
     :avatar "martin.jpeg" }
 
    {:name "Paula Gearon"
-    :bio "Electrical Engineer. Physics graduate. Black Belt TKD. Clojurista. Graph Databassist."
+    :bio "In her 10th year of Clojure development, Paula is a software engineer
+at Cisco Systems who enjoys working in the most technical parts of a system,
+building the infrastructure that lets other developers do their jobs.
+She has been the technical lead on several commercial and open source projects,
+with a focus on data storage and processing, and was a lead editor for the
+SPARQL standard for accessing RDF databases. When not coding, she does triathlons,
+cooks, helps her children with homework, and mentors and supports young members
+of Women Who Code. Originally from Australia, she currently lives with her family
+in Virginia, in the USA."
     :twitter "https://twitter.com/quoll"
     :github "https://github.com/quoll"
     :www "https://medium.com/@miffedgirl"
@@ -30,9 +42,10 @@
     :avatar "paula.jpeg"}
 
    {:name "Tejas Dinkar"
-    :bio "CodeMonkey and Chief Bug Generator at Quintype. Thought
-    follower. Serial Non-Entrepreneur. Looking for the apt word for
-    situations, but not how to spell it"
+    :bio "A full stack engineer with over 9 years of experience in multiple domains,
+Tejas is a software craftsman who enjoys learning new ways to solve problems. Currently,
+Tejas loves to play with Clojure, Ruby, GoLang, ReasonML, and Node.js, and he is
+the Head of Technology for Quintype, a builder of products for digital media companies."
     :twitter "https://twitter.com/tdinkar"
     :github "https://github.com/gja"
     :www "http://blog.gja.in"
