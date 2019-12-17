@@ -634,18 +634,14 @@ table {
     }
 
     .article-image {
-        width: 28%;
-        height: 100%;
+        width: 200px;
+        height: 200px;
         float: none;
         position: absolute;
         left: 0;
         top: 0;
         margin: 0;
         border-radius: 10%
-    }
-
-    .reviewers.article-image{
-	height: 90%;
     }
 
     .article-list h4 {
@@ -656,7 +652,7 @@ table {
 
     .contents {
         padding: 0 40px 0px 40px;
-        max-width: 650px;
+        max-width: 700px;
     }
 
     footer {
@@ -686,7 +682,7 @@ table {
 
 /* Slideshow styles */
 .slideshow-container {
-  width: 2500px;
+  width: 2780px;
   font-size: 0;
   transition: 1s ease;
 }
@@ -696,7 +692,7 @@ table {
 }
 
 .slideshow-container img {
-  width: 625px;
+  width: 695px;
   display: inline-block;
   font-size: 16px;
   text-align: center;
