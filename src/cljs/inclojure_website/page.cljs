@@ -233,16 +233,29 @@
     [:h3 "Platinum"]
 
     [:a {:href "https://nilenso.com"}
-     [:img {:alt "Github", :src "images/sponsors/nilenso.png"}]]
+     [:img {:alt "nilenso", :src "images/sponsors/nilenso.png"}]]
     [:a {:href "https://www.helpshift.com"}
-     [:img {:alt "Github", :src "images/sponsors/helpshift.png"}]]]
+     [:img {:alt "helpshift", :src "images/sponsors/helpshift.png"}]]]
+
+   [:div.benefactor-slab.gold
+    [:h3 "Gold"]
+
+    [:a {:href "https://www.helpshift.com"}
+     [:img {:alt "juspay", :src "images/sponsors/juspay.png"}]]]
+
+   [:div.benefactor-slab.bronze
+    [:h3 "Bronze"]
+
+    [:a {:href "https://www.helpshift.com"}
+     [:img {:alt "quintype", :src "images/sponsors/quintype.png"}]]]
+
 
    [:div.benefactor-slab.community
     [:h3 "Community"]
 
     [:div
      [:a {:href "https://cognitect.com"}
-      [:img {:alt "Github", :src "images/sponsors/cognitect.png"}]]]]])
+      [:img {:alt "cognitect", :src "images/sponsors/cognitect.png"}]]]]])
 
 (defn coc []
   [:section {:id "coc"}

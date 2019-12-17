@@ -369,6 +369,14 @@ nav a.link:nth-child(6) {
     width: 55%;
 }
 
+.benefactor-slab.gold img {
+    width: 50%;
+}
+
+.benefactor-slab.bronze img {
+    width: 45%;
+}
+
 .benefactor-slab.community img {
     width: 40%
 }
@@ -534,11 +542,20 @@ table {
     }
 
     .benefactor-slab.platinum img {
+	width: 38%;
+    }
+
+    .benefactor-slab.gold img {
+	width: 34%;
+    }
+
+    .benefactor-slab.bronze img {
 	width: 30%;
     }
 
+
     .benefactor-slab.community img {
-	width: 25%
+	width: 26%
     }
 
     .benefactor-slab a {
