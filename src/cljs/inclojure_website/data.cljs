@@ -33,8 +33,7 @@ She has been the technical lead on several commercial and open source projects,
 with a focus on data storage and processing, and was a lead editor for the
 SPARQL standard for accessing RDF databases. When not coding, she does triathlons,
 cooks, helps her children with homework, and mentors and supports young members
-of Women Who Code. Originally from Australia, she currently lives with her family
-in Virginia, in the USA."
+of Women Who Code."
     :twitter "https://twitter.com/quoll"
     :github "https://github.com/quoll"
     :www "https://medium.com/@miffedgirl"
