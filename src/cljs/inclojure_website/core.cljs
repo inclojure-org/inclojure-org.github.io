@@ -3,7 +3,7 @@
               [goog.events :as events]
               [goog.history.EventType :as HistoryEventType]
               [inclojure-website.morellet :as morellet]
-              [inclojure-website.page :as page :refer [home layout sub-page]]
+              [inclojure-website.page :as page :refer [home layout sub-page workshops]]
               [inclojure-website.talks :as talks]
               [reagent.core :as reagent :refer [atom]]
               [secretary.core :as secretary :include-macros true])
@@ -14,6 +14,11 @@
 
 (secretary/defroute "/" []
   (reset! sub-page (home)))
+
+(secretary/defroute "/#workshop-details" []
+  ;; Reset scroll position when switching between two pages
+  (.scrollTo js/window 0 0)
+  (reset! sub-page (workshops)))
 
 ;; -------------------------
 ;; history
@@ -32,7 +37,6 @@
 ;; Initialize app
 
 (defn mount-root []
-  (reset! sub-page (home))
   (reagent/render-component [layout] (.getElementById js/document "app")))
 
 (defn init! []

@@ -63,9 +63,7 @@
 ;;
 
 (defn workshops []
-  (sundry/goto-link "")
-
-  [:section {:id "workshops"}
+  [:section {:id "workshop-details"}
    [:div
     [:p.intro "IN/Clojure 2020 will have two full-day workshops."]
     [:p "An introductory Clojure workshop and an intermediate Clojure
@@ -484,9 +482,7 @@
        :src "images/workshops/introductory.png"}]
 
      [:h4 {:id "introductory-workshop"}
-      [:a {:href "#"
-           :on-click (fn []
-                       (reset! sub-page (workshops)))}
+      [:a {:href "#workshop-details"}
        "Introduction to Clojure"]]
 
      [:p.article-subtitle "Practising programmers and/or CS
