@@ -20,6 +20,13 @@
   (.scrollTo js/window 0 0)
   (reset! sub-page (workshops)))
 
+(secretary/defroute "/#tickets" []
+  ;; @TODO This has to be done for all nav links.
+  (reset! sub-page (home)))
+
+
+
+
 ;; -------------------------
 ;; history
 ;;
