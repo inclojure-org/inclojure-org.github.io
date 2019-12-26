@@ -3,7 +3,7 @@
               [goog.events :as events]
               [goog.history.EventType :as HistoryEventType]
               [inclojure-website.morellet :as morellet]
-              [inclojure-website.page :as page :refer [home layout sub-page workshops]]
+              [inclojure-website.page :as page :refer [home layout sub-page workshops nav-links]]
               [inclojure-website.talks :as talks]
               [reagent.core :as reagent :refer [atom]]
               [secretary.core :as secretary :include-macros true])
@@ -20,12 +20,10 @@
   (.scrollTo js/window 0 0)
   (reset! sub-page (workshops)))
 
-(secretary/defroute "/#tickets" []
-  ;; @TODO This has to be done for all nav links.
-  (reset! sub-page (home)))
-
-
-
+;; Make perma-links for all navigation paths
+(doseq [nav-link nav-links]
+  (secretary/defroute (str "/#" (second nav-link)) []
+    (reset! sub-page (home))))
 
 ;; -------------------------
 ;; history

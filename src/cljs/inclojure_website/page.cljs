@@ -43,16 +43,21 @@
 ;; ----------
 ;;
 
+(def nav-links {"Tickets" "tickets"
+                "Talks" "cfp"
+                "Workshops" "workshops"
+                "Sponsors" "sponsorship"
+                "CoC" "coc"})
+
 (defn nav []
   [:nav
    [:h1 [:a {:href "/"}]]
    [:div.nav-links
     [:a.link {:href "#" :on-click #(reset! sub-page (home))} "Home"]
-    [:a.link {:href "#" :on-click #(sundry/goto-link "tickets")} "Tickets"]
-    [:a.link {:href "#" :on-click #(sundry/goto-link "cfp")} "Talks"]
-    [:a.link {:href "#" :on-click #(sundry/goto-link "workshops")} "Workshops"]
-    [:a.link {:href "#" :on-click #(sundry/goto-link "sponsorship")} "Sponsors"]
-    [:a.link {:href "#" :on-click #(sundry/goto-link "coc")} "CoC"]]])
+    (for [nav-link nav-links]
+      ^{:key (str (random-uuid))}
+      [:a.link {:href "#" :on-click #(sundry/goto-link (second nav-link))}
+       (first nav-link)])]])
 
 ;;
 ;; --------------
