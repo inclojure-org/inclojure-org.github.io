@@ -433,10 +433,15 @@
    [:p "This year, selected speakers will enjoy sharing
    the stage with the perennially effervescent Bozhidar Batsov, and
    other speakers from across the globe."]
-   [:p "One phase of talk selection is done, with 2 \"Full talks\" selected. "
-    [:a {:href "https://hasgeek.com/inclojure/2020/schedule#schedule"} "See the tentative schedule."]]
-   [:p "The second phase of selections will happen after " [:strong "CFP closes on 01 Jan 2020."]]
-   [:p "View CFP details and " [:strong [:a {:href "https://hasgeek.com/inclojure/2020/proposals"} " submit your proposal now!"]]]])
+   [:p [:strong "CFP closes 20 Jan 2020 "] " (revised from 01 Jan 2020)."]
+   [:ul
+    [:li "One phase of talk selection is done, with 2 \"Full talks\" selected."]
+    [:li "The next phase of selections is on!"]
+    [:li "Talks will be selected incrementally "
+     [:a {:href "https://hasgeek.com/inclojure/2020/schedule#schedule" :target "_blank"}
+      "while slots last"]"."]]
+   [:p [:strong [:a {:href "https://hasgeek.com/inclojure/2020/proposals"}
+                 "Learn more and propose a talk now!"]]]])
 
 (defn ending-ornament []
   [:section {:id "ornament"}
