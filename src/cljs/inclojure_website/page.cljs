@@ -439,7 +439,8 @@
     [:li "The next phase of selections is on!"]
     [:li "Talks will be selected incrementally "
      [:a {:href "https://hasgeek.com/inclojure/2020/schedule#schedule" :target "_blank"}
-      "while slots last"]"."]]
+      "while slots last"]"."]
+    [:li "Talk proposers each receive a complimentary pass for conference day, irrespective of selection status."]]
    [:p [:strong [:a {:href "https://hasgeek.com/inclojure/2020/proposals"}
                  "Learn more and propose a talk now!"]]]])
 
