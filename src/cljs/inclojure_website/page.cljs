@@ -44,7 +44,7 @@
 ;;
 
 (def nav-links {"Tickets" "tickets"
-                "Talks" "cfp"
+                "Talks" "talks"
                 "Workshops" "workshops"
                 "Sponsors" "sponsorship"
                 "CoC" "coc"})
@@ -425,24 +425,21 @@
           :src "images/calendar.svg"}]
         "Schedule"]]]]]])
 
-(defn cfp []
-  [:section {:id "cfp"}
-   [:h2 "Call For proposals"]
-   [:p "We welcome talk submissions for the 4th edition of
-   IN/Clojure 2020."]
+(defn talks []
+  [:section {:id "talks"}
+   [:h2 "Talks"]
+   [:p "We're excited by the rich and diverse set of proposals submitted for the
+4th edition of IN/Clojure 2020."]
+   [:p "The " [:strong "CFP closed on 20 Jan 2020 "] " (revised from 01 Jan 2020)."]
+   [:p "Talks are being finalised and being "
+    [:a {:href "https://hasgeek.com/inclojure/2020/schedule#schedule" :target "_blank"}
+     "scheduled here"] ", incrementally."]
    [:p "This year, selected speakers will enjoy sharing
    the stage with the perennially effervescent Bozhidar Batsov, and
-   other speakers from across the globe."]
-   [:p [:strong "CFP closes 20 Jan 2020 "] " (revised from 01 Jan 2020)."]
-   [:ul
-    [:li "One phase of talk selection is done, with 2 \"Full talks\" selected."]
-    [:li "The next phase of selections is on!"]
-    [:li "Talks will be selected incrementally "
-     [:a {:href "https://hasgeek.com/inclojure/2020/schedule#schedule" :target "_blank"}
-      "while slots last"]"."]
-    [:li "Talk proposers each receive a complimentary pass for conference day, irrespective of selection status."]]
-   [:p [:strong [:a {:href "https://hasgeek.com/inclojure/2020/proposals"}
-                 "Learn more and propose a talk now!"]]]])
+   a lovely set of speakers from across the globe."]
+   [:p "While only some proposals will make it to the final schedule, all talk proposers receive a complimentary pass for conference day, irrespective of selection status."]
+   [:p "Speaking of which, tickets are going, going, going... "
+    [:strong [:a {:href "https://inclojure.org/#tickets"} "get yours now"]]"!"]])
 
 (defn ending-ornament []
   [:section {:id "ornament"}
@@ -541,7 +538,7 @@
   [:div
    [intro]
    [keynote]
-   [cfp]
+   [talks]
    [talk-selectors]
    [workshops-section]
    [tickets]
