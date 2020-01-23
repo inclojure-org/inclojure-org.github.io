@@ -439,7 +439,7 @@
    a lovely set of speakers from across the globe."]
    [:p "While only some proposals will make it to the final schedule, all talk proposers receive a complimentary pass for conference day, irrespective of selection status."]
    [:p "Speaking of which, tickets are going, going, going... "
-    [:strong [:a {:href "https://inclojure.org/#tickets"} "get yours now"]]"!"]])
+    [:strong [:a {:href "#" :on-click #(sundry/goto-link "tickets")} "get yours now"]]"!"]])
 
 (defn ending-ornament []
   [:section {:id "ornament"}
