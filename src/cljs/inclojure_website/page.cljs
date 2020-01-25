@@ -285,7 +285,7 @@
    [:a
     {:href twitter}
     name
-    [:img {:alt name, :src (str "images/team/" avatar)}]]
+    [:img {:alt name, :src (str avatar)}]]
    [:div.small.article-fine-print.no-mobile
      [:a
       {:href github}
