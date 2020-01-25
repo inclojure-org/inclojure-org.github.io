@@ -244,16 +244,16 @@
    [:div.benefactor-slab.gold
     [:h3 "Gold"]
 
-    [:a {:href "https://www.helpshift.com"}
+    [:a {:href "https://juspay.in/"}
      [:img {:alt "juspay", :src "images/sponsors/juspay.png"}]]
 
-    [:a {:href "https://www.gojek.com/"}
+    [:a {:href "https://www.gojek.io/"}
      [:img {:alt "gojek", :src "images/sponsors/gojek.svg"}]]]
 
    [:div.benefactor-slab.bronze
     [:h3 "Bronze"]
 
-    [:a {:href "https://www.helpshift.com"}
+    [:a {:href "https://www.quintype.com/"}
      [:img {:alt "quintype", :src "images/sponsors/quintype.png"}]]]
 
 
