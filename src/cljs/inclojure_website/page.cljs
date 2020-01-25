@@ -146,7 +146,7 @@
    [:img
     {:style {:width "100%" :border-radius "2%"}
      :alt "Pune",
-     :src "images/bg-pune.jpg"}]
+     :src "https://inclojure.imgix.net/https%3A%2F%2Finclojure.org%2Fimages%2Fbg-pune.jpg?q=85&expires=1590310831&s=47484230ce6e26adc2986d2cd90367a0"}]
    [:h3 "The Conference"]
    [:p "The conference will be held in a relatively centrally and well-connected on Nagar Rd, just 3kms off of the Pune International Airport (PNQ)."]
    [:iframe
@@ -201,6 +201,7 @@
 (defn schedule []
   [:section {:id "schedule"}
    [:h2 "Schedule"]
+   [:p "Check out the full schedule " [:a {:href "https://hasgeek.com/inclojure/2020/schedule"} "here."]]
    [:p "IN/Clojure 2020 will happen over two days. On the 14" [:sup "th"] " and the 15" [:sup "th"] " of February."]
    [:table.u-full-width
     [:tbody
@@ -244,7 +245,10 @@
     [:h3 "Gold"]
 
     [:a {:href "https://www.helpshift.com"}
-     [:img {:alt "juspay", :src "images/sponsors/juspay.png"}]]]
+     [:img {:alt "juspay", :src "images/sponsors/juspay.png"}]]
+
+    [:a {:href "https://www.gojek.com/"}
+     [:img {:alt "gojek", :src "images/sponsors/gojek.svg"}]]]
 
    [:div.benefactor-slab.bronze
     [:h3 "Bronze"]
@@ -306,7 +310,7 @@
         {:href "#"}
         [:img.reviewers.article-image.location
          {:alt alt
-          :src (str "images/comittee/" avatar)}]]
+          :src avatar}]]
        [:h4
         [:a {:href www} name]]
        [:p.article-subtitle bio]
@@ -327,7 +331,7 @@
       {:href "#"}
       [:img.article-image
        {:alt "bbatsov",
-        :src "images/speakers/bozhidar-batsov.jpg"}]]
+        :src "https://inclojure.imgix.net/https%3A%2F%2Finclojure.org%2Fimages%2Fspeakers%2Fbozhidar-batsov.jpg?q=85&expires=1590307397&s=93578bc241abf81c18a96ecb462b6c9a"}]]
      [:h4
       [:a {:href "https://metaredux.com"} "Bozhidar Batsov"]]
      [:p.article-subtitle "Bozhidar is the maintainer of CIDER, nREPL,
@@ -355,16 +359,16 @@
    [:h2 "Previous editions"]
    [:div {:style {:overflow "hidden"}}
     [:div.slideshow-container.slide.no-mobile
-     [:img {:src "images/previously/action1.jpg"}]
-     [:img {:src "images/previously/action4.jpg"}]
-     [:img {:src "images/previously/action2.jpg"}]
-     [:img {:src "images/previously/action3.jpg"}]]]
+     [:img {:src "https://inclojure.imgix.net/https%3A%2F%2Finclojure.org%2Fimages%2Fpreviously%2Faction1.jpg?q=85&expires=1590307324&s=10385308d107651f241ce1a63da3bfad"}]
+     [:img {:src "https://inclojure.imgix.net/https%3A%2F%2Finclojure.org%2Fimages%2Fpreviously%2Faction4.jpg?q=85&expires=1590307350&s=a7533c3d8bc47e57f2f731e00fbaaa28"}]
+     [:img {:src "https://inclojure.imgix.net/https%3A%2F%2Finclojure.org%2Fimages%2Fpreviously%2Faction2.jpg?q=85&expires=1590307254&s=8048103934183831d654a9079ee0a3de"}]
+     [:img {:src "https://inclojure.imgix.net/https%3A%2F%2Finclojure.org%2Fimages%2Fpreviously%2Faction3.jpg?q=85&expires=1590307373&s=3c5d9c975668320b1f617f53e8f64963"}]]]
 
    [:ol.article-list
     [:li
      [:img.previously.article-image.location
       {:alt "bangalore"
-       :src "images/bangalore-map-caption.jpg"}]
+       :src "https://inclojure.imgix.net/https%3A%2F%2Finclojure.org%2Fimages%2Fbangalore-map-caption.jpg?q=85&expires=1590310882&s=1d4615eb3a2fb94bade63a95bb9f3353"}]
 
      [:div.previously
       [:strong "2019"]
@@ -405,7 +409,7 @@
     [:li
      [:img.previously.article-image.location
      {:alt "pune",
-      :src "images/pune-map-caption.jpg"}]
+      :src "https://inclojure.imgix.net/https%3A%2F%2Finclojure.org%2Fimages%2Fpune-map-caption.jpg?q=85&expires=1590310985&s=39592d67f324569d1729b494688b55b3"}]
 
      [:div.previously
       [:strong "2016"]
@@ -544,7 +548,6 @@
    [tickets]
    [sponsorship]
    [venue]
-   [schedule]
    [action-shots]
    [coc]
    [team]])

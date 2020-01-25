@@ -60,7 +60,7 @@ h1 a, a:visited {
     display: block;
     width: 260px;
     height: 50px;
-    background: url(../images/inclojure-logo.png) 0 2px no-repeat;
+    background: url(https://inclojure.imgix.net/https%3A%2F%2Finclojure.org%2Fimages%2Finclojure-logo.png?q=85&expires=1590306949&s=d6cfbf1b21014a8de886b83389a6ae33) 0 2px no-repeat;
     background-size: auto;
     background-size: contain;
 }
@@ -471,7 +471,7 @@ table {
         display: block;
         width: 500px;
         height: 70px;
-        background: url(../images/inclojure-logo.png) 0 2px no-repeat;
+        background: url(https://inclojure.imgix.net/https%3A%2F%2Finclojure.org%2Fimages%2Finclojure-logo.png?q=85&expires=1590306949&s=d6cfbf1b21014a8de886b83389a6ae33) 0 2px no-repeat;
         background-size: contain;
     }
 

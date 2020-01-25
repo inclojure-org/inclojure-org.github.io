@@ -1,16 +1,55 @@
 (ns inclojure-website.data)
 
 (defonce team-list
-  [{:name "Aditya Athalye" :github "https://github.com/adityaathalye" :twitter "http://twitter.com/adityaathalye" :avatar "aditya.png"}
-   {:name "Akshay Gupta" :github "https://github.com/kitallis" :twitter "http://twitter.com/kitallis" :avatar "kitallis.png"}
-   {:name "Harsh Gupta" :github "https://github.com/hargup" :twitter "https://twitter.com/hargup13" :avatar "harsh.jpg"}
-   {:name "Kapil Reddy" :github "https://github.com/kapilreddy" :twitter "https://twitter.com/KapilReddy" :avatar "kapil.png"}
-   {:name "Nivedita Priyadarshini" :github "https://github.com/nid90" :twitter "http://twitter.com/nid90" :avatar "nid.png"}
-   {:name "Ravindra Jaju" :github "https://github.com/jaju" :twitter "https://twitter.com/jaju" :avatar "jaju.jpg"}
-   {:name "Rubal Jabbal" :github "https://github.com/rubalj" :twitter "https://twitter.com/rubaljabbal" :avatar "rubal.png"}
-   {:name "Sandilya Jandhyala" :github "https://github.com/jysandy" :twitter "http://twitter.com/jysandilya" :avatar "sandy.png"}
-   {:name "Srihari Sriraman" :github "https://github.com/ssrihari" :twitter "http://twitter.com/sriharisriraman" :avatar "srihari.png"}
-   {:name "Venkatesh Halli" :github "https://github.com/vhalli" :twitter "https://twitter.com/venkateshhalli" :avatar "vhalli.png"}])
+  [{:name "Aditya Athalye"
+    :github "https://github.com/adityaathalye"
+    :twitter "http://twitter.com/adityaathalye"
+    :avatar "https://inclojure.imgix.net/https%3A%2F%2Finclojure.org%2Fimages%2Fteam%2Faditya.png?q=85&expires=1590307416&s=5349387ad517280b6ad64acd77befbaf"}
+
+   {:name "Akshay Gupta"
+    :github "https://github.com/kitallis"
+    :twitter "http://twitter.com/kitallis"
+    :avatar "https://inclojure.imgix.net/https%3A%2F%2Finclojure.org%2Fimages%2Fteam%2Fkitallis.png?q=85&expires=1590307532&s=0c790f4c99c75150724a4c700a650bdd"}
+
+   {:name "Harsh Gupta"
+    :github "https://github.com/hargup"
+    :twitter "https://twitter.com/hargup13"
+    :avatar "https://inclojure.imgix.net/https%3A%2F%2Finclojure.org%2Fimages%2Fteam%2Fharsh.png?q=85&expires=1590307572&s=b405a8ee71721f10e23488c1201e09ac"}
+
+   {:name "Kapil Reddy"
+    :github "https://github.com/kapilreddy"
+    :twitter "https://twitter.com/KapilReddy"
+    :avatar "https://inclojure.imgix.net/https%3A%2F%2Finclojure.org%2Fimages%2Fteam%2Fkapil.png?q=85&expires=1590307604&s=9623a911ccbc7da8cb6647aa312251c3"}
+
+   {:name "Nivedita Priyadarshini"
+    :github "https://github.com/nid90"
+    :twitter "http://twitter.com/nid90"
+    :avatar "https://inclojure.imgix.net/https%3A%2F%2Finclojure.org%2Fimages%2Fteam%2Fnid.png?q=85&expires=1590307667&s=46be45c1f69eec0f5d695bfc6b6ee3c4"}
+
+   {:name "Ravindra Jaju"
+    :github "https://github.com/jaju"
+    :twitter "https://twitter.com/jaju"
+    :avatar "https://inclojure.imgix.net/https%3A%2F%2Finclojure.org%2Fimages%2Fteam%2Fjaju.jpg?q=85&expires=1590307688&s=68a849245af4984d67ebc582188fc0f8"}
+
+   {:name "Rubal Jabbal"
+    :github "https://github.com/rubalj"
+    :twitter "https://twitter.com/rubaljabbal"
+    :avatar "https://inclojure.imgix.net/https%3A%2F%2Finclojure.org%2Fimages%2Fteam%2Frubal.png?q=85&expires=1590307703&s=53a93ae40b6aea448d5d54367977bf95"}
+
+   {:name "Sandilya Jandhyala"
+    :github "https://github.com/jysandy"
+    :twitter "http://twitter.com/jysandilya"
+    :avatar "https://inclojure.imgix.net/https%3A%2F%2Finclojure.org%2Fimages%2Fteam%2Fsandy.png?q=85&expires=1590307723&s=66cd2b5381cc1d05492616fd3d98233e"}
+
+   {:name "Srihari Sriraman"
+    :github "https://github.com/ssrihari"
+    :twitter "http://twitter.com/sriharisriraman"
+    :avatar "https://inclojure.imgix.net/https%3A%2F%2Finclojure.org%2Fimages%2Fteam%2Fsrihari.png?q=85&expires=1590307747&s=0ed88ba43c1e4e33d38726da90109268"}
+
+   {:name "Venkatesh Halli"
+    :github "https://github.com/vhalli"
+    :twitter "https://twitter.com/venkateshhalli"
+    :avatar "https://inclojure.imgix.net/https%3A%2F%2Finclojure.org%2Fimages%2Fteam%2Fvhalli.png?q=85&expires=1590307769&s=67d0eb9fc0556c9ed0dec34267771d92"}])
 
 (defonce talk-selectors
   [{:name "Martin Klepsch"
@@ -23,7 +62,7 @@ recently organised the Heart Of Clojure conference in Europe."
     :github "https://github.com/martinklepsch"
     :www "https://www.martinklepsch.org"
     :alt "martinklepsch"
-    :avatar "martin.jpeg" }
+    :avatar "https://inclojure.imgix.net/https%3A%2F%2Finclojure.org%2Fimages%2Fcomittee%2Fmartin.jpeg?q=85&expires=1590308360&s=8a37bcc118c54f17846f9ff789c93804"}
 
    {:name "Paula Gearon"
     :bio "In her 10th year of Clojure development, Paula is a software engineer
@@ -39,7 +78,7 @@ in Virginia, in the USA."
     :github "https://github.com/quoll"
     :www "https://medium.com/@miffedgirl"
     :alt "paulagearon"
-    :avatar "paula.jpeg"}
+    :avatar "https://inclojure.imgix.net/https%3A%2F%2Finclojure.org%2Fimages%2Fcomittee%2Fpaula.jpeg?q=85&expires=1590310694&s=543c3c3827568e6dc05fc6b6a10d4cbe"}
 
    {:name "Tejas Dinkar"
     :bio "A full stack engineer with over 9 years of experience in multiple domains,
@@ -50,7 +89,7 @@ the Head of Technology for Quintype, a builder of products for digital media com
     :github "https://github.com/gja"
     :www "http://blog.gja.in"
     :alt "tdinkar"
-    :avatar "tejas.jpeg" }])
+    :avatar "https://inclojure.imgix.net/https%3A%2F%2Finclojure.org%2Fimages%2Fcomittee%2Ftejas.jpeg?q=85&expires=1590310716&s=e41e990c93131170b2303bb994d65fc3"}])
 
 (defonce previous-editions
   {:bangalore {:map "images/bangalore-map-caption.png"
