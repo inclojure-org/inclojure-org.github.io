@@ -329,7 +329,7 @@
     [:li
      [:a
       {:href "#"}
-      [:img.article-image
+      [:img.article-image.keynote
        {:alt "bbatsov",
         :src "https://inclojure.imgix.net/https%3A%2F%2Finclojure.org%2Fimages%2Fspeakers%2Fbozhidar-batsov.jpg?q=85&expires=1590307397&s=93578bc241abf81c18a96ecb462b6c9a"}]]
      [:h4
