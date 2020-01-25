@@ -14,7 +14,7 @@
    {:name "Harsh Gupta"
     :github "https://github.com/hargup"
     :twitter "https://twitter.com/hargup13"
-    :avatar "https://inclojure.imgix.net/https%3A%2F%2Finclojure.org%2Fimages%2Fteam%2Fharsh.png?q=85&expires=1590307572&s=b405a8ee71721f10e23488c1201e09ac"}
+    :avatar "https://inclojure.imgix.net/https%3A%2F%2Finclojure.org%2Fimages%2Fteam%2Fharsh.jpg?q=85&expires=1590311600&s=bf1b6764152525487c8a46fc14877ac0"}
 
    {:name "Kapil Reddy"
     :github "https://github.com/kapilreddy"
