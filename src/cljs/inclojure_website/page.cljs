@@ -418,7 +418,7 @@
    [:thead
     [:tr [:th "Time"] [:th "Event"]]]
    [:tbody
-    [:tr
+    [:tr.selected
      [:td "9:30 am"]
      [:td "Registrations"]]
 
