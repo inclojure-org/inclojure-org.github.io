@@ -205,6 +205,43 @@ footer a img {
     background: #fff;
 }
 
+.talk-table td {
+    font-size: 90%;
+    width: 30%;
+    padding-left: 5px;
+}
+
+.talk-table tr {
+    padding-top: 20px;
+}
+
+.talk-table th {
+    text-alight: left;
+}
+
+.talk-table th:nth-child(3) {
+    padding-left: 15px;
+    text-align: right;
+}
+
+
+.talk-table td:nth-child(2) {
+    font-size: 90%;
+    width: 60%;
+}
+
+.talk-table tr.selected {
+    background: #eee;
+    color: #00B180;
+}
+
+.talk-table td:nth-child(3) {
+    font-size: 90%;
+    width: 25%;
+    padding-left: 30px;
+    text-align: right;
+}
+
 .feature {
     width: 100%;
     height: 30%;
@@ -583,6 +620,13 @@ table {
         border-left: 8px solid #FFE100;
         box-shadow: 20px 0 30px rgba(0,0,0,0.06);
     }
+
+    .talk-table td {
+	font-size: 90%;
+	width: 15%;
+	padding-left: 5px;
+    }
+
 
     .feature {
         position: fixed;

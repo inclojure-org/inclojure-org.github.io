@@ -8,6 +8,23 @@
 (defn goto-link [id]
   (set! (.-location js/window) (str "/#" id)))
 
+(defn time-of-day [hour]
+  (if (> hour 12)
+    {:hour (- hour 12) :period "pm"}
+    {:hour hour :period "am"}))
+
+(defn format-minute [the-minute]
+  (if (< the-minute 10)
+    (str "0" the-minute)
+    (str the-minute)))
+
+(defn format-date [date-str]
+  (let [date-obj              (js/Date. date-str)
+        hour                  (.getHours date-obj)
+        minutes               (.getMinutes date-obj)
+        {:keys [hour period]} (time-of-day hour)]
+    (str hour ":" (format-minute minutes) " " period)))
+
 (comment
   "Some incomplete crap to start showing a countdown for CFP"
   (defn subtract-seconds

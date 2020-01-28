@@ -198,23 +198,6 @@
     "Maharashtra, IN"
     [:br]]])
 
-(defn schedule []
-  [:section {:id "schedule"}
-   [:h2 "Schedule"]
-   [:p "Check out the full schedule " [:a {:href "https://hasgeek.com/inclojure/2020/schedule"} "here."]]
-   [:p "IN/Clojure 2020 will happen over two days. On the 14" [:sup "th"] " and the 15" [:sup "th"] " of February."]
-   [:table.u-full-width
-    [:tbody
-     [:tr
-      [:td "Introductory Clojure"]
-      [:td "Fri, 14th Feb 2020"]]
-     [:tr
-      [:td "Intermediate Clojure"]
-      [:td "Fri, 14th Feb 2020"]]
-     [:tr
-      [:td "Single-track day of talks"]
-      [:td "Sat, 15th Feb 2020"]]]]])
-
 (defn sponsorship []
   [:section {:id "sponsorship"}
    [:h2 "Sponsorship"]
@@ -279,6 +262,7 @@
    [:p "Participants violating these rules may be
    sanctioned or expelled from the conference without a refund at
    the discretion of the organisers."]])
+
 
 (defn team-member [name github twitter avatar]
   [:li
@@ -429,21 +413,70 @@
           :src "images/calendar.svg"}]
         "Schedule"]]]]]])
 
+(defn workshop-table []
+  [:table.u-full-width.talk-table
+   [:thead
+    [:tr [:th "Time"] [:th "Event"]]]
+   [:tbody
+    [:tr
+     [:td "9:30 am"]
+     [:td "Registrations"]]
+
+    [:tr
+     [:td "10:00 am – 6 pm"]
+     [:td "Introductory workshop"]]
+
+    [:tr
+     [:td "10:00 am – 6 pm"]
+     [:td "Intermediate workshop"]]]])
+
+(defn talks-table []
+  [:table.u-full-width.talk-table
+   [:thead
+    [:tr [:th "Time"] [:th "Event"] [:th "Speaker"]]]
+   [:tbody
+    (for [slot (mapcat :sessions (-> data/talks
+                                     :schedule
+                                     second
+                                     :slots))]
+      ^{:key (str (random-uuid))}
+      [:tr {:class (when (or (nil? (:proposal_url slot))
+                             (:is_break slot))
+                     "selected")}
+
+       [:td (sundry/format-date (:start_at slot))]
+       [:td (if (:proposal_url slot)
+
+              [:a {:href (:proposal_url slot)}
+               (:title slot)]
+
+              (:title slot))]
+
+       [:td (:speaker slot)]])]])
+
 (defn talks []
   [:section {:id "talks"}
    [:h2 "Talks"]
    [:p "We're excited by the rich and diverse set of proposals submitted for the
 4th edition of IN/Clojure 2020."]
    [:p "The " [:strong "CFP closed on 20 Jan 2020 "] " (revised from 01 Jan 2020)."]
-   [:p "Talks are being finalised and being "
-    [:a {:href "https://hasgeek.com/inclojure/2020/schedule#schedule" :target "_blank"}
-     "scheduled here"] ", incrementally."]
    [:p "This year, selected speakers will enjoy sharing
    the stage with the perennially effervescent Bozhidar Batsov, and
    a lovely set of speakers from across the globe."]
    [:p "While only some proposals will make it to the final schedule, all talk proposers receive a complimentary pass for conference day, irrespective of selection status."]
    [:p "Speaking of which, tickets are going, going, going... "
     [:strong [:a {:href "#" :on-click #(sundry/goto-link "tickets")} "get yours now"]]"!"]])
+
+
+(defn schedule []
+  [:section {:id "schedule"}
+   [:h2 "Schedule"]
+   [:p "IN/Clojure 2020 will happen over two days. On the 14" [:sup "th"] " and the 15" [:sup "th"] " of February."]
+
+   [:h6 {:style {:border-bottom "1px dotted"}} [:strong "Friday, 14.02.2020"] " | Workshops"]
+   (workshop-table)
+   [:h6 {:style {:border-bottom "1px dotted"}} [:strong "Saturday, 15.02.2020"] " | Talks"]
+   (talks-table)])
 
 (defn ending-ornament []
   [:section {:id "ornament"}
@@ -543,6 +576,7 @@
    [intro]
    [keynote]
    [talks]
+   [schedule]
    [talk-selectors]
    [workshops-section]
    [tickets]
