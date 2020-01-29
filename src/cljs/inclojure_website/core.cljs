@@ -25,6 +25,10 @@
   (secretary/defroute (str "/#" (second nav-link)) []
     (reset! sub-page (home))))
 
+;; Add a separate perma-link for #schedule since it's not nav
+(secretary/defroute (str "/#schedule") []
+  (reset! sub-page (home)))
+
 ;; -------------------------
 ;; history
 ;;
