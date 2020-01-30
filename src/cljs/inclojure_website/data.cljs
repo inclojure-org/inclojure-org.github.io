@@ -942,7 +942,7 @@ the Head of Technology for Quintype, a builder of products for digital media com
          "novotel-pune-nagar-road-crimson-hall/crimson-hall-day-of-talks-at-novotel-hotel",
          :proposal    "Kv8gtitnKvBuyw5HChgkVb",
          :proposal_id 5267,
-         :speaker     "Rashmi Mittal",
+         :speaker     "Rashmi Mittal, and Madhuparna Ghosh",
          :speaker_bio
          {:html
           "<p>Madhuparna is a senior developer at Quintype, she builds digital tools for media publishers. She loves working on backend and frontend technologies, she mostly spends time working with Clojure, NodeJS and Javascript.</p>\n<p>Rashmi has over 20 years of experience in product development in various verticals including 15 years in the Silicon Valley where she primarily worked at Adobe Systems on products like Adobe Illustrator, HTML5 animation and Video Publishing. She is currently the Vice President of Engineering at Quintype.</p>",
