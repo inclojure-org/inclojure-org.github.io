@@ -428,7 +428,11 @@
 
     [:tr
      [:td "10:00 am – 6 pm"]
-     [:td "Intermediate workshop"]]]])
+     [:td "Intermediate workshop"]]
+
+    [:tr
+     [:td "7 pm onwards"]
+     [:td "Pre-conference party @ " [:a {:href "https://g.page/royal-orchid-central-pune"} "Royal Orchid Central (at Tiger Trail, 4th Floor)"]]]]])
 
 (defn talks-table []
   [:table.u-full-width.talk-table
