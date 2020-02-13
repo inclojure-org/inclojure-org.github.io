@@ -47,7 +47,7 @@
                 "Talks" "talks"
                 "Workshops" "workshops"
                 "Sponsors" "sponsorship"
-                "CoC" "coc"})
+                "Venue" "venue"})
 
 (defn nav []
   [:nav
@@ -424,11 +424,15 @@
 
     [:tr
      [:td "10:00 am – 6 pm"]
-     [:td "Introductory workshop"]]
+     [:td "Introductory workshop"
+      [:br]
+      "(Conference Room 5, 5th Floor, A-wing, MCCIA trade towers)"]]
 
     [:tr
      [:td "10:00 am – 6 pm"]
-     [:td "Intermediate workshop"]]
+     [:td "Intermediate workshop"
+      [:br]
+      "(Conference Room 6, 5th Floor, A-wing, MCCIA trade towers)"]]
 
     [:tr
      [:td "7 pm onwards"]
@@ -477,9 +481,9 @@
    [:h2 "Schedule"]
    [:p "IN/Clojure 2020 will happen over two days. On the 14" [:sup "th"] " and the 15" [:sup "th"] " of February."]
 
-   [:h6 {:style {:border-bottom "1px dotted"}} [:strong "Friday, 14.02.2020"] " | Workshops"]
+   [:h6 {:style {:border-bottom "1px dotted"}} [:strong "Friday, 14.02.2020"] " | " [:a {:href "https://www.google.com/maps?ll=18.535633,73.82988&z=14&t=m&hl=en&gl=IN&mapclient=embed&cid=15632844478142083508"} "Workshops (@ MCCIA Trade Towers)"]]
    (workshop-table)
-   [:h6 {:style {:border-bottom "1px dotted"}} [:strong "Saturday, 15.02.2020"] " | Talks"]
+   [:h6 {:style {:border-bottom "1px dotted"}} [:strong "Saturday, 15.02.2020"] " | " [:a {:href "https://www.google.com/maps?ll=18.558883,73.910794&z=16&t=m&hl=en&gl=IN&mapclient=embed&cid=13148294514236867118"} "Talks (@ Novotel Hotel)"]]
    (talks-table)])
 
 (defn ending-ornament []
