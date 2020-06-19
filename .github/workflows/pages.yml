@@ -33,6 +33,11 @@ jobs:
       - name: Check leiningen version
         run: lein -v
 
+      - name: Build the app
+        run: |
+          lein clean
+          lein cljsbuild once min
+
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
