@@ -20,5 +20,5 @@ config found in `project.clj`. By default the port is set to `7002`.
 # Release
 
 * The CI pipeline will take care of building the static files for hosting, hence they are `.gitignore`d from the project.
-* This site is deployed over Github Pages. Due to its limitations, we only keep Github Pages relevant files in the `master` branch, all development happens on `trunk`.
-* Just pushing changes deploys to the `master` branch using [`.github/workflows/pages.yml`](./.github/workflows/pages.yml) which is then picked up by Github Pages.
+* This site is deployed over Github Pages. We only keep Github Pages relevant files in the `master` branch, all development happens on `trunk`.
+* Push to `trunk` for your changes to be picked up by [`.github/workflows/pages.yml`](./.github/workflows/pages.yml) for deployment over `master`.
