@@ -365,7 +365,7 @@
           :src "https://www.simple.org/images/youtube.png"}]
         "Talks"]
        [:a.button.city
-        {:href "https://inclojure.org/2019/#schedule"}
+        {:href "https://inclojure.org/archive/2019/#schedule"}
         [:img
          {:style {:height "25px" :width "25px" :vertical-align "middle" :margin-right "10px"}
           :alt "",
@@ -383,7 +383,7 @@
           :src "https://www.simple.org/images/youtube.png"}]
         "Talks"]
        [:a.button.city
-        {:href "https://inclojure.org/2018/#schedule"}
+        {:href "https://inclojure.org/archive/2018/#schedule"}
         [:img
          {:style {:height "25px" :width "25px" :vertical-align "middle", :margin-right "10px"}
           :alt "",
@@ -406,7 +406,7 @@
           :src "https://www.simple.org/images/youtube.png"}]
         "Talks"]
        [:a.button.city
-        {:href "https://inclojure.org/2016/#schedule"}
+        {:href "https://inclojure.org/archive/2016/#schedule"}
         [:img
          {:style {:height "25px" :width "25px" :vertical-align "middle", :margin-right "10px"}
           :alt "",
