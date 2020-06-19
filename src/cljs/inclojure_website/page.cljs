@@ -146,7 +146,7 @@
    [:img
     {:style {:width "100%" :border-radius "2%"}
      :alt "Pune",
-     :src "https://inclojure.imgix.net/https%3A%2F%2Finclojure.org%2Fimages%2Fbg-pune.jpg?q=85&expires=1590310831&s=47484230ce6e26adc2986d2cd90367a0"}]
+     :src "images/bg-pune.jpg"}]
    [:h3 "The Conference"]
    [:p "The conference will be held in a relatively centrally and well-connected on Nagar Rd, just 3kms off of the Pune International Airport (PNQ)."]
    [:iframe
@@ -315,7 +315,7 @@
       {:href "#"}
       [:img.article-image.keynote
        {:alt "bbatsov",
-        :src "https://inclojure.imgix.net/https%3A%2F%2Finclojure.org%2Fimages%2Fspeakers%2Fbozhidar-batsov.jpg?q=85&expires=1590307397&s=93578bc241abf81c18a96ecb462b6c9a"}]]
+        :src "images/speaker/bozhidar-batsov.jpg"}]]
      [:h4
       [:a {:href "https://metaredux.com"} "Bozhidar Batsov"]]
      [:p.article-subtitle "Bozhidar is the maintainer of CIDER, nREPL,
@@ -343,16 +343,16 @@
    [:h2 "Previous editions"]
    [:div {:style {:overflow "hidden"}}
     [:div.slideshow-container.slide.no-mobile
-     [:img {:src "https://inclojure.imgix.net/https%3A%2F%2Finclojure.org%2Fimages%2Fpreviously%2Faction1.jpg?q=85&expires=1590307324&s=10385308d107651f241ce1a63da3bfad"}]
-     [:img {:src "https://inclojure.imgix.net/https%3A%2F%2Finclojure.org%2Fimages%2Fpreviously%2Faction4.jpg?q=85&expires=1590307350&s=a7533c3d8bc47e57f2f731e00fbaaa28"}]
-     [:img {:src "https://inclojure.imgix.net/https%3A%2F%2Finclojure.org%2Fimages%2Fpreviously%2Faction2.jpg?q=85&expires=1590307254&s=8048103934183831d654a9079ee0a3de"}]
-     [:img {:src "https://inclojure.imgix.net/https%3A%2F%2Finclojure.org%2Fimages%2Fpreviously%2Faction3.jpg?q=85&expires=1590307373&s=3c5d9c975668320b1f617f53e8f64963"}]]]
+     [:img {:src "images/previously/action1.jpg"}]
+     [:img {:src "images/previously/action4.jpg"}]
+     [:img {:src "images/previously/action2.jpg"}]
+     [:img {:src "images/previously/action3.jpg"}]]]
 
    [:ol.article-list
     [:li
      [:img.previously.article-image.location
       {:alt "bangalore"
-       :src "https://inclojure.imgix.net/https%3A%2F%2Finclojure.org%2Fimages%2Fbangalore-map-caption.jpg?q=85&expires=1590310882&s=1d4615eb3a2fb94bade63a95bb9f3353"}]
+       :src "images/bangalore-map-caption.jpg"}]
 
      [:div.previously
       [:strong "2019"]
@@ -393,7 +393,7 @@
     [:li
      [:img.previously.article-image.location
      {:alt "pune",
-      :src "https://inclojure.imgix.net/https%3A%2F%2Finclojure.org%2Fimages%2Fpune-map-caption.jpg?q=85&expires=1590310985&s=39592d67f324569d1729b494688b55b3"}]
+      :src "images/pune-map-caption.jpg"}]
 
      [:div.previously
       [:strong "2016"]

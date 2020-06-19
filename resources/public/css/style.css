@@ -56,462 +56,462 @@ h1 {
 }
 
 h1 a, a:visited {
-    color:#000;
-    display: block;
-    width: 260px;
-    height: 50px;
-    background: url(https://inclojure.imgix.net/https%3A%2F%2Finclojure.org%2Fimages%2Finclojure-logo.png?q=85&expires=1590306949&s=d6cfbf1b21014a8de886b83389a6ae33) 0 2px no-repeat;
-    background-size: auto;
-    background-size: contain;
+  color:#000;
+  display: block;
+  width: 260px;
+  height: 50px;
+  background: url(images/inclojure-logo.png) 0 2px no-repeat;
+  background-size: auto;
+  background-size: contain;
 }
 
 h1 span {
-    display: block;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.4em;
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
 }
 
 h1 a {
-    border: none;
+  border: none;
 }
 
 strong {
-    font-weight: 300;
+  font-weight: 300;
 }
 
 b.subtitle {
-    color: #c82502;
-    font-weight: 300;
+  color: #c82502;
+  font-weight: 300;
 }
 
 h2 {
-    text-transform: uppercase;
-    font-size: 21px;
-    color:#000;
-    margin: 2em 0 1em 0;
-    border: none;
-    padding: 0 0 10px 0;
-    letter-spacing: 0.1em;
-    font-weight: 500;
-    border-bottom: 1px dotted;
+  text-transform: uppercase;
+  font-size: 21px;
+  color:#000;
+  margin: 2em 0 1em 0;
+  border: none;
+  padding: 0 0 10px 0;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  border-bottom: 1px dotted;
 }
 
 h2.guest {
-    color: #000;
-    font-size: 300%;
-    text-transform: none;
-    letter-spacing: 0;
-    margin-top: 0;
-    font-weight: 300;
+  color: #000;
+  font-size: 300%;
+  text-transform: none;
+  letter-spacing: 0;
+  margin-top: 0;
+  font-weight: 300;
 }
 
 h3 {
-    font-size: 18px;
-    margin-bottom: 0.2em;
-    font-weight: 300;
-    margin-top: 2em;
+  font-size: 18px;
+  margin-bottom: 0.2em;
+  font-weight: 300;
+  margin-top: 2em;
 }
 
 h4 {
-    font-size: 16px;
-    font-weight: 300;
-    margin: 2em 0 0.5em 0;
-    color: #999;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 2em 0 0.5em 0;
+  color: #999;
 }
 
 iframe {
-    border: none;
+  border: none;
 }
 
 section {
-    margin-bottom: 5em;
+  margin-bottom: 5em;
 }
 
 .speaker-1,
 .speaker-2,
 .speaker-3 {
-    font-weight: 300;
-    text-transform: uppercase;
-    font-size: 75%;
-    vertical-align: middle;
-    display: block;
-    margin-bottom: 0.2em;
-    letter-spacing: 0.05em;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 75%;
+  vertical-align: middle;
+  display: block;
+  margin-bottom: 0.2em;
+  letter-spacing: 0.05em;
 }
 
 p, li {
-    margin-top: 0;
-    line-height: 1.4;
-    font-weight: 100;
+  margin-top: 0;
+  line-height: 1.4;
+  font-weight: 100;
 }
 
 .intro {
-    font-size: 28px;
-    font-weight: 120;
-    line-height: 1.3em;
-    margin-top: 1em;
-    clear: left;
+  font-size: 28px;
+  font-weight: 120;
+  line-height: 1.3em;
+  margin-top: 1em;
+  clear: left;
 }
 
 address {
-    font-size: 80%;
-    margin: 1em 0 1em 0;
-    font-style: initial;
-    border: dotted;
-    border-top-width: medium;
-    border-right-width: medium;
-    border-bottom-width: medium;
-    border-left-width: medium;
-    border-radius: 10px;
-    padding: 10px;
-    max-width: 50%;
-    border-width: 1px;
-    font-weight: 200;
+  font-size: 80%;
+  margin: 1em 0 1em 0;
+  font-style: initial;
+  border: dotted;
+  border-top-width: medium;
+  border-right-width: medium;
+  border-bottom-width: medium;
+  border-left-width: medium;
+  border-radius: 10px;
+  padding: 10px;
+  max-width: 50%;
+  border-width: 1px;
+  font-weight: 200;
 }
 
 .half {
-    left: 0;
-    position: relative;
+  left: 0;
+  position: relative;
 }
 
 .mobile {
-    display: block;
+  display: block;
 }
 
 .no-mobile {
-    display: none;
+  display: none;
 }
 
 footer {
-    display: none; /** TEMP **/
-    position: absolute;
-    top: 75px;
-    right: 0;
+  display: none; /** TEMP **/
+  position: absolute;
+  top: 75px;
+  right: 0;
 }
 
 footer a {
-    border: none;
+  border: none;
 }
 
 footer a img {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-    transition: border-color 1s;
-    border: 1px solid #eee;
-    border-radius: 100px;
-    padding: 5px;
-    background: #fff;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  transition: border-color 1s;
+  border: 1px solid #eee;
+  border-radius: 100px;
+  padding: 5px;
+  background: #fff;
 }
 
 .talk-table td {
-    font-size: 90%;
-    width: 30%;
-    padding-left: 5px;
+  font-size: 90%;
+  width: 30%;
+  padding-left: 5px;
 }
 
 .talk-table tr {
-    padding-top: 20px;
+  padding-top: 20px;
 }
 
 .talk-table th {
-    text-alight: left;
-    padding-left: 5px;
+  text-alight: left;
+  padding-left: 5px;
 }
 
 .talk-table th:nth-child(3) {
-    padding-left: 15px;
-    text-align: right;
+  padding-left: 15px;
+  text-align: right;
 }
 
 
 .talk-table td:nth-child(2) {
-    font-size: 90%;
-    width: 60%;
+  font-size: 90%;
+  width: 60%;
 }
 
 .talk-table tr.selected {
-    background: #eee;
-    color: #00B180;
+  background: #eee;
+  color: #00B180;
 }
 
 .talk-table td:nth-child(3) {
-    font-size: 90%;
-    width: 25%;
-    padding-left: 30px;
-    text-align: right;
+  font-size: 90%;
+  width: 25%;
+  padding-left: 30px;
+  text-align: right;
 }
 
 .feature {
-    width: 100%;
-    height: 30%;
-    background-size: cover;
+  width: 100%;
+  height: 30%;
+  background-size: cover;
 }
 
 .feature-overlay {
-    width: 100%;
-    height: 30%;
-    background-size: cover;
-    opacity: 0.8;
-    background-image: url("../images/background-texture.png");
+  width: 100%;
+  height: 30%;
+  background-size: cover;
+  opacity: 0.8;
+  background-image: url("../images/background-texture.png");
 
 }
 
 .contents {
-    padding: 25px;
+  padding: 25px;
 }
 
 .article-list {
-    list-style: none;
-    margin: 20px 0 0 0;
-    padding: 0;
+  list-style: none;
+  margin: 20px 0 0 0;
+  padding: 0;
 }
 
 
 .article-list li {
-    list-style: none;
-    margin: 0;
-    padding: 0 0 16px 0;
-    position: relative;
-    clear: both;
+  list-style: none;
+  margin: 0;
+  padding: 0 0 16px 0;
+  position: relative;
+  clear: both;
 }
 
 .article-subtitle {
-    font-size: 80%;
-    margin: 0.8em 0;
+  font-size: 80%;
+  margin: 0.8em 0;
 }
 
 .article-list h4 {
-    margin: 0;
-    padding: 0.3em 0 0 0;
+  margin: 0;
+  padding: 0.3em 0 0 0;
 }
 
 .article-fine-print {
-    line-height: 0.2;
+  line-height: 0.2;
 }
 
 .article-fine-print a {
-    border: none;
+  border: none;
 }
 
 .article-fine-print a:hover img {
-    opacity: 1;
-    border-color: #333;
+  opacity: 1;
+  border-color: #333;
 }
 
 .article-image {
-    width: 120px;
-    height: 132px;
-    float: right;
-    margin: 0 0 16px 16px;
+  width: 120px;
+  height: 132px;
+  float: right;
+  margin: 0 0 16px 16px;
 }
 
 .previously.article-image {
-    width: 150px;
-    height: 170px;
-    margin: 0 0 16px 0;
+  width: 150px;
+  height: 170px;
+  margin: 0 0 16px 0;
 }
 
 .intro {
-    font-size: 28px;
-    font-weight: 120;
+  font-size: 28px;
+  font-weight: 120;
 }
 
 nav {
-    padding-top: 0;
-    position: relative;
+  padding-top: 0;
+  position: relative;
 }
 
 nav em {
-    padding: 0 8px;
-    color: #ddd;
+  padding: 0 8px;
+  color: #ddd;
 }
 
 nav a.link,
 nav span {
-    display: inline-block;
-    padding: 0px 10px 10px 0;
-    height: 30px;
-    text-align: center;
-    font-weight: 500;
-    font-size: 18px;
+  display: inline-block;
+  padding: 0px 10px 10px 0;
+  height: 30px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
 }
 
 nav a.link {
-    margin: 0 1em 1em 0;
+  margin: 0 1em 1em 0;
 }
 
 nav .nav-links {
-    display: block;
-    text-align: left;
+  display: block;
+  text-align: left;
 }
 
 nav a.link:nth-child(2) {
-    border-bottom: 2px solid #147AAB;
+  border-bottom: 2px solid #147AAB;
 }
 
 nav a.link:nth-child(3) {
-    border-bottom: 2px solid #E36511;
+  border-bottom: 2px solid #E36511;
 }
 
 nav a.link:nth-child(4) {
-    border-bottom: 2px solid #00B180;
+  border-bottom: 2px solid #00B180;
 }
 
 nav a.link:nth-child(5) {
-    border-bottom: 2px solid #D04B36;
+  border-bottom: 2px solid #D04B36;
 }
 
 nav a.link:nth-child(6) {
-    border-bottom: 2px solid #675997;
+  border-bottom: 2px solid #675997;
 }
 
 
 .people {
-    column-count: 2;
-    margin-left: 0;
-    padding-left: 0;
+  column-count: 2;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 .people span {
-    font-weight: 200;
+  font-weight: 200;
 }
 
 .people li {
-    font-size: 80%;
-    line-height: 2.2;
-    margin-left: 0;
-    list-style: none;
-    break-inside: avoid;
-    page-break-inside: avoid;
-    position: relative;
-    padding-left: 42px;
+  font-size: 80%;
+  line-height: 2.2;
+  margin-left: 0;
+  list-style: none;
+  break-inside: avoid;
+  page-break-inside: avoid;
+  position: relative;
+  padding-left: 42px;
 }
 
 .people img {
-    height: 32px;
-    width: 32px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background: #eee;
-    border-radius: 5px;
+  height: 32px;
+  width: 32px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #eee;
+  border-radius: 5px;
 }
 
 .benefactor-slab img {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .benefactor-slab.platinum img {
-    width: 55%;
+  width: 55%;
 }
 
 .benefactor-slab.gold img {
-    width: 50%;
+  width: 50%;
 }
 
 .benefactor-slab.bronze img {
-    width: 45%;
+  width: 45%;
 }
 
 .benefactor-slab.community img {
-    width: 40%
+  width: 40%
 }
 
 .benefactor-slab a {
-    vertical-align: middle;
-    margin: 0 2em 0 2em;
-    text-decoration: none;
-    border: none;
+  vertical-align: middle;
+  margin: 0 2em 0 2em;
+  text-decoration: none;
+  border: none;
 }
 
 #ornament {
-    margin: 7em 0 0 0;
+  margin: 7em 0 0 0;
 }
 
 #ornament img {
-    max-width: 75%;
+  max-width: 75%;
 }
 
 #end {
-    margin-top: 1em;
-    font-size: 12px;
+  margin-top: 1em;
+  font-size: 12px;
 }
 
 #end li {
-    line-height: 1.5em;
+  line-height: 1.5em;
 }
 
 table {
-    line-height: 2;
-    font-weight: 100;
+  line-height: 2;
+  font-weight: 100;
 }
 
 .previously {
-    display: block;
-    margin-bottom: 1.5em;
+  display: block;
+  margin-bottom: 1.5em;
 }
 
 .previously.article-image {
-    width: 180px;
-    height: 200px;
-    margin: 0 0 16px 0;
-    float: none;
+  width: 180px;
+  height: 200px;
+  margin: 0 0 16px 0;
+  float: none;
 }
 
 .previously .city {
-    border-color: #d6dfe9;
-    padding: 0 10px 0 10px;
-    height: auto;
-    font-weight: 300;
-    font-size: 80%;
-    letter-spacing: 0;
-    text-transform: none;
-    background:#fff;
-    margin: 5px 8px 0 0;
+  border-color: #d6dfe9;
+  padding: 0 10px 0 10px;
+  height: auto;
+  font-weight: 300;
+  font-size: 80%;
+  letter-spacing: 0;
+  text-transform: none;
+  background:#fff;
+  margin: 5px 8px 0 0;
 }
 
 .button:hover {
-    color:#333;
-    border-color:#888;
-    outline: 0;
+  color:#333;
+  border-color:#888;
+  outline: 0;
 }
 
 /* For devices larger than 900px */
 @media (min-width: 900px) {
-    body {
-        font-size: 18px;
-        line-height: 1.6;
-        letter-spacing: 0.01em;
-        padding: 0;
-        border: none;
-    }
+  body {
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+    padding: 0;
+    border: none;
+  }
 
-    body.permalink {
-        padding-top: 0;
-        padding-top: 0;
-    }
+  body.permalink {
+    padding-top: 0;
+    padding-top: 0;
+  }
 
-    h1 {
-        font-size: 46px;
-        margin-top: 0;
-        position: relative;
-        top: 0;
-        left: 0;
-        background: none;
-        width: auto;
-        padding: 0;
-    }
+  h1 {
+    font-size: 46px;
+    margin-top: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    background: none;
+    width: auto;
+    padding: 0;
+  }
 
-    h1 a, h1 a:visited {
-        color: #000;
-        display: block;
-        width: 500px;
-        height: 70px;
-        background: url(https://inclojure.imgix.net/https%3A%2F%2Finclojure.org%2Fimages%2Finclojure-logo.png?q=85&expires=1590306949&s=d6cfbf1b21014a8de886b83389a6ae33) 0 2px no-repeat;
-        background-size: contain;
-    }
+  h1 a, h1 a:visited {
+    color: #000;
+    display: block;
+    width: 500px;
+    height: 70px;
+    background: url(images/inclojure-logo.png) 0 2px no-repeat;
+    background-size: contain;
+  }
 
     h1 span {
         font-size: 16px;
