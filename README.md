@@ -23,4 +23,4 @@ config found in `project.clj`. By default the port is set to `7002`.
 * The action takes care of building the static files, and hence they are `.gitignore`d from the project
 * We only keep Github Pages relevant files in the `master` branch, all development happens on `trunk`
 * Push to `trunk` for your changes to be picked up for deployment over `master`
-* When you push to `trunk`, the action also deploys a commit ti `master`
+* When you push to `trunk`, the action also deploys a commit to `master`
