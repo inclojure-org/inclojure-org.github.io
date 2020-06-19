@@ -15,7 +15,9 @@ lein figwheel
 Figwheel will automatically push cljs changes to the browser. Visit `http://localhost:3449` to see the website.
 
 Figwheel also starts `nREPL` using the value of the `:nrepl-port` in the `:figwheel`
-config found in `project.clj`. By default the port is set to `7002`.
+config found in `project.clj`. 
+
+By default the port is set to `7002`.
 
 # Release
 
