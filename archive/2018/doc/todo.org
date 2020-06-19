@@ -1,8 +1,0 @@
-** functionality
-- [-] update papercall link
-- [-] update tickets link
-- [-] opportunity grant link
-
-** tech chores
-- [-] add static templating for maintenance purposes
-  - adding sponsors, or speakers shouldn't imply changing code, or a lot of change
