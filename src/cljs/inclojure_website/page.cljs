@@ -315,7 +315,7 @@
       {:href "#"}
       [:img.article-image.keynote
        {:alt "bbatsov",
-        :src "images/speaker/bozhidar-batsov.jpg"}]]
+        :src "images/speakers/bozhidar-batsov.jpg"}]]
      [:h4
       [:a {:href "https://metaredux.com"} "Bozhidar Batsov"]]
      [:p.article-subtitle "Bozhidar is the maintainer of CIDER, nREPL,
