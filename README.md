@@ -1,6 +1,6 @@
 # Contributing
 
-* Built using clojurescript + reagent
+* Built using [ClojureScript](https://clojurescript.org) + [reagent](https://reagent-project.github.io)
 * The default branch for this repo is `trunk`
 * Install [Clojure + lein](https://purelyfunctional.tv/guide/how-to-install-clojure) before starting
 
