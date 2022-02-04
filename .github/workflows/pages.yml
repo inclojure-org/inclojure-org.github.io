@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - trunk
+  # to trigger manually from actions tab
+  workflow_dispatch:
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
