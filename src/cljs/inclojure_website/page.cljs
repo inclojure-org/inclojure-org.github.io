@@ -1,9 +1,8 @@
 (ns inclojure-website.page
   (:require [inclojure-website.data :as data]
+            [inclojure-website.links :as links]
             [inclojure-website.morellet :as morellet]
             [inclojure-website.sundry :as sundry]
-            [inclojure-website.talks :as talks]
-            [accountant.core :as accountant]
             [reagent.core :as reagent :refer [atom create-class]]))
 
 (declare home)
@@ -70,11 +69,10 @@
 (defn workshops []
   [:section {:id "workshop-details"}
    [:div
-    [:p.intro "IN/Clojure 2020 will have two full-day workshops."]
+    [:p.intro data/conf-with-year " will have two full-day workshops."]
     [:p "An introductory Clojure workshop and an intermediate Clojure
     workshop. The lessons apply to ClojureScript as well. Note that
-    both the workshops will be conducted simultaneously on the 14"
-    [:sup "th"] " of February, 2020."]
+    both the workshops will be conducted simultaneously on the same day."]
     [:h3 {:id "introduction"}
      "Introduction to Clojure"]
     [:h4 "Audience"]
@@ -128,7 +126,7 @@
 
 (defn intro []
   [:section {:id "intro"}
-   [:p.intro "IN/Clojure is India's annual Clojure and ClojureScript
+   [:p.intro data/conf " is India's annual Clojure and ClojureScript
     conference, and Asia's first."]
    [:p "Our focus: the free exchange of ideas between new and
    experienced Clojure programmers alike. We are volunteer-run, and
@@ -137,115 +135,49 @@
 (defn venue []
   [:section {:id "venue"}
    [:h2 "Venue"]
-   [:p "The very first IN/Clojure was held in Pune in 2016 and after two editions in "
-    [:em "namma "]
-    "Bengaluru, we're delighted to return to "
-    [:em "apla "]
-    "Pune! Now, where are those "
-    [:em "bakarwadis and modaks?"]]
+   [:p "This one is in Bengaluru."]
    [:img
     {:style {:width "100%" :border-radius "2%"}
-     :alt "Pune",
-     :src "images/bg-pune.jpg"}]
+     :alt "Bengaluru",
+     :src "images/bg-bangalore.jpg"}]
    [:h3 "The Conference"]
-   [:p "The conference will be held in a relatively centrally and well-connected on Nagar Rd, just 3kms off of the Pune International Airport (PNQ)."]
-   [:iframe
-    {:height "450",
-     :width "100%",
-     :src "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.3359264715677!2d73.90860541495768!3d18.558887972844822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c13f953dc837%3A0xb6782032b34e422e!2sNovotel%20Pune%20Nagar%20Road!5e0!3m2!1sen!2sin!4v1575908729886!5m2!1sen!2sin"}]
-   [:address "Crimson Hall, Novotel"
-    [:br]
-    "Nagar Rd, Sakore Nagar"
-    [:br]
-    "Viman Nagar"
-    [:br]
-    "Pune - 411014"
-    [:br]
-    "Maharashtra, IN"
-    [:br]]
-   [:h4 "Getting there"]
-   [:p [:strong "By Air:"] " Pune International Airport (PNQ) is a 10
-   minute taxi ride from the venue."]
-   [:p [:strong "By Train:"] " Pune is well connected by train to all
-   major cities of India. Pune Station is about 25 minutes from the
-   venue by car."]
-   [:p [:strong "By Road:"] " Pune is also well connected by bus. If
-   you are coming from Mumbai, we highly recommend taking the Shivneri
-   bus from Dadar, Chembur, Vashi or Borivali (this is a government
-   service)."]
-   [:h4 "Getting around"]
-   [:p "Uber and Ola Cabs are both active in Pune city. You should
-   have no trouble using these. Local autorickshaws are also easily
-   available."]
-   [:p "There are quite a few restaurants, pubs and small cafes in the
-   Koregaon Park neighborhood, which is a 15 minute ride from the
-   venue."]
+   [:p "TBD"]
    [:h3 "The Workshops"]
-   [:iframe
-    {:height "450",
-     :width "100%",
-     :src "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15131.39434095538!2d73.8298557!3d18.5357433!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd8f30539fc95f1b4!2sMCCIA%20Trade%20Tower!5e0!3m2!1sen!2sin!4v1576334854079!5m2!1sen!2sin"}]
-   [:address "MCCIA Trade Tower"
-    [:br]
-    "ICC Complex, Senapati Bapat Rd"
-    [:br]
-    "Laxmi Society, Model Colony"
-    [:br]
-    "Shivajinagar"
-    [:br]
-    "Pune - 411016"
-    [:br]
-    "Maharashtra, IN"
-    [:br]]])
+   [:p "TBD"]])
 
 (defn sponsorship []
   [:section {:id "sponsorship"}
    [:h2 "Sponsorship"]
    [:p]
    [:p "Help foster the growing Clojure community in India/Asia."]
-   [:p "Over the years, IN/Clojure has helped kick-start a series of
+   [:p "Over the years, " data/conf " has helped kick-start a series of
    Clojure workshops and meet-ups across the country. It has helped
    organizations hiring Clojurists to reach out to a wonderful
    community. And has helped attendees make a strong case for
    Clojure/Clojurescript adoption in their companies."]
-   [:p "With your help, we hope to make IN/Clojure 2020 bigger than
+   [:p "With your help, we hope to make " data/conf-with-year " bigger than
    before and continue our efforts to help foster the growing
    Clojure community in India/Asia."]
-   [:p "To sponsor IN/Clojure 2020, review sponsorship details in the"
-    [:a {:href "pdf/inclojure-2020-sponsorship-deck.pdf"} " prospectus "]
+   [:p "To sponsor " data/conf-with-year ", review sponsorship details in the"
+    [:a {:href links/sponsorship-deck} " prospectus "]
     "and contact us at our mailing list"
-    [:a {:href "mailto:2020@inclojure.org"} " 2020@inclojure.org."]]
+    [:a {:href links/email} " " data/email]]
 
    [:div.benefactor-slab.platinum
     [:h3 "Platinum"]
 
     [:a {:href "https://nilenso.com"}
-     [:img {:alt "nilenso", :src "images/sponsors/nilenso.png"}]]
-    [:a {:href "https://www.helpshift.com"}
-     [:img {:alt "helpshift", :src "images/sponsors/helpshift.png"}]]]
+     [:img {:alt "nilenso", :src "images/sponsors/nilenso.png"}]]]
 
    [:div.benefactor-slab.gold
-    [:h3 "Gold"]
-
-    [:a {:href "https://juspay.in/"}
-     [:img {:alt "juspay", :src "images/sponsors/juspay.png"}]]
-
-    [:a {:href "https://www.gojek.io/"}
-     [:img {:alt "gojek", :src "images/sponsors/gojek.svg"}]]]
+    [:h3 "Gold"]]
 
    [:div.benefactor-slab.bronze
-    [:h3 "Bronze"]
-
-    [:a {:href "https://www.quintype.com/"}
-     [:img {:alt "quintype", :src "images/sponsors/quintype.png"}]]]
+    [:h3 "Bronze"]]
 
 
    [:div.benefactor-slab.community
-    [:h3 "Community"]
-
-    [:div
-     [:a {:href "https://cognitect.com"}
-      [:img {:alt "cognitect", :src "images/sponsors/cognitect.png"}]]]]])
+    [:h3 "Community"]]])
 
 (defn coc []
   [:section {:id "coc"}
@@ -334,9 +266,7 @@
 
 (defn tickets []
   [:section {:id  "tickets"}
-   [:h2  "Tickets"]
-   [:div
-    [:div#boxoffice-widget [:pre "Loading..."]]]])
+   [:h2  "Tickets"]])
 
 (defn action-shots []
   [:section {:id "action-shots"}
@@ -362,7 +292,7 @@
         [:img
          {:style {:height "25px" :width "25px" :vertical-align "middle" :margin-right "10px"}
           :alt ""
-          :src "https://www.simple.org/images/youtube.png"}]
+          :src links/youtube-png}]
         "Talks"]
        [:a.button.city
         {:href "https://inclojure.org/archive/2019/#schedule"}
@@ -380,7 +310,7 @@
         [:img
          {:style {:height "25px" :width "25px" :vertical-align "middle", :margin-right "10px"}
           :alt "",
-          :src "https://www.simple.org/images/youtube.png"}]
+          :src links/youtube-png}]
         "Talks"]
        [:a.button.city
         {:href "https://inclojure.org/archive/2018/#schedule"}
@@ -396,6 +326,24 @@
       :src "images/pune-map-caption.jpg"}]
 
      [:div.previously
+      [:strong "2020"]
+      [:p.article-subtitle
+       [:a.button.city
+        {:href "https://www.youtube.com/watch?v=dZ4xczP5zDI&list=PLlAML-kjpXY7ZGj6anXfKSqN1XGTCEmmw"}
+        [:img
+         {:style {:height "25px" :width "25px" :vertical-align "middle" :margin-right "10px"}
+          :alt "",
+          :src links/youtube-png}]
+        "Talks"]
+       [:a.button.city
+        {:href "https://inclojure.org/archive/2020/#schedule"}
+        [:img
+         {:style {:height "25px" :width "25px" :vertical-align "middle", :margin-right "10px"}
+          :alt "",
+          :src "images/calendar.svg"}]
+        "Schedule"]]]
+     
+     [:div.previously
       [:strong "2016"]
       [:p.article-subtitle
        [:a.button.city
@@ -403,7 +351,7 @@
         [:img
          {:style {:height "25px" :width "25px" :vertical-align "middle" :margin-right "10px"}
           :alt "",
-          :src "https://www.simple.org/images/youtube.png"}]
+          :src links/youtube-png}]
         "Talks"]
        [:a.button.city
         {:href "https://inclojure.org/archive/2016/#schedule"}
@@ -424,66 +372,33 @@
 
     [:tr
      [:td "10:00 am – 6 pm"]
-     [:td "Introductory workshop"
-      [:br]
-      "(Conference Room 5, 5th Floor, A-wing, MCCIA trade towers)"]]
+     [:td "Introductory workshop"]]
 
     [:tr
      [:td "10:00 am – 6 pm"]
-     [:td "Intermediate workshop"
-      [:br]
-      "(Conference Room 6, 5th Floor, A-wing, MCCIA trade towers)"]]
+     [:td "Intermediate workshop"]]
 
     [:tr
      [:td "7 pm onwards"]
-     [:td "Pre-conference party @ " [:a {:href "https://g.page/royal-orchid-central-pune"} "Royal Orchid Central (at Tiger Trail, 4th Floor)"]]]]])
+     [:td "Pre-conference party"]]]])
 
 (defn talks-table []
-  [:table.u-full-width.talk-table
-   [:thead
-    [:tr [:th "Time"] [:th "Event"] [:th "Speaker"]]]
-   [:tbody
-    (for [slot (mapcat :sessions (-> data/talks
-                                     :schedule
-                                     second
-                                     :slots))]
-      ^{:key (str (random-uuid))}
-      [:tr {:class (when (or (nil? (:proposal_url slot))
-                             (:is_break slot))
-                     "selected")}
-
-       [:td (sundry/format-date (:start_at slot))]
-       [:td (if (:proposal_url slot)
-
-              [:a {:href (:proposal_url slot)}
-               (:title slot)]
-
-              (:title slot))]
-
-       [:td (:speaker slot)]])]])
+  [:p "TBD"])
 
 (defn talks []
   [:section {:id "talks"}
    [:h2 "Talks"]
-   [:p "We're excited by the rich and diverse set of proposals submitted for the
-4th edition of IN/Clojure 2020."]
-   [:p "The " [:strong "CFP closed on 20 Jan 2020 "] " (revised from 01 Jan 2020)."]
-   [:p "This year, selected speakers will enjoy sharing
-   the stage with the perennially effervescent Bozhidar Batsov, and
-   a lovely set of speakers from across the globe."]
-   [:p "While only some proposals will make it to the final schedule, all talk proposers receive a complimentary pass for conference day, irrespective of selection status."]
-   [:p "Speaking of which, tickets are going, going, going... "
-    [:strong [:a {:href "#" :on-click #(sundry/goto-link "tickets")} "get yours now"]]"!"]])
+   [:p "We'll be opening up a call for proposals for the 5th edition of " data/conf " shortly."]])
 
 
 (defn schedule []
   [:section {:id "schedule"}
    [:h2 "Schedule"]
-   [:p "IN/Clojure 2020 will happen over two days. On the 14" [:sup "th"] " and the 15" [:sup "th"] " of February."]
+   [:p "IN/Clojure 2024 is expected to happen over two days in February 2024."]
 
-   [:h6 {:style {:border-bottom "1px dotted"}} [:strong "Friday, 14.02.2020"] " | " [:a {:href "https://www.google.com/maps?ll=18.535633,73.82988&z=14&t=m&hl=en&gl=IN&mapclient=embed&cid=15632844478142083508"} "Workshops (@ MCCIA Trade Towers)"]]
+   [:h6 {:style {:border-bottom "1px dotted"}} [:strong "Day 1"] " | " [:strong "Workshops"]]
    (workshop-table)
-   [:h6 {:style {:border-bottom "1px dotted"}} [:strong "Saturday, 15.02.2020"] " | " [:a {:href "https://www.google.com/maps?ll=18.558883,73.910794&z=16&t=m&hl=en&gl=IN&mapclient=embed&cid=13148294514236867118"} "Talks (@ Novotel Hotel)"]]
+   [:h6 {:style {:border-bottom "1px dotted"}} [:strong "Day 2"] " | " [:strong "Talks"]]
    (talks-table)])
 
 (defn ending-ornament []
@@ -498,9 +413,6 @@
      "https://gitlab.com/inclojure/inclojure.gitlab.io/blob/redesign/src/cljs/inclojure_website/morellet.cljs"}
      " François Morellet."]]
 
-    [:li "this edition of IN/Clojure is organized in partnership with"
-     [:a {:href "https://hasgeek.com"} " HasGeek."]]
-
     [:li "source code to this website and other conference
     organizational material is available"
      [:a {:href
@@ -511,8 +423,7 @@
 
 (defn footer []
   [:footer
-   [:a
-    {:href "mailto:2020@inclojure.org"}
+   [:a {:href links/email}
     [:img {:alt "Flickr", :src "images/mailbox.svg"}]]
    [:a
     {:href "https://twitter.com/in_clojure"}
@@ -525,11 +436,10 @@
   [:section {:id "workshops"}
    [:h2 "Workshops"]
    [:div
-    [:p"IN/Clojure 2020 will have two full-day workshops."]
+    [:p data/conf-with-year " will have two full-day workshops."]
     [:p "An introductory Clojure workshop and an intermediate Clojure
     workshop. The lessons apply to ClojureScript as well. Note that
-    both the workshops will be conducted simultaneously on the 14"
-     [:sup "th"] " of February, 2020."]
+    both the workshops will be conducted simultaneously on the same day."]
 
     [:ol.article-list
     [:li
@@ -582,7 +492,6 @@
 (defn home []
   [:div
    [intro]
-   [keynote]
    [talks]
    [schedule]
    [talk-selectors]

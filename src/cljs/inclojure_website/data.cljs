@@ -1,30 +1,19 @@
 (ns inclojure-website.data)
 
+(defonce conf "In/Clojure")
+(defonce conf-with-year "In/Clojure 2024")
+(defonce email "2024@inclojure.org")
+
 (defonce team-list
   [{:name "Aditya Athalye"
     :github "https://github.com/adityaathalye"
     :twitter "http://twitter.com/adityaathalye"
     :avatar "images/team/aditya.png"}
 
-   {:name "Akshay Gupta"
-    :github "https://github.com/kitallis"
-    :twitter "http://twitter.com/kitallis"
-    :avatar "images/team/kitallis.png"}
-
-   {:name "Harsh Gupta"
-    :github "https://github.com/hargup"
-    :twitter "https://twitter.com/hargup13"
-    :avatar "images/team/harsh.jpg?"}
-
    {:name "Kapil Reddy"
     :github "https://github.com/kapilreddy"
     :twitter "https://twitter.com/KapilReddy"
     :avatar "images/team/kapil.png"}
-
-   {:name "Nivedita Priyadarshini"
-    :github "https://github.com/nid90"
-    :twitter "http://twitter.com/nid90"
-    :avatar "images/team/nid.png"}
 
    {:name "Ravindra Jaju"
     :github "https://github.com/jaju"
@@ -36,60 +25,13 @@
     :twitter "https://twitter.com/rubaljabbal"
     :avatar "images/team/rubal.png"}
 
-   {:name "Sandilya Jandhyala"
-    :github "https://github.com/jysandy"
-    :twitter "http://twitter.com/jysandilya"
-    :avatar "images/team/sandy.png"}
-
    {:name "Srihari Sriraman"
     :github "https://github.com/ssrihari"
     :twitter "http://twitter.com/sriharisriraman"
-    :avatar "images/team/srihari.png"}
-
-   {:name "Venkatesh Halli"
-    :github "https://github.com/vhalli"
-    :twitter "https://twitter.com/venkateshhalli"
-    :avatar "images/team/vhalli.png"}])
+    :avatar "images/team/srihari.png"}])
 
 (defonce talk-selectors
-  [{:name "Martin Klepsch"
-    :bio "Martin is a Clojure/Script consultant who never expected to work on a
-documentation platform. Before starting cljdoc he helped run various community
-events in Berlin, created CLJSJS and contributed to lots of Clojure OpenSource
-projects like Boot, the ClojureScript compiler, re-frame and more. Martin also
-recently organised the Heart Of Clojure conference in Europe."
-    :twitter "https://twitter.com/martinklepsch"
-    :github "https://github.com/martinklepsch"
-    :www "https://www.martinklepsch.org"
-    :alt "martinklepsch"
-    :avatar "images/comittee/martin.jpeg"}
-
-   {:name "Paula Gearon"
-    :bio "In her 10th year of Clojure development, Paula is a software engineer
-at Cisco Systems who enjoys working in the most technical parts of a system,
-building the infrastructure that lets other developers do their jobs.
-She has been the technical lead on several commercial and open source projects,
-with a focus on data storage and processing, and was a lead editor for the
-SPARQL standard for accessing RDF databases. When not coding, she does triathlons,
-cooks, helps her children with homework, and mentors and supports young members
-of Women Who Code. Originally from Australia, she currently lives with her family
-in Virginia, in the USA."
-    :twitter "https://twitter.com/quoll"
-    :github "https://github.com/quoll"
-    :www "https://medium.com/@miffedgirl"
-    :alt "paulagearon"
-    :avatar "images/comittee/paula.jpeg"}
-
-   {:name "Tejas Dinkar"
-    :bio "A full stack engineer with over 9 years of experience in multiple domains,
-Tejas is a software craftsman who enjoys learning new ways to solve problems. Currently,
-Tejas loves to play with Clojure, Ruby, GoLang, ReasonML, and Node.js, and he is
-the Head of Technology for Quintype, a builder of products for digital media companies."
-    :twitter "https://twitter.com/tdinkar"
-    :github "https://github.com/gja"
-    :www "http://blog.gja.in"
-    :alt "tdinkar"
-    :avatar "images/comittee/tejas.jpeg"}])
+  [])
 
 (defonce previous-editions
   {:bangalore {:map "images/bangalore-map-caption.png"
