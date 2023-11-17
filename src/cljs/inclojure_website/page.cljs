@@ -42,7 +42,11 @@
 ;; ----------
 ;;
 
-(def nav-links {"Tickets" "tickets"
+(def nav-links {
+                "Venue" "venue"
+                "Sponsors" "sponsorship"
+                "Call For Papers" "talks"}
+  #_{"Tickets" "tickets"
                 "Talks" "talks"
                 "Workshops" "workshops"
                 "Sponsors" "sponsorship"
@@ -67,7 +71,9 @@
 ;;
 
 (defn workshops []
-  [:section {:id "workshop-details"}
+ [:div
+  [:p.intro "Coming Soon!"]]
+  #_[:section {:id "workshop-details"}
    [:div
     [:p.intro data/conf-with-year " will have two full-day workshops."]
     [:p "An introductory Clojure workshop and an intermediate Clojure
@@ -135,15 +141,15 @@
 (defn venue []
   [:section {:id "venue"}
    [:h2 "Venue"]
-   [:p "This one is in Bengaluru."]
+   [:p "The 5th edition is back in Bengaluru after 5 years!"]
    [:img
     {:style {:width "100%" :border-radius "2%"}
      :alt "Bengaluru",
      :src "images/bg-bangalore.jpg"}]
    [:h3 "The Conference"]
-   [:p "TBD"]
+   [:p "Keep an eye out for this space as we finalise the venue and logistics!"]
    [:h3 "The Workshops"]
-   [:p "TBD"]])
+   [:p "More to come here soon."]])
 
 (defn sponsorship []
   [:section {:id "sponsorship"}
@@ -163,20 +169,20 @@
     "and contact us at our mailing list"
     [:a {:href links/email} " " data/email]]
 
-   [:div.benefactor-slab.platinum
+   #_[:div.benefactor-slab.platinum
     [:h3 "Platinum"]
 
     [:a {:href "https://nilenso.com"}
      [:img {:alt "nilenso", :src "images/sponsors/nilenso.png"}]]]
 
-   [:div.benefactor-slab.gold
+   #_[:div.benefactor-slab.gold
     [:h3 "Gold"]]
 
-   [:div.benefactor-slab.bronze
+   #_[:div.benefactor-slab.bronze
     [:h3 "Bronze"]]
 
 
-   [:div.benefactor-slab.community
+   #_[:div.benefactor-slab.community
     [:h3 "Community"]]])
 
 (defn coc []
@@ -216,7 +222,7 @@
       [team-member name github twitter avatar])]])
 
 (defn talk-selectors []
-  [:section {:id "talk-selection"}
+  #_[:section {:id "talk-selection"}
    [:h2 "Reviewers"]
    [:ol.article-list
     (for [{:keys [name alt github twitter www avatar bio]} data/talk-selectors]
@@ -265,7 +271,7 @@
        [:img {:alt "Github", :src "images/github.png"}]]]]]])
 
 (defn tickets []
-  [:section {:id  "tickets"}
+  #_[:section {:id  "tickets"}
    [:h2  "Tickets"]])
 
 (defn action-shots []
@@ -362,7 +368,7 @@
         "Schedule"]]]]]])
 
 (defn workshop-table []
-  [:table.u-full-width.talk-table
+  #_[:table.u-full-width.talk-table
    [:thead
     [:tr [:th "Time"] [:th "Event"]]]
    [:tbody
@@ -388,18 +394,18 @@
 (defn talks []
   [:section {:id "talks"}
    [:h2 "Talks"]
-   [:p "We'll be opening up a call for proposals for the 5th edition of " data/conf " shortly."]])
+   [:p "We'll be opening up a call for proposals shortly."]])
 
 
 (defn schedule []
   [:section {:id "schedule"}
    [:h2 "Schedule"]
-   [:p "IN/Clojure 2024 is expected to happen over two days in February 2024."]
+   [:p "IN/Clojure 2024 is expected to happen over two days in March 2024."]
 
-   [:h6 {:style {:border-bottom "1px dotted"}} [:strong "Day 1"] " | " [:strong "Workshops"]]
-   (workshop-table)
-   [:h6 {:style {:border-bottom "1px dotted"}} [:strong "Day 2"] " | " [:strong "Talks"]]
-   (talks-table)])
+   #_[:h6 {:style {:border-bottom "1px dotted"}} [:strong "Day 1"] " | " [:strong "Workshops"]]
+   #_(workshop-table)
+   #_[:h6 {:style {:border-bottom "1px dotted"}} [:strong "Day 2"] " | " [:strong "Talks"]]
+   #_(talks-table)])
 
 (defn ending-ornament []
   [:section {:id "ornament"}
@@ -492,13 +498,13 @@
 (defn home []
   [:div
    [intro]
+   [venue]
    [talks]
    [schedule]
    [talk-selectors]
-   [workshops-section]
-   [tickets]
    [sponsorship]
-   [venue]
+   #_[workshops-section]
+   [tickets]
    [action-shots]
    [coc]
    [team]])

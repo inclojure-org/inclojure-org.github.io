@@ -1,7 +1,7 @@
 (ns inclojure-website.data)
 
-(defonce conf "In/Clojure")
-(defonce conf-with-year "In/Clojure 2024")
+(defonce conf "IN/Clojure")
+(defonce conf-with-year "IN/Clojure 2024")
 (defonce email "2024@inclojure.org")
 
 (defonce team-list
@@ -10,25 +10,41 @@
     :twitter "http://twitter.com/adityaathalye"
     :avatar "images/team/aditya.png"}
 
+   {:name "Alisha Mohanty"
+    :github "https://github.com/alishamohanty"
+    :avatar "images/team/alisha.webp"}
+
+   {:name "Atharva Raykar"
+    :github "https://github.com/tfidfwastaken"
+    :avatar "images/team/atharva.webp"}
+
+   {:name "Deepa Venkatraman"
+    :avatar "images/team/deepa.jpg"}
+
    {:name "Kapil Reddy"
     :github "https://github.com/kapilreddy"
     :twitter "https://twitter.com/KapilReddy"
     :avatar "images/team/kapil.png"}
+
+   {:name "Ravi Chandra Padmala"
+    :github "https://github.com/neenaoffline"
+    :twitter "https://twitter.com/neenaoffline"
+    :avatar "images/team/neena.webp"}
 
    {:name "Ravindra Jaju"
     :github "https://github.com/jaju"
     :twitter "https://twitter.com/jaju"
     :avatar "images/team/jaju.jpg"}
 
-   {:name "Rubal Jabbal"
-    :github "https://github.com/rubalj"
-    :twitter "https://twitter.com/rubaljabbal"
-    :avatar "images/team/rubal.png"}
-
    {:name "Srihari Sriraman"
     :github "https://github.com/ssrihari"
     :twitter "http://twitter.com/sriharisriraman"
-    :avatar "images/team/srihari.png"}])
+    :avatar "images/team/srihari.png"}
+
+   {:name "Vikram Chintalapati"
+    :github "https://github.com/vkrmis"
+    :twitter "https://twitter.com/cvikram"
+    :avatar "images/team/vkrm.png"}])
 
 (defonce talk-selectors
   [])
