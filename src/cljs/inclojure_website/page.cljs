@@ -147,9 +147,31 @@
      :alt "Bengaluru",
      :src "images/bg-bangalore.jpg"}]
    [:h3 "The Conference"]
-   [:p "Keep an eye out for this space as we finalise the venue and logistics!"]
-   [:h3 "The Workshops"]
-   [:p "More to come here soon."]])
+   [:p "The conference will be held near the heart of Bengaluru at Bangalore International Center (BIC)."]
+   [:address
+    "7, 4th Main Road"
+    [:br]
+    "Domlur II Stage"
+    [:br]
+    "Bengaluru 560 071"
+    [:br]
+    "Karnataka, IN"
+    [:br]]
+   [:iframe
+    {:height "450",
+     :width "100%",
+     :src "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.078985580048!2d77.63307921584516!3d12.966797490859014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15c2415198a1%3A0x9367b30a9bcd14fe!2sBangalore+International+Centre+(New+Building)!5e0!3m2!1sen!2sin!4v1550159709143"}]
+   [:h4 "Getting there"]
+   [:p [:strong "By Air:"]
+    " Kempegowda International Airport (KIA) is a 1 hour taxi ride from the venue."]
+   [:p [:strong "By Train:"]
+    " Bengaluru is well connected by train to all major cities of India.
+     KSR Station is about 30 minutes from the venue by car."]
+   [:h4 "Getting around"]
+   [:p "Uber and Ola Cabs are both active in Bengaluru. You should
+        have no trouble using these. Local autorickshaws are also easily available."]
+   [:p "The venue is adjacent to Indiranagar, which is a vibrant hub for dining and nightlife—
+        you will find everything from street food to high-end international cuisine."]])
 
 (defn sponsorship []
   [:section {:id "sponsorship"}
@@ -164,10 +186,13 @@
    [:p "With your help, we hope to make " data/conf-with-year " bigger than
    before and continue our efforts to help foster the growing
    Clojure community in India/Asia."]
+   #_[:p "To sponsor " data/conf-with-year
+    "contact us at our mailing list"
+    [:a {:href links/email} " " data/email]]
    [:p "To sponsor " data/conf-with-year ", review sponsorship details in the"
     [:a {:href links/sponsorship-deck} " prospectus "]
     "and contact us at our mailing list"
-    [:a {:href links/email} " " data/email]]
+    [:a {:href links/email} " " data/email] "."]
 
    #_[:div.benefactor-slab.platinum
     [:h3 "Platinum"]
@@ -400,7 +425,8 @@
 (defn schedule []
   [:section {:id "schedule"}
    [:h2 "Schedule"]
-   [:p "IN/Clojure 2024 is expected to happen over two days in March 2024."]
+   [:p "IN/Clojure 2024 will happen on 22nd and 23rd March, 2024.
+        The first day will have the workshops, and the second day will have the talks."]
 
    #_[:h6 {:style {:border-bottom "1px dotted"}} [:strong "Day 1"] " | " [:strong "Workshops"]]
    #_(workshop-table)
