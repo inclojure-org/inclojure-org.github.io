@@ -45,7 +45,7 @@
 (def nav-links {
                 "Venue" "venue"
                 "Sponsors" "sponsorship"
-                "Call For Papers" "talks"}
+                "Call For Papers" "cfp"}
   #_{"Tickets" "tickets"
                 "Talks" "talks"
                 "Workshops" "workshops"
@@ -71,8 +71,6 @@
 ;;
 
 (defn workshops []
- [:div
-  [:p.intro "Coming Soon!"]]
   #_[:section {:id "workshop-details"}
    [:div
     [:p.intro data/conf-with-year " will have two full-day workshops."]
@@ -141,7 +139,7 @@
 (defn venue []
   [:section {:id "venue"}
    [:h2 "Venue"]
-   [:p "The 5th edition is back in Bengaluru after 5 years!"]
+   [:p "The 5th edition is back in Namma Bengaluru!"]
    [:img
     {:style {:width "100%" :border-radius "2%"}
      :alt "Bengaluru",
@@ -186,9 +184,6 @@
    [:p "With your help, we hope to make " data/conf-with-year " bigger than
    before and continue our efforts to help foster the growing
    Clojure community in India/Asia."]
-   #_[:p "To sponsor " data/conf-with-year
-    "contact us at our mailing list"
-    [:a {:href links/email} " " data/email]]
    [:p "To sponsor " data/conf-with-year ", review sponsorship details in the"
     [:a {:href links/sponsorship-deck} " prospectus "]
     "and contact us at our mailing list"
@@ -270,7 +265,7 @@
          [:img {:alt "Github", :src "images/github.png"}]]]])]])
 
 (defn keynote []
-  [:section {:id "keynote"}
+  #_[:section {:id "keynote"}
    [:h2 "Keynote"]
    [:ol.article-list
     [:li
@@ -416,11 +411,15 @@
 (defn talks-table []
   [:p "TBD"])
 
-(defn talks []
-  [:section {:id "talks"}
-   [:h2 "Talks"]
-   [:p "We'll be opening up a call for proposals shortly."]])
-
+(defn cfp []
+  [:section {:id "cfp"}
+   [:h2 "Call For proposals"]
+   [:p "We welcome talk submissions for " data/conf-with-year "."]
+   [:p [:strong "CFP closes on 15th Jan 2024."]]
+   [:p "Talk proposers each receive a complimentary pass for conference day,
+   irrespective of selection status."]
+   [:p [:strong [:a {:href "https://forms.gle/1eyanrgJypwksoz27"}
+                 "Learn more and propose a talk now!"]]]])
 
 (defn schedule []
   [:section {:id "schedule"}
@@ -465,7 +464,7 @@
     [:img {:alt "Flickr", :src "images/flickr.png"}]]])
 
 (defn workshops-section []
-  [:section {:id "workshops"}
+  #_[:section {:id "workshops"}
    [:h2 "Workshops"]
    [:div
     [:p data/conf-with-year " will have two full-day workshops."]
@@ -524,12 +523,14 @@
 (defn home []
   [:div
    [intro]
+   [keynote]
+   #_[talks]
    [venue]
-   [talks]
+   [cfp]
    [schedule]
    [talk-selectors]
    [sponsorship]
-   #_[workshops-section]
+   [workshops-section]
    [tickets]
    [action-shots]
    [coc]
