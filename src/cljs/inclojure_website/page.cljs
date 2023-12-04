@@ -45,7 +45,7 @@
 (def nav-links {
                 "Venue" "venue"
                 "Sponsors" "sponsorship"
-                "Call For Papers" "cfp"}
+                "Call For Proposals" "cfp"}
   #_{"Tickets" "tickets"
                 "Talks" "talks"
                 "Workshops" "workshops"
@@ -413,7 +413,7 @@
 
 (defn cfp []
   [:section {:id "cfp"}
-   [:h2 "Call For proposals"]
+   [:h2 "Call For Proposals"]
    [:p "We welcome talk submissions for " data/conf-with-year "."]
    [:p [:strong "CFP closes on 15th Jan 2024."]]
    [:p "Talk proposers each receive a complimentary pass for conference day,
