@@ -305,10 +305,25 @@
 
    [:ol.article-list
     [:li
-     [:img.previously.article-image.location
-      {:alt "bangalore"
-       :src "images/bangalore-map-caption.jpg"}]
+     [:div.previously
+      [:strong "2020"]
+      [:p.article-subtitle
+       [:a.button.city
+        {:href "https://www.youtube.com/watch?v=dZ4xczP5zDI&list=PLlAML-kjpXY7ZGj6anXfKSqN1XGTCEmmw"}
+        [:img
+         {:style {:height "25px" :width "25px" :vertical-align "middle" :margin-right "10px"}
+          :alt "",
+          :src links/youtube-png}]
+        "Talks"]
+       [:a.button.city
+        {:href "https://inclojure.org/archive/2020/#schedule"}
+        [:img
+         {:style {:height "25px" :width "25px" :vertical-align "middle", :margin-right "10px"}
+          :alt "",
+          :src "images/calendar.svg"}]
+        "Schedule"]]]]
 
+    [:li
      [:div.previously
       [:strong "2019"]
       [:p.article-subtitle
@@ -325,8 +340,9 @@
          {:style {:height "25px" :width "25px" :vertical-align "middle" :margin-right "10px"}
           :alt "",
           :src "images/calendar.svg"}]
-        "Schedule"]]]
+        "Schedule"]]]]
 
+    [:li
      [:div.previously
       [:strong "2018"]
       [:p.article-subtitle
@@ -346,28 +362,6 @@
         "Schedule"]]]]
 
     [:li
-     [:img.previously.article-image.location
-     {:alt "pune",
-      :src "images/pune-map-caption.jpg"}]
-
-     [:div.previously
-      [:strong "2020"]
-      [:p.article-subtitle
-       [:a.button.city
-        {:href "https://www.youtube.com/watch?v=dZ4xczP5zDI&list=PLlAML-kjpXY7ZGj6anXfKSqN1XGTCEmmw"}
-        [:img
-         {:style {:height "25px" :width "25px" :vertical-align "middle" :margin-right "10px"}
-          :alt "",
-          :src links/youtube-png}]
-        "Talks"]
-       [:a.button.city
-        {:href "https://inclojure.org/archive/2020/#schedule"}
-        [:img
-         {:style {:height "25px" :width "25px" :vertical-align "middle", :margin-right "10px"}
-          :alt "",
-          :src "images/calendar.svg"}]
-        "Schedule"]]]
-     
      [:div.previously
       [:strong "2016"]
       [:p.article-subtitle
