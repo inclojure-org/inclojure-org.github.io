@@ -130,8 +130,7 @@
 
 (defn intro []
   [:section {:id "intro"}
-   [:p.intro data/conf " is India's annual Clojure and ClojureScript
-    conference, and Asia's first."]
+   [:p.intro data/conf " is India's annual Clojure conference."]
    [:p "Our focus: the free exchange of ideas between new and
    experienced Clojure programmers alike. We are volunteer-run, and
     not-for-profit."]])
@@ -183,7 +182,7 @@
    Clojure/Clojurescript adoption in their companies."]
    [:p "With your help, we hope to make " data/conf-with-year " bigger than
    before and continue our efforts to help foster the growing
-   Clojure community in India/Asia."]
+   Clojure community in India and Asia."]
    [:p "To sponsor " data/conf-with-year ", review sponsorship details in the"
     [:a {:href links/sponsorship-deck} " prospectus "]
     "and contact us at our mailing list"

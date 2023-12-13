@@ -2,7 +2,7 @@
 
 (defonce conf "IN/Clojure")
 (defonce conf-with-year "IN/Clojure 2024")
-(defonce email "team@inclojure.org")
+(defonce email "2024@inclojure.org")
 
 (defonce team-list
   [{:name "Aditya Athalye"
