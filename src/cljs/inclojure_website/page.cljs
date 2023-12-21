@@ -188,7 +188,7 @@
     "and contact us at our mailing list"
     [:a {:href links/email} " " data/email] "."]
 
-   #_[:div.benefactor-slab.platinum
+   [:div.benefactor-slab.platinum
     [:h3 "Platinum"]
 
     [:a {:href "https://nilenso.com"}
@@ -197,12 +197,17 @@
    #_[:div.benefactor-slab.gold
     [:h3 "Gold"]]
 
-   #_[:div.benefactor-slab.bronze
-    [:h3 "Bronze"]]
+   [:div.benefactor-slab.bronze
+    [:h3 "Bronze"]
 
+    [:a {:href "https://nammayatri.in/"}
+     [:img {:alt "Namma Yatri" , :src "images/sponsors/namma-yatri.png"}]]]
 
-   #_[:div.benefactor-slab.community
-    [:h3 "Community"]]])
+   [:div.benefactor-slab.community
+    [:h3 "Community"]
+
+    [:a {:href "https://www.teamohana.com"}
+     [:img {:alt "TeamOhana", :src "images/sponsors/team-ohana.png"}]]]])
 
 (defn coc []
   [:section {:id "coc"}
@@ -298,6 +303,7 @@
    [:h2 "Previous editions"]
    [:div {:style {:overflow "hidden"}}
     [:div.slideshow-container.slide.no-mobile
+     [:img {:src "images/previously/action5.jpg"}]
      [:img {:src "images/previously/action1.jpg"}]
      [:img {:src "images/previously/action4.jpg"}]
      [:img {:src "images/previously/action2.jpg"}]
