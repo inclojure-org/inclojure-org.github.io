@@ -138,7 +138,7 @@
 (defn venue []
   [:section {:id "venue"}
    [:h2 "Venue"]
-   [:p "The 5th edition is back in Namma Bengaluru!"]
+   [:p "We are back in Namma Bengaluru!"]
    [:img
     {:style {:width "100%" :border-radius "2%"}
      :alt "Bengaluru",
