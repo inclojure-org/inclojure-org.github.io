@@ -749,7 +749,7 @@ table {
 
 /* Slideshow styles */
 .slideshow-container {
-  width: 2780px;
+  width: 3475px;
   font-size: 0;
   transition: 1s ease;
 }
@@ -771,36 +771,40 @@ table {
 }
 
 @keyframes slide {
-  12.5% {
+  10% {
     transform: translateX(0%);
   }
 
-  25% {
-    transform: translateX(-25%);
+  20% {
+    transform: translateX(-20%);
   }
 
-  37.5% {
-    transform: translateX(-25%);
+  30% {
+    transform: translateX(-20%);
+  }
+
+  40% {
+    transform: translateX(-40%);
   }
 
   50% {
-    transform: translateX(-50%);
+    transform: translateX(-40%);
   }
 
-  62.5% {
-    transform: translateX(-50%);
+  60% {
+    transform: translateX(-60%);
   }
 
-  75% {
-    transform: translateX(-75%);
+  70% {
+    transform: translateX(-60%);
   }
 
-  87.5% {
-    transform: translateX(-75%);
+  80% {
+    transform: translateX(-80%);
   }
 
-  99% {
-    transform: translateX(-75%);
+  90% {
+    transform: translateX(-80%);
   }
 
   100% {
