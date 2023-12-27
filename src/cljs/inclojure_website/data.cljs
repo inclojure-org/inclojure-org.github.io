@@ -51,7 +51,7 @@
    {:name "Shantanu Kumar"
     :avatar "images/committee/shantanu.png"
     :twitter "https://twitter.com/kumarshantanu"
-    :github "kumarshantanu.github.io"
+    :github "https://kumarshantanu.github.io/"
     :www "https://www.linkedin.com/in/shantanuk06/"
     :alt "Shantanu Kumar"
     :bio "Shantanu is an experienced software artisan. He has interests in distributed systems, functional programming, performance and scalability.\nHe has been a user of Clojure for a long time professionally, and has published multiple open source libraries. He also has a book to his name on the topic of high performance programming in relation to Clojure."}
