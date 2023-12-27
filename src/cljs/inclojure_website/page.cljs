@@ -246,7 +246,7 @@
       [team-member name github twitter avatar])]])
 
 (defn talk-selectors []
-  #_[:section {:id "talk-selection"}
+  [:section {:id "talk-selection"}
    [:h2 "Reviewers"]
    [:ol.article-list
     (for [{:keys [name alt github twitter www avatar bio]} data/talk-selectors]
