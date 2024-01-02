@@ -47,15 +47,35 @@
     :avatar "images/team/vkrm.png"}])
 
 (defonce talk-selectors
-  [
+  [{:name "Carin Meier"
+    :alt "gigasquid"
+    :github "https://github.com/gigasquid"
+    :twitter "https://twitter.com/gigasquid"
+    :www "http://gigasquidsoftware.com/"
+    :avatar "images/committee/carin.jpeg"
+    :bio "Carin Meier spends her time at the intersection of Clojure, Data, and AI.
+She works at OneStudyTeam as Director of Data Engineering, is the author of the
+O’Reilly book, “Living Clojure”, and PMC member of Apache MxNet."}
+   {:name "Nivedita Priyadarshini"
+    :alt "nid"
+    :github "https://github.com/nid90"
+    :twitter "https://twitter.com/nid90"
+    :www ""
+    :avatar "images/committee/nid.jpeg"
+    :bio (list "Nivedita (nid) is a software developer living in Bangalore, India. She
+started working with Clojure in 2013 and has been writing production and hobby projects
+in Clojure ever since. For most of the last decade, she worked at and ran a software
+cooperative called nilenso. Currently, she is building "
+               [:a {:href "https://github.com/tramlinehq/tramline" :style {:border-width "1px"}} "Tramline."])}
    {:name "Shantanu Kumar"
-    :avatar "images/committee/shantanu.png"
+    :github "https://github.com/kumarshantanu"
     :twitter "https://twitter.com/kumarshantanu"
-    :github "https://kumarshantanu.github.io/"
-    :www "https://www.linkedin.com/in/shantanuk06/"
-    :alt "Shantanu Kumar"
-    :bio "Shantanu is an experienced software artisan. He has interests in distributed systems, functional programming, performance and scalability.\nHe has been a user of Clojure for a long time professionally, and has published multiple open source libraries. He also has a book to his name on the topic of high performance programming in relation to Clojure."}
-   ])
+    :www "https://kumarshantanu.github.io"
+    :avatar "images/committee/shantanu.jpeg"
+    :bio "Shantanu Kumar has extensive production experience in Clojure, Java,
+distributed systems, databases and fault-tolerant scalable systems. He is the
+author of “Clojure High Performance Programming” and organiser of the
+Bangalore-Clojure meetup group."}])
 
 (defonce previous-editions
   {:bangalore {:map "images/bangalore-map-caption.png"

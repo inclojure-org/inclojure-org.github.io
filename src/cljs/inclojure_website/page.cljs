@@ -246,7 +246,7 @@
       [team-member name github twitter avatar])]])
 
 (defn talk-selectors []
-  #_[:section {:id "talk-selection"}
+  [:section {:id "talk-selection"}
    [:h2 "Reviewers"]
    [:ol.article-list
     (for [{:keys [name alt github twitter www avatar bio]} data/talk-selectors]
@@ -309,7 +309,7 @@
      [:img {:src "images/previously/action2.jpg"}]
      [:img {:src "images/previously/action3.jpg"}]]]
 
-   [:ol.article-list
+   [:ol.archive-list
     [:li
      [:div.previously
       [:strong "2020"]
