@@ -414,7 +414,7 @@
   [:section {:id "cfp"}
    [:h2 "Call For Proposals"]
    [:p "We welcome talk submissions for " data/conf-with-year "."]
-   [:p [:strong "CFP closes on 15th Jan 2024."]]
+   [:p [:strong "CFP closes on 30th Jan 2024."]]
    [:p "Talk proposers each receive a complimentary pass for conference day,
    irrespective of selection status."]
    [:p [:strong [:a {:href "https://forms.gle/1eyanrgJypwksoz27"}
