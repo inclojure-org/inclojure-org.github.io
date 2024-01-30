@@ -42,15 +42,15 @@
 ;; ----------
 ;;
 
-(def nav-links {
-                "Venue" "venue"
+(def nav-links {"Venue" "venue"
                 "Sponsors" "sponsorship"
+                "Workshop" "workshops"
                 "Call For Proposals" "cfp"}
   #_{"Tickets" "tickets"
-                "Talks" "talks"
-                "Workshops" "workshops"
-                "Sponsors" "sponsorship"
-                "Venue" "venue"})
+     "Talks" "talks"
+     "Workshops" "workshops"
+     "Sponsors" "sponsorship"
+     "Venue" "venue"})
 
 (defn nav []
   [:nav
@@ -71,54 +71,46 @@
 ;;
 
 (defn workshops []
-  #_[:section {:id "workshop-details"}
+  [:section {:id "workshop-details"}
    [:div
-    [:p.intro data/conf-with-year " will have two full-day workshops."]
-    [:p "An introductory Clojure workshop and an intermediate Clojure
-    workshop. The lessons apply to ClojureScript as well. Note that
-    both the workshops will be conducted simultaneously on the same day."]
+    [:p.intro data/conf-with-year " is co-hosting a free, beginner friendly workshop with ClojureBridge."]
+    [:p "ClojureBridge is a free, beginner-friendly Clojure programming workshop that aims
+         to increase diversity within the Clojure community."]
+    [:p "You will learn fundamental programming concepts in Clojure through practical examples
+         and exercises. Teachers and assistants will be there to guide you."]
     [:h3 {:id "introduction"}
-     "Introduction to Clojure"]
-    [:h4 "Audience"]
-    [:p "Practising programmers and/or CS undergrads/grads who are new to Clojure, LISPs or functional programming but not absolute beginners
-         at programming. We recommend that attendees be familiar with at least one programming language."]
+     "ClojureBridge: Introduction to Clojure"]
+    [:h4 "Who can apply?"]
+    [:p "This workshop will be for women and non-binary attendees. Women and non-binary attendees are
+         permitted to bring along a male guest attendee."]
+    [:p "The workshop is open to people who are completely new to programming, as well as existing developers
+         new to Clojure."]
+    [:h4 "What do I need to bring?"]
+    [:p "Please bring your own laptop for the workshop. Everything else, including wifi, drinking water,
+         lunch and tea will be provided at the venue."]
     [:h4 "Session outline"]
+    [:p "We will split the attendees two groups—Beginner and Intermediate.
+         The intermediate group will have more challenging exercises to delve into."]
+    [:p "The session itself will be divided into two parts—" [:strong "Learning"] " and " [:strong "Doing"]]
     [:div
-     [:p "This will be a day-long hands-on workshop. We will progressively work through a series of exercises by building concept upon concept."]
-     [:p "We will try to achieve this with:"]
+     [:p "Learning:"]
      [:ul
-      [:li "A small set of core ideas,"]
-      [:li "a handful of Clojure primitives,"]
-      [:li "a few API design techniques, and"]
-      [:li "an interactive (REPL-driven) programming workflow."]]
-     [:p "We will do the following:"]
+      [:li "What is programming?"]
+      [:li "What is Clojure? Why choose Clojure?"]
+      [:li "Understanding the REPL"]
+      [:li "Clojure Syntax—the anatomy of an S-expression"]
+      [:li "Data types, functions, and sequences"]
+      [:li "Context and lexical bindings"]
+      [:li "Control flow and logic"]
+      [:li "Functional composition"]]
+     [:p "Doing (in smaller groups, with assigned guides):"]
      [:ul
-      [:li "Model things with pure data,"]
-      [:li "design clean functional APIs,"]
-      [:li "compose purely functional logic, and"]
-      [:li "use the REPL to interactively grow, inspect and debug code."]]
-     [:p "By the end of the workshop, attendees should have an understanding of what Clojure has to offer, as well as a basic understanding of
-            how to solve problems in Clojure. The workshop should serve as a springboard from which attendees can launch their own exploration
-            of the language and its ecosystem. Fully documented workshop material will be available for use at home."]]
-
-    [:h3
-     {:id "intermediate"}
-     "Intermediate Clojure"]
-    [:h4 "Audience"]
-    [:p "This workshop is aimed at practising programmers who have some exposure to Clojure, but are looking to accomplish non trivial tasks using Clojure."]
-    [:h4 "Session outline"]
-    [:p "This will be a day-long hands-on workshop."]
-    [:p "The aim of this workshop is to help the attendee work in Clojure more effectively. We will learn about:"]
-    [:ul
-     [:li "Repl driven development"]
-     [:li "Clojure's approach to state and identity"]
-     [:li "Laziness & Vars (Benefits & pitfalls)"]
-     [:li "Java interop"]
-     [:li "Testing"]
-     [:li "Debugging Effectively"]
-     [:li "Clojure ecosystem"]]
-    [:p "To help us illustrate and understand the application of these concepts, we will build a simple web app that will tie all these concepts together."]
-    [:p "We will not be covering macros or advanced clojure concurrency primitives in this workshop."]]])
+      [:li "Exercise 1: (Almost) Play Quidditch with Clojure"]
+      [:li "Exercise 2: Land of Wizards"]
+      [:li "Exercise 3: Operating a Mars Rover"]]
+     #_[:p "By the end of the workshop, attendees should have an understanding of what Clojure has to offer, as well as a basic understanding of
+          how to solve problems in Clojure. The workshop should serve as a springboard from which attendees can launch their own exploration
+          of the language and its ecosystem. Fully documented workshop material will be available for use at home."]]]])
 
 ;;
 ;; ------------------
@@ -195,7 +187,7 @@
      [:img {:alt "nilenso", :src "images/sponsors/nilenso.png"}]]]
 
    #_[:div.benefactor-slab.gold
-    [:h3 "Gold"]]
+      [:h3 "Gold"]]
 
    [:div.benefactor-slab.bronze
     [:h3 "Bronze"]
@@ -225,7 +217,6 @@
    sanctioned or expelled from the conference without a refund at
    the discretion of the organisers."]])
 
-
 (defn team-member [name github twitter avatar]
   [:li
    [:a
@@ -233,9 +224,9 @@
     name
     [:img {:alt name, :src (str avatar)}]]
    [:div.small.article-fine-print.no-mobile
-     [:a
-      {:href github}
-      [:img {:alt "Github", :src "images/github.png"}]]]])
+    [:a
+     {:href github}
+     [:img {:alt "Github", :src "images/github.png"}]]]])
 
 (defn team []
   [:section {:id "team"}
@@ -270,33 +261,33 @@
 
 (defn keynote []
   #_[:section {:id "keynote"}
-   [:h2 "Keynote"]
-   [:ol.article-list
-    [:li
-     [:a
-      {:href "#"}
-      [:img.article-image.keynote
-       {:alt "bbatsov",
-        :src "images/speakers/bozhidar-batsov.jpg"}]]
-     [:h4
-      [:a {:href "https://metaredux.com"} "Bozhidar Batsov"]]
-     [:p.article-subtitle "Bozhidar is the maintainer of CIDER, nREPL,
+     [:h2 "Keynote"]
+     [:ol.article-list
+      [:li
+       [:a
+        {:href "#"}
+        [:img.article-image.keynote
+         {:alt "bbatsov",
+          :src "images/speakers/bozhidar-batsov.jpg"}]]
+       [:h4
+        [:a {:href "https://metaredux.com"} "Bozhidar Batsov"]]
+       [:p.article-subtitle "Bozhidar is the maintainer of CIDER, nREPL,
      a dozen related projects, and the editor of the community
      Clojure style guide. Most people would probably describe him as
      an Emacs zealot (and they would be right). He's also quite fond
      of the Lisp family of languages, functional programming in
      general and Clojure in particular."]
-     [:div.article-fine-print.no-mobile
-      [:a
-       {:href "https://twitter.com/bbatsov"}
-       [:img {:alt "Twitter", :src "images/twitter.png"}]]
-      [:a
-       {:href "https://github.com/bbatsov"}
-       [:img {:alt "Github", :src "images/github.png"}]]]]]])
+       [:div.article-fine-print.no-mobile
+        [:a
+         {:href "https://twitter.com/bbatsov"}
+         [:img {:alt "Twitter", :src "images/twitter.png"}]]
+        [:a
+         {:href "https://github.com/bbatsov"}
+         [:img {:alt "Github", :src "images/github.png"}]]]]]])
 
 (defn tickets []
   #_[:section {:id  "tickets"}
-   [:h2  "Tickets"]])
+     [:h2  "Tickets"]])
 
 (defn action-shots []
   [:section {:id "action-shots"}
@@ -388,24 +379,24 @@
 
 (defn workshop-table []
   #_[:table.u-full-width.talk-table
-   [:thead
-    [:tr [:th "Time"] [:th "Event"]]]
-   [:tbody
-    [:tr.selected
-     [:td "9:30 am"]
-     [:td "Registrations"]]
+     [:thead
+      [:tr [:th "Time"] [:th "Event"]]]
+     [:tbody
+      [:tr.selected
+       [:td "9:30 am"]
+       [:td "Registrations"]]
 
-    [:tr
-     [:td "10:00 am – 6 pm"]
-     [:td "Introductory workshop"]]
+      [:tr
+       [:td "10:00 am – 6 pm"]
+       [:td "Introductory workshop"]]
 
-    [:tr
-     [:td "10:00 am – 6 pm"]
-     [:td "Intermediate workshop"]]
+      [:tr
+       [:td "10:00 am – 6 pm"]
+       [:td "Intermediate workshop"]]
 
-    [:tr
-     [:td "7 pm onwards"]
-     [:td "Pre-conference party"]]]])
+      [:tr
+       [:td "7 pm onwards"]
+       [:td "Pre-conference party"]]]])
 
 (defn talks-table []
   [:p "TBD"])
@@ -440,8 +431,8 @@
    [:ul
     [:li "the sidebar artwork is procedurally generated and inspired by"
      [:a {:href
-     "https://gitlab.com/inclojure/inclojure.gitlab.io/blob/redesign/src/cljs/inclojure_website/morellet.cljs"}
-     " François Morellet."]]
+          "https://gitlab.com/inclojure/inclojure.gitlab.io/blob/redesign/src/cljs/inclojure_website/morellet.cljs"}
+      " François Morellet."]]
 
     [:li "source code to this website and other conference
     organizational material is available"
@@ -463,53 +454,27 @@
     [:img {:alt "Flickr", :src "images/flickr.png"}]]])
 
 (defn workshops-section []
-  #_[:section {:id "workshops"}
-   [:h2 "Workshops"]
+  [:section {:id "workshops"}
+   [:h2 "Workshop"]
    [:div
-    [:p data/conf-with-year " will have two full-day workshops."]
-    [:p "An introductory Clojure workshop and an intermediate Clojure
-    workshop. The lessons apply to ClojureScript as well. Note that
-    both the workshops will be conducted simultaneously on the same day."]
+    [:p data/conf-with-year " is co-hosting a free, beginner friendly workshop with ClojureBridge."]
 
     [:ol.article-list
-    [:li
-     [:img.article-image
-      {:alt "introductory"
-       :src "images/workshops/introductory.png"}]
+     [:li
+      [:img.article-image
+       {:alt "introductory"
+        :src "images/workshops/clojurebridge-logo.png"}]
 
-     [:h4 {:id "introductory-workshop"}
-      [:a {:href "#workshop-details"}
-       "Introduction to Clojure"]]
+      [:h4 {:id "introductory-workshop"}
+       [:a {:href "#workshop-details"}
+        "Introduction To Clojure"]]
 
-     [:p.article-subtitle "Practising programmers and/or CS
-     undergrads/grads who are new to Clojure, LISPs or functional
-     programming but not absolute beginners at programming. We
-     recommend that attendees be familiar with at least one
-     programming language."]
-
-     [:div.article-fine-print.no-mobile
-      [:a
-       {:href "https://github.com/inclojure-org/clojure-by-example"}
-       [:img {:alt "Github", :src "images/github.png"}]]]]
-
-    [:li
-     [:img.article-image
-      {:alt "intermediate",
-       :src "images/workshops/intermediate.png"}]
-
-     [:h4 {:id "intermediate-workshop"}
-      [:a  {:href "#"
-            :on-click (fn []
-                        (reset! sub-page (workshops)))} "Intermediate Clojure"]]
-
-     [:p.article-subtitle "This workshop is aimed at practising
-     programmers who have some exposure to Clojure, but are looking to
-     accomplish non trivial tasks using Clojure."]
-
-     [:div.article-fine-print.no-mobile
-      [:a
-       {:href "https://github.com/inclojure-org/intermediate-clojure-workshop"}
-       [:img {:alt "Github", :src "images/github.png"}]]]]]]])
+      [:p.article-subtitle "ClojureBridge is a free, beginner-friendly Clojure
+         programming workshop that aims to increase diversity within the Clojure
+         community. You will learn fundamental programming concepts in Clojure
+         through practical examples and exercises. This workshop will be for
+         women and non-binary attendees. Women and non-binary attendees are
+         permitted to bring along a male guest attendee."]]]]])
 
 ;;
 ;; ---------
