@@ -81,17 +81,20 @@
     [:h3 {:id "introduction"}
      "ClojureBridge: Introduction to Clojure"]
     [:h4 "Who can apply?"]
-    [:p "This workshop will be for women and non-binary attendees. Women and non-binary attendees are
-         permitted to bring along a male guest attendee."]
+    [:p "This workshop will be for women and non-binary attendees. Male attendees may attend as
+         guests of women or non-binary attendees."]
     [:p "The workshop is open to people who are completely new to programming, as well as existing developers
          new to Clojure."]
     [:h4 "What do I need to bring?"]
-    [:p "Please bring your own laptop for the workshop. Everything else, including wifi, drinking water,
+    [:p [:strong "Set up and installation:"]
+     "We will share set up instructions well in advance. Please ensure that the set up
+      is complete before the workshop. There will be an online session to help
+      participants with installation and set up at 6.30pm on 21st March 2024. Details
+      will be shared prior to the event."]
+    [:p "Please bring your own laptop for the workshop. Everything else, including WiFi, drinking water,
          lunch and tea will be provided at the venue."]
     [:h4 "Session outline"]
-    [:p "We will split the attendees two groups—Beginner and Intermediate.
-         The intermediate group will have more challenging exercises to delve into."]
-    [:p "The session itself will be divided into two parts—" [:strong "Learning"] " and " [:strong "Doing"]]
+    [:p "The session itself will be divided into two parts—" [:strong "Learning"] " and " [:strong "Doing"] "."]
     [:div
      [:p "Learning:"]
      [:ul
@@ -105,9 +108,7 @@
       [:li "Functional composition"]]
      [:p "Doing (in smaller groups, with assigned guides):"]
      [:ul
-      [:li "Exercise 1: (Almost) Play Quidditch with Clojure"]
-      [:li "Exercise 2: Land of Wizards"]
-      [:li "Exercise 3: Operating a Mars Rover"]]
+      [:li "Land of Wizards"]]
      #_[:p "By the end of the workshop, attendees should have an understanding of what Clojure has to offer, as well as a basic understanding of
           how to solve problems in Clojure. The workshop should serve as a springboard from which attendees can launch their own exploration
           of the language and its ecosystem. Fully documented workshop material will be available for use at home."]]]])
@@ -473,8 +474,8 @@
          programming workshop that aims to increase diversity within the Clojure
          community. You will learn fundamental programming concepts in Clojure
          through practical examples and exercises. This workshop will be for
-         women and non-binary attendees. Women and non-binary attendees are
-         permitted to bring along a male guest attendee."]]]]])
+         women and non-binary attendees. Male attendees may attend as guests
+         of women or non-binary attendees."]]]]])
 
 ;;
 ;; ---------
