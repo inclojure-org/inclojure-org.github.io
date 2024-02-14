@@ -823,6 +823,7 @@ table {
   }
 }
 
-#boxoffice-widget {
-  padding-top: 0px !important;
+#ticket-widget {
+  border: 1px dotted black;
+  margin-bottom: 1.5em;
 }

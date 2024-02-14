@@ -42,10 +42,10 @@
 ;; ----------
 ;;
 
-(def nav-links {"Venue" "venue"
+(def nav-links {"Tickets" "tickets"
+                "Venue" "venue"
                 "Sponsors" "sponsorship"
-                "Workshop" "workshops"
-                "Call For Proposals" "cfp"}
+                "Workshop" "workshops"}
   #_{"Tickets" "tickets"
      "Talks" "talks"
      "Workshops" "workshops"
@@ -126,7 +126,8 @@
    [:p.intro data/conf " is India's annual Clojure conference."]
    [:p "Our focus: the free exchange of ideas between new and
    experienced Clojure programmers alike. We are volunteer-run, and
-    not-for-profit."]])
+    not-for-profit."]
+   [:p "When: 22nd and 23rd March."]])
 
 (defn venue []
   [:section {:id "venue"}
@@ -287,8 +288,12 @@
          [:img {:alt "Github", :src "images/github.png"}]]]]]])
 
 (defn tickets []
-  #_[:section {:id  "tickets"}
-     [:h2  "Tickets"]])
+  [:section {:id "tickets"}
+   [:h2 "Tickets"]
+   [:div#ticket-widget
+    [:iframe {:id "ts-iframe", :src "https://www.townscript.com/v2/widget/inclojure-2024/booking", :frameborder "0", :height "600", :width "100%"}]
+    [:link {:rel "stylesheet", :href "https://www.townscript.com/static/Bookingflow/css/ts-iframe.style.css"}]]
+   [:p "Issues with booking? Try " [:a {:href "https://www.townscript.com/v2/e/inclojure-2024/booking"} "this page"] "."]])
 
 (defn action-shots []
   [:section {:id "action-shots"}
@@ -491,12 +496,12 @@
    [keynote]
    #_[talks]
    [venue]
-   [cfp]
-   [schedule]
+   #_[schedule]
+   [tickets]
+   #_[cfp]
    [talk-selectors]
    [sponsorship]
    [workshops-section]
-   [tickets]
    [action-shots]
    [coc]
    [team]])
