@@ -73,7 +73,8 @@
 (defn workshops []
   [:section {:id "workshop-details"}
    [:div
-    [:p.intro data/conf-with-year " is co-hosting a free, beginner friendly workshop with ClojureBridge."]
+    [:p.intro data/conf-with-year " is co-hosting a free, beginner friendly workshop with ClojureBridge on 22nd March.
+              There will be a virtual setup session for this workshop on 21st March."]
     [:p "ClojureBridge is a free, beginner-friendly Clojure programming workshop that aims
          to increase diversity within the Clojure community."]
     [:p "You will learn fundamental programming concepts in Clojure through practical examples
@@ -85,12 +86,12 @@
          guests of women or non-binary attendees."]
     [:p "The workshop is open to people who are completely new to programming, as well as existing developers
          new to Clojure."]
-    [:h4 "What do I need to bring?"]
-    [:p [:strong "Set up and installation:"]
-     "We will share set up instructions well in advance. Please ensure that the set up
+    [:h4 "Set up and installation"]
+    [:p "We will share set up instructions well in advance. Please ensure that the set up
       is complete before the workshop. There will be an online session to help
-      participants with installation and set up at 6.30pm on 21st March 2024. Details
-      will be shared prior to the event."]
+      participants with installation and set up at " [:strong "6—7:30pm on 21st March 2024."]
+     " Details will be shared prior to the event."]
+    [:h4 "What do I need to bring?"]
     [:p "Please bring your own laptop for the workshop. Everything else, including WiFi, drinking water,
          lunch and tea will be provided at the venue."]
     [:h4 "Session outline"]
@@ -463,17 +464,18 @@
   [:section {:id "workshops"}
    [:h2 "Workshop"]
    [:div
-    [:p data/conf-with-year " is co-hosting a free, beginner friendly workshop with ClojureBridge."]
+    [:p data/conf-with-year " is co-hosting a free, beginner friendly workshop with ClojureBridge on 22nd March."]
 
     [:ol.article-list
      [:li
-      [:img.article-image
-       {:alt "introductory"
-        :src "images/workshops/clojurebridge-logo.png"}]
+      [:a {:href "#workshop-details"}
+       [:img.article-image
+        {:alt "introductory"
+         :src "images/workshops/clojurebridge-logo.png"}]]
 
       [:h4 {:id "introductory-workshop"}
        [:a {:href "#workshop-details"}
-        "Introduction To Clojure"]]
+        "Introduction To Clojure »"]]
 
       [:p.article-subtitle "ClojureBridge is a free, beginner-friendly Clojure
          programming workshop that aims to increase diversity within the Clojure
