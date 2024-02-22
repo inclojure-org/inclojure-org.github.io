@@ -95,7 +95,7 @@
     [:p "Please bring your own laptop for the workshop. Everything else, including WiFi, drinking water,
          lunch and tea will be provided at the venue."]
     [:h4 "Session outline"]
-    [:p "The session itself will be divided into two parts—" [:strong "Learning"] " and " [:strong "Doing"] "."]
+    [:p "The session itself will take place on 22nd March from 10am to 6pm and will be divided into two parts—" [:strong "Learning"] " and " [:strong "Doing"] "."]
     [:div
      [:p "Learning:"]
      [:ul
