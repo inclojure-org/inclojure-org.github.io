@@ -82,17 +82,26 @@
     [:h3 {:id "introduction"}
      "ClojureBridge: Introduction to Clojure"]
     [:h4 "Who can apply?"]
-    [:p "This workshop will be for women and non-binary attendees. Male attendees may attend as
-         guests of women or non-binary attendees."]
+    [:ul [:li "This workshop will be for women and non-binary attendees."]
+     [:li "Male attendees may attend as guests of women or non-binary attendees."]]
     [:p "The workshop is open to people who are completely new to programming, as well as existing developers
          new to Clojure."]
-    [:h4 "Set up and installation"]
-    [:p "We will share set up instructions well in advance. Please ensure that the set up
-      is complete before the workshop. There will be an online session to help
-      participants with installation and set up at " [:strong "6—7:30pm on 21st March 2024."]
-     " Details will be shared prior to the event."]
-    [:h4 "What do I need to bring?"]
-    [:p "Please bring your own laptop for the workshop. Everything else, including WiFi, drinking water,
+    [:h4 "Schedule"]
+    [:table.u-full-width
+     {:style {:font-size "90%"}}
+     [:thead
+      [:tr [:th "Date"] [:th "Time"] [:th "Event"]]]
+     [:tbody
+      [:tr
+       [:td "21-03-2024"]
+       [:td "6:00 pm – 7:30 pm"]
+       [:td [:strong "Online"] " session for installation and editor setup."]]
+      [:tr
+       [:td "22-03-2024"]
+       [:td "10:00 am – 6:00 pm"]
+       [:td [:strong "In-person"] " workshop at Bangalore International Centre."]]]]
+    [:h4 "What do I need to bring to the workshop?"]
+    [:p "Please bring " [:strong "your own laptop"] " for the workshop. Everything else, including WiFi, drinking water,
          lunch and tea will be provided at the venue."]
     [:h4 "Session outline"]
     [:p "The session itself will take place on 22nd March from 10am to 6pm and will be divided into two parts—" [:strong "Learning"] " and " [:strong "Doing"] "."]
