@@ -119,9 +119,11 @@
      [:p "Doing (in smaller groups, with assigned guides):"]
      [:ul
       [:li "Land of Wizards"]]
-     #_[:p "By the end of the workshop, attendees should have an understanding of what Clojure has to offer, as well as a basic understanding of
-          how to solve problems in Clojure. The workshop should serve as a springboard from which attendees can launch their own exploration
-          of the language and its ecosystem. Fully documented workshop material will be available for use at home."]]]])
+     [:h4 "Register here!"]
+     [:p "To register for this workshop, select the ClojureBridge Pass and click proceed."]
+     [:div#ticket-widget
+      [:iframe {:id "ts-iframe", :src "https://www.townscript.com/v2/widget/inclojure-2024/booking", :frameborder "0", :height "600", :width "100%"}]
+      [:link {:rel "stylesheet", :href "https://www.townscript.com/static/Bookingflow/css/ts-iframe.style.css"}]]]]])
 
 ;;
 ;; ------------------
@@ -205,13 +207,13 @@
     [:h3 "Bronze"]
 
     [:a {:href "https://nammayatri.in/"}
-     [:img {:alt "Namma Yatri" , :src "images/sponsors/namma-yatri.png"}]]]
-
-   [:div.benefactor-slab.community
-    [:h3 "Community"]
+     [:img {:alt "Namma Yatri" , :src "images/sponsors/namma-yatri.png"}]]
 
     [:a {:href "https://www.teamohana.com"}
-     [:img {:alt "TeamOhana", :src "images/sponsors/team-ohana.png"}]]]])
+     [:img {:alt "TeamOhana", :src "images/sponsors/team-ohana.png"}]]]
+
+   #_[:div.benefactor-slab.community
+      [:h3 "Community"]]])
 
 (defn coc []
   [:section {:id "coc"}
