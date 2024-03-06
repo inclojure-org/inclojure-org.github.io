@@ -243,6 +243,33 @@ footer a img {
   text-align: right;
 }
 
+.tentative-talk-table td {
+  font-size: 90%;
+  width: 30%;
+  padding-left: 5px;
+}
+
+.tentative-talk-table tr {
+  padding-top: 20px;
+}
+
+.tentative-talk-table th {
+  text-alight: left;
+  padding-left: 5px;
+}
+
+.tentative-talk-table th:nth-child(2) {
+  padding-left: 15px;
+  text-align: right;
+}
+
+.tentative-talk-table td:nth-child(2) {
+  font-size: 90%;
+  width: 25%;
+  padding-left: 30px;
+  text-align: right;
+}
+
 .feature {
   width: 100%;
   height: 30%;

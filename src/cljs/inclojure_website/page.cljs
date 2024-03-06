@@ -7,6 +7,7 @@
 
 (declare home)
 (declare workshops)
+(declare workshop-table)
 (defonce sub-page (atom nil))
 
 ;;
@@ -44,6 +45,7 @@
 
 (def nav-links {"Tickets" "tickets"
                 "Venue" "venue"
+                "Schedule" "schedule"
                 "Sponsors" "sponsorship"
                 "Workshop" "workshops"}
   #_{"Tickets" "tickets"
@@ -87,19 +89,7 @@
     [:p "The workshop is open to people who are completely new to programming, as well as existing developers
          new to Clojure."]
     [:h4 "Schedule"]
-    [:table.u-full-width
-     {:style {:font-size "90%"}}
-     [:thead
-      [:tr [:th "Date"] [:th "Time"] [:th "Event"]]]
-     [:tbody
-      [:tr
-       [:td "21-03-2024"]
-       [:td "6:00 pm – 7:30 pm"]
-       [:td [:strong "Online"] " session for installation and editor setup."]]
-      [:tr
-       [:td "22-03-2024"]
-       [:td "10:00 am – 6:00 pm"]
-       [:td [:strong "In-person"] " workshop at Bangalore International Centre."]]]]
+    (workshop-table)
     [:h4 "What do I need to bring to the workshop?"]
     [:p "Please bring " [:strong "your own laptop"] " for the workshop. Everything else, including WiFi, drinking water,
          lunch and tea will be provided at the venue."]
@@ -396,28 +386,49 @@
         "Schedule"]]]]]])
 
 (defn workshop-table []
-  #_[:table.u-full-width.talk-table
-     [:thead
-      [:tr [:th "Time"] [:th "Event"]]]
-     [:tbody
-      [:tr.selected
-       [:td "9:30 am"]
-       [:td "Registrations"]]
-
-      [:tr
-       [:td "10:00 am – 6 pm"]
-       [:td "Introductory workshop"]]
-
-      [:tr
-       [:td "10:00 am – 6 pm"]
-       [:td "Intermediate workshop"]]
-
-      [:tr
-       [:td "7 pm onwards"]
-       [:td "Pre-conference party"]]]])
+  [:table.u-full-width
+   {:style {:font-size "90%"}}
+   [:thead
+    [:tr [:th "Date"] [:th "Time"] [:th "Event"]]]
+   [:tbody
+    [:tr
+     [:td "21-03-2024"]
+     [:td "6:00 pm – 7:30 pm"]
+     [:td [:strong "Online"] " session for installation and editor setup."]]
+    [:tr
+     [:td "22-03-2024"]
+     [:td "10:00 am – 6:00 pm"]
+     [:td [:strong "In-person"] " workshop at Bangalore International Centre."]]]])
 
 (defn talks-table []
-  [:p "TBD"])
+  [:table.u-full-width.tentative-talk-table
+   [:thead
+    [:tr [:th "Event"] [:th "Speaker"]]]
+   [:tbody
+    [:tr
+     [:td "Carbon Dating Polymorphism in Clojure"]
+     [:td "Amogh Talpallikar"]]
+    [:tr
+     [:td "Developer Tooling for Speed and Productivity in 2024"]
+     [:td "Vedang Manerikar"]]
+    [:tr
+     [:td "Personal Identity Information (PII) Detection with Clojure"]
+     [:td "Aldo Sujin"]]
+    [:tr
+     [:td "Architecture and Design of Goose"]
+     [:td "Akshat Shah"]]
+    [:tr
+     [:td "Navigating Data Models: A Journey into Unified, Scalable, and Composable Data Architecture"]
+     [:td "Anuj Kumar"]]
+    [:tr
+     [:td "Functional Programming Patterns"]
+     [:td "Abhinav Sarkar"]]
+    [:tr
+     [:td "Exploring Electric Clojure"]
+     [:td "Dheeraj Kumar"]]
+    [:tr
+     [:td "Building a spreadsheet from the ground up"]
+     [:td "Prabhanshu Gupta"]]]])
 
 (defn cfp []
   [:section {:id "cfp"}
@@ -435,10 +446,10 @@
    [:p "IN/Clojure 2024 will happen on 22nd and 23rd March, 2024.
         The first day will have the workshops, and the second day will have the talks."]
 
-   #_[:h6 {:style {:border-bottom "1px dotted"}} [:strong "Day 1"] " | " [:strong "Workshops"]]
-   #_(workshop-table)
-   #_[:h6 {:style {:border-bottom "1px dotted"}} [:strong "Day 2"] " | " [:strong "Talks"]]
-   #_(talks-table)])
+   [:h6 {:style {:border-bottom "1px dotted"}} [:strong "ClojureBridge"] " | " [:strong "21st - 22nd March"]]
+   (workshop-table)
+   [:h6 {:style {:border-bottom "1px dotted"}} [:strong "Talks (confirmed so far)"] " | " [:strong "23rd March"]]
+   (talks-table)])
 
 (defn ending-ornament []
   [:section {:id "ornament"}
@@ -509,7 +520,7 @@
    [keynote]
    #_[talks]
    [venue]
-   #_[schedule]
+   [schedule]
    [tickets]
    #_[cfp]
    [talk-selectors]
