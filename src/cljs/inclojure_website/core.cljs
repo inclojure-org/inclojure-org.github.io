@@ -1,13 +1,13 @@
 (ns inclojure-website.core
-    (:require [accountant.core :as accountant]
-              [goog.events :as events]
-              [goog.history.EventType :as HistoryEventType]
-              [inclojure-website.morellet :as morellet]
-              [inclojure-website.page :as page :refer [home layout sub-page workshops nav-links]]
-              [inclojure-website.talks :as talks]
-              [reagent.core :as reagent :refer [atom]]
-              [secretary.core :as secretary :include-macros true])
-    (:import goog.History))
+  (:require [accountant.core :as accountant]
+            [goog.events :as events]
+            [goog.history.EventType :as HistoryEventType]
+            [inclojure-website.morellet :as morellet]
+            [inclojure-website.page :as page :refer [home layout sub-page workshops nav-links talk-links]]
+            [inclojure-website.talks :as talks]
+            [reagent.core :as reagent :refer [atom]]
+            [secretary.core :as secretary :include-macros true])
+  (:import goog.History))
 
 ;; -------------------------
 ;; Routes
@@ -21,6 +21,11 @@
   (reset! sub-page (workshops)))
 
 ;; Make perma-links for all navigation paths
+(doseq [talk-link talk-links]
+  (secretary/defroute (str "/#" talk-link) []
+    (reset! sub-page (home))
+    (js/setTimeout #(.scrollIntoView (.getElementById js/document talk-link)) 0)))
+
 (doseq [nav-link nav-links]
   (secretary/defroute (str "/#" (second nav-link)) []
     (reset! sub-page (home))))
@@ -36,11 +41,11 @@
 
 (defn hook-browser-navigation! []
   (doto (History.)
-        (events/listen
-         HistoryEventType/NAVIGATE
-         (fn [event]
-           (secretary/dispatch! (.-token event))))
-        (.setEnabled true)))
+    (events/listen
+     HistoryEventType/NAVIGATE
+     (fn [event]
+       (secretary/dispatch! (.-token event))))
+    (.setEnabled true)))
 
 ;; -------------------------
 ;; Initialize app

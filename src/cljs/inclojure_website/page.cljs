@@ -1,5 +1,6 @@
 (ns inclojure-website.page
-  (:require [inclojure-website.data :as data]
+  (:require [clojure.string :as string]
+            [inclojure-website.data :as data]
             [inclojure-website.links :as links]
             [inclojure-website.morellet :as morellet]
             [inclojure-website.sundry :as sundry]
@@ -46,13 +47,11 @@
 (def nav-links {"Tickets" "tickets"
                 "Venue" "venue"
                 "Schedule" "schedule"
-                "Sponsors" "sponsorship"
-                "Workshop" "workshops"}
-  #_{"Tickets" "tickets"
-     "Talks" "talks"
-     "Workshops" "workshops"
-     "Sponsors" "sponsorship"
-     "Venue" "venue"})
+                "Talks" "speaker-list"
+                "Workshop" "workshops"
+                "Sponsors" "sponsorship"})
+
+(def talk-links ["steven" "amogh" "vedang" "aldo" "akshat" "anuj" "abhinav" "dheeraj" "prabhanshu"])
 
 (defn nav []
   [:nav
@@ -190,17 +189,17 @@
     [:a {:href "https://nilenso.com"}
      [:img {:alt "nilenso", :src "images/sponsors/nilenso.png"}]]]
 
-   #_[:div.benefactor-slab.gold
-      [:h3 "Gold"]]
-
-   [:div.benefactor-slab.bronze
-    [:h3 "Bronze"]
+   [:div.benefactor-slab.gold
+    [:h3 "Gold"]
 
     [:a {:href "https://nammayatri.in/"}
      [:img {:alt "Namma Yatri" , :src "images/sponsors/namma-yatri.png"}]]
 
     [:a {:href "https://www.teamohana.com"}
      [:img {:alt "TeamOhana", :src "images/sponsors/team-ohana.png"}]]]
+
+   #_[:div.benefactor-slab.bronze
+      [:h3 "Bronze"]]
 
    #_[:div.benefactor-slab.community
       [:h3 "Community"]]])
@@ -401,33 +400,65 @@
      [:td [:strong "In-person"] " workshop at Bangalore International Centre."]]]])
 
 (defn talks-table []
-  [:table.u-full-width.tentative-talk-table
+  [:table.u-full-width.talk-table
    [:thead
-    [:tr [:th "Event"] [:th "Speaker"]]]
+    [:tr [:th "Time"] [:th "Event"] [:th "Speaker"]]]
    [:tbody
+    [:tr.selected
+     [:td "9:30 am"]
+     [:td "Registrations"]
+     [:td ""]]
+    [:tr.selected
+     [:td "9:50 am"]
+     [:td "Welcome remarks and introductions"]
+     [:td ""]]
     [:tr
-     [:td "Carbon Dating Polymorphism in Clojure"]
+     [:td "10:00 am"]
+     [:td [:a {:href "#keynote"} "Opening Keynote: The Grift, the Grind, and the ग्रंथ"]]
+     [:td "Steven Deobald"]]
+    [:tr
+     [:td "11:05 am"]
+     [:td [:a {:href "#amogh"} "Carbon Dating Polymorphism in Clojure"]]
      [:td "Amogh Talpallikar"]]
+    [:tr.selected
+     [:td "11:25 am"]
+     [:td "Chai-Kaapi Break"]
+     [:td ""]]
     [:tr
-     [:td "Developer Tooling for Speed and Productivity in 2024"]
+     [:td "11:45 am"]
+     [:td [:a {:href "#vedang"} "Developer Tooling for Speed and Productivity in 2024"]]
      [:td "Vedang Manerikar"]]
     [:tr
-     [:td "Personal Identity Information (PII) Detection with Clojure"]
+     [:td "12:30 pm"]
+     [:td [:a {:href "#aldo"} "Personal Identity Information (PII) Detection with Clojure"]]
      [:td "Aldo Sujin"]]
     [:tr
-     [:td "Architecture and Design of Goose"]
+     [:td "1:15 pm"]
+     [:td [:a {:href "#akshat"} "Architecture and Design of Goose"]]
      [:td "Akshat Shah"]]
+    [:tr.selected
+     [:td "1:40 pm"]
+     [:td "Lunch & Networking"]
+     [:td ""]]
     [:tr
-     [:td "Navigating Data Models: A Journey into Unified, Scalable, and Composable Data Architecture"]
+     [:td "2:45 pm"]
+     [:td [:a {:href "#anuj"} "Navigating Data Models: A Journey into Unified, Scalable, and Composable Data Architecture"]]
      [:td "Anuj Kumar"]]
     [:tr
-     [:td "Functional Programming Patterns"]
+     [:td "3:30 pm"]
+     [:td [:a {:href "#abhinav"} "Functional Programming Patterns"]]
      [:td "Abhinav Sarkar"]]
+    [:tr.selected
+     [:td "4:15 am"]
+     [:td "Chai-Kaapi Break"]
+     [:td ""]]
     [:tr
-     [:td "Exploring Electric Clojure"]
+     [:td "4:35 am"]
+     [:td [:a {:href "#dheeraj"} "Exploring Electric Clojure"]]
      [:td "Dheeraj Kumar"]]
     [:tr
-     [:td "Building a spreadsheet from the ground up"]
+     [:td "5:20 am"]
+     [:td [:a {:href "#prabhanshu"} "Building a spreadsheet from the ground up"]]
      [:td "Prabhanshu Gupta"]]]])
 
 (defn cfp []
@@ -448,8 +479,31 @@
 
    [:h6 {:style {:border-bottom "1px dotted"}} [:strong "ClojureBridge"] " | " [:strong "21st - 22nd March"]]
    (workshop-table)
-   [:h6 {:style {:border-bottom "1px dotted"}} [:strong "Talks (confirmed so far)"] " | " [:strong "23rd March"]]
+   [:h6 {:style {:border-bottom "1px dotted"}} [:strong "Talks"] " | " [:strong "23rd March"]]
    (talks-table)])
+
+(defn speaker-list []
+  [:section {:id "speaker-list"}
+   [:h2 "Talks"]
+   [:ol.article-list
+    (for [{:keys [name talk-title github twitter www avatar bio talk-summary]} data/speakers]
+      ^{:key (str (random-uuid))}
+      [:li {:id (-> name (string/split " ") first str string/lower-case)}
+       [:a
+        {:href "#"}
+        [:img.speakers.article-image.location
+         {:src avatar}]]
+       [:h4 talk-title]
+       [:p.article-subtitle "By " [:a {:href (or www twitter github)} name]]
+       [:p.article-subtitle [:strong "About the talk"] ": " talk-summary]
+       (when (not-empty bio) [:p.article-subtitle [:strong "About the speaker"] ": " bio])
+       [:div.article-fine-print.no-mobile
+        [:a
+         {:href twitter}
+         [:img {:alt "Twitter", :src "images/twitter.png"}]]
+        [:a
+         {:href github}
+         [:img {:alt "Github", :src "images/github.png"}]]]])]])
 
 (defn ending-ornament []
   [:section {:id "ornament"}
@@ -523,6 +577,7 @@
    [schedule]
    [tickets]
    #_[cfp]
+   [speaker-list]
    [talk-selectors]
    [sponsorship]
    [workshops-section]

@@ -334,6 +334,10 @@ footer a img {
   margin: 0 0 16px 16px;
 }
 
+img.speakers {
+  object-fit: cover
+}
+
 .previously.article-image {
   width: 150px;
   height: 170px;

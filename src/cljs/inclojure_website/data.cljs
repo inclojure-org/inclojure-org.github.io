@@ -86,6 +86,122 @@ distributed systems, databases and fault-tolerant scalable systems. He is the
 author of “Clojure High Performance Programming” and organiser of the
 Bangalore-Clojure meetup group."}])
 
+(defonce speakers
+  [{:name "Amogh Talpallikar"
+    :talk-title "Carbon Dating Polymorphism in Clojure"
+    :github "https://github.com/mogverse"
+    :twitter "https://twitter.com/mogverse"
+    :www "https://www.linkedin.com/in/amogh-talpallikar-35704b5a/?originalSubdomain=in"
+    :avatar "images/speakers/amogh.jpg"
+    :bio "Amogh is an Engineering Manager at Helpshift with over 5 years of
+          hands-on experience in writing and maintaining backend systems in Clojure.
+          Beyond the realm of technology, he embraces his inner creativity as an
+          amateur doodler and a habitual storyteller. A pop culture aficionado at
+          heart, he finds inspiration in the narratives of both code and culture."
+    :talk-summary "Explore the evolution of polymorphism as an idea, tracing its
+                   origins and key historical influences, to understand the design decisions
+                   and significance of Clojure's offering"}
+   {:name "Vedang Manerikar"
+    :talk-title "Developer Tooling for Speed and Productivity in 2024"
+    :github ""
+    :twitter "https://fosstodon.org/@vedang"
+    :www ""
+    :avatar "images/speakers/vedang.jpg"
+    :bio ""
+    :talk-summary "This talk covers some tools and practices that improve the
+                   experience of programming Clojure. These tools have made me better and
+                   faster, and I hope they will be useful to others as well. Broadly, I
+                   categorise tools that help (1) individual contributors, (2) Clojure teams,
+                   (3) working with production."}
+   {:name "Aldo Sujin"
+    :talk-title "Personal Identity Information (PII) Detection with Clojure"
+    :github ""
+    :twitter ""
+    :www "https://www.linkedin.com/in/aldo-sujin-g-b630ba221/"
+    :avatar "images/speakers/aldo.jpg"
+    :bio "Aldo Sujin is a Software engineer at Formcept. With the knowledge in Clojure and
+          regular expressions, he has implemented the PII annotation in Clojure as one of the
+          core plug-ins for the data processing engine of FORMCEPT’s MECBot product. Reach out to know about Clojure, Formcept and MECBot."
+    :talk-summary "With the digitalization of anything and everything, PII detection is a recent topic of attention. This talk will cover
+                   how to detect PII with Clojure, the challenges involved and how one can overcome these challenges."}
+   {:name "Akshat Shah"
+    :talk-title "Architecture and Design of Goose"
+    :github "https://github.com/olttwa"
+    :twitter "https://twitter.com/olttwa"
+    :www ""
+    :avatar "images/speakers/akshat.jpg"
+    :bio "Akshat is a Senior Partner at Nilenso, and the author of Goose, a background processing library written in Clojure.
+          Akshat believes in the immeasurable impact code can create. Before Nilenso, he was part of a hypergrowth journey at GoTo and Rippling,
+          where he realised the true potential of software."
+    :talk-summary "The goal of this talk is to inspire developers to rethink
+                   their approach to background processing and open-source libraries. They will
+                   learn about simplicity in API design, reliability, extensibility and
+                   scalability. Additionally, developers will be introduced to a battle-tested
+                   library for background processing written in Clojure which was designed with
+                   these principles and features in mind."}
+   {:name "Anuj Kumar"
+    :talk-title "Navigating Data Models: A Journey into Unified, Scalable, and Composable Data Architecture"
+    :github "https://github.com/anujsrc"
+    :twitter "https://x.com/kumarsays"
+    :www "https://medium.com/@anujsays"
+    :avatar "images/speakers/anuj.jpg"
+    :bio "Anuj Kumar, Co-founder and leadership team member at FORMCEPT, has
+          over 16 years of experience in designing large-scale distributed systems. He
+          has spoken at various conferences, published patents and research papers,
+          and authored a book on Microservices with Clojure."
+    :talk-summary "In the dynamic realm of data management, the choice of data
+                   models can often dictate the success or failure of organizational data
+                   strategies. This talk delves into the intricacies of data models, explores
+                   the associated challenges, and presents a solution that Clojure and its
+                   ecosystem can provide. "}
+   {:name "Abhinav Sarkar"
+    :talk-title "Functional Programming Patterns"
+    :github "https://abhinavsarkar.net/"
+    :twitter "https://fantastic.earth/@abnv"
+    :www "https://abhinavsarkar.net/"
+    :avatar "images/speakers/abhinav.jpg"
+    :bio "Abhinav works as a Senior Engineer at Google Abhinav has worked
+          extensively in Clojure, Go and Java on large distributed systems for the
+          past fifteen years. He has been dabbling in functional programming for the
+          past decade and has been exploring Haskell, Erlang and ML."
+    :talk-summary "I've been writing Clojure and other functional programming
+                   languages professionally for nearly a decade now. I've noticed that while
+                   people understand the basics of FP, they find it hard to apply FP at large.
+                   In this session, I'll talk about some useful patterns that make applying FP
+    easier at large."}
+   {:name "Dheeraj Kumar"
+    :talk-title "Exploring Electric Clojure"
+    :github ""
+    :twitter ""
+    :www "https://www.linkedin.com/in/adheerajkumar/"
+    :avatar "images/speakers/dheeraj.jpg"
+    :bio "Dheeraj Kumar has been writing software unprofessionally for 14 years.
+          He can mess-up any layer of the system from mobile frontends to DB infra. He
+          blames most of his absurd productivity on Clojure. He moved to tech
+          leadership solely to prevent others from making his mistakes."
+    :talk-summary "This talk explores Electric Clojure, a new paradigm for building full-stack
+                   web applications in Clojure without thinking about the frontend/backend
+                   separation or the network, resulting in blazing-fast applications with fewer
+                   lines of code."}
+   {:name "Prabhanshu Gupta"
+    :talk-title "Building a spreadsheet from the ground up"
+    :github "https://github.com/prabhanshuguptagit"
+    :twitter "https://twitter.com/twomogambo"
+    :www ""
+    :avatar "images/speakers/prabhanshu.webp"
+    :bio "Prabhanshu has been a software developer at nilenso since 2019, where
+          he's written a bunch of Rails and Clojure. These days he spends most of his
+          time hacking on bean, a spreadsheet written in cljs. Otherwise he's likely
+          to be found making bleeps and bloops on the (largely unused) music gear he's
+          amassed over the years."
+    :talk-summary "Spreadsheets are probably the easiest programming environment
+                   to use, but maybe not the simplest (wink wink). I ask the question: What
+                   could better spreadsheet software look like? In an attempt to answer this
+                   I've been making one, using ClojureScript. I’ll discuss what’s fun about
+                   exploring spreadsheets as a programming environment, how I went about
+                   building one, some Clojure tooling that makes it easy, things I learnt along
+                   the way and how you could build one too."}])
+
 (defonce previous-editions
   {:bangalore {:map "images/bangalore-map-caption.png"
                :editions [{:year "2019"
