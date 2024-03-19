@@ -51,7 +51,7 @@
                 "Workshop" "workshops"
                 "Sponsors" "sponsorship"})
 
-(def talk-links ["steven" "amogh" "vedang" "aldo" "akshat" "anuj" "abhinav" "dheeraj" "prabhanshu"])
+(def talk-links ["keynote" "amogh" "vedang" "aldo" "akshat" "anuj" "abhinav" "dheeraj" "prabhanshu"])
 
 (defn nav []
   [:nav
@@ -263,30 +263,30 @@
          [:img {:alt "Github", :src "images/github.png"}]]]])]])
 
 (defn keynote []
-  #_[:section {:id "keynote"}
-     [:h2 "Keynote"]
-     [:ol.article-list
-      [:li
-       [:a
-        {:href "#"}
-        [:img.article-image.keynote
-         {:alt "bbatsov",
-          :src "images/speakers/bozhidar-batsov.jpg"}]]
-       [:h4
-        [:a {:href "https://metaredux.com"} "Bozhidar Batsov"]]
-       [:p.article-subtitle "Bozhidar is the maintainer of CIDER, nREPL,
-     a dozen related projects, and the editor of the community
-     Clojure style guide. Most people would probably describe him as
-     an Emacs zealot (and they would be right). He's also quite fond
-     of the Lisp family of languages, functional programming in
-     general and Clojure in particular."]
-       [:div.article-fine-print.no-mobile
-        [:a
-         {:href "https://twitter.com/bbatsov"}
-         [:img {:alt "Twitter", :src "images/twitter.png"}]]
-        [:a
-         {:href "https://github.com/bbatsov"}
-         [:img {:alt "Github", :src "images/github.png"}]]]]]])
+  [:section {:id "keynote"}
+   [:h2 "Keynote"]
+   [:ol.article-list
+    [:li
+     [:a
+      {:href "#"}
+      [:img.article-image.keynote
+       {:alt "deobald",
+        :src "images/speakers/steven.png"}]]
+     [:h4 "The Grift, the Grind, and the " [:span.devanagari "ग्रंथ"]]
+     [:p.article-subtitle
+      "By " [:a {:href "https://www.deobald.ca/"} "Steven Deobald"]]
+     "Programming used to be fun. What happened?"
+     [:p.article-subtitle [:strong "About the speaker"] ": Steven helped start nilenso, India's first software
+          cooperative. These days he works on Endatabas, the world's first
+          immutable HTAP SQL document database. He likes canoeing, bicycles, and
+          walkable cities."]
+     [:div.article-fine-print.no-mobile
+      [:a
+       {:href "https://twitter.com/deobald"}
+       [:img {:alt "Twitter", :src "images/twitter.png"}]]
+      [:a
+       {:href "https://github.com/deobald"}
+       [:img {:alt "Github", :src "images/github.png"}]]]]]])
 
 (defn tickets []
   [:section {:id "tickets"}
