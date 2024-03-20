@@ -113,9 +113,9 @@ Bangalore-Clojure meetup group."}])
     :talk-title "Developer Tooling for Speed and Productivity in 2024"
     :github ""
     :masto "https://fosstodon.org/@vedang"
-    :www ""
+    :www "https://vedang.me"
     :avatar "images/speakers/vedang.jpg"
-    :bio ""
+    :bio "Vedang is a software engineer and technology leader with a passion for building scalable systems and empowering teams. He has a keen interest in functional programming, particularly in Clojure, and enjoys building innovative end-to-end solutions to hard product challenges."
     :talk-summary "This talk covers some tools and practices that improve the
                    experience of programming Clojure. These tools have made me better and
                    faster, and I hope they will be useful to others as well. Broadly, I
