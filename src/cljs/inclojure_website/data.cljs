@@ -46,6 +46,14 @@
     :twitter "https://twitter.com/jaju"
     :avatar "images/team/jaju.jpg"}
 
+   {:name "Sezal Jain"
+    :github "https://github.com/sezaljain"
+    :avatar "images/team/sezal.jpg"}
+
+   {:name "Siri PR"
+    :github "https://github.com/siripr4"
+    :avatar "images/team/siri.webp"}
+
    {:name "Somya Maithani"
     :github "https://github.com/msomya"
     :avatar "images/team/somya.png"}
