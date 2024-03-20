@@ -160,7 +160,7 @@ Bangalore-Clojure meetup group."}])
     :masto "https://fantastic.earth/@abnv"
     :www "https://abhinavsarkar.net/"
     :avatar "images/speakers/abhinav.jpg"
-    :bio "Abhinav works as a Senior Engineer at Google Abhinav has worked
+    :bio "Abhinav works as a Senior Engineer at Google, who has worked
           extensively in Clojure, Go and Java on large distributed systems for the
           past fifteen years. He has been dabbling in functional programming for the
           past decade and has been exploring Haskell, Erlang and ML."
