@@ -449,15 +449,15 @@
      [:td [:a {:href "#abhinav"} "Functional Programming Patterns"]]
      [:td "Abhinav Sarkar"]]
     [:tr.selected
-     [:td "4:15 am"]
+     [:td "4:15 pm"]
      [:td "Chai-Kaapi Break"]
      [:td ""]]
     [:tr
-     [:td "4:35 am"]
+     [:td "4:35 pm"]
      [:td [:a {:href "#dheeraj"} "Exploring Electric Clojure"]]
      [:td "Dheeraj Kumar"]]
     [:tr
-     [:td "5:20 am"]
+     [:td "5:20 pm"]
      [:td [:a {:href "#prabhanshu"} "Building a spreadsheet from the ground up"]]
      [:td "Prabhanshu Gupta"]]]])
 
