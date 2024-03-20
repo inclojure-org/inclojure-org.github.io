@@ -271,7 +271,7 @@
       {:href "#"}
       [:img.article-image.keynote
        {:alt "deobald",
-        :src "images/speakers/steven.png"}]]
+        :src "images/speakers/steven.jpg"}]]
      [:h4 "The Grift, the Grind, and the " [:span.devanagari "ग्रंथ"]]
      [:p.article-subtitle
       "By " [:a {:href "https://www.deobald.ca/"} "Steven Deobald"]]
@@ -282,8 +282,8 @@
           walkable cities."]
      [:div.article-fine-print.no-mobile
       [:a
-       {:href "https://twitter.com/deobald"}
-       [:img {:alt "Twitter", :src "images/twitter.png"}]]
+       {:href "https://fantastic.earth/@deobald"}
+       [:img {:alt "Twitter", :src "images/mastodon.ico"}]]
       [:a
        {:href "https://github.com/deobald"}
        [:img {:alt "Github", :src "images/github.png"}]]]]]])
@@ -486,7 +486,7 @@
   [:section {:id "speaker-list"}
    [:h2 "Talks"]
    [:ol.article-list
-    (for [{:keys [name talk-title github twitter www avatar bio talk-summary]} data/speakers]
+    (for [{:keys [name talk-title github masto twitter www avatar bio talk-summary]} data/speakers]
       ^{:key (str (random-uuid))}
       [:li {:id (-> name (string/split " ") first str string/lower-case)}
        [:a
@@ -494,13 +494,17 @@
         [:img.speakers.article-image.location
          {:src avatar}]]
        [:h4 talk-title]
-       [:p.article-subtitle "By " [:a {:href (or www twitter github)} name]]
+       [:p.article-subtitle "By " [:a {:href (or www twitter masto github)} name]]
        [:p.article-subtitle [:strong "About the talk"] ": " talk-summary]
        (when (not-empty bio) [:p.article-subtitle [:strong "About the speaker"] ": " bio])
        [:div.article-fine-print.no-mobile
-        [:a
-         {:href twitter}
-         [:img {:alt "Twitter", :src "images/twitter.png"}]]
+        (cond
+          (not-empty twitter) [:a
+                               {:href twitter}
+                               [:img {:alt "Twitter", :src "images/twitter.png"}]]
+          (not-empty masto) [:a
+                             {:href masto}
+                             [:img {:alt "Mastodon", :src "images/mastodon.ico"}]])
         [:a
          {:href github}
          [:img {:alt "Github", :src "images/github.png"}]]]])]])

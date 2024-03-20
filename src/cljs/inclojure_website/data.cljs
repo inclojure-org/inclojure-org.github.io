@@ -104,7 +104,7 @@ Bangalore-Clojure meetup group."}])
    {:name "Vedang Manerikar"
     :talk-title "Developer Tooling for Speed and Productivity in 2024"
     :github ""
-    :twitter "https://fosstodon.org/@vedang"
+    :masto "https://fosstodon.org/@vedang"
     :www ""
     :avatar "images/speakers/vedang.jpg"
     :bio ""
@@ -157,7 +157,7 @@ Bangalore-Clojure meetup group."}])
    {:name "Abhinav Sarkar"
     :talk-title "Functional Programming Patterns"
     :github "https://abhinavsarkar.net/"
-    :twitter "https://fantastic.earth/@abnv"
+    :masto "https://fantastic.earth/@abnv"
     :www "https://abhinavsarkar.net/"
     :avatar "images/speakers/abhinav.jpg"
     :bio "Abhinav works as a Senior Engineer at Google Abhinav has worked
