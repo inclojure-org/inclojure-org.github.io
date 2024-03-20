@@ -98,9 +98,9 @@ Bangalore-Clojure meetup group."}])
           Beyond the realm of technology, he embraces his inner creativity as an
           amateur doodler and a habitual storyteller. A pop culture aficionado at
           heart, he finds inspiration in the narratives of both code and culture."
-    :talk-summary "Explore the evolution of polymorphism as an idea, tracing its
+    :talk-summary "This talk explores the evolution of polymorphism as an idea, tracing its
                    origins and key historical influences, to understand the design decisions
-                   and significance of Clojure's offering"}
+                   and significance of Clojure's offering."}
    {:name "Vedang Manerikar"
     :talk-title "Developer Tooling for Speed and Productivity in 2024"
     :github ""
@@ -121,7 +121,7 @@ Bangalore-Clojure meetup group."}])
     :avatar "images/speakers/aldo.jpg"
     :bio "Aldo Sujin is a Software engineer at Formcept. With the knowledge in Clojure and
           regular expressions, he has implemented the PII annotation in Clojure as one of the
-          core plug-ins for the data processing engine of FORMCEPT’s MECBot product. Reach out to know about Clojure, Formcept and MECBot."
+          core plug-ins for the data processing engine of FORMCEPT’s MECBot product."
     :talk-summary "With the digitalization of anything and everything, PII detection is a recent topic of attention. This talk will cover
                    how to detect PII with Clojure, the challenges involved and how one can overcome these challenges."}
    {:name "Akshat Shah"
@@ -156,7 +156,7 @@ Bangalore-Clojure meetup group."}])
                    ecosystem can provide. "}
    {:name "Abhinav Sarkar"
     :talk-title "Functional Programming Patterns"
-    :github "https://abhinavsarkar.net/"
+    :github "https://github.com/abhin4v"
     :masto "https://fantastic.earth/@abnv"
     :www "https://abhinavsarkar.net/"
     :avatar "images/speakers/abhinav.jpg"
@@ -167,7 +167,7 @@ Bangalore-Clojure meetup group."}])
     :talk-summary "I've been writing Clojure and other functional programming
                    languages professionally for nearly a decade now. I've noticed that while
                    people understand the basics of FP, they find it hard to apply FP at large.
-                   In this session, I'll talk about some useful patterns that make applying FP
+                   In this session, I'll talk about some useful patterns that make applying FP.
     easier at large."}
    {:name "Dheeraj Kumar"
     :talk-title "Exploring Electric Clojure"

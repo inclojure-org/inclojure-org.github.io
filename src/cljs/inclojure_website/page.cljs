@@ -494,7 +494,7 @@
         [:img.speakers.article-image.location
          {:src avatar}]]
        [:h4 talk-title]
-       [:p.article-subtitle "By " [:a {:href (or www twitter masto github)} name]]
+       [:p.article-subtitle "By " [:a {:href (or www masto twitter github)} name]]
        [:p.article-subtitle [:strong "About the talk"] ": " talk-summary]
        (when (not-empty bio) [:p.article-subtitle [:strong "About the speaker"] ": " bio])
        [:div.article-fine-print.no-mobile
@@ -505,9 +505,9 @@
           (not-empty masto) [:a
                              {:href masto}
                              [:img {:alt "Mastodon", :src "images/mastodon.ico"}]])
-        [:a
-         {:href github}
-         [:img {:alt "Github", :src "images/github.png"}]]]])]])
+        (when (not-empty github) [:a
+                                  {:href github}
+                                  [:img {:alt "Github", :src "images/github.png"}]])]])]])
 
 (defn ending-ornament []
   [:section {:id "ornament"}
