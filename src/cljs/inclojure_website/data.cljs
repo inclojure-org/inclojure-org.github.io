@@ -9,7 +9,7 @@
     :github "https://github.com/alishamohanty"
     :avatar "images/team/alisha.webp"}
 
-   {:name "Akshatha Herle"
+   {:name "Akshatha H"
     :github "https://github.com/qptr"
     :avatar "images/team/akshatha.webp"}
 
